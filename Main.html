@@ -3,10 +3,46 @@
 <meta http-equiv="Cotent-Type" content="texte/html"; charset="utf-8"/>
 <head>
 	<title>High media serveur</title>
+	<style>
+ 		#helloDiv {
+ 		  background: #333;
+ 		  color: #fff;
+ 		  font-size: 24px;
+ 		  text-align: center;
+ 		  border-radius: 3px;
+ 		  width: 200px;
+ 		  height: 200px;
+ 		  display: none;
+ 		}
+ 		 td {
+    			border: 1px solid black;
+ 			 }
+	</style>
+	<script src="Scripts/jquery.min.js"></script>
 	<script src="Scripts/MaintScript.js"></script>
 </head>
-<body onload="countToTen();">
+<body onload="countToTen()";>
+	<div id="helloDiv">Bonjour</div>
+
+	<table id="things">
+		<tr>
+    		<td>item 1</td>
+    		<td>item 2</td>
+    		<td>item 3</td>
+  		</tr>
+  	</table>
+
 	<h1>Test</h1>
+	<button id="clickme">Test button</button>
 <p id="theCount"></p>
+<script>
+$( "#clickme" ).click(function () {
+  if ( $( "#helloDiv" ).is( ":hidden" ) ) {
+    $( "#helloDiv" ).slideDown( "slow" );
+  } else {
+    $( "div" ).hide();
+  }
+});
+</script>
 </body>
 </html>

@@ -15,7 +15,16 @@
 			"file": "Main.html",
 			"settings":
 			{
-				"buffer_size": 183,
+				"buffer_size": 274,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Scripts/MaintScript.js",
+			"settings":
+			{
+				"buffer_size": 338,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -51,6 +60,11 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/mathe_s1yp05r/Documents/Prod/High-media-serveur",
+		"/C/Users/mathe_s1yp05r/Documents/Prod/High-media-serveur/Scripts"
+	],
 	"file_history":
 	[
 		"/C/Users/mathe_s1yp05r/Documents/Prod/Main.html"
@@ -97,15 +111,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 183,
+						"buffer_size": 274,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								143,
-								143
+								217,
+								217
 							]
 						],
 						"settings":
@@ -118,6 +132,35 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Scripts/MaintScript.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
 				}
 			]
 		}
@@ -128,7 +171,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 39.0
 	},
 	"layout":
 	{
@@ -199,7 +242,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 214.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
