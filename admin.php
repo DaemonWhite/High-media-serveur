@@ -20,12 +20,7 @@
         $pass_hache = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 
         // Insertion
-        $req = $bdd->prepare('INSERT INTO membre(UserName, Name_Surname, Password, Chambre) VALUES(:UserName, :Name_Surname,:Password, :Chambre)');
-        $req->execute(array(
-            'UserName' => $pseudo,
-            'Password' => $pass_hache,
-            'Name_Surname' => $RealName
-            'Chambre' => $UsChanmbre));
+       
         ?>
 
            
