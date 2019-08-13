@@ -42,7 +42,7 @@
 
 
     ?>
-    <form action="Com/TestNewPassWord.php" method="post">
+    <form action="Com/TestNewPassWord.php?US=0&PS=0&CH=0&T1=Name test&T2=0&T3=0" method="post">
         <a>Nom et prenom :  </a></li>   <input type="text" name="Name" /><br><br>
         <a>Pseudo :         </a></li>   <input type="text" name="Pseudo" /><br><br>
         <a>mot de passe :   </a></li>   <input type="text" name="Pass" /><br><br>
