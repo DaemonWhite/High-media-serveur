@@ -1,5 +1,11 @@
 # High media serveur
 
+v - 0.0.04A
+
+- Correction de l'enregistrement des ip
+- Ajout de la base du systéme d'upload
+- Ajout d'un bloqueur de page
+- corection de la mise ajour des table pour les nouvelle session
 
 V - 0.0.03A
 

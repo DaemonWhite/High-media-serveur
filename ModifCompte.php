@@ -49,10 +49,12 @@ if (!empty($_POST['NName']) OR !empty($_POST['NPseudo']) OR !empty($_POST['NCham
 	  				if (!empty($_POST['NPassV'])) {
 		
 	  					if (!empty($_POST['NVerifPassV'])) {
+
 	  						# code...
+	  						$CriptPass = password_hash($_POST['NVerifPassV'], PASSWORD_BCRYPT);
 	  						$UpdateName = $bdd->prepare('UPDATE membre SET Password = :NewPassword WHERE ID_user = :user');
 							$UpdateName->execute(array(
-							    'NewPassword' => $_POST['NVerifPassV'],
+							    'NewPassword' => $CriptPass,
 							    'user' => $IDUser
 							    ));
 								
