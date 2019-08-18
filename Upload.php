@@ -1,63 +1,110 @@
 <?php
 //var_dump($_FILES);
 
-
-$Vdoss1 = "upload/Video/" . $_POST['Title'] . "/";
-echo $Vdoss2 = $Vdoss1 . $_POST['Seson'] . "/";
-
+$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //(file_exists($dossier)
 
 
-	if (!empty($_FILES)) {
+	if (!empty($_POST['Title'])) {
 
-		echo $file_name = $_FILES['Video']['name'];
-		echo $file_extension = strrchr($file_name, ".");
+		$Vdoss1 = "upload/Video/" . $_POST['Title'] . "/";
+		$Vdoss2 = $Vdoss1 . "S" . $_POST['Seson'] . "/";
 
-		$valide_extention = $arrayName = array('.mp4', '.MP4');
+		$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $_POST['Title'] . '\' AND Episode=\'' . $_POST['Ep'] . '\'');
+		$vEp = $reqEpisode->fetch();
 
-		if (in_array($file_extension, $valide_extention)) {
+		if (empty($vEp)) {
 
-			if (!file_exists($Vdoss2 . $_FILES['Video']['name'])) {
-
-				if (!file_exists($Vdoss1)) {
-	
-					CreateRepertoire(2);
-	
-				} elseif (!file_exists($Vdoss2)) {
-	
-					CreateRepertoire(1);
-	
-				} else {CreateRepertoire(0);} 
-
-
+			if (!empty($_FILES)) {
+		
+				$file_name = $_FILES['Video']['name'];
+				$file_extension = strrchr($file_name, ".");
+		
+				$valide_extention = $arrayName = array('.mp4', '.MP4');
+		
+				if (in_array($file_extension, $valide_extention)) {
+		
+					if (!file_exists($Vdoss2 . $_FILES['Video']['name'])) {
+		
+						if (!file_exists($Vdoss1)) {
+			
+							CreateRepertoire(2, $bdb);
+			
+						} elseif (!file_exists($Vdoss2)) {
+			
+							CreateRepertoire(1, $bdb);
+			
+						} else {CreateRepertoire(0, $bdb);} 
+		
+		
+						# code...
+					} else {$Uerreur = "La video existe déja";}
+		
+					# code...
+				} else {$Uerreur = "seule les video au extention suivante son autorisés";}
 				# code...
-			} else {$Uerreur = "La video existe déja";}
+			} else {$Uerreur = "Veulier m'etres une video";}
 
 			# code...
-		} else {$Uerreur = "seule les video au extention suivante son autorisés";}
-		# code...
-	} else {$Uerreur = "Veulier m'etres une video";}
+		} else {$Uerreur = "Episode déja existan";}
+
+	} else {$Uerreur = "veulier metre un titre";}
 
 
 
+	function CreateRepertoire($Season, $bda) {
 
-	function CreateRepertoire($Season) {
+		$GetTitle = $_POST['Title'] ;
+		$GetSubtitle = "NoValide"; //$_POST['subtitle'] 
+		$GetSeson = $_POST['Seson'];
+		$GetEp = $_POST['Ep'] ;
+		$GetGen =  "NoValide"; //$_POST['Gen']
+		$GetTyp = "NoValide"; //$_POST['typ']
+		$Format = "0";
 
-		echo $Season;
+		$reqTitre = $bda->query('SELECT nom FROM titre WHERE nom=\'' . $GetTitle . '\'');
+		$vTitre = $reqTitre->fetch();
+
+		if ($vTitre['nom'] == $GetTitle) {
+
+			
+
+		} else {
+
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format) VALUES  (:nom, :Format)");
+                                          $AddTitre->execute(array( 
+                                          	'nom' => $GetTitle,
+                                          	'Format' => $Format));
+
+		}
 
 		$DefaultDaus = "upload/Video/";
-		$dossier = $DefaultDaus . "/" .$_POST['Title'];
+		$dossier = $DefaultDaus . "/" . $_POST['Title'];
 
 		if ($Season > 1) {
 			mkdir($dossier);
 		}
 		
 
-		$dossier = $dossier . "/" . $_POST['Seson'] . "/";
+		$dossier = $dossier . "/S" . $_POST['Seson'] . "/";
 
 		if ($Season > 0) {
 			mkdir($dossier);
 		}
+
+		$Ressource = $dossier . "/" . $_FILES['Video']['name'];
+
+		$Uerreur = null;
+
+		$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Genre, type) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Genre, :type)");
+                                          $AddVideo->execute(array( 
+                                          	'titre' => $GetTitle,
+                                          	'SousTitre' => $GetSubtitle,
+                                          	'Saison' => $GetSeson,
+                                          	'Episode' => $GetEp,
+                                          	'Repertoire' => $Ressource,
+                                          	'Genre' => $GetGen,
+                                          	'type' => $GetTyp));
 
 		move_uploaded_file($_FILES["Video"]["tmp_name"], $dossier . $_FILES["Video"]["name"]);
 
@@ -68,12 +115,12 @@ echo $Vdoss2 = $Vdoss1 . $_POST['Seson'] . "/";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>High media serveur upload</title>
+	<title>High media serveur - upload</title>
 	<meta charset="utf-8">
 </head>
 <body>
 
-	<?php echo $Uerreur; ?>
+	<?php if (isset($Uerreur)) {echo $Uerreur;} ?>
 
 	<div role="dialogue" align="center">
 
@@ -86,7 +133,7 @@ echo $Vdoss2 = $Vdoss1 . $_POST['Seson'] . "/";
     	    <h2>Upload Fichier</h2>
     	    <input type="text" name="Title" placeholder="Nom de la série"><br><br>
     	    <label for="fileUpload">Fichier:</label>
-    	    <select name="Seson">
+    	    <select name="Ep">
     	    	<?php
     	    	$RP = 1000;
     	    	$n = 1;
@@ -103,7 +150,7 @@ echo $Vdoss2 = $Vdoss1 . $_POST['Seson'] . "/";
     	    	$n = 1;
  					while ($RP > $n) {
 
- 						echo  '<option value="S'. $n . '">' . $n . '</option>';
+ 						echo  '<option value="'. $n . '">' . $n . '</option>';
  					   	    		$n++;
  					   	    	}   	    	
     	    	?>

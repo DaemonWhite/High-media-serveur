@@ -1,42 +1,64 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Video</title>
-        <meta charset="utf-8" />
-    </head>
+<?php
 
-    <header>
-       
-    </header>
+session_start();
 
+$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-    <body>
+$NameVideo = $bdd->query("SELECT nom FROM titre ORDER BY nom   ");
 
-        <a href="index.php">Back</a>
-        <p></p>
+if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
+    # code...
 
-        <?php
+  ?>
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>High media serveur - Video</title>
+  </head>
+  <body>
 
-        if (isset($_GET['prenom']) AND isset($_GET['nom'])) // On a le nom et le prénom
-        {
-            echo 'Bonjour ' . $_GET['prenom'] . ' ' . $_GET['nom'] . ' !';
-        }
-        else // Il manque des paramètres, on avertit le visiteur
-        {
-            echo 'Il faut renseigner un nom et un prénom !';
-        }
-        ?>
+    <?php 
 
-        <p>Bonjour !</p>
+    while ($donnes = $NameVideo->fetch()) {
 
-        <p>Je sais comment tu t'appelles, hé hé. Tu t'appelles <?php echo $_POST['Pseudo']; ?> !</p>
+        echo '<form action="?name=' . $donnes['nom'] .'" method="post">' 
+        . $donnes['nom'] . '<input type="submit" value="Valider"> 
+        </form>'; 
+    }
+
     
-        <p>Si tu veux changer de prénom, <a href="index.php">clique ici</a> pour revenir à la page formulaire.php.</p>
 
-        <footer id="pied_de_page">
-            <p>Copyright moi, tous droits réservés</p>
-        </footer>
+    ?>
+  </body>
+  </html>
 
-        
-    </body>
-</html>
+<?php } else {
+
+$EpVideo = $bdd->query('SELECT titre, Episode FROM video WHERE titre=\'' . $_GET['name'] . '\'');
+        $EpVideo->execute(array($_GET['name'])); 
+
+    ?>
+
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>High media serveur - Video</title>
+  </head>
+  <body>
+
+    <?php 
+
+    echo $_GET['name'] . '<br>';
+
+    while ($donnes = $EpVideo->fetch()) {
+
+     echo '<a href="VLecteur?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .'">Episode ' . $donnes['Episode'] . '</a><br>' ;
+    }
+
+    ?>
+
+    <a href=""></a>
+  </body>
+  </html>
+
+<?php } ?>

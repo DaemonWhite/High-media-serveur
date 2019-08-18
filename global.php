@@ -46,8 +46,8 @@ if (!empty($_GET['Deco'])) {
                     <h3>Titre menu</h3>
                     <ul>
                         <li><a href="jeux_video.php">Jeux Video</a></li>
-                        <li><a onclick="window.open('Upload.php', 'exemple', 'height=200, width=400, top=100, left=100,' 'toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=no, status=no');" >Upload</a></li>
-                        <li><a href="page3.html">Lien</a></li>
+                        <li><a href="Upload.php" >Upload</a></li>
+                        <li><a href="video.php">Video</a></li>
                         <form action="admin.php" method="post">
                             <p>
                                 <input type="password" name="mot_de_pass">

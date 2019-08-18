@@ -1,6 +1,15 @@
 # High media serveur
 
-v - 0.0.04A
+
+V - 0.0.05A
+
+- Ajout de la page de choix de l'épisode
+- Ajout de la page qui repertotrie les Série
+- Ajout d'un lient pour les video
+- Corection a l'upload il est impossible d'avoir deux video au même episode
+
+
+V - 0.0.04A
 
 - Correction de l'enregistrement des ip
 - Ajout de la base du systéme d'upload

@@ -32,33 +32,8 @@ if (isset($_POST['DemandeConexion'])) {
                 if (!empty($_POST['SaveMe'])) {
 
                     if (($_SERVER['REMOTE_ADDR'] = $UserInfo['IP1']) OR ($_SERVER['REMOTE_ADDR'] = $UserInfo['IP2'])) {
-
-                        if ($UserInfo['Modif_IP'] == 0) {
-    
-                                $mod = 1;
-    
-                                $UpdateIp = $bdd->prepare('UPDATE membre SET IP1 = :IP, Modif_IP = :modif WHERE ID_user = :ID ');
-                                $UpdateIp->execute(array(
-                                    'IP' => $ip_Visiteur,
-                                    'modif' => $mod,
-                                    'ID' => $UserInfo['ID_user']
-                                    ));
-
-                                echo "Choix A";
     
                                 header("Location: Global.php");
-    
-                            } else { 
-    
-                                $mod = 0;
-    
-                                $UpdateIp = $bdd->prepare('UPDATE membre SET IP1 = :IP, Modif_IP = :modif WHERE ID_user = :ID ');
-                                $UpdateIp->execute(array(
-                                    'IP' => $ip_Visiteur,
-                                    'modif' => $mod,
-                                    'ID' => $UserInfo['ID_user']
-                                    ));  header("Location: Global.php"); 
-                            echo "Choix B";}
                         # code...
                     } else {
 
