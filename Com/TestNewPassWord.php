@@ -8,6 +8,12 @@
 <?php
 
 session_start();
+
+$SecuG = htmlspecialchars($_SESSION['Securiter']);
+
+if ($SecuG == 3) {
+  # code...
+
     
 
 if (empty($_GET['T1'])) {
@@ -57,7 +63,7 @@ $reponseB = $bdd->query("SELECT Chambre FROM membre ORDER BY Chambre   ");
 
 if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Securiter']) AND !empty($_POST['Name']) AND !empty($_POST['Chambr']))
 {
-    $pseudo = $_POST['Pseudo'];
+   echo $pseudo = $_POST['Pseudo'];
     $passW = $_POST['Pass'];
     $passVerif = $_POST['VerifPass'];
     $RealName = $_POST['Name'];
@@ -68,8 +74,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
     $reqUsname->execute(array($pseudo));
     $UsNameExist = $reqUsname->rowCount();
 
-        if ($UsNameExist == 0) {
-            echo "bonjour c'est foireux";
+        if ($UsNameExist == 0) {  
     
     
             $reqName = $bdd->prepare("SELECT Name_Surname FROM membre WHERE Name_Surname = ?");
@@ -85,11 +90,11 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
                     if (($passW == $passVerif) AND !empty($_POST['Pass']) AND !empty($_POST['VerifPass']))
                      {
                      
-                     
-                         $pass_hache = password_hash($passW, PASSWORD_DEFAULT);
+                     echo $pseudo;
+                         $pass_hache = password_hash($passW, PASSWORD_BCRYPT);
                           
-                         $insertmbr = $bdd->prepare("INSERT INTO membre(UserName, Name_Surname, Password, Chambre, Securiter) VALUES  (?, ?, ?, ?, ?)");
-                                          $insertmbr->execute(array($pseudo, $RealName, $pass_hache, $UsChanmbre, $UsSecuriter));
+                         $insertmbr = $bdd->prepare("INSERT INTO membre(UserName, Name_Surname, Password, Chambre, Securiter) VALUES  (?,?,?,?,?)");
+                                          $insertmbr->execute(array( $pseudo, $RealName, $pass_hache, $UsChanmbre, $UsSecuriter));
              
                                           $NewPass = 1;
              
@@ -154,8 +159,6 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
     var C = "<?php if(isset($_GET['D3'])) { echo $_GET['D3']; }?>";
 
     var TypeUser = "<?php if(isset($_GET['sec'])) { echo $_GET['sec']; }?>";
-
-    document.getElementById("demo").innerHTML = "You selected: " + ElChoixName;
 
     var InfChoix = 0
 
@@ -274,34 +277,37 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
 
 
 <body onload="valeurToTen()">
-   
-    <p id="demo"></p>
 
-
-         <?php
-         if(isset($erreur)) {
-            echo '<font color="red">'.$erreur."</font>";
-         }
-         ?>
-
+<div align="center">
+            <?php if(isset($erreur)) {echo '<font color="red">'.$erreur."</font>";}?>
+<table>
+<tr>
 	<form action="" method="post">
-        <label for="UsName"> Nom et prenom :  </label></li>   <input type="text" name="Name" id="pseudo"/><br><br>
-        <a>Pseudo :         </a></li>   <input type="text" name="Pseudo" /><br><br>
-        <a>mot de passe :   </a></li>   <input type="text" name="Pass" /><br><br>
-        <a>Confirmer le mot de passe : </a></li>    <input type="text" name="VerifPass" /><br><br>
-        <a>Chambre :        </a></li>   <input type="text" name="Chambr" /><br><br>
+        <td><label for="UsName"> Nom et prenom :  </label> </td><td>  <input type="text" name="Name" id="pseudo"/></td></tr>
+        <td><a>Pseudo :         </a>  </td><td> <input type="text" name="Pseudo" /></td></tr>
+        <td><a>mot de passe :   </a> </td><td>  <input type="text" name="Pass" /></td></tr>
+        <td><a>Confirmer le mot de passe : </a>  </td><td>  <input type="text" name="VerifPass" /></td></tr>
+        <td><a>Chambre :        </a> </td><td>  <input type="text" name="Chambr" /></td></tr><br><br>
 
-        <select name="Securiter">
+        <tr><td>
+          <select name="Securiter">
             <option value="1">Utilisateur</option>
             <option value="2">Modérateur</option>
             <option value="3">Administrateur</option>
-        </select>
+          </select>
+        </td></tr>
 
 
 <br><br><br><br>
     
-        <input type="submit" value="Condirmer" /><br><br>
+      <tr><td align="center"><td>
+        <input type="submit" value="Condirmer" />
+      </td></td>
+    </tr>
     </form>
+  </table>
+</div>
+
 
 <div align="center">
 
@@ -367,7 +373,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
 
           <h3>Resultat des recherche de par non et prénom : </h3>
 
-        <?php if(isset($erreur)) {echo '<font color="red">'.$_SESSION['Erreur']."</font>";}?>  
+        <?php if(isset($_SESSION['Erreur'])) {echo '<font color="red">'.$_SESSION['Erreur']."</font>";}?>  
 
                                                              
 
@@ -542,7 +548,11 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
     <?php if (!empty($_SESSION['ValideModif'])) {$_SESSION['ValideModif'] = null; echo 'window.onload = function () { alert("Information modifier avec succer")}'; }?>
 
 
+<?php } else {
 
+echo "Vous n'avez pas l'autoriqtion d'aller ici votre compte sera signaler";
+
+}?>
 </script>
 
 
