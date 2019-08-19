@@ -1,5 +1,10 @@
 # High media serveur
 
+V - 0.0.06A
+
+- Ajout d'information
+- Reorganisation des élémen
+- Ajout de l'interface organisé de la page d'acueille
 
 V - 0.0.05A
 
