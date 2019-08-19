@@ -1,0 +1,67 @@
+.colorTitle
+{
+    color: #54C472; / define les <p></p> en bleu 
+}
+.BackgroundA
+{
+	background-color: #2F2F2F; 
+    color: white;
+}
+.BackgroundB
+{	
+	background-position: center;
+	width: 30%;
+	min-width: 400px;
+	border-radius: 10px;
+	border: 3px black groove;
+	background-color: #3D3D3D; 
+    color: white;
+    margin: auto;
+}
+.CupeInfo
+{	
+	background-position: center;
+	width: 30%;
+	min-width: 400px;
+	border-radius: 10px;
+	border: 3px black groove;
+	background-color: #3D3D3D; 
+    color: white;
+    margin: auto;
+}
+.SelectionBase
+{
+	text-decoration: none;
+   	color: #54C472;
+   	font-style: italic;
+}
+.SelectionBase:hover /* Apparence au survol des liens */
+{
+   text-decoration: underline;
+   color: green;
+}
+
+/* ------- Création du cube ----------*/
+
+.Conteneur
+{	
+	display: flex;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+    right: 50%;
+    bottom: 50%;
+	justify-content: center;
+    align-items: center;
+}
+
+.CupeInfo:nth-child(1)
+{	
+	width: 30%;
+	min-width: 400px;
+	border-radius: 10px;
+	border: 3px black groove;
+	background-color: #3D3D3D; 
+    color: white;
+    margin: auto;
+}
