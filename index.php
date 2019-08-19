@@ -17,7 +17,7 @@ if (isset($_POST['DemandeConexion'])) {
             $requser->execute(array($PseudConnect));
             $UserInfo = $requser->fetch();
 
-            echo $UserInfo['ID_user'];
+            $UserInfo['ID_user'];
 
             
 
@@ -40,15 +40,13 @@ if (isset($_POST['DemandeConexion'])) {
                         if ($UserInfo['Modif_IP'] == 0) {
     
                                 $mod = 1;
-                                  echo  $_SERVER['REMOTE_ADDR'];
+                                $_SERVER['REMOTE_ADDR'];
                                 $UpdateIp = $bdd->prepare('UPDATE membre SET IP1 = :ip, Modif_IP = :modif WHERE ID_user = :ID ');
                                 $UpdateIp->execute(array(
                                     'ip' => $ip_Visiteur,
                                     'modif' => $mod,
                                     'ID' => $_SESSION['ID']
                                     ));
-
-                                echo "Choix C";
     
                                 header("Location: Global.php");
 
@@ -89,8 +87,9 @@ if (isset($_POST['DemandeConexion'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>HighMediaServeur - connexion</title>
         <meta charset="utf-8" />
+        <title>HighMediaServeur - connexion</title>
+        <link rel="stylesheet" href="Res/style.css" />
     </head>
 
     <header>
@@ -100,7 +99,7 @@ if (isset($_POST['DemandeConexion'])) {
     
 
 
-    <body>
+    <body class="BackgroundA">
 
         <?php
 
@@ -168,28 +167,37 @@ if (isset($_POST['DemandeConexion'])) {
 
 
     ?>
-
-     <?php if(isset($erreur)) {echo '<font color="red">'.$erreur."</font>";}?>
-
-    <form action="" method="post">
-
-        <input type="text" name="PseudConnect" placeholder="pseudo">
-        <input type="password" name="PassConnect" placeholder="Mot de passe">
-        <input type="submit" name="DemandeConexion" value="Connexion">
-
-        <input type="checkbox" id="SaveMe" name="SaveMe" checked>
-        <label for="SaveMe">Se souvenir de moi</label><br><br>
-
-    </form>
-
-
-    <li><a href="Global.php">Connexion</a></li>
-
-    <!-- Le pied de page -->
+<section class="Conteneur">
     
-    <footer id="pied_de_page">
-        <p>Copyright moi, tous droits réservés</p>
-    </footer>
+    <div align="center" class="CupeInfo">
+         <p class="colorTitle">Bienvenu sur high media serveur </p>
+    
+         <?php if(isset($erreur)) {echo '<font color="red">'.$erreur."</font>";}?>
+    
+        <form action="" method="post">
+        <table><tr><td>
+            Pseudo: </td><td><input type="text" name="PseudConnect" placeholder="pseudo"></td></tr>
+            <tr><td>Mot de passe:</td><td> <input type="password" name="PassConnect" placeholder="Mot de passe"></td></tr><tr></tr>
+    
+            <tr><td><input type="checkbox" id="SaveMe" name="SaveMe" checked>
+            <label for="SaveMe">Se souvenir de moi</label></td></tr>
+            </table><br>
+            <input type="submit" name="DemandeConexion" value="Connexion">
+            
+    
+        </form><br>
+    
+    
+        <li><a href="Global.php" class="SelectionBase">Se connecter en temp que invité</a></li>
+    
+        <!-- Le pied de page -->
+        
+        <footer id="pied_de_page">
+            <p>Copyright moi, tous droits réservés</p>
+        </footer>
+    </div>
+
+</section>
 
 
 
