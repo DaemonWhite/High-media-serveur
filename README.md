@@ -1,5 +1,21 @@
 # High media serveur
 
+v - 0.0.07A
+
+- Ajout de l'image utilisateur par default
+- Ajout des vouton interactive "Dossier,Favori,Suprimer,Télècharger,Upload"
+- Ajout du texte d'identification
+- Ajout du placement pour l'image
+- Ajout d'un bouton "Proposition"	non fonctionelle
+- Ajout d'un bouton "Serveur"	non fonctionelle
+- Ajout d'un bouton "Espace Personnelle"	non fonctionelle
+- Ajout d'un bouton "Acueille"	non fonctionelle
+- Ajout d'un bouton "Audio"	non fonctionelle
+- Ajout d'un bouton "video"	Fonctionelle
+- Ajout de la barre de navigation dans la page d'acueille
+- Ajout d'entée de texte personnaliser
+- Ajout de bouton personaliser
+
 V - 0.0.06A
 
 - Ajout d'information

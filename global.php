@@ -12,7 +12,53 @@ if (!empty($_GET['Deco'])) {
 
     echo "cookie suprimer";
 
+    session_start();
+
+    $_SESSION['Pseudo'] = "Anonyme";
+    $_SESSION['ID'] = "-1";
+    $_SESSION['Securiter'] = "-1";
+
+    echo "Deco";
+
+    header('Location: global.php');
 }
+
+if (empty($_SESSION['ID']) OR empty($_SESSION['Pseudo'] OR empty($_SESSION['Securiter']))) {
+
+    echo "vide";
+
+    if (empty($_COOKIE['ID']) OR empty($_COOKIE['Pseudo']) OR empty($_COOKIE['Securiter'])) {
+        echo "vide2";
+        header('Location: index.php');
+
+    } else {
+            $_SESSION['ID'] = $_COOKIE['ID'];
+            $_SESSION['Pseudo'] = $_COOKIE['Pseudo'];
+            $_SESSION['Securiter'] = $_COOKIE['Securiter'];
+        }
+    } 
+
+
+
+    if ($_SESSION['Securiter'] == 1) {
+
+        $typeUser = "Utilisateur";
+        # code...
+    } elseif ($_SESSION['Securiter'] == 2) {
+
+        $typeUser = "Modérateur";
+        # code...
+    } elseif ($_SESSION['Securiter'] == 3) {
+
+        $typeUser = "Administrateur";
+        # code...
+    } elseif ($_SESSION['Securiter'] === "-1") {
+
+        $typeUser = "Inviter";
+        $_SESSION['Pseudo'] = "Anonyme";
+
+    }
+    $Pseudo = $_SESSION['Pseudo'];
 
 ?>
 <!DOCTYPE html>
@@ -20,77 +66,98 @@ if (!empty($_GET['Deco'])) {
     <head>
         <title>HighMediaServeur</title>
         <meta charset="utf-8" />
+        <link rel="stylesheet" href="Res/style.css" />
     </head>
 
     <header>
        
     </header>
 
-
 <script type="text/javascript">
     
-    document.getElementById('mon-lien').addEventListener('click', function(){
-    document.getElementById('mon-layer').style.display = "block";
-});
+    function ChangePAGE(Type)
+    {
+        if (Type === "Video") 
+        {
+            window.location = "Video.php";
+        }
+        if (Type === "Audio") 
+        {
+
+        } 
+        if (Type === "Perso") 
+        {
+
+        } 
+        if (Type === "Serv") 
+        {
+
+        } 
+        if (Type === "Propo") 
+        {
+
+        } 
+    }
 
 </script>
     
 
 
-    <body>
-<LAYER BGCOLOR="#0000ff" > 
+    <body class="BackgroundA">
 
+        <nav id="menu">
+                
+                    
+                    <div>
+                        <button class="linkSelect">Acueille</button>
+                        <button class="linkSelect" onclick="ChangePAGE('Video')">Video</button>
+                        <button class="linkSelect" onclick="ChangePAGE('Audio')">Audio</button>
+                        <button class="linkSelect" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                        <button class="linkSelect" onclick="ChangePAGE('Serv')">Serveur</button>
+                        <button class="linkSelect" onclick="ChangePAGE('Propo')">Proposition</button>
 
-           <nav id="menu">        
-                <div class="element_menu">
-                    <h3>Titre menu</h3>
-                    <ul>
-                        <li><a href="jeux_video.php">Jeux Video</a></li>
-                        <li><a href="Upload.php" >Upload</a></li>
-                        <li><a href="video.php">Video</a></li>
-                        <form action="admin.php" method="post">
-                            <p>
-                                <input type="password" name="mot_de_pass">
-                                <input type="submit" value="confirmer">
+                    </div>
 
-                            </p>
+                    <div class="separationA">
 
-                            <li><?php echo $_SESSION['Pseudo']; ?></li>
+                        <span class="infoUser"><?php echo $typeUser; ?></span>
+
+                        <div class="imageUser">
+                            <img src="User/Default/User.jpg" class="image">
+                        </div>
+
+                        <span class="UserName"><?php echo $Pseudo ?></span>
+                        <form action="?Deco=1" method="post">
+                            <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
                         </form>
-                    </ul>
-                </div>    
-            </nav>
 
-<form action="Com/TestNewPassWord.php?" method="post">
-        <input type="submit" value="Créer un compte" /><br><br>
-</form>
-    
-<form action="?Deco=1" method="post">
-        <input name="Deco" id="Deco" type="submit" value="SeDeconecter" /><br><br>
-</form>
-    <!-- Le corps -->
-    
-   <?php include("Com/main.php"); ?>
+                    </div>
 
-   <?php
-    // 1 : on ouvre le fichier
-    $monfichier = fopen('base.txt', 'r+');
-     
-    // 2 : on lit la première ligne du fichier
-    $ligne = fgets($monfichier);
-     
-    // 3 : quand on a fini de l'utiliser, on ferme le fichier
-    fclose($monfichier);
-    ?>
+                    <div class="separationB">
+
+                        <button class="bottomMenu">Dossier</button>
+                        <button class="bottomMenu">Favori</button>
+                        <button class="bottomMenu">Suprimer</button>
+                        <button class="bottomMenu">Télècharger</button>
+                        <button class="bottomMenu">Upload</button>
+
+                    </div>
+                    
+                    
+                    
+                    
+
+            
+        </nav>
+
+    
+   <!-- ?php include("Com/main.php"); ?> -->
     
     <!-- Le pied de page -->
     
-    <footer id="pied_de_page">
+    <!-- <footer id="pied_de_page">
         <p>Copyright moi, tous droits réservés</p>
-    </footer>
-
-
-</LAYER>
+    </footer> -->
         
     </body>
 </html>

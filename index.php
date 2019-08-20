@@ -176,13 +176,13 @@ if (isset($_POST['DemandeConexion'])) {
     
         <form action="" method="post">
         <table><tr><td>
-            Pseudo: </td><td><input type="text" name="PseudConnect" placeholder="pseudo"></td></tr>
-            <tr><td>Mot de passe:</td><td> <input type="password" name="PassConnect" placeholder="Mot de passe"></td></tr><tr></tr>
+            Pseudo: </td><td><input type="text" name="PseudConnect" placeholder="pseudo" class="texteBase"></td></tr>
+            <tr><td>Mot de passe:</td><td> <input type="password" name="PassConnect" placeholder="Mot de passe" class="texteBase"></td></tr><tr></tr>
     
             <tr><td><input type="checkbox" id="SaveMe" name="SaveMe" checked>
             <label for="SaveMe">Se souvenir de moi</label></td></tr>
             </table><br>
-            <input type="submit" name="DemandeConexion" value="Connexion">
+            <input type="submit" name="DemandeConexion" value="Connexion" class="buttonBase">
             
     
         </form><br>
