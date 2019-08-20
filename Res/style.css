@@ -1,3 +1,9 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: Arial black, Arial,;
+}
 .colorTitle
 {
     color: #54C472; / define les <p></p> en bleu 
@@ -9,14 +15,9 @@
 }
 .BackgroundB
 {	
-	background-position: center;
-	width: 30%;
-	min-width: 400px;
-	border-radius: 10px;
-	border: 3px black groove;
+	background-position: left;
 	background-color: #3D3D3D; 
     color: white;
-    margin: auto;
 }
 .CupeInfo
 {	
@@ -64,4 +65,322 @@
 	background-color: #3D3D3D; 
     color: white;
     margin: auto;
+}
+
+/* ------- Entre Texte --------------*/
+
+.texteBase
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
+.texteBase:hover
+{
+  border: 3px #54C472 groove;
+  background-color: #2F2F2F;
+  color: #54C472;
+}
+.texteBase:active	
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
+.texteBase:focus	
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
+.texteBase:visited	
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
+/* ------- Bouton base ----------*/
+
+.buttonBase
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px #54C472 solid;
+  background-color: #54C472;
+  padding-left:8px;
+}
+.buttonBase:hover
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 3px green solid;
+  background-color: green;
+  padding-left:8px;
+}
+
+
+
+/* ------- Création du menu ----------*/
+
+#menu
+{
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+    min-width: 30vh;
+    max-width: 30vh;
+    position: fixed;
+    background-color: #3D3D3D;
+    height: 100vh;
+    overflow: visible;
+    border-right: 0.6vh black solid;
+}
+.link
+{
+
+	width: 100%;
+	height: 350px;
+}
+
+.linkSelect
+{
+  border-top: none; 
+  border-bottom: none; 
+  border-right: none; 
+  border-left: none; 
+  text-decoration: none;
+  font-style: bold;
+  color: white;
+  font-size: 3vh;
+  text-align: center;
+  margin-top: 1vh;
+  list-style-type: none;
+  overflow: visible;
+  width: 32vh;
+  height: 3vh;
+  position: relative;
+  background: #3A874E;
+}
+.linkSelect:after
+{
+  overflow: visible;
+  content: "";
+  position: absolute;
+  right: -1.5vh;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.5vh solid #3A874E;
+  border-top: 1.5vh solid transparent;
+  border-bottom: 1.5vh solid transparent;
+}
+.linkSelect:hover
+{
+  background: #4AAD64;
+}
+.linkSelect:hover:after
+{
+  border-left: 1.5vh solid #4AAD64;
+}
+
+.linkSelect:nth-child(1)
+{
+	width: 33vh;
+	height: 4vh;
+}
+.linkSelect:nth-child(1):hover
+{
+	 background: #3A874E;
+}
+.linkSelect:nth-child(1):after
+{
+  right: -2vh;
+  border-left: 2vh solid #3A874E;
+  border-top: 2vh solid transparent;
+  border-bottom: 2vh solid transparent;
+}
+.linkSelect:nth-child(1):hover:after
+{
+  border-left: 2vh solid #3A874E;
+}
+
+.linkSelect:nth-child(2)
+{
+	margin-top: 2vh;
+	font-size: 2.3vh;
+}
+
+.linkSelect:nth-child(3)
+{
+	margin-top: 2vh;
+	font-size: 2.3vh;
+}
+
+.linkSelect:nth-child(4)
+{
+	margin-top: 2vh;
+	font-size: 2.3vh;
+}
+
+.linkSelect:nth-child(5)
+{
+	margin-top: 2vh;
+	font-size: 2.3vh;
+}
+
+.linkSelect:nth-child(6)
+{
+	margin-top: 2vh;
+	font-size: 2.3vh;
+	margin-bottom: 1.5vh;
+}
+
+.separationA
+{
+	text-align: center;
+	padding-left: 4.5vh;
+	padding-right: 4.5vh;
+	padding-top: 1vh; 
+	border-top: 0.4vh black solid;
+	padding-bottom: 1vh; 
+	border-bottom: 0.4vh black solid;
+}
+
+.infoUser
+{ 
+	font-style: bold;
+	font-size: 2.3vh;
+	color: red;
+	padding-top: 1vh; 
+}
+
+.imageUser
+{
+  overflow: hidden;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background:#3D3D3D;
+  border-radius:50%;
+  width:20vh;
+  height:20vh;
+  border:0.5vh solid black; 
+}
+.image
+{
+	width:100%; 
+	height:100%;
+}
+
+.UserName
+{
+	font-style: bold;
+	font-size: 2.3vh;
+	color: white;
+	margin-bottom: 1vh;
+}
+
+.bottomDisconect
+{
+	margin-top: 1vh;
+	padding: 0.5vh;
+	font-size: 1.7vh;
+  	border-radius: 22vh;
+  	border: 3px black solid;
+  	background-color: #2F2F2F;
+  	padding-left:8px;
+  	color: red;
+
+}
+.bottomDisconect:hover
+{
+	margin-top: 1vh;
+	padding: 0.5vh;
+	font-size: 1.7vh;
+  	border-radius: 22vh;
+  	border: 3px black solid;
+  	background-color: #262626;
+  	padding-left:8px;
+  	color: red;
+
+}
+
+.separationB
+{
+	text-align: center;
+	padding-top: 1vh;
+	padding-left: 10vh;
+	padding-right: 10vh;
+}
+.bottomMenu
+{
+  color: white;
+  text-align: center; 
+  margin-left: -6vh;
+  list-style-type: none;
+  overflow: visible;
+  width: 22vh;
+  height: 3vh;
+  position: relative;
+  background: #3A874E;
+  border-top: none; 
+  border-bottom: none; 
+  border-right: none; 
+  border-left: none; 
+  margin-bottom: 1vh;
+  font-size: 2vh;
+}
+
+.bottomMenu:before
+{
+  overflow: visible;
+  content: "";
+  position: absolute;
+  right: 22vh;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 1.5vh solid #3A874E;
+  border-top: 1.5vh solid transparent;
+  border-bottom: 1.5vh solid transparent;
+}
+
+.bottomMenu:after
+{
+  overflow: visible;
+  content: "";
+  position: absolute;
+  right: -1.5vh;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 1.5vh solid #3A874E;
+  border-top: 1.5vh solid transparent;
+  border-bottom: 1.5vh solid transparent;
+}
+.bottomMenu:hover
+{
+	font-size: 2.2vh;
+	background: green;
+}
+.bottomMenu:hover:before
+{
+	border-right: 1.5vh solid green;	
+}
+.bottomMenu:hover:after
+{
+	border-left: 1.5vh solid green;	
 }
