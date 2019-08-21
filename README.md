@@ -1,9 +1,17 @@
 # High media serveur
 
+V - 0.0.08A
+
+- Bouton Uplaod du menu et fonctionelle
+- Modification Des cripte son en inclûde
+- Correction le mode inviter fonctione
+- Ajout du popup d'upload
+- Ajout d'un popup de conexion 
+
 v - 0.0.07A
 
 - Ajout de l'image utilisateur par default
-- Ajout des vouton interactive "Dossier,Favori,Suprimer,Télècharger,Upload"
+- Ajout des vouton interactive "Dossier,Fa vori,Suprimer,Télècharger,Upload"
 - Ajout du texte d'identification
 - Ajout du placement pour l'image
 - Ajout d'un bouton "Proposition"	non fonctionelle

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 18 août 2019 à 17:29
+-- Généré le :  mer. 21 août 2019 à 20:00
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -96,6 +96,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `Repertoire` text NOT NULL,
   `Genre` varchar(255) DEFAULT NULL,
   `Type` varchar(255) DEFAULT NULL,
+  `Proprietaire` text NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -103,12 +104,12 @@ CREATE TABLE IF NOT EXISTS `video` (
 -- Déchargement des données de la table `video`
 --
 
-INSERT INTO `video` (`ID`, `titre`, `SousTitre`, `Saison`, `Episode`, `Repertoire`, `Genre`, `Type`) VALUES
-(1, 'Dog Days', 'NoValide', 1, 1, 'upload/Video//Dog Days/S1//Dog_Days_01_Vostfr.mp4', 'NoValide', 'NoValide'),
-(2, 'Dog Days', 'NoValide', 1, 2, 'upload/Video//Dog Days/S1//Dog_Days_02_Vostfr.mp4', 'NoValide', 'NoValide'),
-(3, 'Dororo', 'NoValide', 1, 1, 'upload/Video//Dororo/S1//Dororo 01 VOSTFR.mp4', 'NoValide', 'NoValide'),
-(4, 'Dog Days', 'NoValide', 1, 3, 'upload/Video//Dog Days/S1//Dog_Days_03_Vostfr.mp4', 'NoValide', 'NoValide'),
-(5, 'Dog Days', 'NoValide', 1, 5, 'upload/Video//Dog Days/S1//Dog_Days_05_Vostfr.mp4', 'NoValide', 'NoValide');
+INSERT INTO `video` (`ID`, `titre`, `SousTitre`, `Saison`, `Episode`, `Repertoire`, `Genre`, `Type`, `Proprietaire`) VALUES
+(1, 'Dog Days', 'NoValide', 1, 1, 'upload/Video//Dog Days/S1//Dog_Days_01_Vostfr.mp4', 'NoValide', 'NoValide', ''),
+(2, 'Dog Days', 'NoValide', 1, 2, 'upload/Video//Dog Days/S1//Dog_Days_02_Vostfr.mp4', 'NoValide', 'NoValide', ''),
+(3, 'Dororo', 'NoValide', 1, 1, 'upload/Video//Dororo/S1//Dororo 01 VOSTFR.mp4', 'NoValide', 'NoValide', ''),
+(4, 'Dog Days', 'NoValide', 1, 3, 'upload/Video//Dog Days/S1//Dog_Days_03_Vostfr.mp4', 'NoValide', 'NoValide', ''),
+(5, 'Dog Days', 'NoValide', 1, 5, 'upload/Video//Dog Days/S1//Dog_Days_05_Vostfr.mp4', 'NoValide', 'NoValide', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
