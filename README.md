@@ -1,7 +1,15 @@
 # High media serveur
 
+V - 0.0.09A
+
+- Ajout de bouton pour choisire le nombre de  bouton voulue
+- Ajout du début d'upload
+- Ajout de la fenetre d'upload de nouvau fichier
+- correction le bouton connect est placé correctement
+
 V - 0.0.08A
 
+- Ajout du bouton connexion si déconecter
 - Bouton Uplaod du menu et fonctionelle
 - Modification Des cripte son en inclûde
 - Correction le mode inviter fonctione
