@@ -197,87 +197,25 @@ function newBonus(num) {
 
 
 
-function _(el) {
-  return document.getElementById(el);
-}
+var form = document.forms.namedItem("formUpload");
+form.addEventListener('submit', function(ev) {
 
-async function uploadFile() {
+  var
+    oOutput = document.getElementById("output"),
+    oData = new FormData(document.forms.namedItem("formUpload"));
 
-	if (totalVideo >= 1 && Envoi == 0) 
-		{ 
-			file = _("fileUpload").files[0];
-			uploadEvent(file,"fileUpload")
-		 };
+  oData.append("CustomField", "This is some extra data");
 
-	if ((totalVideo >= 2) && (Envoi == 1)) 
-		{ 
-			file = _("fileUpload2").files[0];
-			uploadEvent(file,"fileUpload2")
-		 };
+  var oReq = new XMLHttpRequest();
+  oReq.open("POST", "upload/upload.php", true);
+  oReq.onload = function(oEvent) {
+    if (oReq.status == 200) {
+      alert("Uploaded")
+    } else {
+      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+    }
+  };
 
-	if (totalVideo >= 3 && (Envoi == 2)) 
-		{ 
-			file = _("fileUpload3").files[0];
-			uploadEvent(file,"fileUpload3")
-		 };
- 
-}
-
-function uploadEvent(file,originelle) {
-
-	 
-  var formdata = new FormData();
-  formdata.append(originelle, file);
-  var ajax = new XMLHttpRequest();
-  if (originelle === "fileUpload") {
-  ajax.upload.addEventListener("progress",  progressHandler, false);
-  }
-
-  if (originelle === "fileUpload2") {
-  ajax.upload.addEventListener("progress",  progressHandler2, false);
-  }
-
-  if (originelle === "fileUpload3") {
-  ajax.upload.addEventListener("progress",  progressHandler3, false);
-  }
-
-  ajax.addEventListener("load", completeHandler, false);
-  ajax.addEventListener("error", errorHandler, false);
-  ajax.addEventListener("abort", abortHandler, false);
-  ajax.open("POST", "upload/upload.php"); // http://www.developphp.com/video/JavaScript/File-Upload-Progress-Bar-Meter-Tutorial-Ajax-PHP
-  //use file_upload_parser.php from above url
-  ajax.send(formdata);
-
-  
-
-}
-
-function progressHandler(event) {
-  var percent = (event.loaded / event.total) * 100;
-  _("progress1").value = Math.round(percent);
-}
-
-function progressHandler2(event) {
-  var percent2 = (event.loaded / event.total) * 100;
-  _("progress2").value = Math.round(percent2);
-}
-
-function progressHandler3(event) {
-  var percent3 = (event.loaded / event.total3) * 100;
-  _("progress3").value = Math.round(percent);
-}
-
-function completeHandler(event) {
-  _("progress1").value = 0; //wil clear progress bar after successful upload
-  Envoi++
-  uploadFile()
-  
-}
-
-function errorHandler(event) {
-  _("status").innerHTML = "Upload Failed";
-}
-
-function abortHandler(event) {
-  _("status").innerHTML = "Upload Aborted";
-}
+  oReq.send(oData);
+  ev.preventDefault();
+}, false);
