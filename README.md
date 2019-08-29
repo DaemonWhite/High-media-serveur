@@ -2,7 +2,10 @@
 
 V - 0.0.09A
 
-- Ajout de bouton pour choisire le nombre de  bouton voulue
+- Ahout du début du multi upload
+- Ajout du nombre épisode mit de manière logique
+- Ajout disparition des bouton - de manière procéduralle
+- Ajout de bouton pour choisire le nombre de video voulue
 - Ajout du début d'upload
 - Ajout de la fenetre d'upload de nouvau fichier
 - correction le bouton connect est placé correctement
