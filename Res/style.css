@@ -532,7 +532,7 @@ body
   border-left: 2vh solid green;
 }
 
-.boutonUpload:nth-child(5)
+.boutonUpload[id="exit"]
 {
   margin-left: 12%;
   margin-bottom: 6%;
@@ -540,7 +540,7 @@ body
   height: 4vh;
   font-size: 2.4vh;
 }
-.boutonUpload:nth-child(5):before
+.boutonUpload[id="exit"]:before
 {
   right: 20vh;
   border-right: 2vh solid #3A874E;
@@ -548,7 +548,7 @@ body
   border-bottom: 2vh solid transparent;
 }
 
-.boutonUpload:nth-child(5):after
+.boutonUpload[id="exit"]:after
 {
   right: -2vh;
   border-left: 2vh solid #3A874E;
@@ -556,49 +556,79 @@ body
   border-bottom: 2vh solid transparent;
 }
 
-.boutonUpload:nth-child(5):hover:before
+.boutonSubmit[id="exit"]:hover:before
 {
   border-right: 2vh solid green;
 }
 
-.boutonUpload:nth-child(5):hover:after
+.boutonSubmit[id="exit"]:hover:after
 {
   border-left: 2vh solid green;
 }
 
-.boutonUpload:nth-child(6)
+.boutonSubmit
 {
-  margin-left: 12%;
-  margin-bottom: 6%;
+  margin-left: 17%;
+  margin-top: 6%;
+  color: white;
+  text-align: center; 
+  list-style-type: none;
+  overflow: visible;
   width: 20vh;
   height: 4vh;
+  position: relative;
+  background: #3A874E;
+  border-top: none; 
+  border-bottom: none; 
+  border-right: none; 
+  border-left: none; 
   font-size: 2.4vh;
 }
-.boutonUpload:nth-child(6):before
+
+.boutonSubmit:before
 {
+  overflow: visible;
+  content: "";
+  position: absolute;
   right: 20vh;
+  bottom: 0;
+  width: 0;
+  height: 0;
   border-right: 2vh solid #3A874E;
   border-top: 2vh solid transparent;
   border-bottom: 2vh solid transparent;
 }
 
-.boutonUpload:nth-child(6):after
+.boutonSubmit:after
 {
+  overflow: visible;
+  content: "";
+  position: absolute;
   right: -2vh;
+  bottom: 0;
+  width: 0;
+  height: 0;
   border-left: 2vh solid #3A874E;
   border-top: 2vh solid transparent;
   border-bottom: 2vh solid transparent;
 }
 
-.boutonUpload:nth-child(6):hover:before
+.boutonSubmit:hover
+{
+  font-size: 2.5vh;
+  background-color: green;
+}
+
+.boutonSubmit:hover:before
 {
   border-right: 2vh solid green;
 }
 
-.boutonUpload:nth-child(6):hover:after
+.boutonSubmit:hover:after
 {
   border-left: 2vh solid green;
 }
+
 /*--------- Zone upload ------------*/
 
 .ecritureUp
