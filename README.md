@@ -2,7 +2,10 @@
 
 V - 0.0.09A
 
-- Ahout du début du multi upload
+- Ajout d'un debug qui empéche l'envoi de fichier vide
+- Ajout d'un debug qui permet de ne pas avoire le même episode sur la feille
+- Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre
+- Ajout du début du multi upload
 - Ajout du nombre épisode mit de manière logique
 - Ajout disparition des bouton - de manière procéduralle
 - Ajout de bouton pour choisire le nombre de video voulue
