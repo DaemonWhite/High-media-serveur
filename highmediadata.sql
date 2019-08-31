@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 21 août 2019 à 20:00
+-- Généré le :  sam. 31 août 2019 à 17:12
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -69,6 +69,9 @@ CREATE TABLE IF NOT EXISTS `titre` (
   `Format` int(11) NOT NULL COMMENT '0 = video 1 = music',
   `Nombre` int(11) NOT NULL DEFAULT '1',
   `Saison` int(11) DEFAULT NULL,
+  `Synopsis` text,
+  `Genre` varchar(255) NOT NULL,
+  `Type` varchar(255) NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -76,9 +79,9 @@ CREATE TABLE IF NOT EXISTS `titre` (
 -- Déchargement des données de la table `titre`
 --
 
-INSERT INTO `titre` (`id`, `nom`, `Format`, `Nombre`, `Saison`) VALUES
-(1, 'Dog Days', 0, 1, NULL),
-(2, 'Dororo', 0, 1, NULL);
+INSERT INTO `titre` (`id`, `nom`, `Format`, `Nombre`, `Saison`, `Synopsis`, `Genre`, `Type`) VALUES
+(1, 'Dog Days', 0, 1, NULL, NULL, 'Anime', 'no'),
+(2, 'Dog Day', 0, 1, NULL, 'L\'histoire de chien humanoÃ¯de.', 'Anime', 'no');
 
 -- --------------------------------------------------------
 
@@ -94,22 +97,21 @@ CREATE TABLE IF NOT EXISTS `video` (
   `Saison` int(11) NOT NULL DEFAULT '1',
   `Episode` int(11) NOT NULL DEFAULT '1',
   `Repertoire` text NOT NULL,
-  `Genre` varchar(255) DEFAULT NULL,
-  `Type` varchar(255) DEFAULT NULL,
   `Proprietaire` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `video`
 --
 
-INSERT INTO `video` (`ID`, `titre`, `SousTitre`, `Saison`, `Episode`, `Repertoire`, `Genre`, `Type`, `Proprietaire`) VALUES
-(1, 'Dog Days', 'NoValide', 1, 1, 'upload/Video//Dog Days/S1//Dog_Days_01_Vostfr.mp4', 'NoValide', 'NoValide', ''),
-(2, 'Dog Days', 'NoValide', 1, 2, 'upload/Video//Dog Days/S1//Dog_Days_02_Vostfr.mp4', 'NoValide', 'NoValide', ''),
-(3, 'Dororo', 'NoValide', 1, 1, 'upload/Video//Dororo/S1//Dororo 01 VOSTFR.mp4', 'NoValide', 'NoValide', ''),
-(4, 'Dog Days', 'NoValide', 1, 3, 'upload/Video//Dog Days/S1//Dog_Days_03_Vostfr.mp4', 'NoValide', 'NoValide', ''),
-(5, 'Dog Days', 'NoValide', 1, 5, 'upload/Video//Dog Days/S1//Dog_Days_05_Vostfr.mp4', 'NoValide', 'NoValide', '');
+INSERT INTO `video` (`ID`, `titre`, `SousTitre`, `Saison`, `Episode`, `Repertoire`, `Proprietaire`) VALUES
+(1, 'Dog Days', 'NoValide', 1, 1, 'Video/Dog Days/S1//Dog_Days_01_Vostfr.mp4', 'Anonyme'),
+(2, 'Dog Day', 'NoValide', 1, 1, 'Video/Dog Day/S1//Dog_Days_01_Vostfr.mp4', 'Anonyme'),
+(3, 'Dog Day', 'NoValide', 1, 2, 'Video/Dog Day/S1//Dog_Days_02_Vostfr.mp4', 'Anonyme'),
+(4, 'Dog Day', 'NoValide', 1, 3, 'Video/Dog Day/S1//Dog_Days_03_Vostfr.mp4', 'Anonyme'),
+(5, 'Dog Day', 'NoValide', 1, 4, 'Video/Dog Day/S1//Dog_Days_04_Vostfr.mp4', 'Anonyme'),
+(6, 'Dog Day', 'NoValide', 1, 5, 'Video/Dog Day/S1//Dog_Days_05_Vostfr.mp4', 'Anonyme');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

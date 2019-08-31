@@ -126,7 +126,7 @@ include("Com/verifiLoad.php");
                 <div class="upMargin">
                     
                     
-                    <div>
+                    <div align="center">
 
                         <div id="error"></div>
 
@@ -140,11 +140,19 @@ include("Com/verifiLoad.php");
                                 </tr>
                                 <div id="output"></div>
                                 <div class="progresseBar" >
-                                    <div id="progress1" style="width: 40%"></div>
+                                    <div id="progress1" style="width: 0%"></div>
                                 </div>
                                 <div>
                                     <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Titre" onblur="verif(this, 'titre', '0')">
-                                    <div align="center" id="ErrorTitle"></div>
+                                    <div class="classError" align="center" id="ErrorTitle"></div>
+                                </div>
+                                <div align="left">
+                                    <select name="Genre" class="selectBase">
+                                        <option value="Anime">Animé</option>
+                                        <option value="Docu">Documentaire</option>
+                                        <option value="Movie">Filme</option>
+                                        <option value="TV">Serie télè</option>
+                                    </select>
                                 </div>
                                 <tr>
                                     <td><input id="bouton1" type="button" onclick="newBonus(1)" class="buttonNew" value="+" style="display: ;" ></td>
@@ -262,6 +270,11 @@ include("Com/verifiLoad.php");
                                     <td><input type='hidden' id="nullUpload" name='MAX_FILE_SIZE' value='7516192768'></td>
                                 </tr>
                                 </table>
+                                <span class="ecritureUp" style="margin-top: 2%;">Synopsis</span>
+                                <div align="center">
+
+                                    <textarea class="textareaBase" name="Synopsis" placeholder="synopsis"></textarea>
+                                </div>
                                 <div>
 
                                     <button type="button" onclick="newUpload()" class="boutonSubmit" id="Upl" style="display: ;">Upload</button>
@@ -283,8 +296,6 @@ include("Com/verifiLoad.php");
 
         </section>
 
-
-        <script src="Res/Framework/jquery.js"></script>
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
         </script>

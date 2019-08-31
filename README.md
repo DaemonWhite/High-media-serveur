@@ -2,7 +2,11 @@
 
 V - 0.0.09A
 
-
+- Ajout du genre
+- Ajout du synopsice
+- Correction le modal Upload est désormer bien alligner au centre
+- Ajot du genre
+- Correction de la taille de la fenétre modale
 - Ajout de la barre de chargement + style css
 - Ajout d'un debug qui empéche l'envoi de fichier vide
 - Ajout d'un debug qui permet de ne pas avoire le même episode sur la feille
