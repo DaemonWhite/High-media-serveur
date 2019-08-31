@@ -131,6 +131,32 @@ body
 }
 
 
+/* -------Texte area base -----------*/
+
+.textareaBase
+{
+  width: 50vh;
+  height: 20vh;
+  resize: none;
+  padding: 1%;
+  margin-top: 2%;
+  background: #2d2d2d;
+  border: 2px #54C472 solid;
+  color: #54C472;
+  overflow: auto;
+}
+
+/* --------Selecte base ------------*/
+
+.selectBase
+{
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 2px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
 
 /* ------- Création du menu ----------*/
 
@@ -429,10 +455,10 @@ body
   display: column;
   color: black;
   overflow: auto;
-  min-width: calc(100vw - 50%);
+  min-width: calc(100vw - 40%);
+  max-width: calc(100vw - 15%);
   min-height: calc(100vh - 20%);
-  max-width: calc(100vw - 20px)
-  max-height: calc(100vh - 20px);
+  max-height: calc(100vh - 8%);
   background-color: #4a4a4a;
 }
 
@@ -568,7 +594,6 @@ body
 
 .boutonSubmit
 {
-  margin-left: 17%;
   margin-top: 6%;
   color: white;
   text-align: center; 
@@ -687,18 +712,16 @@ body
 }
 .progresseBar
 {
-  border: 2%;
+  border: 3px black groove;
   margin-top: 2%;
   height: 6%;  /* Can be anything */
   position: relative;
   background: #2d2d2d;
-  padding: 1%;
 
 }
 .progresseBar > div
 {
   display: block;
-  width: 20%;
   height: 1.5vh;
   background-color: rgb(194,43,43);
   box-shadow: 
@@ -706,4 +729,16 @@ body
     inset 0 -2px 6px rgba(0,0,0,0.4);
   position: relative;
   overflow: hidden;
+}
+
+.classError
+{
+
+  margin-right: 12%;
+  margin-left: 12%;
+  margin-bottom: 2%;
+  padding: 1%;
+  background: #2f2e2e;
+  color: #BC240D;
+
 }
