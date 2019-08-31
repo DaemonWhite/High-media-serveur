@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "User"
+		},
+		{
+			"path": "upload"
+		},
+		{
+			"path": "Res"
+		},
+		{
+			"path": "Com"
+		}
+	]
+}

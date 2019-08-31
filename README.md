@@ -1,7 +1,27 @@
 # High media serveur
 
+V - 0.0.09A
+
+- Ajout du genre
+- Ajout du synopsice
+- Correction le modal Upload est désormer bien alligner au centre
+- Ajot du genre
+- Correction de la taille de la fenétre modale
+- Ajout de la barre de chargement + style css
+- Ajout d'un debug qui empéche l'envoi de fichier vide
+- Ajout d'un debug qui permet de ne pas avoire le même episode sur la feille
+- Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre
+- Ajout du début du multi upload
+- Ajout du nombre épisode mit de manière logique
+- Ajout disparition des bouton - de manière procéduralle
+- Ajout de bouton pour choisire le nombre de video voulue
+- Ajout du début d'upload
+- Ajout de la fenetre d'upload de nouvau fichier
+- correction le bouton connect est placé correctement
+
 V - 0.0.08A
 
+- Ajout du bouton connexion si déconecter
 - Bouton Uplaod du menu et fonctionelle
 - Modification Des cripte son en inclûde
 - Correction le mode inviter fonctione

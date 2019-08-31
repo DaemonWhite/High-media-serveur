@@ -4,7 +4,7 @@ $moveUrl = "global.php";
 
 include("Com/Conexion.php");?>
 <!DOCTYPE html>
-<html>
+<html lang="fr-FR">
     <head>
         <meta charset="utf-8" />
         <title>HighMediaServeur - connexion</title>
@@ -107,9 +107,9 @@ include("Com/Conexion.php");?>
     
         </form><br>
     
-    
-        <li><a href="?invite=1" class="SelectionBase">Se connecter en temp que invité</a></li>
-    
+        <ul>
+            <li><a href="?invite=1" class="SelectionBase">Se connecter en temp que invité</a></li>
+        </ul>
         <!-- Le pied de page -->
         
         <footer id="pied_de_page">
