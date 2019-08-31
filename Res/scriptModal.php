@@ -8,6 +8,7 @@
 
 let modal = null
 let modalB = null
+let form, progressBare;
 var totalVideo = 1
 var Envoi = 0
 var Erreur = []
@@ -406,7 +407,8 @@ function newUpload() {
 	{
 		console.log(verifVideo.value)
 
-	var form = document.forms.namedItem("formUpload");
+	form = document.forms.namedItem("formUpload");
+	progressBare = document.getElementById("progress1");
 	
 	  var
 	    oOutput = document.getElementById("output"),
@@ -414,7 +416,25 @@ function newUpload() {
 	
 	  oData.append("CustomField", "This is some extra data");
 	
-	  var oReq = new XMLHttpRequest();
+	  let oReq = new XMLHttpRequest();
+	  oReq.upload.onloadstart = function (e) {
+	  	progressBare.style.display = null;
+	  	progressBare.style.width = "0%";
+	  	progressBare.max = e.total;
+	  	form.disabled = true;
+	  }
+
+	  oReq.upload.onprogress = function (e) {
+	  	var charge =  ((e.loaded / e.total)*100 )
+	  	progressBare.style.width = charge + "%";
+	  }
+
+	  oReq.upload.onloadend = function (e) {
+	  	form.disabled = true;
+	  }
+
+
+
 	  oReq.open("POST", "upload/upload.php", true);
 	  oReq.onload = function(oEvent) {
 	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
