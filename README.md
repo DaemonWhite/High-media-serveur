@@ -2,6 +2,8 @@
 
 V - 0.0.09A
 
+
+- Ajout de la barre de chargement + style css
 - Ajout d'un debug qui empéche l'envoi de fichier vide
 - Ajout d'un debug qui permet de ne pas avoire le même episode sur la feille
 - Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre

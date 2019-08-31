@@ -139,6 +139,9 @@ include("Com/verifiLoad.php");
                                     <td align="center"><span class="ecritureUp">Ajouter la video</span></td>
                                 </tr>
                                 <div id="output"></div>
+                                <div class="progresseBar" >
+                                    <div id="progress1" style="width: 40%"></div>
+                                </div>
                                 <div>
                                     <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Titre" onblur="verif(this, 'titre', '0')">
                                     <div align="center" id="ErrorTitle"></div>
@@ -151,9 +154,6 @@ include("Com/verifiLoad.php");
                                     <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload1" onchange="noVideo()"></td>
                                     <td><input type='hidden' id="fileUpload1" name='MAX_FILE_SIZE' value='7516192768'></td>
                                 </tr>
-                                
-                                <progress id="progress1" value="0" max="100">
-                                
     
                                 <tr id="bonus1" style="display: none;">
                                     <td><input id="bouton2" type="button" onclick="newBonus(2)" class="buttonNew" value="+" style="display: ;" ></td>
@@ -163,8 +163,6 @@ include("Com/verifiLoad.php");
                                     <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload2"></td>
                                     <td><input type='hidden' id="fileUpload2" name='MAX_FILE_SIZE' value='7516192768'></td>
                                 </tr>
-                                
-                                <progress id="progress2" value="0" max="100">
     
                                 <tr id="bonus2" style="display: none;" >
                                     <td><input id="bouton3" type="button" onclick="newBonus(3)" class="buttonNew" value="+" style="display: ;" ></td>
@@ -175,8 +173,6 @@ include("Com/verifiLoad.php");
                                     <td><input type='hidden' id="fileUpload3" name='MAX_FILE_SIZE' value='7516192768'></td>
                                 </tr>
                                 
-                                
-                                <progress id="progress3" value="0" max="100">
     
                                 <tr id="bonus3" style="display: none;" >
                                     <td><input id="bouton4" type="button" onclick="newBonus(4)" class="buttonNew" value="+" style="display: ;" ></td>
