@@ -4,6 +4,118 @@
 		"selected_items":
 		[
 			[
+				"mrgin",
+				"margin-bottom\tproperty"
+			],
+			[
+				"marg",
+				"margin-bottom\tproperty"
+			],
+			[
+				"E",
+				"Ep"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"pad",
+				"padding-bottom\tproperty"
+			],
+			[
+				"do",
+				"donnes"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"ma",
+				"margin-left\tproperty"
+			],
+			[
+				"en",
+				"entreVideo"
+			],
+			[
+				"on",
+				"onauxclick\tAttr"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"border-r",
+				"border-right\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"co",
+				"column\tflex-direction"
+			],
+			[
+				"fo",
+				"form"
+			],
+			[
+				"fl",
+				"flex-start\tjustify-content"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"pa",
+				"padding-left\tproperty"
+			],
+			[
+				"a",
+				"auto\tmargin"
+			],
+			[
+				"fle",
+				"flex-direction\tproperty"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"t",
+				"td\tTag"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"pro",
+				"progressBare"
+			],
+			[
+				"pr",
+				"progressBare"
+			],
+			[
+				"tmp",
+				"tmp_name"
+			],
+			[
+				"err",
+				"ErrorMessage"
+			],
+			[
 				"ver",
 				"verifVideo"
 			],
@@ -30,10 +142,6 @@
 			[
 				"get",
 				"getElementById"
-			],
-			[
-				"do",
-				"document"
 			],
 			[
 				"re",
@@ -112,24 +220,8 @@
 				"background-color\tproperty"
 			],
 			[
-				"mar",
-				"margin-bottom\tproperty"
-			],
-			[
-				"margin",
-				"margin-left\tproperty"
-			],
-			[
-				"pa",
-				"padding-left\tproperty"
-			],
-			[
 				"margin-",
 				"margin-left\tproperty"
-			],
-			[
-				"marg",
-				"margin\tproperty"
 			],
 			[
 				"g",
@@ -160,10 +252,6 @@
 				"box-shadow\tproperty"
 			],
 			[
-				"fo",
-				"focus"
-			],
-			[
 				"focu",
 				"FocusSelect"
 			],
@@ -174,10 +262,6 @@
 			[
 				"f",
 				"focusValide"
-			],
-			[
-				"pr",
-				"preventDefault"
 			],
 			[
 				"al",
@@ -194,10 +278,6 @@
 			[
 				"cl",
 				"closeModal"
-			],
-			[
-				"a",
-				"aria-hidden"
 			],
 			[
 				"ove",
@@ -224,10 +304,6 @@
 				"_COOKIE"
 			],
 			[
-				"ma",
-				"margin-top\tproperty"
-			],
-			[
 				"pan",
 				"padding\tproperty"
 			],
@@ -242,10 +318,6 @@
 			[
 				"di",
 				"div\tTag"
-			],
-			[
-				"se",
-				"section\tTag"
 			],
 			[
 				"els",
@@ -431,34 +503,25 @@
 			"file": "/D/Project/High-media-serveur/README.md",
 			"settings":
 			{
-				"buffer_size": 2341,
+				"buffer_size": 3101,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "global.php",
+			"file": "VLecteur.php",
 			"settings":
 			{
-				"buffer_size": 18006,
+				"buffer_size": 3339,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Res/popup.php",
+			"file": "video.php",
 			"settings":
 			{
-				"buffer_size": 2686,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 3467,
+				"buffer_size": 8503,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -467,7 +530,36 @@
 			"file": "upload/Upload.php",
 			"settings":
 			{
-				"buffer_size": 4997,
+				"buffer_size": 5572,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "  <section id=\"Upload\" class=\"modal-back\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"\" style=\"display: none;\">\n  \n          <div class=\"modal-bloc js-stope-modale\">\n              \n              <button id=\"#SUpload\"class=\"boutonUpload\">Créer une série</button>\n      \n              <form action=\"Upload/Upload.php?act=AddMovie\" method=\"post\">\n                  <button class=\"boutonUpload\">Ajouter un film</button>\n              </form>\n              <form action=\"Upload/Upload.php?act=AddEp\" method=\"post\">\n                  <button class=\"boutonUpload\">Ajouter un épisode</button>\n              </form>\n              <button class=\"boutonUpload js-close-modale\">Fermer</button>\n          \n      \n          </div>\n      \n  </section>\n  \n<section id=\"SUpload\" class=\"modal-back\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"\" style=\"display: none;\">\n      \n      <div class=\"modal-bloc js-stope-modale\">\n  \n          <div class=\"upMargin\">\n              \n              \n              <div align=\"center\">\n  \n                  <div id=\"error\"></div>\n  \n                  <form action=\"global.php\" name=\"formUpload\" method=\"post\" enctype=\"multipart/form-data\">\n                      <table>\n                          <tr><td></td>\n                              <td align=\"center\"><span class=\"ecritureUp\">Episode</span></td>\n                              <td align=\"center\"><span class=\"ecritureUp\">Saison</span></td>\n                              <td align=\"center\"><span class=\"ecritureUp\">Titre Secondaire</span></td>\n                              <td align=\"center\"><span class=\"ecritureUp\">Ajouter la video</span></td>\n                          </tr>\n                          <div id=\"output\"></div>\n                          <div class=\"progresseBar\" >\n                              <div id=\"progress1\" style=\"width: 0%\"></div>\n                          </div>\n                          <div>\n                              <input class=\"texteBase\" id=\"title\" type=\"text\" name=\"nameSerie\" placeholder=\"Titre\" onblur=\"verif(this, 'titre', '0')\">\n                              <div class=\"classError\" align=\"center\" id=\"ErrorTitle\"></div>\n                          </div>\n                          <div align=\"left\">\n                              <select name=\"Genre\" class=\"selectBase\">\n                                  <option value=\"Anime\">Animé</option>\n                                  <option value=\"Docu\">Documentaire</option>\n                                  <option value=\"Movie\">Filme</option>\n                                  <option value=\"TV\">Serie télè</option>\n                              </select>\n                          </div>\n                          <tr>\n                              <td><input id=\"bouton1\" type=\"button\" onclick=\"newBonus(1)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep1\" class=\"EpisodeSize\" type=\"number\" name=\"Ep1\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','1')\" value=\"1\"></td>\n                              <td><input id=\"S1\" class=\"EpisodeSize\" type=\"number\" name=\"Saison01\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload1\" onchange=\"noVideo()\"></td>\n                              <td><input type='hidden' id=\"fileUpload1\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n      \n                          <tr id=\"bonus1\" style=\"display: none;\">\n                              <td><input id=\"bouton2\" type=\"button\" onclick=\"newBonus(2)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep2\" class=\"EpisodeSize\" type=\"number\" name=\"Ep2\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','2')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison02\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload2\"></td>\n                              <td><input type='hidden' id=\"fileUpload2\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n      \n                          <tr id=\"bonus2\" style=\"display: none;\" >\n                              <td><input id=\"bouton3\" type=\"button\" onclick=\"newBonus(3)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep3\" class=\"EpisodeSize\" type=\"number\" name=\"Ep3\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','3')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison03\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload3\"></td>\n                              <td><input type='hidden' id=\"fileUpload3\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                          \n      \n                          <tr id=\"bonus3\" style=\"display: none;\" >\n                              <td><input id=\"bouton4\" type=\"button\" onclick=\"newBonus(4)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep4\" class=\"EpisodeSize\" type=\"number\" name=\"Ep4\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','4')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison04\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload4\"></td>\n                              <td><input type='hidden' id=\"fileUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus4\" style=\"display: none;\" >\n                              <td><input id=\"bouton5\" type=\"button\" onclick=\"newBonus(5)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep5\" class=\"EpisodeSize\" type=\"number\" name=\"Ep5\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','5')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison05\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload5\"></td>\n                              <td><input type='hidden' id=\"fileUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus5\" style=\"display: none;\" >\n                              <td><input id=\"bouton6\" type=\"button\" onclick=\"newBonus(6)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep6\" class=\"EpisodeSize\" type=\"number\" name=\"Ep6\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','6')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison06\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload6\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus6\" style=\"display: none;\" >\n                              <td><input id=\"bouton7\" type=\"button\" onclick=\"newBonus(7)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep7\" class=\"EpisodeSize\" type=\"number\" name=\"Ep7\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','7')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison07\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload7\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus7\" style=\"display: none;\" >\n                              <td><input id=\"bouton8\" type=\"button\" onclick=\"newBonus(8)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep8\" class=\"EpisodeSize\" type=\"number\" name=\"Ep8\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','8')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison08\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload8\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus8\" style=\"display: none;\" >\n                              <td><input id=\"bouton9\" type=\"button\" onclick=\"newBonus(9)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep9\" class=\"EpisodeSize\" type=\"number\" name=\"Ep9\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','9')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison09\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload9\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                  \n      \n                          <tr id=\"bonus9\" style=\"display: none;\" >\n                              <td><input id=\"bouton10\" type=\"button\" onclick=\"newBonus(10)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep10\" class=\"EpisodeSize\" type=\"number\" name=\"Ep10\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','10')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison10\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload10\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n      \n                          <tr id=\"bonus10\" style=\"display: none;\">\n                              <td><input id=\"bouton11\" type=\"button\" onclick=\"newBonus(11)\" class=\"buttonNew\" value=\"+\" style=\"display: ;\" ></td>\n                              <td><input id=\"Ep11\" class=\"EpisodeSize\" type=\"number\" name=\"Ep11\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','11')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison11\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload11\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n      \n      \n                          <tr id=\"bonus11\" style=\"display: none;\">\n                              <td></td>\n                              <td><input id=\"Ep12\" class=\"EpisodeSize\" type=\"number\" name=\"Ep12\" min=\"1\" max=\"1000\" onblur=\"verif(this,'numero','12')\"></td>\n                              <td><input class=\"EpisodeSize\" type=\"number\" name=\"Saison12\" min=\"1\" max=\"50\" value=\"1\"></td>\n                              <td><input class=\"texteBase\" id=\"subTitle\" type=\"text\" name=\"titleName\" placeholder=\"Titre Secondaire\"></td>\n                              <td><input class=\"buttonBase\" type=\"file\" name=\"Video[]\" id=\"fileUpload12\"></td>\n                              <td><input type='hidden' id=\"nullUpload\" name='MAX_FILE_SIZE' value='7516192768'></td>\n                          </tr>\n                          </table>\n                          <span class=\"ecritureUp\" style=\"margin-top: 2%;\">Synopsis</span>\n                          <div align=\"center\">\n  \n                              <textarea class=\"textareaBase\" name=\"Synopsis\" placeholder=\"synopsis\"></textarea>\n                          </div>\n                          <div>\n  \n                              <button type=\"button\" onclick=\"newUpload()\" class=\"boutonSubmit\" id=\"Upl\" style=\"display: ;\">Upload</button>\n                              <button type=\"button\" class=\"boutonUpload js-close-modale\" id=\"exit\">Fermer</button></br>\n      \n                          </div>\n                      </form>\n                      \n              </div>        \n  \n          </div>\n  \n      </div>\n\n  \n</section>",
+			"file": "Res/popUpload.php",
+			"file_size": 14433,
+			"file_write_time": 132118176685520016,
+			"settings":
+			{
+				"buffer_size": 14231,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "global.php",
+			"settings":
+			{
+				"buffer_size": 3328,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleVideo.css",
+			"settings":
+			{
+				"buffer_size": 1171,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -476,62 +568,7 @@
 			"file": "Res/style.css",
 			"settings":
 			{
-				"buffer_size": 10924,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptModal.php",
-			"settings":
-			{
-				"buffer_size": 7791,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Com/TestNewPassWord.php",
-			"settings":
-			{
-				"buffer_size": 16871,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Com/Conexion.php",
-			"settings":
-			{
-				"buffer_size": 3382,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\n/*\nUtilise le fichier \"Php_Upload/UploadAjaxABCI_Upload.php\" comme destination ajax\n*/\n\nsession_start();\nheader('Content-type: text/html; charset=UTF-8'); // Inutile depuis php 5.6\n\n// Charge les classes php avec spl_autoload_register\nspl_autoload_register(function ($class) {require 'Php_Upload/Classes/' . $class . '.php';});\n\n// Initialise la classe de services pour les fonctions \"returnOctets()\" et \"getUniqid()\"\n$up = new UploadABCIServices();\n\n// Défini la taille des fragments à 8 Mo\n$UpAbci_fragmentSize = $up->returnOctets('8M'); /* Taille maximale des fragments de fichier. Détermine la fréquence de sauvegarde du fichier en cours d'upload (le fichier temporaire est sauvegardé à chaque fragment complet envoyé) et donc le nombre de requêtes ajax nécessaires à l'upload total. Utile pour limiter la taille des fragments pour les serveur qui ont une valeur \"upload_max_filesize\" importante sinon les sauvegardes seraient peu fréquentes. \n\nLa taille des fragments doit évidemment être inférieure à \"upload_max_filesize\" et \"post_max_size\" sinon elle n'est pas prise en compte dans le code ci-dessous.\n*/\n\n// Vérifie si $UpAbci_fragmentSize n'est pas supérieur aux limites du serveur\n$upload_max_filesize = min($up->returnOctets(ini_get('upload_max_filesize')), $up->returnOctets(ini_get('post_max_size')));$UpAbci_fragmentSize = !empty($UpAbci_fragmentSize) && $upload_max_filesize > $UpAbci_fragmentSize ? $UpAbci_fragmentSize : $upload_max_filesize;\n\n$UpAbci_uniqidForm = $up->getUniqid();\n\n// Jeton de formulaire\n$_SESSION['UploadAjaxABCI'][$UpAbci_uniqidForm]['token'] = 1;\n\n?>\n<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"UTF-8\" />\n<meta name=viewport content=\"width=device-width, initial-scale=1\">\n<title>Upload Ajax ABCIWEB</title>\n<link rel=\"icon\" type=\"image/png\" href=\"Javascript/Images/favicon.png\" />\n\n<style>\nhtml {\n\tfont-family:Arial, Helvetica, sans-serif;\n\tfont-size:0.95em;\n\tline-height:1.6em;\n}\n\n.formajaxabci input[type=submit] {\n\twidth:100px;\n\tfont-size:1.2em;\n}\n\n.formajaxabci input[type=button]:not(.bouton_fichiers){\n\tfont-family:Arial, Helvetica, sans-serif;\n\tfont-size:0.8em;\n}\n\n.formajaxabci p, .reponse_form p {\n\tmargin:0;\n\tpadding:0;\n}\n\n.UpAbci_infosFile {\n\tword-wrap:break-word;\t\n}\n\n.UpAbci_infosFile progress { \n\twidth:100px;\n}\n</style>\n</head>\n\n<body>\n<h3 style=\"margin-top:2em;line-height:1.8em\">\nUtilisation des classes prédéfinies pour afficher les informations spécifiques aux fichiers.<br>\nStyles événementiels pour modifier l'affichage des éléments du formulaire en fonction du traitement en cours.<br>\nExemples simples de configuration des options javascript.<br>\nConsultez également le fichier serveur pour des exemples type d'utilisation de la classe serveur.\n</h3>\n\n<div style=\"margin-top:2em\">\nChaque formulaire supporte l'upload multiple et possède des comportements d'affichage spécifiques <strong>commentés dans le code source</strong>. Notez bien que tous les éléments inclus dans le bloc conteneur des résultats, renseigné en troisième paramètre dans l'initialisation de la classe javascript, sont rafraichis à chaque sélection de fichiers.\n<br>\n<br>\nLes boutons de sélection customisés acceptent les comportements onclick et drag and drop.<br>\n<br>\nPour supprimer la possibilité d'upload multiple, il suffit de supprimer la propriété multiple=\"multiple\" de l'input de type file dans le html. Certains formulaires comportent une limitation concernant les extensions acceptées. Dans ce cas, il serait judicieux d'utiliser en complément l'attribut <strong>accept</strong> dans le champ de type file, pour guider le visiteur dans le choix de ses fichiers. \n<br><br>\nVous pouvez ajouter d'autres champs dans le formulaire, ils seront transmis automatiquement par la requête ajax et seront disponibles côté serveur dans la super globale $_POST. La notation tableau est supportée. <a href=\"index.html#form_champs_sup\" target=\"_blank\">Plus d'informations ici</a>.\n<br><br>\n<strong>Consultez le fichier d'upload</strong> \"Php_Upload/UploadAjaxABCI_Upload.php\" pour voir les méthodes utilisées côté serveur : récupération des paramètres de la requête Ajax, définition de la destination des fichiers, retours d'informations serveur dans le statut des fichiers et dans le bloc ayant la classe \"UpAbci_infosServer\", contrôles,  renommage des fichiers, etc. \n<br><br>Pour les exemples ci-dessous, les fichiers sont renommés en cas de doublon sur le serveur. Voir le fichier d'exemple \"UploadAjaxABCI_Custom_VerifFileExist.php\" pour laisser au visiteur le choix d'écraser (ou non) un fichier existant.\n</div>\n\n\n\n<!-- Dans les deux premiers exemples ci-dessous, la liste des fichiers sélectionnés et donc les informations spécifiques aux fichiers sont situées à l'extérieur du formulaire. C'est une possibilité que la classe javascript gère de façon transparente, en fonction du troisième paramètre indiqué lors de l'initialisation de la classe javascript. -->\n\n\n\n\n<!-- FORMULAIRE 2 -->\n\n<!-- Même exemple avec deux champs de type file et si erreur (extension ou autre) on affichera le statut en rouge. La configuration javascript restreint les extension autorisées en fonction du nom des inputs de type file.\n\n- Pour l'exemple les fichiers téléchargés depuis le champ nommé \"upload_2\" seront téléchargés dans le dossier \"Destination_Upload2\". C'est une possibilité configurable côté serveur en exemple dans le fichier \"UploadAjaxABCI_Upload.php\" -->\n\n<form class=\"formajaxabci\" id=\"form_files2\" action=\"#\" method=\"post\" style=\"margin-top:2em;\"> \n <fieldset style=\"color:#900;border:3px solid #900;border-radius:5px;padding:1em\">\n    <legend>Upload 2 : limité aux extensions jpg, jpeg, png, gif pour le premier champ et limité aux extensions pdf pour le second champ</legend>\n     <input type=\"file\" multiple=\"multiple\" name=\"upload_1\" style=\"display:none\">\n     <input type=\"file\" multiple=\"multiple\" name=\"upload_2\" style=\"display:none\">\n     <input type=\"hidden\" name=\"UpAbci_uniqidForm\" value=\"<?=$UpAbci_uniqidForm?>\">\n     <input type=\"hidden\" name=\"UpAbci_fragmentSize\" value=\"<?=$UpAbci_fragmentSize?>\">\n     \n\t<!-- les boutons personnalisés ci-dessous remplaceront les boutons d'upload standards des champs de type file grâce à l'option de configuration \"config.customFileSelect\" déclarée en javascript plus bas -->\n     <input type=\"button\" value=\"Charger vos fichiers images\" class=\"bouton_fichiers\" style=\"background-color:#FC0;border-radius:7px;height:2.5em;font-size:1.2em;cursor:pointer\">\n     <input type=\"button\" value=\"Charger vos fichiers PDF\" class=\"bouton_fichiers\" style=\"background-color:#F90;border-radius:7px;height:2.5em;font-size:1.2em;cursor:pointer\">\n\n     <input type=\"submit\" value=\"Envoyer\" style=\"color:#900;height:2.5em;border-radius:7px;cursor:pointer\">\n </fieldset>\n</form>\n\n<!-- Le bloc conteneur des informations s'affichera ici à la sélection des fichiers avec \"data-upabcicss-select-file\" et à la soumission du formulaire avec \"data-upabcicss-submit\".\n\nL'affichage de ce bloc d'information à la soumission du formulaire avec le style événementiel avec data-upabcicss-submit (donc même si aucun fichier n'a été sélectionné) est ici nécessaire si je souhaite faire afficher une information en retour dans tous les cas de figure, avec ou sans fichier joint au formulaire.\n-->\n<div class=\"reponse_form\" id=\"reponse_upload2\" style=\"display:none;margin-bottom:10px;margin-top:10px;border-bottom:2px solid #900;padding:1em;\" data-upabcicss-select-file=\"display:block\" data-upabcicss-submit=\"display:block\">\n\t\n    <!-- retour d'informations générales du formulaire alimenté par retour ajax. Le fichier php de traitement (UploadAjaxABCI_Upload.php) renvoie actuellement 'Aucun fichier traité' si aucun fichier n'a été soumis -->\n    <div class=\"UpAbci_infosServer\" style=\"display:none;color:#900;font-size:large\" data-upabcicss-infos-server=\"display:block\"></div>\n\n\t<!-- bloc conteneur des informations d'un fichier (sera dupliqué par la classe si upload multiple). -->\n    <div class=\"UpAbci_infosFile\" style=\"margin-top:10px;display:none\" data-upabcicss-select-file=\"display:block\">\n     \n     \t<!-- lien arrêt, affiché en transparence 0.5 si résultat (= upload terminé) -->\n\t\t<span style=\"cursor:pointer;color:#900\" class=\"UpAbci_stop\" data-upabcicss-result=\"cursor:default;opacity:0.5\">arrêt</span>\n       \n         <!-- nom du fichier -->\n\t\t - <span class=\"UpAbci_name\"></span>\n        \n         <!-- taille du fichier -->\n        <span class=\"UpAbci_size\">0 Mo</span>\n       \n         <!-- progression graphique -->\n        <progress class=\"UpAbci_progressionG\"></progress>\n        \n         <!-- pourcentage -->\n      \t<span class=\"UpAbci_percentage\">0&nbsp;%</span>\n      \n         <!-- progression textuelle -->\n     \t- en cours : <span class=\"UpAbci_progressionT\">0&nbsp;Mo</span>\n        \n         <!-- sauvegarde effectuée -->\n       - sauvegardé : <span class=\"UpAbci_backup\">0&nbsp;Mo</span>\n        \n       \t <!-- temps passé -->\n       - temps passé : <span class=\"UpAbci_duration\">0&nbsp;s</span>\n        \n       \t <!-- temps restant estimé -->\n       - temps restant : <span class=\"UpAbci_remainingTime\">indéfini</span>\n        \n         <!-- status : si erreur (extension ou autre) on affichera le statut en rouge -->\n       - status : <span class=\"UpAbci_status\" data-upabcicss-result-error=\"color:red\">en attente</span>\n    </div>\n    \n    <!-- on affiche le lien \"arrêter tout\" uniquement si des fichiers ont été sélectionnés et on l'efface à la fin du traitement du formulaire avec les styles événementiels data-upabcicss-* --> \n \t<div class=\"UpAbci_stopAll\" style=\"display:none;width:100px;margin:auto;font-size:0.9em;color:#900;cursor:pointer\" data-upabcicss-select-file=\"display:block;margin-top:15px;\" data-upabcicss-form-end=\"display:none\">\n    Arrêter tout\n    </div>\n    \n\t<!-- pourra s'afficher même si aucun fichier n'a été soumis avec data-upabcicss-form-end, ce qui ne serait pas le cas en employant data-upabcicss-upload-end qui signale la fin du traitement des fichiers -->\n    <div style=\"margin-top:15px;display:none;text-align:center;font-weight:bold\" data-upabcicss-form-end=\"display:block\">\n    Traitement terminé\n    </div> \n    \n    <!-- on affiche cette ligne d'information si une sauvegarde est trouvée pour au moins un fichier à la fin du traitement (à noter qu'en cas de téléchargement complet d'un fichier il n'existe plus de sauvegarde)-->\n\t<div style=\"margin-top:10px;display:none\" data-upabcicss-backup-end=\"display:block\">\n    <span style=\"font-weight:bold\">Note : </span>les fichiers partiellement sauvegardés peuvent être complétés pendant 24h suivant la dernière sauvegarde effectuée.\n    </div> \n       \n</div>\n\n\n\n\n<!-- Dans les exemples ci-dessous, la liste des fichiers sélectionnés et les informations correspondantes sont inclues dans le formulaire. \n\nDans ce cas NE PAS UTILISER LA BALISE <BUTTON> POUR LES BOUTONS D'ARRET des fichiers car ils seront interprétés comme un bouton de soumission de formulaire, contrairement à input de type \"button\" qui lui ne perturbera pas la soumission du formulaire -->\n\n\n\n\n<!-- FORMULAIRE 5 --> \n\n<!-- Aperçu des images avec condition dans la configuration javascript : 20 Mo max par image et 100 Mo total (les images dépassant 20 Mo ne sont pas totalisées) \nAffichage du nouveau nom en cas de renommage du fichier, soit que le nom du fichier ait été nettoyé, soit qu'il ait été renommé en cas de doublon sur le serveur. Voir le fichier \"UploadAjaxABCI_Upload.php\"\n-->\n\n<p style=\"margin-top:3em;margin-bottom:3em\"><a href=\"index.html#fichiers_exemples\">Index</a></p>\n\n\n<script src=\"Javascript/jquery.js\"></script>\n<!-- UploadAjaxABCI.js est la version minifiée de UploadAjaxABCI_DEV.js -->\n<script src=\"Javascript/UploadAjaxABCI.js\"></script>\n\n<script>\n\"use strict\"; // Vous pouvez supprimer cette ligne en cas d'utilisation d'autres scripts javascript qui ne supportent pas ce mode.\n\n// Destination de la requête ajax d'upload\nvar destination_ajax = 'Php_Upload/UploadAjaxABCI_Upload.php';\n\n// FORMULAIRE 1\n\n\n\n\n// FORMULAIRE 2\nvar form2 = new UploadAjaxABCI(destination_ajax, '#form_files2', '#reponse_upload2');\n\n// configuration\n\n//Si vous souhaitez avoir un contrôle d'extensions différent sur chaque champ du formulaire, vous pouvez utiliser l'option \".config.filesExtensionsInput\" qui prend comme index le nom de l'input de type file et comme valeur le tableau d'extensions autorisées, exemple :\n\nform2.config.filesExtensionsInput['upload_1'] = ['jpg','jpeg','png','gif'];\nform2.config.filesExtensionsInput['upload_2'] = ['pdf'];\n\nform2.config.customFileSelect = \".bouton_fichiers\";// Je souhaite remplacer les boutons standards de sélection de fichiers du navigateur par des boutons personnalisés dont j'indique la class dans cette option. S'il existe plusieurs champs d'upload comme dans cet exemple, les boutons (ou liens) d'envoi sont affectés aux champs de type file dans l'ordre de leur écriture dans le html : le premier bouton sera affecté au premier champ de type file, le second sera affecté au second champ de type file etc. N'oubliez pas d'appliquer un style \"display:none\" sur vos champs de type file. Exemple 1er formulaire plus haut.\n\nform2.config.cssSubmitOn = \"cursor:default;opacity:0.7;color:gray\"; // Durant le téléchargement des fichiers, applique ces styles sur le bouton d'envoi du formulaire.\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t   \nform2.config.cssFileSelectOn = \"cursor:default;opacity:0.7;color:gray\"; // Durant le téléchargement des fichiers, applique ces styles sur les boutons de sélection des fichiers. \n\n/*\nPour mettre une séparation qui indique la provenance des fichiers suivant le bouton de sélection, voir un exemple dans \"UploadAjaxABCI_Crop_multiple_multiple.php\" (fonction \"config.func_FileSelectAll\").\n*/\n\n// Démarrage de la fonction, DOM chargé\n$(function(){form2.Start()});\n\n\n\n\n\n\n\n// FORMULAIRE 6\n// idem formulaire 5 avec customisation. Voir exemple plus abouti dans \"UploadAjaxABCI_Custom.php\".\n\nvar form6 = new UploadAjaxABCI(destination_ajax, '#form_files6', '#reponse_upload6');\n\n// Attention il conviendrait de baisser (ou mettre à zéro) la valeur ci-dessous pour les smartphones.\nform6.config.imgPreviewMaxSizeTotal = 100; // en Mo poids total maximum de toutes les photos. Au delà les vignettes ne seront pas affichées.\n\nform6.config.customFileSelect = \".bouton_fichiers\";\n\nform6.config.cssFileSelectOn = \"cursor:wait;opacity:0.8\";// Durant le téléchargement des fichiers, applique ces effets sur le bouton d'envoi du formulaire.\n\n// On peut utiliser l'option \".config.func_FormEnd\" pour créer une fonction javascript qui sera exécutée par la classe à la fin du traitement du formulaire. Ici une fonction qui permet de fermer la boite d'information en cliquant sur le bouton \"fin de traitement\" \nform6.config.func_FormEnd = function(obj)\n{  \n   $(\"#fin_traitement6\").one(\"click\", function()\n   {\n\t $(\"#reponse_upload6\").slideToggle(\"slow\");\n   })\n};\n\nform6.info.status.inProgress = 'en cours';\n\nform6.info.status.ok = \"\"; // Modification de la réponse textuelle du status si téléchargement ok. En mettant vide seules les informations envoyées par php en retour de requête ajax seront s'affichées.\n\n// Démarrage de la fonction, DOM chargé\n$(function(){form6.Start()});\n\n</script> \n</body>\n</html>",
-			"file": "/D/Wamp/www/TEST/UploadAjaxABCI.php",
-			"file_size": 18343,
-			"file_write_time": 132113817212498133,
-			"settings":
-			{
-				"buffer_size": 15245,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload.php",
-			"settings":
-			{
-				"buffer_size": 13295,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Wamp/www/TEST/Javascript/UploadAjaxABCI_DEV.js",
-			"settings":
-			{
-				"buffer_size": 96312,
+				"buffer_size": 11864,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -624,29 +661,41 @@
 	],
 	"file_history":
 	[
+		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
+		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
+		"/D/Wamp/www/HighMediaServeur/Com/Conexion.php",
+		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
+		"/D/Wamp/www/HighMediaServeur/Res/style.css",
+		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
+		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
+		"/D/Wamp/www/HighMediaServeur/global.php",
+		"/D/Wamp/www/TEST/index.html",
+		"/D/Wamp/www/HighMediaServeur/index.php",
+		"/D/Wamp/www/HighMediaServeur/Res/popup.php",
+		"/D/Wamp/www/TEST/Javascript/UploadAjaxABCI_DEV.js",
+		"/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload.php",
+		"/D/Wamp/www/TEST/UploadAjaxABCI.php",
+		"/D/Wamp/www/TEST/catch-file.php",
+		"/D/Wamp/www/TEST/.htaccess",
+		"/D/Wamp/www/TEST/file-upload-progress-bar.js",
+		"/D/Wamp/www/TEST/styles.css",
 		"/D/Wamp/www/HighMediaServeur/info.php",
 		"/D/Wamp/www/TEST/Javascript/UploadAjaxABCI.js",
 		"/D/Wamp/www/TEST/index.php",
 		"/D/Wamp/www/TEST/upload.php",
 		"/C/Users/Matheo/Downloads/TFRICHET.FR-upload-multiple-apc-05.2013/index.php",
-		"/D/Wamp/www/TEST/UploadAjaxABCI.php",
-		"/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload.php",
 		"/C/Users/Matheo/Downloads/Upload-Ajax-ABCI-v7.4/Upload-Ajax-ABCI/UploadAjaxABCI_Crop_multiple_multiple.php",
 		"/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload_Crop_multiple.php",
 		"/D/Wamp/www/HighMediaServeur/Res/Framework/jquery",
 		"/D/Wamp/www/HighMediaServeur/HighMediaProject.sublime-project",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModalB.js",
-		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/www/HighMediaServeur/Com/verifiLoad.php",
-		"/D/Wamp/www/HighMediaServeur/Com/Conexion.php",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.js",
 		"/D/Wamp/www/HighMediaServeur/popup.php",
 		"/D/Wamp/www/HighMediaServeur/test.html",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModal2.js",
 		"/D/Wamp/www/TEST/style-test.css",
 		"/D/Wamp/www/TEST/script.js",
-		"/D/Wamp/www/HighMediaServeur/Res/style.css",
-		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
 		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/D/Wamp/www/TEST/script",
 		"/D/Wamp/www/TEST/style-test",
@@ -661,7 +710,6 @@
 		"/C/Users/Matheo/Desktop/test.html",
 		"/D/Wamp/www/HighMediaServeur/video.php",
 		"/D/Wamp/www/HighMediaServeur/jeux_video.php",
-		"/D/Wamp/www/HighMediaServeur/global.php",
 		"/D/Wamp/www/HighMediaServeur/admin.php",
 		"/C/Users/Matheo/Downloads/lecteur-video/index.html",
 		"/D/Project/HighMediaServeur/Html/HGMMain.html",
@@ -739,6 +787,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"EpVideo",
+			"NameVideo",
+			"\">'",
+			"newZone",
+			"input",
+			"separationAlbum",
+			"span",
+			"image",
+			"vTitre",
+			"Remue",
+			"choix",
+			"center",
+			"mo",
+			"border",
+			"display",
+			"3D3D3D",
+			"display",
+			"progr",
+			"nameV",
+			"titre",
+			"title",
+			"vide",
+			"numVideo",
+			"aplError",
+			"Erreur",
+			"!=",
+			"!=\n",
+			"ErrorMessage",
+			"possibleUpload",
+			"upl",
+			"surligne",
 			"totalVideo",
 			"fileUpload",
 			"display",
@@ -824,15 +903,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2341,
+						"buffer_size": 3101,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1305,
-								1305
+								35,
+								35
 							]
 						],
 						"settings":
@@ -845,61 +924,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "global.php",
+					"file": "VLecteur.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18006,
+						"buffer_size": 3339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5245,
-								5245
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 223.0,
-						"translation.y": 1523.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Res/popup.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1376,
-								1376
-							],
-							[
-								2145,
-								2145
+								2790,
+								2790
 							]
 						],
 						"settings":
@@ -914,41 +956,102 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "index.php",
+					"buffer": 2,
+					"file": "video.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3467,
+						"buffer_size": 8503,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2974,
-								2974
+								7182,
+								7182
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
 							"origin_encoding": "UTF-8",
-							"spell_check": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 293.0,
+						"translation.y": 2809.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "upload/Upload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4784,
+								4784
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Res/popUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								740,
+								740
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -958,20 +1061,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "upload/Upload.php",
+					"buffer": 5,
+					"file": "global.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4997,
+						"buffer_size": 3328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3000,
-								3000
+								2997,
+								2997
 							]
 						],
 						"settings":
@@ -979,30 +1082,61 @@
 							"is_init_dirty_state": false,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 936.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Res/style.css",
+					"buffer": 6,
+					"file": "Res/styleVideo.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10924,
+						"buffer_size": 1171,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9159,
-								9159
+								1142,
+								1142
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Res/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
 							]
 						],
 						"settings":
@@ -1014,201 +1148,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 8114.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Res/scriptModal.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7791,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5022,
-								5022
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Com/TestNewPassWord.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1247,
-								1164
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3987.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Com/Conexion.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								247,
-								367
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 4.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/D/Wamp/www/TEST/UploadAjaxABCI.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15245,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11948,
-								11969
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": true,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 761.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 13295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10135,
-								10135
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3029.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/D/Wamp/www/TEST/Javascript/UploadAjaxABCI_DEV.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 96312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1560.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1220,7 +1163,7 @@
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 37.0
 	},
 	"layout":
 	{
@@ -1242,7 +1185,7 @@
 		"cols":
 		[
 			0.0,
-			0.525490196078,
+			0.584967320261,
 			1.0
 		],
 		"rows":

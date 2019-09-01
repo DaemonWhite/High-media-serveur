@@ -1,5 +1,12 @@
 # High media serveur
 
+v - 0.0.11A
+
+- Ajout de l'interface de base video
+- Correctif d'afichage sur les autre navigateur que chrome
+- Modification les case upload son mit en include
+- Ajout de la réference de saison
+
 V - 0.0.10A
 
 - Ajout de la vue du synopsice
