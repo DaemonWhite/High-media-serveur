@@ -1,5 +1,14 @@
 # High media serveur
 
+V - 0.0.10A
+
+- Ajout de la vue du synopsice
+- Ajout de la vue par saison
+- ajout de la liste d'episode
+- Corection les video seront enregistée avec le bon répertoire
+- Ajout des case pour les video
+- Ajout du menu de navigation dans le menu
+
 V - 0.0.09A
 
 - Ajout du genre
