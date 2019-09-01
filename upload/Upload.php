@@ -142,7 +142,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 			mkdir($dossier);
 		}
 
-		$Ressource = $dossier . "/" . $nameVideo;
+		$Ressource = "upload/" . $dossier . "/" . $nameVideo;
 
 		$Uerreur = null;
 
