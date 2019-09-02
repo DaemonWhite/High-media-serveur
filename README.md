@@ -1,5 +1,12 @@
 # High media serveur
 
+V - 0.0.12A
+
+- Ajout du multi upload dans la section ajouter
+- Ajout d'un shelle ^our présenter les épisode présent
+- Ajout de l'interface d'ajout d'épisode
+
+
 v - 0.0.11A
 
 - Ajout de l'interface de base video
