@@ -10,6 +10,7 @@ let modal = null
 let modalB = null
 let form, progressBare;
 var totalVideo = 1
+var addTotalVideo = 13
 var Envoi = 0
 var Erreur = []
 // Erreur type Titre
@@ -27,7 +28,7 @@ Erreur[9] = 0;
 Erreur[10] = 0;
 Erreur[11] = 0;
 Erreur[12] = 0;
-// Erreur type Episode vide
+// Erreur type Episode "2"
 Erreur[13] = 0;
 Erreur[14] = 0;
 Erreur[15] = 0;
@@ -40,8 +41,33 @@ Erreur[21] = 0;
 Erreur[22] = 0;
 Erreur[23] = 0;
 Erreur[24] = 0;
+// Erreur type File eùpty
+Erreur[25] = 0;
+Erreur[26] = 0;
+Erreur[27] = 0;
+Erreur[28] = 0;
+Erreur[29] = 0;
+Erreur[30] = 0;
+Erreur[31] = 0;
+Erreur[32] = 0;
+Erreur[33] = 0;
+Erreur[34] = 0;
+Erreur[35] = 0;
+Erreur[36] = 0;
+// Erreur type File eùpty 2
+Erreur[37] = 0;
+Erreur[38] = 0;
+Erreur[39] = 0;
+Erreur[40] = 0;
+Erreur[41] = 0;
+Erreur[42] = 0;
+Erreur[43] = 0;
+Erreur[44] = 0;
+Erreur[45] = 0;
+Erreur[46] = 0;
+Erreur[47] = 0;
+Erreur[48] = 0;
 
-console.log(Erreur[0]+ Erreur[1] + Erreur[2] + Erreur[3] + Erreur[4] + Erreur[5] + Erreur[6]+ Erreur[7] + Erreur[8] + Erreur[9] + Erreur[10] + Erreur[11] + Erreur[12] + Erreur[13] + Erreur[14] + Erreur[15] + Erreur[16]+ Erreur[17] + Erreur[18] + Erreur[19] + Erreur[20] + Erreur[21] + Erreur[22] + Erreur[23] + Erreur[24])
 
 const FocusSelect = "button, a, input,textarea"
 let focusValide = []
@@ -180,13 +206,25 @@ window.addEventListener('keydown', function (e) {
 	displayNum1["bonus10"] = 0
 	displayNum1["bonus11"] = 0
 
-function newBonus(num) {
+	displayNum1["bonus13"] = 0
+	displayNum1["bonus14"] = 0
+	displayNum1["bonus15"] = 0
+	displayNum1["bonus16"] = 0
+	displayNum1["bonus17"] = 0
+	displayNum1["bonus18"] = 0
+	displayNum1["bonus19"] = 0
+	displayNum1["bonus20"] = 0
+	displayNum1["bonus21"] = 0
+	displayNum1["bonus22"] = 0
+	displayNum1["bonus23"] = 0
+
+function newBonus(num, type) {
 
 	var num2 = num
 	var num3 = num
     num2 - 1;
     num3 + 1;
-	if (num < 12) 
+	if (num < 26) 
 	{
 		var did = document.getElementById("bonus" + num)
 		var visual = document.getElementById("bouton" + num)
@@ -195,6 +233,8 @@ function newBonus(num) {
 		
 
 		var visual2 = document.getElementById("bouton" + (num2 - 1))
+
+		console.log(visual2)
 
 		var Eisode = Ep
 		Eisode++ 
@@ -207,7 +247,7 @@ function newBonus(num) {
 			visual.setAttribute('value', '-')
 			
  
-			if (num > 1) {
+			if (num > 1 && num != 13) {
 				visual2.style.display = "none"
 			}
 
@@ -218,18 +258,21 @@ function newBonus(num) {
 
 			displayNum1["bonus" + num] = 1
 			EpV.setAttribute('value', Eisode)
-			totalVideo++
+			if (type == 0) { totalVideo++ }
+			if (type == 1) { addTotalVideo++ }
 
 		} else {
 
-			if (num > 1) {
+			if (num > 1 && num != 13) {
 				visual.setAttribute('value', '+')
-				visual2.style.display = null
+				visual2.style.display = null;
 			}
 				
 			did.style.display = "none"
 			displayNum1["bonus" + num] = 0
-			totalVideo--
+			if (type == 0) { totalVideo-- }
+			if (type == 1) { addTotalVideo-- }
+			
 		}
 	}
 }
@@ -352,7 +395,7 @@ callback = readData;
 function newUpload() {
 	numVideo = 0;
 	vide = 1;
-	ErrVideo = 13;
+	ErrVideo = 25;
 
 	aTitle = document.getElementById("title" )
 	vTitle = aTitle.value
@@ -403,7 +446,7 @@ function newUpload() {
 
 	
 
-	if ((Erreur[0] == 0 )&& (Erreur[1] == 0) && (Erreur[2] == 0) && (Erreur[3] == 0) && (Erreur[4] == 0) && (Erreur[5] == 0) && (Erreur[6] == 0 )&& (Erreur[7] == 0) && (Erreur[8] == 0) && (Erreur[9] == 0) && (Erreur[10] == 0) && (Erreur[11] == 0) && (Erreur[12] == 0) && (Erreur[13] == 0) && (Erreur[14] == 0) && (Erreur[15] == 0) && (Erreur[16] == 0 )&& (Erreur[17] == 0) && (Erreur[18] == 0) && (Erreur[19] == 0) && (Erreur[20] == 0) && (Erreur[21] == 0) && (Erreur[22] == 0) && (Erreur[23] == 0) && (Erreur[24] == 0)) 
+	if ((Erreur[0] == 0 )&& (Erreur[1] == 0) && (Erreur[2] == 0) && (Erreur[3] == 0) && (Erreur[4] == 0) && (Erreur[5] == 0) && (Erreur[6] == 0 )&& (Erreur[7] == 0) && (Erreur[8] == 0) && (Erreur[9] == 0) && (Erreur[10] == 0) && (Erreur[11] == 0) && (Erreur[12] == 0) && (Erreur[25] == 0) && (Erreur[26] == 0) && (Erreur[27] == 0 )&& (Erreur[28] == 0) && (Erreur[29] == 0) && (Erreur[30] == 0) && (Erreur[31] == 0) && (Erreur[32] == 0) && (Erreur[33] == 0) && (Erreur[34] == 0) && (Erreur[35] == 0) && (Erreur[36] == 0)) 
 	{
 		console.log(verifVideo.value)
 
@@ -448,7 +491,115 @@ function newUpload() {
 	} else { ErrorMessage() }
 }
 
+function addUpload() {
+	numVideo = 12;
+	vide = 13;
+	ErrVideo = 37;
+
+	console.log(Erreur[0]+ Erreur[1] + Erreur[2] + Erreur[3] + Erreur[4] + Erreur[5] + Erreur[6]+ Erreur[7] + Erreur[8] + Erreur[9] + Erreur[10] + Erreur[11] + Erreur[12] + Erreur[13] + Erreur[15] + Erreur[16]+ Erreur[17] + Erreur[18] + Erreur[19] + Erreur[20] + Erreur[21] + Erreur[22] + Erreur[23] + Erreur[24])
+		
+		while (addTotalVideo > numVideo) {
+
+			var verifVideo = document.getElementById("fileUpload" + vide)
+	
+			console.log(verifVideo.value)
+	
+			if (verifVideo.value == "") {
+	
+				surligne(verifVideo, true);
+				document.getElementById("ErrorTitle" ).innerHTML = "Veulier choisire une video";
+				aplError(ErrVideo, 1);
+				ErrorMessage()
+				return false;
+
+			} else {
+
+				document.getElementById("ErrorTitle" ).innerHTML = null;
+				surligne(verifVideo, false);
+				aplError(ErrVideo, 0);
+
+			}
+	
+	
+		vide++
+		numVideo++;
+		ErrVideo++;
+
+		}
+
+	
+
+	if ((Erreur[1] == 0) && (Erreur[2] == 0) && (Erreur[3] == 0) && (Erreur[4] == 0) && (Erreur[5] == 0) && (Erreur[6] == 0 )&& (Erreur[7] == 0) && (Erreur[8] == 0) && (Erreur[9] == 0) && (Erreur[10] == 0) && (Erreur[11] == 0) && (Erreur[12] == 0) && (Erreur[37] == 0) && (Erreur[38] == 0) && (Erreur[39] == 0) && (Erreur[40] == 0 )&& (Erreur[41] == 0) && (Erreur[42] == 0) && (Erreur[43] == 0) && (Erreur[44] == 0) && (Erreur[45] == 0) && (Erreur[46] == 0) && (Erreur[47] == 0) && (Erreur[48] == 0)) 
+	{
+		console.log(verifVideo.value)
+
+	form = document.forms.namedItem("formAddUpload");
+	progressBare = document.getElementById("progress2");
+	
+	  var
+	    oOutput = document.getElementById("output2"),
+	    oData = new FormData(document.forms.namedItem("formAddUpload"));
+	
+	  oData.append("CustomField", "This is some extra data");
+	
+	  let oReq = new XMLHttpRequest();
+	  oReq.upload.onloadstart = function (e) {
+	  	progressBare.style.display = null;
+	  	progressBare.style.width = "0%";
+	  	progressBare.max = e.total;
+	  	form.disabled = true;
+	  }
+
+	  oReq.upload.onprogress = function (e) {
+	  	var charge =  ((e.loaded / e.total)*100 )
+	  	progressBare.style.width = charge + "%";
+	  }
+
+	  oReq.upload.onloadend = function (e) {
+	  	form.disabled = true;
+	  }
+
+
+
+	  oReq.open("POST", "upload/addUpload.php", true);
+	  oReq.onload = function(oEvent) {
+	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
+	      callback(oReq.responseText);
+	    } else {
+	      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+	    }
+	  };
+	
+	  oReq.send(oData);
+	} else { ErrorMessage() }
+}
 
 function readData(sData) {
 	document.getElementById("error" ).innerHTML = sData;
+	verifEpisode()
+}
+
+function verifEpisode() {
+
+	var serr = document.getElementById('nameSerr').value
+	var text = document.getElementById("Shell")
+
+	var oData = new FormData();
+
+	oData.append("Name", serr);
+
+	vef = new XMLHttpRequest();
+	vef.open("POST", "upload/verifDonner.php", true);
+	 vef.onload = function(oEvent) {
+	    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+	      text.innerHTML = vef.responseText;
+	    } else {
+	      text.innerHTML = "Error --> Impossible de recupérer les donner";
+	    }
+	  };
+
+	vef.send(oData);
+
+	console.log(serr)
+
 }

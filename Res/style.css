@@ -742,3 +742,13 @@ body
   color: #BC240D;
 
 }
+.selectModal
+{
+  font-size: 2.7vh;
+  -moz-border-radius:4px;
+  border-radius:4px;
+  border: 4px #54C472 solid;
+  background-color: #2F2F2F;
+  padding-left:8px;
+  color: #54C472;
+}
