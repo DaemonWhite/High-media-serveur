@@ -151,7 +151,6 @@ const loadModal = async function (url) {
 	const target = '#' + url.split('#')[1]
 	const html = await fetch(url).then(response => response.text())
 	const page = document.createRange().createContextualFragment(html).querySelector(target)
-	console.log(html, target)
 	if (page === null) {throw 'Element ${target} non trouver'}
 	document.body.append(page)
 	return page
@@ -163,7 +162,6 @@ const loadModa2 = async function (url) {
 	const target = '#' + url.split('#')[1]
 	const html = await fetch(url).then(response => response.text())
 	const page = document.createRange().createContextualFragment(html).querySelector(target)
-	console.log(html, target)
 	if (page === null) {throw 'Element ${target} non trouver'}
 	document.body.append(page)
 	return page
@@ -602,4 +600,14 @@ function verifEpisode() {
 
 	console.log(serr)
 
+}
+
+function NonDisponible()
+{
+	alert("C'est fonctionaliter seront ajouter plus tard")
+}
+
+function Reserver()
+{
+	alert("Il faut vous abonée pour utiliser cette fonctionaliter")
 }
