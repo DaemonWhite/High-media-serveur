@@ -10,6 +10,7 @@ $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 $ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,10 +47,6 @@ $Rimage = $ImageUs->fetch();
         if (Type === "Propo") 
         {
             NonDisponible()
-        }
-        if (Type === "user") 
-        {
-            window.location = "user.php";
         } 
     }
 
@@ -77,26 +74,14 @@ $Rimage = $ImageUs->fetch();
                         <span class="infoUser"><?php echo $typeUser; ?></span>
 
                         <div class="imageUser">
-                            <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                                <img src="<?php echo $Rimage['image'];?>" class="image">
+                        	<?php if ($_SESSION['Securiter'] >= 1) { ?>
+                            	<img src="<?php echo $Rimage['image'];?>" class="image">
                             <?php } else { ?>
-                                <img src="User/Default/User.jpg" class="image">
-                            <?php } ?>
+                            	<img src="User/Default/User.jpg" class="image">
+							<?php } ?>
                         </div>
 
-                        <span class="UserName"><?php echo $Pseudo ?></span>
-                        <?php if ($_SESSION['Securiter'] != "-1") {
-                            # code...
-                        ?>
-                        <form action="?Deco=1" method="post">
-                            <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                        </form>
-                         <?php } else { ?>
-                        <div>
-                            <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
-                        </div>
-
-                        <?php } ?>
+                        <span class="UserName"><?php echo $Pseudo; ?></span>
 
                     </div>
 
@@ -116,19 +101,47 @@ $Rimage = $ImageUs->fetch();
             
         </nav>
 
+        <section>
+        	<div  style="margin-left: 20vh;">
+        		<div style="display: flex;">
+        			<form style="margin-top: 2%; margin-left: 20vh;" name="newImage" method="post" enctype="multipart/form-data">
+        				<input class="buttonBase" type="file" id="imageUpl" name="imageUpl" onchange="changeUseIm()" value="Choisire la nouvelle image de profile">
+        			</form>
+        		</div>
+        	</div>
+        </section>
+
         <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
+
+        <script type="text/javascript">
+        		
+        	function changeUseIm() {
+		
+			var form = document.forms.namedItem("newImage");
+			
+			  var oData = new FormData(document.forms.namedItem("newImage"));
+			
+			  oData.append("CustomField", "This is some extra data");
+			
+			  let oReq = new XMLHttpRequest();
+		
+			  oReq.open("POST", "user/changeImage.php", true);
+			  oReq.onload = function(oEvent) {
+			    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
+			      window.location = "global.php"
+			    } else {
+			      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+			    }
+			  };
+			
+			  oReq.send(oData);
+		}
+
+        </script>
 
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
         </script>
 
-   <!-- ?php include("Com/main.php"); ?> -->
-    
-    <!-- Le pied de page -->
-    
-    <!-- <footer id="pied_de_page">
-        <p>Copyright moi, tous droits réservés</p>
-    </footer> -->
-        
-    </body>
+   </body>
 </html>

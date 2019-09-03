@@ -6,6 +6,10 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+$img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
+$Rimage = $ImageUs->fetch();
+
 $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $EpVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
@@ -87,8 +91,12 @@ $numEpHigh = $numEp + 1;
                   <span class="infoUser"><?php echo $typeUser; ?></span>
   
                   <div class="imageUser">
-                      <img src="User/Default/User.jpg" class="image">
-                  </div>
+                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                        <img src="<?php echo $Rimage['image'];?>" class="image">
+                      <?php } else { ?>
+                        <img src="User/Default/User.jpg" class="image">
+                      <?php } ?>
+                   </div>
   
                   <span class="UserName"><?php echo $Pseudo ?></span>
                   <?php if ($_SESSION['Securiter'] != "-1") {

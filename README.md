@@ -1,5 +1,11 @@
 # High media serveur
 
+v - 0.0.14A
+
+- Ajout de la page parrametrage
+- Ajout d'un alt sur cgaque page
+- Ajout changement d'image utilisateur
+
 v - 0.0.13A
 
 - Modification enléve de certain debug nuisife
