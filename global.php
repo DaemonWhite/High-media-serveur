@@ -29,19 +29,19 @@ include("Com/verifiLoad.php");
         }
         if (Type === "Audio") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Perso") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Serv") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Propo") 
         {
-
+            NonDisponible()
         } 
     }
 
@@ -55,12 +55,12 @@ include("Com/verifiLoad.php");
                 
                     
                     <div>
-                        <button class="linkSelect">Acueil</button>
-                        <button class="linkSelect" onclick="ChangePAGE('Video')">Video</button>
-                        <button class="linkSelect" onclick="ChangePAGE('Audio')">Audio</button>
-                        <button class="linkSelect" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                        <button class="linkSelect" onclick="ChangePAGE('Serv')">Serveur</button>
-                        <button class="linkSelect" onclick="ChangePAGE('Propo')">Proposition</button>
+                        <button class="linkSelect" id="LinkDebutPassif">Acueil</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                        <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
 
                     </div>
 
@@ -94,13 +94,17 @@ include("Com/verifiLoad.php");
                         <button class="bottomMenu" id="Res/popup.php#">Favori</button>
                         <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
                         <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
+                        <?php if ($_SESSION['Securiter'] >= 1) { ?>
                         <button class="bottomMenu" id="#Upload">Uploade</button>
+                        <?php } else { ?>
+                          <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                        <?php } ?>
 
                     </div>
             
         </nav>
 
-        <?php include("Res/popUpload.php"); ?>
+        <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>

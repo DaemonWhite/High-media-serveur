@@ -1,5 +1,15 @@
 # High media serveur
 
+v - 0.0.13A
+
+- Modification enléve de certain debug nuisife
+- Ajout des bouton d'épisode de la saison pour le Vlecteur
+- Optimisation du css
+- corection Du bouton video dans Vupload
+- Modification rajout de securiter
+- Ajout des fonctionaliter non disponible
+- Ajout des fonctionaliter réserver au membre
+
 V - 0.0.12A
 
 - Ajout du multi upload dans la section ajouter

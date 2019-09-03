@@ -33,19 +33,19 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
         }
         if (Type === "Audio") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Perso") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Serv") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Propo") 
         {
-
+            NonDisponible()
         }
 
     }
@@ -65,12 +65,12 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
           
               
               <div>
-                  <button class="linkSelect">Video</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Propo')">Proposition</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
+                  <button class="linkSelect" id="LinkDebutPassif">Video</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
   
               </div>
   
@@ -100,11 +100,15 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   
               <div class="separationB">
   
-                  <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Favori</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
+                  <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                  <button class="bottomMenu" id="" onclick="NonDisponible()">Favori</button>
+                  <button class="bottomMenu" id="" onclick="NonDisponible()">Suprimer</button>
+                  <button class="bottomMenu" id="" onclick="NonDisponible()">Télècharger</button>
+                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
                   <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <?php } else { ?>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                  <?php } ?>
   
               </div>  
       
@@ -139,8 +143,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
       </div>
     </section>
   
- <?php include("Res/popUpload.php"); ?>
-
+  <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
     
 
       <script type="text/javascript">
@@ -176,21 +179,25 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
         {
             window.location = "global.php";
         }
+        if (Type === "Video") 
+        {
+            window.location = "video.php";
+        }
         if (Type === "Audio") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Perso") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Serv") 
         {
-
+            NonDisponible()
         } 
         if (Type === "Propo") 
         {
-
+            NonDisponible()
         }
 
     }
@@ -204,12 +211,12 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
           
               
               <div>
-                  <button class="linkSelect">Video</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Propo')">Proposition</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
+                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')">Video</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
   
               </div>
   
@@ -285,7 +292,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
     </section>
 
   
-  <?php include("Res/popUpload.php"); ?>
+  <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
       <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>

@@ -11,6 +11,14 @@ $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 $EpVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
 $video = $EpVideo->fetch();
 
+$Episo= $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+
+$numEp = intval($_GET['Ep']);
+$numEpDown = $numEp - 1;
+$numEpHigh = $numEp + 1;
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,21 +36,25 @@ $video = $EpVideo->fetch();
         {
             window.location = "global.php";
         }
+        if (Type === "Video") 
+        {
+            window.location = "video.php";
+        }
         if (Type === "Audio") 
         {
-
+        	NonDisponible()
         } 
         if (Type === "Perso") 
         {
-
+        	NonDisponible()
         } 
         if (Type === "Serv") 
         {
-
+        	NonDisponible()
         } 
         if (Type === "Propo") 
         {
-
+        	NonDisponible()
         }
 
     }
@@ -61,12 +73,12 @@ $video = $EpVideo->fetch();
           
               
               <div>
-                  <button class="linkSelect" onauxclick="ChangePAGE('Video')">Video</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" onclick="ChangePAGE('Propo')">Proposition</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
+                  <button class="linkSelect" id="LinkDebutActif" onclick="ChangePAGE('Video')">Video</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
   
               </div>
   
@@ -100,7 +112,11 @@ $video = $EpVideo->fetch();
                   <button class="bottomMenu" id="Res/popup.php#">Favori</button>
                   <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
                   <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
+                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
                   <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <?php } else { ?>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                  <?php } ?>
   
               </div>  
       
@@ -121,16 +137,52 @@ $video = $EpVideo->fetch();
 				</video>
           	</div>
 
+          	<div align="center" style="margin-top: 2%;">
+
+          		<?php
+          		$anaVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $numEpDown . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+				$aVideo = $anaVideo->fetch();
+
+          		if (!empty($aVideo['Episode'])) { ?>
+          			<button class="buttonNew" onclick="newApelleVideo('<?php echo $aVideo['Episode']; ?>')"><</button>
+          		<?php } ?>
+          		
+          		 <?php while ($newEp = $Episo->fetch()) { ?>
+
+          			<button class="buttonNew" onclick="newApelleVideo('<?php echo $newEp['Episode'];  ?>')"><?php echo $newEp['Episode'];  ?></button>
+
+          		<?php } ?>
+
+          		<?php
+          		$anaVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $numEpHigh . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+				$aVideo = $anaVideo->fetch();
+
+          		if (!empty($aVideo['Episode'])) { ?>
+          			<button class="buttonNew" onclick="newApelleVideo('<?php echo $aVideo['Episode']; ?>')">></button>
+          		<?php } ?>
+
+          	</div>
 
           </div>
         </div>
       </div>
     </section>
 
- 	<?php include("Res/popUpload.php"); ?>
+ 	<?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
-      <script type="text/javascript">
-            <?php include("Res/scriptModal.php"); ?>
-      </script>
+ 	<script type="text/javascript">
+ 		
+ 		function newApelleVideo(nZone)
+ 		{
+ 			var sa = "<?php echo $_GET['S']; ?>";
+ 			var nom = "<?php echo $_GET['Name']; ?>";
+
+ 			window.location = "?Name=" + nom + "&Ep=" + nZone + "&S=" + sa ;
+ 		}
+
+ 	</script>
+    <script type="text/javascript">
+          <?php include("Res/scriptModal.php"); ?>
+    </script>
 </body>
 </html>
