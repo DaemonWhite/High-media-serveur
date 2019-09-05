@@ -53,12 +53,26 @@
                               <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Titre" onblur="verif(this, 'titre', '0')">
                               <div class="classError" align="center" id="ErrorTitle"></div>
                           </div>
+                          <div>
+                            <input type="file" name="miniature">
+                            <img id="Vminiature">
+                          </div>
                           <div align="left">
                               <select name="Genre" class="selectBase">
                                   <option value="Anime">Animé</option>
                                   <option value="Docu">Documentaire</option>
                                   <option value="Movie">Filme</option>
                                   <option value="TV">Serie télè</option>
+                              </select>
+                          </div>
+                          <div>
+                              <select name="type" class="selectBase">
+                                <option value="Kodomo">Kodomo</option>
+                                <option value="Shonen">Shonener</option>
+                                <option value="Shojo">Shojo</option>
+                                <option value="Seinen">Seinen</option>
+                                <option value="Josei">Josei</option>
+                                <option value="Sejin">Sejin</option>
                               </select>
                           </div>
                           <tr>
