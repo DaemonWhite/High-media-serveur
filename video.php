@@ -69,7 +69,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
           
               
               <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
                   <button class="linkSelect" id="LinkDebutPassif">Video</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
@@ -84,9 +84,9 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   
                   <div class="imageUser">
                     <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                          <img src="<?php echo $Rimage['image'];?>" class="image">
+                          <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
                     <?php } else { ?>
-                          <img src="User/Default/User.jpg" class="image">
+                          <img src="User/Default/User.png" class="image">
                     <?php } ?>
                   </div>
   
@@ -134,7 +134,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
         
                 echo '<div align="left" onclick="newZone('; echo "'"; echo $donnes['nom']; echo "'"; echo ')">
                           <table align="left" class="caseBottom">
-                                    <tr><td align="left" class="borderBottom"><img src="User/Default/User.jpg"></td>
+                                    <tr><td align="left" class="borderBottom"><img class="image" src="upload/video/DVideo.jpg"></td>
                                     
                                       <td align="center"><span class="whiteCase">'. $donnes['nom'] . '</span></td>  
                                     </tr>
@@ -233,7 +233,11 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
                   <span class="infoUser"><?php echo $typeUser; ?></span>
   
                   <div class="imageUser">
-                      <img src="User/Default/User.jpg" class="image">
+                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                          <img src="<?php echo $Rimage['image'];?>" class="image">
+                      <?php } else { ?>
+                          <img src="User/Default/User.png" class="image">
+                      <?php } ?>
                   </div>
   
                   <span class="UserName"><?php echo $Pseudo ?></span>

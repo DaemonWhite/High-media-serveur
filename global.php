@@ -63,7 +63,7 @@ $Rimage = $ImageUs->fetch();
                 
                     
                     <div>
-                        <button class="linkSelect" id="LinkDebutPassif">Acueil</button>
+                        <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
@@ -78,9 +78,9 @@ $Rimage = $ImageUs->fetch();
 
                         <div class="imageUser">
                             <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                                <img src="<?php echo $Rimage['image'];?>" class="image">
+                                <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
                             <?php } else { ?>
-                                <img src="User/Default/User.jpg" class="image">
+                                <img src="User/Default/User.png" class="image">
                             <?php } ?>
                         </div>
 

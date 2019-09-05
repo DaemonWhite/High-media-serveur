@@ -92,9 +92,9 @@ $numEpHigh = $numEp + 1;
   
                   <div class="imageUser">
                       <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <img src="<?php echo $Rimage['image'];?>" class="image">
+                        <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
                       <?php } else { ?>
-                        <img src="User/Default/User.jpg" class="image">
+                        <img src="User/Default/User.png" class="image">
                       <?php } ?>
                    </div>
   
@@ -119,11 +119,11 @@ $numEpHigh = $numEp + 1;
                   <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
                   <button class="bottomMenu" id="Res/popup.php#">Favori</button>
                   <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
+                  <button class="bottomMenu" id="Res/popup.php#" download>Télècharger</button>
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                  <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <button class="bottomMenu" id="#Upload">Upload</button>
                   <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                   <?php } ?>
   
               </div>  

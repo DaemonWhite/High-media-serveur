@@ -1,5 +1,11 @@
 # High media serveur
 
+
+v - 0.0.15A
+
+- Correction accée a la page user
+- Corection ajout de l'image utilisateur page video sur la liste d'image
+
 v - 0.0.14A
 
 - Ajout de la page parrametrage

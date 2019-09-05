@@ -77,7 +77,7 @@ $Rimage = $ImageUs->fetch();
                         	<?php if ($_SESSION['Securiter'] >= 1) { ?>
                             	<img src="<?php echo $Rimage['image'];?>" class="image">
                             <?php } else { ?>
-                            	<img src="User/Default/User.jpg" class="image">
+                            	<img src="User/Default/User.png" class="image">
 							<?php } ?>
                         </div>
 
@@ -107,6 +107,9 @@ $Rimage = $ImageUs->fetch();
         			<form style="margin-top: 2%; margin-left: 20vh;" name="newImage" method="post" enctype="multipart/form-data">
         				<input class="buttonBase" type="file" id="imageUpl" name="imageUpl" onchange="changeUseIm()" value="Choisire la nouvelle image de profile">
         			</form>
+                    <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                    <button href="com/testnewpassword.php" class="buttonBase">Admin</button>
+                    <?php } ?>
         		</div>
         	</div>
         </section>

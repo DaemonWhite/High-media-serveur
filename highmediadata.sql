@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 03 sep. 2019 à 14:39
+-- Généré le :  jeu. 05 sep. 2019 à 14:26
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `highmediadata`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `favori`
+--
+
+DROP TABLE IF EXISTS `favori`;
+CREATE TABLE IF NOT EXISTS `favori` (
+  `ID` int(11) NOT NULL,
+  `User` int(11) NOT NULL,
+  `Favori` text NOT NULL,
+  `type` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `membre` (
 INSERT INTO `membre` (`ID_user`, `UserName`, `Name_Surname`, `Password`, `Securiter`, `Chambre`, `IP1`, `IP2`, `Modif_IP`) VALUES
 (1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 417, '::1', NULL, 1),
 (2, 'jeanKevine', 'RALPHE Elia', '$2y$10$pC87doBoaSBnxHyK3XWy1.dHRA9R9H932reEja8k9m/bbLrIxQU2u', 1, 123, NULL, NULL, 0),
-(3, 'JordanRoy', 'HULBERT Jordan', '$2y$10$xhGGdiQ64di/Kmk5G67z9.Wqu8o/ywnwMex4gsQ6dL6/w4vvAhHny', 2, 418, NULL, NULL, 0),
+(3, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1),
 (4, 'Raoul', 'Name test', '$2y$10$Y1OcYRLOHQ61OwamIWuDweND9uUpg6YExIIUMzZaXpqmqe7iVWuTy', 1, 123, NULL, NULL, 0),
 (5, 'Fauxcap', 'TRAVERS enzo', '$2y$10$t3YnP9cf0RcL73m9FYq6ReU.Fjl3UJelWmCg8bm1ZJfgEe2wG//8m', 2, 409, '192.168.1.30', '192.168.1.38', 1),
 (6, 'Jesu', 'DIEUX Jesu', '$2y$10$lgCSbsQvitM85RfytKgz.OD0FokIpdXTCzIc6yTf7K7jq//foEKTK', 2, 420, NULL, NULL, 0),
@@ -117,13 +131,13 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`ID`, `theme`, `image`, `historique`) VALUES
 (1, 'Default', 'user/1/536497.jpg', 0),
-(2, 'Default', 'User/Default/User.jpg', 0),
-(3, 'Default', 'User/Default/User.jpg', 0),
-(4, 'Default', 'User/Default/User.jpg', 0),
-(5, 'Default', 'User/Default/User.jpg', 0),
-(6, 'Default', 'User/Default/User.jpg', 0),
-(7, 'Default', 'User/Default/User.jpg', 0),
-(8, 'Default', 'User/Default/User.jpg', 0);
+(2, 'Default', 'User/Default/User.png', 0),
+(3, 'Default', 'User/Default/User.png', 0),
+(4, 'Default', 'User/Default/User.png', 0),
+(5, 'Default', 'User/Default/User.png', 0),
+(6, 'Default', 'User/Default/User.png', 0),
+(7, 'Default', 'User/Default/User.png', 0),
+(8, 'Default', 'User/Default/User.png', 0);
 
 -- --------------------------------------------------------
 
