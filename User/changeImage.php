@@ -6,7 +6,14 @@ $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 $user = $_SESSION['ID'];
 $dRepertoire = $user . "/";
 
+$updateImage = $bdd->query('SELECT image FROM user');
+$deletOld = $updateImage->fetch();
 
+echo $deletOld['image'] . "</br>";
+
+echo $deletOld = strrchr($deletOld['image'], "/");
+$dell = $user . $deletOld;
+unlink($dell);
 
 var_dump($_FILES);
 	if (!empty($_FILES['imageUpl'])) {
