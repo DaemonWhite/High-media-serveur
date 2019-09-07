@@ -10,6 +10,11 @@ $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 $ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
 
+
+$NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10");
+
+$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,42 +22,15 @@ $Rimage = $ImageUs->fetch();
         <title>HighMediaServeur</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="Res/style.css" />
+        <link rel="stylesheet" href="Res/styleBox.css" />
+
     </head>
 
     <header>
        
     </header>
 
-<script type="text/javascript">
-    
-    function ChangePAGE(Type)
-    {
-        if (Type === "Video") 
-        {
-            window.location = "Video.php";
-        }
-        if (Type === "Audio") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Perso") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Serv") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Propo") 
-        {
-            NonDisponible()
-        }
-        if (Type === "user") 
-        {
-            window.location = "user.php";
-        } 
-    }
-
+<script type="text/javascript" src="Res/scriptZone.js">
 </script>
     
 
@@ -116,10 +94,113 @@ $Rimage = $ImageUs->fetch();
             
         </nav>
 
+        <section>
+            
+            <div align="center" style="margin-left: 20vh;">
+
+                <div class="back">
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Nouvelle musique</span></div>
+                        <div class="listenBoxM">
+                            <table>
+                                <tr>
+                                    <td>Album</td>
+                                    <td>Title</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="listenBoxM">
+                            <table>
+                                <tr>
+                                    <td>Album</td>
+                                    <td>Title</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        
+                    </section>
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Serveur</span></div>
+                        
+                    </section>
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Nouvelle vidéo</span></div>
+
+                        <div align="left" class="overFlaw">
+                            <table class="listenBoxV">
+                                <?php while ($Nvideo = $NameVideo->fetch()) {
+
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+                                    <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+
+                                        <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                        <td class="borderS"><span><?php echo $Nvideo['titre'] ; ?></span></td>
+                                        <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
+                                            <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
+
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                        </div>
+                        
+                    </section>
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Favori</span></div>
+
+                        
+                    </section>
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Information</span></div>
+
+                        
+                    </section>
+
+                    <section class="Box">
+                        <div class="BoxTitle"><span>Historique</span></div>
+                            <div  align="left" class="overFlaw">
+                                <table class="listenBoxV">
+                                    <?php while ($Histo = $His->fetch()) {
+            
+                                        $HistVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Histo['Name'] . '\' AND Episode=\'' . $Histo['Episode'] . '\' AND Saison=\'' . $Histo['Saison'] . '\' ');
+                                        $Nvideo = $HistVideo->fetch();
+        
+                                        $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
+                                        $Aff = $Affiche->fetch() ?>
+                                        
+                                            <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+        
+                                                <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                                <td class="borderS"><span><?php echo $Nvideo['titre'] ; ?></span></td>
+                                                <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
+                                                    <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
+        
+                                            </tr>
+                                    <?php } ?>
+                                </table>
+                            </div>
+
+                        
+                    </section>  
+                    
+                </div>
+            </div>
+
+        </section>
+
         <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
+        </script>
+        <script src="Res/scriptFavori.js">
         </script>
 
    <!-- ?php include("Com/main.php"); ?> -->

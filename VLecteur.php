@@ -12,16 +12,63 @@ $Rimage = $ImageUs->fetch();
 
 $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+
+
 $EpVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
 $video = $EpVideo->fetch();
 
+
 $Episo= $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+
+$anaHist = $bdd->query('SELECT User_ID, Name, Type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND Name=\'' . $_GET['Name'] . '\' AND Type="0" AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+$eHist = $anaHist->fetch();
 
 $numEp = intval($_GET['Ep']);
 $numEpDown = $numEp - 1;
 $numEpHigh = $numEp + 1;
 
 
+if ($video['titre'] != "") {
+
+  if ($_SESSION['ID'] >= 1) {
+
+    $GetType = 0;
+
+    if ($eHist != "") {
+
+      $vefHist = $bdd->query('SELECT ID, User_ID, Name, Type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
+      $veHist = $vefHist->fetch();
+
+      if (($veHist['Name'] == $_GET['Name']) AND ($veHist['Type'] == 0) AND ($veHist['Episode'] == $_GET['Ep']) AND ($veHist['Saison'] == $_GET['S'])) {
+        # code...
+      } else {
+
+      $dell = $bdd->query('DELETE FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND Name=\'' . $_GET['Name'] . '\' AND Type="0" AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+
+      $Nhist = $bdd->prepare("INSERT INTO historique(User_ID, Name, Type, Episode, Saison) VALUES  (:id, :name, :type, :epis, :saison)");
+                                              $Nhist->execute(array( 
+                                                'id' => $_SESSION['ID'],
+                                                'name' => $_GET["Name"],
+                                                'type' => $GetType,
+                                                'epis' => $_GET['Ep'],
+                                                'saison' => $_GET['S']));
+
+      }
+
+    } else {
+
+        $Nhist = $bdd->prepare("INSERT INTO historique(User_ID, Name, Type, Episode, Saison) VALUES  (:id, :name, :type, :epis, :saison)");
+                                              $Nhist->execute(array( 
+                                                'id' => $_SESSION['ID'],
+                                                'name' => $_GET["Name"],
+                                                'type' => $GetType,
+                                                'epis' => $_GET['Ep'],
+                                                'saison' => $_GET['S']));
+
+    }
+
+  
+  }
 
 ?>
 <!DOCTYPE html>
@@ -32,43 +79,7 @@ $numEpHigh = $numEp + 1;
     <link rel="stylesheet" href="Res/style.css" />
     <link rel="stylesheet" href="Res/styleVideo.css" />
 </head>
- <script type="text/javascript">
-    
-    function ChangePAGE(Type)
-    {
-        if (Type === "Acueil") 
-        {
-            window.location = "global.php";
-        }
-        if (Type === "Video") 
-        {
-            window.location = "video.php";
-        }
-        if (Type === "Audio") 
-        {
-        	NonDisponible()
-        } 
-        if (Type === "Perso") 
-        {
-        	NonDisponible()
-        } 
-        if (Type === "Serv") 
-        {
-        	NonDisponible()
-        } 
-        if (Type === "Propo") 
-        {
-        	NonDisponible()
-        }
-
-    }
-
-    function newZone(Page){
-
-      window.location = "?name=" + Page;
-
-     }
-
+ <script type="text/javascript" src="Res/scriptZone.js">
  </script>
 
 <body class="BackgroundA">
@@ -194,3 +205,4 @@ $numEpHigh = $numEp + 1;
     </script>
 </body>
 </html>
+<?php } ?>

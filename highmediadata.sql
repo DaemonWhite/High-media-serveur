@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 07 sep. 2019 à 13:08
+-- Généré le :  sam. 07 sep. 2019 à 20:33
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -33,7 +33,27 @@ CREATE TABLE IF NOT EXISTS `favori` (
   `ID` int(11) NOT NULL,
   `User` int(11) NOT NULL,
   `Favori` text NOT NULL,
-  `type` int(11) NOT NULL
+  `S` int(11) DEFAULT NULL,
+  `Ep` int(11) DEFAULT NULL,
+  `type` int(11) NOT NULL,
+  `Genre` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `historique`
+--
+
+DROP TABLE IF EXISTS `historique`;
+CREATE TABLE IF NOT EXISTS `historique` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `User_ID` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `type` int(11) NOT NULL,
+  `Episode` varchar(255) NOT NULL,
+  `Saison` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

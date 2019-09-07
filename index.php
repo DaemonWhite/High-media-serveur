@@ -15,8 +15,6 @@ include("Com/Conexion.php");?>
        
     </header>
 
-    
-
 
     <body class="BackgroundA">
 
@@ -42,7 +40,7 @@ include("Com/Conexion.php");?>
                     $reqip->execute(array($_COOKIE['Pseudo']));
                     $Userip = $reqip->fetch();
 
-                    if (($_COOKIE['ID'] = $Userip['ID_user'])) {
+                    if (($_COOKIE['ID'] == $Userip['ID_user'])) {
 
                         if ($Userip['IP1'] == $_SERVER['REMOTE_ADDR']) {
 

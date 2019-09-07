@@ -1,100 +1,109 @@
 # High media serveur
 
 
+v - 0.0.16A
+
+- Ajout de l'historique intelligent
+- Ajout de l'historique visible menu principale
+- Correction de certain problème avec Firefox
+- Ajout de l'implant de l'historique (¨Pas visible pour les utilisateur)
+- Correction de l'enregistrement des fichier
+- Correction du bouton fermer
+
 v - 0.0.15A
 
 - Modification ajout de l'image utilisateur (def)
-- Ajout de la miniature par default (tmp)
+- Ajout de la miniature par défaut (tmp)
 - Ajout des miniature
 - Correction de l'optimisation du multi upload
-- Correctin de l'affichage de l'upload
-- Modification des affiches pour les video
-- Modification on peut selectioner seulement les video dans le navigateur
-- Correction ajout de la verification de fichier sur chaque input
+- Correction de l'affichage de l'upload
+- Modification des affiches pour les vidéo
+- Modification on peut sélectionner seulement les video dans le navigateur
+- Correction ajout de la vérification de fichier sur chaque input
 - Modification sele les images son visible
-- Ajout de supression de l'ancienne image
-- Correction accée a la page user
-- Corection ajout de l'image utilisatetur page video sur la liste d'image
+- Ajout de suppression de l'ancienne image
+- Correction accès a la page user
+- Correction ajout de l'image utilisateur page vidéo sur la liste d'image
 
 v - 0.0.14A
 
-- Ajout de la page parrametrage
-- Ajout d'un alt sur cgaque page
+- Ajout de la page paramétrage
+- Ajout d'un alt sur chaque page
 - Ajout changement d'image utilisateur
 
 v - 0.0.13A
 
-- Modification enléve de certain debug nuisife
+- Modification enlevé de certain debug nuisible
 - Ajout des bouton d'épisode de la saison pour le Vlecteur
 - Optimisation du css
-- corection Du bouton video dans Vupload
+- correction Du bouton vidéo dans Vupload
 - Modification rajout de securiter
-- Ajout des fonctionaliter non disponible
-- Ajout des fonctionaliter réserver au membre
+- Ajout des fonctionnalité non disponible
+- Ajout des fonctionnalité réserver au membre
 
 V - 0.0.12A
 
 - Ajout du multi upload dans la section ajouter
-- Ajout d'un shelle ^our présenter les épisode présent
+- Ajout d'un Shell pour présenter les épisode présent
 - Ajout de l'interface d'ajout d'épisode
 
 
 v - 0.0.11A
 
-- Ajout de l'interface de base video
-- Correctif d'afichage sur les autre navigateur que chrome
+- Ajout de l'interface de base vidéo
+- Correctif d’affichage sur les autre navigateur que chrome
 - Modification les case upload son mit en include
-- Ajout de la réference de saison
+- Ajout de la référence de saison
 
 V - 0.0.10A
 
-- Ajout de la vue du synopsice
+- Ajout de la vue du synopsis
 - Ajout de la vue par saison
-- ajout de la liste d'episode
-- Corection les video seront enregistée avec le bon répertoire
-- Ajout des case pour les video
+- ajout de la liste d’épisode
+- Correction les vidéo seront enregistrée avec le bon répertoire
+- Ajout des case pour les vidéo
 - Ajout du menu de navigation dans le menu
 
 V - 0.0.09A
 
 - Ajout du genre
-- Ajout du synopsice
+- Ajout du synopsis
 - Correction le modal Upload est désormer bien alligner au centre
-- Ajot du genre
-- Correction de la taille de la fenétre modale
+- Ajout du genre
+- Correction de la taille de la fenêtre modale
 - Ajout de la barre de chargement + style css
-- Ajout d'un debug qui empéche l'envoi de fichier vide
-- Ajout d'un debug qui permet de ne pas avoire le même episode sur la feille
+- Ajout d'un debug qui empêche l'envoi de fichier vide
+- Ajout d'un debug qui permet de ne pas avoirs le même épisode sur la feuille
 - Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre
 - Ajout du début du multi upload
 - Ajout du nombre épisode mit de manière logique
-- Ajout disparition des bouton - de manière procéduralle
-- Ajout de bouton pour choisire le nombre de video voulue
+- Ajout disparition des bouton - de manière procédurale
+- Ajout de bouton pour choisir le nombre de vidéo voulue
 - Ajout du début d'upload
-- Ajout de la fenetre d'upload de nouvau fichier
-- correction le bouton connect est placé correctement
+- Ajout de la fenêtre d'upload de nouveau fichier
+- correction le bouton connecte est placé correctement
 
 V - 0.0.08A
 
-- Ajout du bouton connexion si déconecter
-- Bouton Uplaod du menu et fonctionelle
-- Modification Des cripte son en inclûde
-- Correction le mode inviter fonctione
+- Ajout du bouton connexion si déconnecter
+- Bouton Uplaod du menu et fonctionnelle
+- Modification Des crypte son en inclûde
+- Correction le mode inviter fonctionne
 - Ajout du popup d'upload
-- Ajout d'un popup de conexion 
+- Ajout d'un popup de connexion 
 
 v - 0.0.07A
 
-- Ajout de l'image utilisateur par default
-- Ajout des vouton interactive "Dossier,Fa vori,Suprimer,Télècharger,Upload"
+- Ajout de l'image utilisateur par défaut
+- Ajout des bouton interactive "Dossier, Favori, Supprimer, Télécharger,Upload"
 - Ajout du texte d'identification
 - Ajout du placement pour l'image
-- Ajout d'un bouton "Proposition"	non fonctionelle
-- Ajout d'un bouton "Serveur"	non fonctionelle
+- Ajout d'un bouton "Proposition"	non fonctionnelle
+- Ajout d'un bouton "Serveur"	non fonctionnelle
 - Ajout d'un bouton "Espace Personnelle"	non fonctionelle
-- Ajout d'un bouton "Acueille"	non fonctionelle
-- Ajout d'un bouton "Audio"	non fonctionelle
-- Ajout d'un bouton "video"	Fonctionelle
+- Ajout d'un bouton "Acueil"	non fonctionnelle
+- Ajout d'un bouton "Audio"	non fonctionnelle
+- Ajout d'un bouton "video"	Fonctionnelle
 - Ajout de la barre de navigation dans la page d'acueille
 - Ajout d'entée de texte personnaliser
 - Ajout de bouton personaliser
