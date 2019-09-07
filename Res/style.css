@@ -25,10 +25,10 @@ body
 	width: 30%;
 	min-width: 400px;
 	border-radius: 10px;
-	border: 3px black groove;
+	border: 3px groove black;
 	background-color: #3D3D3D; 
-    color: white;
-    margin: auto;
+  color: white;
+  margin: auto;
 }
 .SelectionBase
 {
@@ -50,10 +50,10 @@ body
 	position: absolute;
 	top: 0%;
 	left: 50%;
-    right: 50%;
-    bottom: 50%;
+  right: 50%;
+  bottom: 50%;
 	justify-content: center;
-    align-items: center;
+  align-items: center;
 }
 
 .CupeInfo:nth-child(1)
@@ -61,10 +61,10 @@ body
 	width: 30%;
 	min-width: 400px;
 	border-radius: 10px;
-	border: 3px black groove;
+	border: 3px groove #000001;
 	background-color: #3D3D3D; 
-    color: white;
-    margin: auto;
+  color: white;
+  margin: 0 auto;
 }
 
 /* ------- Entre Texte --------------*/
@@ -167,13 +167,14 @@ body
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: column;
-    min-width: 30vh;
-    max-width: 30vh;
-    position: fixed;
-    background-color: #3D3D3D;
-    height: 100vh;
-    overflow: visible;
-    border-right: 0.6vh black solid;
+  min-width: 30vh;
+  max-width: 30vh;
+  position: fixed;
+  background-color: #3D3D3D;
+  height: 100vh;
+  overflow: visible;
+  border-right: 0.6vh black solid;
+  margin-right: 20vh;
 }
 .link
 {
@@ -189,12 +190,10 @@ body
   border-right: none; 
   border-left: none; 
   text-decoration: none;
-  font-style: bold;
   color: white;
   font-size: 3vh;
   text-align: center;
   margin-top: 1vh;
-  list-style-type: none;
   overflow: visible;
   width: 32vh;
   height: 3vh;
@@ -207,9 +206,9 @@ body
   content: "";
   position: absolute;
   right: -1.5vh;
-  bottom: 0;
-  width: 0;
-  height: 0;
+  bottom: 0vh;
+  width: 0vh;
+  height: 0vh;
   border-left: 1.5vh solid #3A874E;
   border-top: 1.5vh solid transparent;
   border-bottom: 1.5vh solid transparent;
@@ -587,12 +586,12 @@ body
   border-bottom: 2vh solid transparent;
 }
 
-.boutonSubmit[id="exit"]:hover:before
+.boutonUpload[id="exit"]:hover:before
 {
   border-right: 2vh solid green;
 }
 
-.boutonSubmit[id="exit"]:hover:after
+.boutonUpload[id="exit"]:hover:after
 {
   border-left: 2vh solid green;
 }
@@ -706,10 +705,10 @@ body
 }
 .EpisodeSize
 {
-  -moz-border-radius: 2px;
   border-radius:2px;
   border: 3px #54C472 solid;
   background-color: #3D3D3D;
+  width: 10vh;
   padding: -2vh;
   font-size: 2vh;
   color: #54C472;
@@ -717,7 +716,7 @@ body
 }
 .progresseBar
 {
-  border: 3px black groove;
+  border: 3px #000001 groove;
   margin-top: 2%;
   height: 6%;  /* Can be anything */
   position: relative;

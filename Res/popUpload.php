@@ -12,10 +12,6 @@
           <div class="modal-bloc js-stope-modale">
               
               <button id="#SUpload" class="boutonUpload">Créer une série</button>
-      
-              <form action="Upload/Upload.php?act=AddMovie" method="post">
-                  <button class="boutonUpload">Ajouter un film</button>
-              </form>
 
               <button id="#addUpload" onclick="verifEpisode()" class="boutonUpload">Ajouter un épisode</button>
 
@@ -38,7 +34,7 @@
                   <div id="error"></div>
   
                   <form action="global.php" name="formUpload" method="post" enctype="multipart/form-data">
-                      <table>
+                      
                           
                           <div id="output"></div>
                           <div class="progresseBar" >
@@ -51,6 +47,7 @@
                           <div>
                             
                           </div>
+                          <table>
                           <div align="center">
                             <tr><td></td>
                               <td><select name="Genre" class="selectBase">
@@ -79,7 +76,8 @@
                             <label for="min" class="buttonNew">Miniature</label></td></tr>
 
                           </div>
-
+                          </table>
+                          <table>
                           <tr><td></td>
                               <td align="center"><span class="ecritureUp">Episode</span></td>
                               <td align="center"><span class="ecritureUp">Saison</span></td>
