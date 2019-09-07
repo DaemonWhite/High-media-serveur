@@ -452,7 +452,7 @@ function newUpload() {
 	progressBare = document.getElementById("progress1");
 	
 	  var
-	    oOutput = document.getElementById("output"),
+	    oOutput = document.getElementById("ErrorTitle"),
 	    oData = new FormData(document.forms.namedItem("formUpload"));
 	
 	  oData.append("CustomField", "This is some extra data");
@@ -481,7 +481,7 @@ function newUpload() {
 	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
 	      callback(oReq.responseText);
 	    } else {
-	      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+	      oOutput.innerHTML = "ErrorTitle " + oReq.status + " occurred uploading your file.<br \/>";
 	    }
 	  };
 	
@@ -573,7 +573,7 @@ function addUpload() {
 }
 
 function readData(sData) {
-	document.getElementById("error" ).innerHTML = sData;
+	document.getElementById("ErrorTitle" ).innerHTML = sData;
 	verifEpisode()
 }
 
