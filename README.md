@@ -3,6 +3,9 @@
 
 v - 0.0.15A
 
+- Modification ajout de l'image utilisateur (def)
+- Ajout de la miniature par default (tmp)
+- Ajout des miniature
 - Correction de l'optimisation du multi upload
 - Correctin de l'affichage de l'upload
 - Modification des affiches pour les video
