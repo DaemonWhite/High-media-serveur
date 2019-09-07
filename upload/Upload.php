@@ -19,6 +19,9 @@ if ($_POST['Ep10'] != 0) {$Episode[9] = $_POST['Ep10']; $Saison[9] = $_POST['Sai
 if ($_POST['Ep11'] != 0) {$Episode[10] = $_POST['Ep11'];  $Saison[10] = $_POST['Saison11'];}
 if ($_POST['Ep12'] != 0) {$Episode[11] = $_POST['Ep12'];  $Saison[11] = $_POST['Saison12'];}
 
+if (!empty($_FILES['miniature'])) { $min = $_FILES['miniature']['name']; } else { $min = "DVideo.jpg";}
+
+
 if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}
 
 
@@ -31,6 +34,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 	if (!empty($_POST['nameSerie'])) {
 
 		$TitrePrincip = $_POST['nameSerie'];
+
+		$minia = 'upload/' . "Video/" . $TitrePrincip ."/". $min;
 
 		echo "papa2";
 
@@ -54,7 +59,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 						if (empty($vEp)) {
 
-							$Vdoss1 = "upload/Video/" . $TitrePrincip . "/";
+							$Vdoss1 = "Video/" . $TitrePrincip . "/";
 							$Vdoss2 = $Vdoss1 . "S" . $Saison[$ExisteVideo] . "/";
 
 							$nameV = $_FILES['Video']['name'][$ExisteVideo];
@@ -64,13 +69,13 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 				
 								if (!file_exists($Vdoss1)) {
 					
-									CreateRepertoire(2, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);
+									CreateRepertoire(2, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);
 					
 								} elseif (!file_exists($Vdoss2)) {
 					
-									CreateRepertoire(1, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);
+									CreateRepertoire(1, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);
 					
-								} else {CreateRepertoire(0, $_POST['nameSerie'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);} 
+								} else {CreateRepertoire(0, $_POST['nameSerie'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);} 
 	
 							} else {$Uerreur = "La video existe déja";}
 
@@ -88,14 +93,16 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 
 
-	function CreateRepertoire($Season, $name, $Ep, $Saison, $nameVideo, $tmpRepertori, $Synopsis, $bda, $user) {
+	function CreateRepertoire($Season, $name, $Ep, $Saison, $nameVideo, $tmpRepertori, $Synopsis, $miniature, $bda, $user) {
 
 		$GetTitle = $name ;
 		$GetSubtitle = "NoValide"; //$_POST['subtitle'] 
 		$GetSeson = $Saison;
 		$GetEp = $Ep;
 		$GetGen =  $_POST['Genre'];
-		$GetTyp = "no"; //$_POST['typ']
+		$GetTyp = $_POST['type']; //$_POST['typ']
+		$GetLang = $_POST['Lang'];
+		$GetMin = $miniature;
 		$Format = "0";
 
 		$reqNombre = $bda->query('SELECT Nombre FROM titre');
@@ -119,17 +126,20 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 		} else {
 
-			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Genre, Synopsis) VALUES  (:nom, :Format, :Genre, :Synopsis)");
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Affiche, :Genre, :type, :Synopsis)");
                                           $AddTitre->execute(array( 
                                           	'nom' => $GetTitle,
                                           	'Format' => $Format,
                                           	'Genre' => $GetGen,
+                                          	'type' => $GetTyp,
+                                          	'Affiche' => $GetMin,
                                           	'Synopsis' => $Synopsis));
 
 		}
 
 		$DefaultDaus = "Video/";
 		$dossier = $DefaultDaus . $_POST["nameSerie"];
+		$dossMini = "Video/" . $GetTitle. "/";
 
 		if ($Season > 1) {
 			mkdir($dossier);
@@ -156,6 +166,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
                                           	'Proprietaire' => $user));
 
 		move_uploaded_file($tmpRepertori, $dossier .  $nameVideo);
+
+		move_uploaded_file($_FILES['miniature']['tmp_name'], $dossMini . $_FILES['miniature']['name'] );
 
 	}
 
