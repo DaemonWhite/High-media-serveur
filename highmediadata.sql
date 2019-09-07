@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 05 sep. 2019 à 14:26
+-- Généré le :  sam. 07 sep. 2019 à 13:08
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -93,22 +93,32 @@ CREATE TABLE IF NOT EXISTS `titre` (
   `Nombre` int(11) NOT NULL DEFAULT '1',
   `Saison` int(11) DEFAULT NULL,
   `Synopsis` text,
+  `Affiche` varchar(255) NOT NULL DEFAULT 'upload/Video/DVideo.jpg',
   `Genre` varchar(255) NOT NULL,
   `Type` varchar(255) NOT NULL DEFAULT 'no',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `titre`
 --
 
-INSERT INTO `titre` (`id`, `nom`, `Format`, `Nombre`, `Saison`, `Synopsis`, `Genre`, `Type`) VALUES
-(1, 'Dog Days', 0, 1, NULL, NULL, 'Anime', 'no'),
-(2, 'Dog Day', 0, 1, NULL, 'L\'histoire de chien humanoÃ¯de.', 'Anime', 'no'),
-(3, 'Titre', 0, 1, NULL, NULL, 'Anime', 'no'),
-(4, 'Dog Dayse', 0, 1, NULL, NULL, 'Anime', 'no'),
-(5, 'Dororo', 0, 1, NULL, 'zeaeazdsddfcazce', 'Anime', 'no'),
-(6, 'Mirai nikki', 0, 1, NULL, NULL, 'Anime', 'no');
+INSERT INTO `titre` (`id`, `nom`, `Format`, `Nombre`, `Saison`, `Synopsis`, `Affiche`, `Genre`, `Type`) VALUES
+(1, 'Dog Days', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(2, 'Dog Day', 0, 1, NULL, 'L\'histoire de chien humanoÃ¯de.', 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(3, 'Titre', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(4, 'Dog Dayse', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(5, 'Dororo', 0, 1, NULL, 'zeaeazdsddfcazce', 'upload/Video/Dororo/dororo_7676.jpg', 'Anime', 'no'),
+(6, 'Mirai nikki', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(7, 'Test', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(8, 'yyyyyy', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(9, 'jjjj', 0, 1, NULL, NULL, 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(10, 'Paa', 0, 1, NULL, 'Azer', 'upload/Video/DVideo.jpg', 'Anime', 'no'),
+(11, 'Angel beats', 0, 1, NULL, NULL, 'upload/Video/Angel beats/angel_beats_1562.jpg', 'Anime', 'no'),
+(12, 'Date a Live', 0, 1, NULL, NULL, 'upload/Video/Date a Live/256_636970677259884840Date_A_Live_1_Small.png', 'Anime', 'Shonen'),
+(13, 'Akame ga kill', 0, 1, NULL, NULL, 'upload/Video/Akame ga kill/akame_ga_kill_3191.jpg', 'Anime', 'Shonen'),
+(14, 'Another', 0, 1, NULL, NULL, 'upload/Video/Another/Another.jpg', 'Anime', 'no'),
+(15, 'Absolut Duo', 0, 1, NULL, NULL, 'upload/Video/Absolut Duo/49bbd90987cc2b8d5b0f6cc87465c14e1420158261_main.jpg', 'Anime', 'no');
 
 -- --------------------------------------------------------
 
@@ -155,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `Repertoire` text NOT NULL,
   `Proprietaire` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=96 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `video`
@@ -194,7 +204,69 @@ INSERT INTO `video` (`ID`, `titre`, `SousTitre`, `Saison`, `Episode`, `Repertoir
 (30, 'Dororo', 'NoValide', 1, 21, 'upload/Video/Dororo/S1//Dororo 21 VOSTFR.mp4', 'Anonyme'),
 (31, 'Dororo', 'NoValide', 1, 22, 'upload/Video/Dororo/S1//Dororo 22 VOSTFR.mp4', 'Anonyme'),
 (32, 'Dororo', 'NoValide', 1, 23, 'upload/Video/Dororo/S1//Dororo 23 VOSTFR.mp4', 'Anonyme'),
-(33, 'Dororo', 'NoValide', 1, 24, 'upload/Video/Dororo/S1//Dororo 24 VOSTFR.mp4', 'Anonyme');
+(33, 'Dororo', 'NoValide', 1, 24, 'upload/Video/Dororo/S1//Dororo 24 VOSTFR.mp4', 'Anonyme'),
+(34, 'Test', 'NoValide', 1, 1, 'upload/Video/Test/S1//Dororo 01 VOSTFR.mp4', 'DaemonWhite'),
+(35, 'yyyyyy', 'NoValide', 1, 1, 'upload/Video/yyyyyy/S1//2019-08-26_22-56-48.mp4', 'JordanRoy'),
+(36, 'jjjj', 'NoValide', 1, 1, 'upload/Video/jjjj/S1//robloxapp-20190825-2345559.wmv', 'JordanRoy'),
+(37, 'Paa', 'NoValide', 1, 1, 'upload/Video/Paa/S1//Dororo 01 VOSTFR.mp4', 'DaemonWhite'),
+(38, 'Angel beats', 'NoValide', 1, 1, 'upload/Video/Angel beats/S1//angel-beats-1-vf-le-depart-gum-gum-streaming.mp4', 'DaemonWhite'),
+(39, 'Angel beats', 'NoValide', 1, 2, 'upload/Video/Angel beats/S1//angel-beats-2-vf-la-guilde-gum-gum-streaming.mp4', 'DaemonWhite'),
+(40, 'Angel beats', 'NoValide', 1, 3, 'upload/Video/Angel beats/S1//angel-beats-3-vf-ma-chanson-gum-gum-streaming.mp4', 'DaemonWhite'),
+(41, 'Angel beats', 'NoValide', 1, 4, 'upload/Video/Angel beats/S1//angel-beats-4-vf-jour-de-match-gum-gum-streaming.mp4', 'DaemonWhite'),
+(42, 'Angel beats', 'NoValide', 1, 5, 'upload/Video/Angel beats/S1//angel-beats-5-vf-saveur-preferee-gum-gum-streaming.mp4', 'DaemonWhite'),
+(43, 'Angel beats', 'NoValide', 1, 6, 'upload/Video/Angel beats/S1//angel-beats-6-vf-affaire-de-famille-gum-gum-streaming.mp4', 'DaemonWhite'),
+(44, 'Angel beats', 'NoValide', 1, 7, 'upload/Video/Angel beats/S1//angel-beats-7-vf-en-vie-gum-gum-streaming.mp4', 'DaemonWhite'),
+(45, 'Angel beats', 'NoValide', 1, 8, 'upload/Video/Angel beats/S1//angel-beats-8-vf-une-danseuse-dans-lobscurite-gum-gum-streaming-1514713770890.mp4', 'DaemonWhite'),
+(46, 'Angel beats', 'NoValide', 1, 9, 'upload/Video/Angel beats/S1//angel-beats-9-vf-dans-ta-memoire-gum-gum-streaming.mp4', 'DaemonWhite'),
+(47, 'Angel beats', 'NoValide', 1, 10, 'upload/Video/Angel beats/S1//angel-beats-10-vf-jours-dadieu-gum-gum-streaming.mp4', 'DaemonWhite'),
+(48, 'Angel beats', 'NoValide', 1, 11, 'upload/Video/Angel beats/S1//angel-beats-11-vf-change-le-monde-gum-gum-streaming.mp4', 'DaemonWhite'),
+(49, 'Angel beats', 'NoValide', 1, 12, 'upload/Video/Angel beats/S1//angel-beats-12-vf-frapper-a-la-porte-du-paradis-gum-gum-streaming.mp4', 'DaemonWhite'),
+(50, 'Date a Live', 'NoValide', 1, 1, 'upload/Video/Date a Live/S1//[Kanojo X Otome] Date A Live - 01 vostfr (BD 1920x1080 x264 AAC).mp4', 'DaemonWhite'),
+(51, 'Date a Live', 'NoValide', 1, 2, 'upload/Video/Date a Live/S1//Date A Live 2 vostfr.mp4', 'DaemonWhite'),
+(52, 'Date a Live', 'NoValide', 1, 3, 'upload/Video/Date a Live/S1//Date A Live 3 vostfr.mp4', 'DaemonWhite'),
+(53, 'Date a Live', 'NoValide', 1, 4, 'upload/Video/Date a Live/S1//Date A Live 4 vostfr.mp4', 'DaemonWhite'),
+(54, 'Date a Live', 'NoValide', 1, 5, 'upload/Video/Date a Live/S1//Date A Live 5 vostfr.mp4', 'DaemonWhite'),
+(55, 'Date a Live', 'NoValide', 1, 6, 'upload/Video/Date a Live/S1//Date A Live 6 vostfr.mp4', 'DaemonWhite'),
+(56, 'Date a Live', 'NoValide', 1, 7, 'upload/Video/Date a Live/S1//Date A Live 7 vostfr.mp4', 'DaemonWhite'),
+(57, 'Date a Live', 'NoValide', 1, 8, 'upload/Video/Date a Live/S1//date-a-live-8-vostfr-le-trio-des-furies-gum-gum-streaming.mp4', 'DaemonWhite'),
+(58, 'Date a Live', 'NoValide', 1, 9, 'upload/Video/Date a Live/S1//date-a-live-9-vostfr-nightmare-en-furie-gum-gum-streaming.mp4', 'DaemonWhite'),
+(59, 'Date a Live', 'NoValide', 1, 10, 'upload/Video/Date a Live/S1//date-a-live-10-vostfr-lesprit-du-feu-gum-gum-streaming.mp4', 'DaemonWhite'),
+(60, 'Date a Live', 'NoValide', 1, 11, 'upload/Video/Date a Live/S1//date-a-live-11-vostfr-compte-a-rebours-gum-gum-streaming.mp4', 'DaemonWhite'),
+(61, 'Date a Live', 'NoValide', 1, 12, 'upload/Video/Date a Live/S1//date-a-live-12-vostfr-ce-quon-ne-peut-abandonner-gum-gum-streaming-1549788509219.mp4', 'DaemonWhite'),
+(62, 'Akame ga kill', 'NoValide', 1, 1, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 01.mp4', 'DaemonWhite'),
+(63, 'Akame ga kill', 'NoValide', 1, 2, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! Episode 2 Vostfr HD !.mp4', 'DaemonWhite'),
+(64, 'Akame ga kill', 'NoValide', 1, 3, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! Episode 3 Vostfr HD !.mp4', 'DaemonWhite'),
+(65, 'Akame ga kill', 'NoValide', 1, 4, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! Episode 4 Vostfr HD.mp4', 'DaemonWhite'),
+(66, 'Akame ga kill', 'NoValide', 1, 5, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! Episode 5 Vostfr HD.mp4', 'DaemonWhite'),
+(67, 'Akame ga kill', 'NoValide', 1, 6, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 06.mp4', 'DaemonWhite'),
+(68, 'Akame ga kill', 'NoValide', 1, 7, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! Episode 7 Vostfr HD.mp4', 'DaemonWhite'),
+(69, 'Akame ga kill', 'NoValide', 1, 8, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 08.mp4', 'DaemonWhite'),
+(70, 'Akame ga kill', 'NoValide', 1, 9, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 09.mp4', 'DaemonWhite'),
+(71, 'Akame ga kill', 'NoValide', 1, 10, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 10.mp4', 'DaemonWhite'),
+(72, 'Akame ga kill', 'NoValide', 1, 11, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 11.mp4', 'DaemonWhite'),
+(73, 'Akame ga kill', 'NoValide', 1, 12, 'upload/Video/Akame ga kill/S1//Akame ga Kill! Episode 12.mp4', 'DaemonWhite'),
+(74, 'Akame ga kill', 'NoValide', 1, 13, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! 13 - Part 01.mp4', 'DaemonWhite'),
+(75, 'Akame ga kill', 'NoValide', 1, 14, 'upload/Video/Akame ga kill/S1//Akame Ga Kill! 14 - Part 01.mp4', 'DaemonWhite'),
+(76, 'Akame ga kill', 'NoValide', 1, 15, 'upload/Video/Akame ga kill/S1//Akame ga Kill ! Episode15 VOSTFR.mp4', 'DaemonWhite'),
+(77, 'Another', 'NoValide', 1, 1, 'upload/Video/Another/S1//Another 01 - vf.mp4', 'DaemonWhite'),
+(78, 'Another', 'NoValide', 1, 2, 'upload/Video/Another/S1//Another 02 - vf.mp4', 'DaemonWhite'),
+(79, 'Another', 'NoValide', 1, 3, 'upload/Video/Another/S1//Another 03 - vf.mp4', 'DaemonWhite'),
+(80, 'Another', 'NoValide', 1, 4, 'upload/Video/Another/S1//Another 04 - vf.mp4', 'DaemonWhite'),
+(81, 'Another', 'NoValide', 1, 5, 'upload/Video/Another/S1//Another 05 - vf.mp4', 'DaemonWhite'),
+(82, 'Another', 'NoValide', 1, 6, 'upload/Video/Another/S1//Another 06 - vf.mp4', 'DaemonWhite'),
+(83, 'Another', 'NoValide', 1, 7, 'upload/Video/Another/S1//Another 07 - vf.mp4', 'DaemonWhite'),
+(84, 'Another', 'NoValide', 1, 8, 'upload/Video/Another/S1//Another 08 - vf.mp4', 'DaemonWhite'),
+(85, 'Another', 'NoValide', 1, 9, 'upload/Video/Another/S1//Another 09 - vf.mp4', 'DaemonWhite'),
+(86, 'Another', 'NoValide', 1, 10, 'upload/Video/Another/S1//Another 10 - vf.mp4', 'DaemonWhite'),
+(87, 'Another', 'NoValide', 1, 11, 'upload/Video/Another/S1//Another 11 - vf.mp4', 'DaemonWhite'),
+(88, 'Another', 'NoValide', 1, 14, 'upload/Video/Another/S1//video(2).mp4', 'DaemonWhite'),
+(89, 'Absolut Duo', 'NoValide', 1, 1, 'upload/Video/Absolut Duo/S1//Absolute Duo 01 VOSTFR.mp4', 'DaemonWhite'),
+(90, 'Absolut Duo', 'NoValide', 1, 2, 'upload/Video/Absolut Duo/S1//Absolute Duo 02 VOSTFR.mp4', 'DaemonWhite'),
+(91, 'Absolut Duo', 'NoValide', 1, 3, 'upload/Video/Absolut Duo/S1//Absolute Duo 03 VOSTFR.mp4', 'DaemonWhite'),
+(92, 'Absolut Duo', 'NoValide', 1, 4, 'upload/Video/Absolut Duo/S1//Absolute Duo 04 VOSTFR 720p.mp4', 'DaemonWhite'),
+(93, 'Absolut Duo', 'NoValide', 1, 5, 'upload/Video/Absolut Duo/S1//Absolute Duo 05 VOSTFR.mp4', 'DaemonWhite'),
+(94, 'Absolut Duo', 'NoValide', 1, 6, 'upload/Video/Absolut Duo/S1//Absolute Duo 06 VOSTFR.mp4', 'DaemonWhite'),
+(95, 'Absolut Duo', 'NoValide', 1, 7, 'upload/Video/Absolut Duo/S1//Absolute Duo 07 VOSTFR 720p.mp4', 'DaemonWhite');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

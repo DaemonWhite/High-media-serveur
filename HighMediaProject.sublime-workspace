@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"chan",
+				"ChangePAGE"
+			],
+			[
+				"bu",
+				"buttonBase"
+			],
+			[
+				"im",
+				"Image"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			],
+			[
+				"ne",
+				"newEp"
+			],
+			[
+				"nu",
+				"numEpDown"
+			],
+			[
+				"Ep",
+				"Episode"
+			],
+			[
+				"vid",
+				"video"
+			],
+			[
+				"add",
+				"addTotalVideo"
+			],
+			[
+				"E",
+				"Erreur"
+			],
+			[
+				"v",
+				"visual2"
+			],
+			[
+				"mar",
+				"margin-bottom\tproperty"
+			],
+			[
+				"s",
+				"style\tAttr"
+			],
+			[
 				"i",
 				"innerHTML"
 			],
@@ -32,14 +92,6 @@
 				"margin-bottom\tproperty"
 			],
 			[
-				"marg",
-				"margin-bottom\tproperty"
-			],
-			[
-				"E",
-				"Ep"
-			],
-			[
 				"na",
 				"name"
 			],
@@ -50,10 +102,6 @@
 			[
 				"do",
 				"donnes"
-			],
-			[
-				"margin",
-				"margin-top\tproperty"
 			],
 			[
 				"ma",
@@ -94,10 +142,6 @@
 			[
 				"flex",
 				"flex-wrap\tproperty"
-			],
-			[
-				"mar",
-				"margin\tproperty"
 			],
 			[
 				"pa",
@@ -144,10 +188,6 @@
 				"verifVideo"
 			],
 			[
-				"nu",
-				"numVideo"
-			],
-			[
 				"oncc",
 				"onclick\tAttr"
 			],
@@ -170,10 +210,6 @@
 			[
 				"re",
 				"return"
-			],
-			[
-				"v",
-				"verif"
 			],
 			[
 				"num",
@@ -288,16 +324,8 @@
 				"focusValide"
 			],
 			[
-				"al",
-				"align-items\tproperty"
-			],
-			[
 				"st",
 				"stopPropagation"
-			],
-			[
-				"s",
-				"stopPropagatio"
 			],
 			[
 				"cl",
@@ -370,10 +398,6 @@
 			[
 				"exe",
 				"execute"
-			],
-			[
-				"ne",
-				"newRequete"
 			],
 			[
 				"CONS",
@@ -490,30 +514,6 @@
 			[
 				"reset",
 				"resetmcm\tfunc. (self)"
-			],
-			[
-				"Boo",
-				"bool\ttype"
-			],
-			[
-				"end",
-				"endif\tkeyword"
-			],
-			[
-				"getV",
-				"getvalue\tfloat func. (globalvariable)"
-			],
-			[
-				"End",
-				"endif\tkeyword"
-			],
-			[
-				"Ques",
-				"quest\tscript"
-			],
-			[
-				"_PCSX_Deb",
-				"_pcsx_eventdebug_notif\tint var."
 			]
 		]
 	},
@@ -523,25 +523,16 @@
 			"file": "/D/Project/High-media-serveur/README.md",
 			"settings":
 			{
-				"buffer_size": 3307,
+				"buffer_size": 4127,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "VLecteur.php",
+			"file": "global.php",
 			"settings":
 			{
-				"buffer_size": 3862,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "video.php",
-			"settings":
-			{
-				"buffer_size": 8450,
+				"buffer_size": 4435,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -550,7 +541,34 @@
 			"file": "Res/popUpload.php",
 			"settings":
 			{
-				"buffer_size": 27998,
+				"buffer_size": 29904,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "VLecteur.php",
+			"settings":
+			{
+				"buffer_size": 6583,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "video.php",
+			"settings":
+			{
+				"buffer_size": 10070,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "User/changeImage.php",
+			"settings":
+			{
+				"buffer_size": 1251,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -565,37 +583,39 @@
 			}
 		},
 		{
+			"contents": "body\n{\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: time new romants;\n}\n.colorTitle\n{\n    color: #54C472; \n}\n.BackgroundA\n{\n\tbackground-color: #2F2F2F; \n    color: white;\n}\n.BackgroundB\n{\t\n\tbackground-position: left;\n\tbackground-color: #3D3D3D; \n    color: white;\n}\n.CupeInfo\n{\t\n\tbackground-position: center;\n\twidth: 30%;\n\tmin-width: 400px;\n\tborder-radius: 10px;\n\tborder: 3px black groove;\n\tbackground-color: #3D3D3D; \n    color: white;\n    margin: auto;\n}\n.SelectionBase\n{\n\ttext-decoration: none;\n   \tcolor: #54C472;\n   \tfont-style: italic;\n}\n.SelectionBase:hover /* Apparence au survol des liens */\n{\n   text-decoration: underline;\n   color: green;\n}\n\n/* ------- Création du cube ----------*/\n\n.Conteneur\n{\t\n\tdisplay: flex;\n\tposition: absolute;\n\ttop: 0%;\n\tleft: 50%;\n    right: 50%;\n    bottom: 50%;\n\tjustify-content: center;\n    align-items: center;\n}\n\n.CupeInfo:nth-child(1)\n{\t\n\twidth: 30%;\n\tmin-width: 400px;\n\tborder-radius: 10px;\n\tborder: 3px black groove;\n\tbackground-color: #3D3D3D; \n    color: white;\n    margin: auto;\n}\n\n/* ------- Entre Texte --------------*/\n\n.texteBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:hover\n{\n  border: 3px #54C472 groove;\n  background-color: #2F2F2F;\n  color: #54C472;\n}\n.texteBase:active\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:focus\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:visited\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n/* ------- Bouton base ----------*/\n\n.buttonBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #54C472;\n  padding-left:8px;\n}\n.buttonBase:hover\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px green solid;\n  background-color: green;\n  padding-left:8px;\n}\n\n\n/* -------Texte area base -----------*/\n\n.textareaBase\n{\n  width: 50vh;\n  height: 20vh;\n  resize: none;\n  padding: 1%;\n  margin-top: 2%;\n  background: #2d2d2d;\n  border: 2px #54C472 solid;\n  color: #54C472;\n  overflow: auto;\n}\n\n/* --------Selecte base ------------*/\n\n.selectBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 2px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n\n/* ------- Création du menu ----------*/\n\n#menu\n{\n\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\talign-items: flex-start;\n\tflex-direction: column;\n    min-width: 30vh;\n    max-width: 30vh;\n    position: fixed;\n    background-color: #3D3D3D;\n    height: 100vh;\n    overflow: visible;\n    border-right: 0.6vh black solid;\n}\n.link\n{\n\n\twidth: 100%;\n\theight: 350px;\n}\n\n.linkSelect\n{\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  text-decoration: none;\n  font-style: bold;\n  color: white;\n  font-size: 3vh;\n  text-align: center;\n  margin-top: 1vh;\n  list-style-type: none;\n  overflow: visible;\n  width: 32vh;\n  height: 3vh;\n  position: relative;\n  background: #3A874E;\n}\n.linkSelect:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -1.5vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n.linkSelect:hover\n{\n  background: #4AAD64;\n}\n.linkSelect:hover:after\n{\n  border-left: 1.5vh solid #4AAD64;\n}\n\n.linkSelect[id=\"LinkDebutPassif\"]\n{\n  margin-top: 2vh;\n\twidth: 33vh;\n\theight: 4vh;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:hover\n{\n\t background: #3A874E;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:hover:after\n{\n  border-left: 2vh solid #3A874E;\n}\n\n.linkSelect[id=\"LinkDebutActif\"]\n{\n  margin-top: 2vh;\n  width: 33vh;\n  height: 4vh;\n}\n.linkSelect[id=\"LinkDebutActif\"]:hover\n{\n   background: #4AAD64;\n}\n.linkSelect[id=\"LinkDebutActif\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n.linkSelect[id=\"LinkDebutActif\"]:hover:after\n{\n  border-left: 2vh solid #4AAD64;\n}\n\n.linkSelect[id=\"linkCenter\"]\n{\n  margin-top: 2vh;\n  font-size: 2.3vh;\n}\n\n.linkSelect[id=\"LinkDown\"]\n{\n\tmargin-top: 2vh;\n\tfont-size: 2.3vh;\n\tmargin-bottom: 1.5vh;\n}\n\n.separationA\n{\n\ttext-align: center;\n\tpadding-left: 4.5vh;\n\tpadding-right: 4.5vh;\n\tpadding-top: 1vh; \n\tborder-top: 0.4vh black solid;\n\tpadding-bottom: 1vh; \n\tborder-bottom: 0.4vh black solid;\n}\n\n.infoUser\n{ \n\tfont-style: bold;\n\tfont-size: 2.3vh;\n\tcolor: red;\n\tpadding-top: 1vh; \n}\n\n.imageUer\n{s\n  overflow: hidden;\n  margin-top: 1vh;\n  margin-bottom: 1vh;\n  background:#3D3D3D;\n  border-radius:50%;\n  width:20vh;\n  height:20vh;\n  border:0.5vh solid black; \n}\n.image\n{\n\twidth:100%; \n\theight:100%;\n}\n\n.UserName\n{\n\tfont-style: bold;\n\tfont-size: 2.3vh;\n\tcolor: white;\n\tmargin-bottom: 1vh;\n}\n\n.bottomDisconect\n{\n\tmargin-top: 1vh;\n\tpadding: 0.5vh;\n\tfont-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: red;\n\n}\n.bottomDisconect:hover\n{\n\tmargin-top: 1vh;\n\tpadding: 0.5vh;\n\tfont-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #262626;\n  padding-left:8px;\n  color: red;\n\n}\n\n.bottomConnect\n{\n  margin-top: 1vh;\n  padding: 0.5vh;\n  font-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #3A874E;\n}\n.bottomConnect:hover\n{\n  margin-top: 1vh;\n  padding: 0.5vh;\n  font-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #262626;\n  padding-left:8px;\n  color: #3A874E;\n\n}\n\n.separationB\n{\n\ttext-align: center;\n\tpadding-top: 1vh;\n\tpadding-left: 10vh;\n\tpadding-right: 10vh;\n}\n.bottomMenu\n{\n  color: white;\n  text-align: center; \n  margin-left: -6vh;\n  list-style-type: none;\n  overflow: visible;\n  width: 22vh;\n  height: 3vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  margin-bottom: 1vh;\n  font-size: 2vh;\n}\n\n.bottomMenu:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 22vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n\n.bottomMenu:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -1.5vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n.bottomMenu:hover\n{\n\tfont-size: 2.2vh;\n\tbackground: green;\n}\n.bottomMenu:hover:before\n{\n\tborder-right: 1.5vh solid green;\t\n}\n.bottomMenu:hover:after\n{\n\tborder-left: 1.5vh solid green;\t\n}\n\n/*-----------Création du modal-----------*/\n\n.modal-back\n{\n  position: fixed;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.8);\n}\n\n.modal-bloc \n{\n  display: column;\n  color: black;\n  overflow: auto;\n  min-width: calc(100vw - 40%);\n  max-width: calc(100vw - 15%);\n  min-height: calc(100vh - 20%);\n  max-height: calc(100vh - 8%);\n  background-color: #4a4a4a;\n}\n\n.boutonUpload\n{\n  margin-left: 35%;\n  margin-top: 13%;\n  color: white;\n  text-align: center; \n  list-style-type: none;\n  overflow: visible;\n  width: 35vh;\n  height: 8vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  font-size: 3vh;\n}\n\n.boutonUpload:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 35vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 4vh solid #3A874E;\n  border-top: 4vh solid transparent;\n  border-bottom: 4vh solid transparent;\n}\n\n.boutonUpload:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -4vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 4vh solid #3A874E;\n  border-top: 4vh solid transparent;\n  border-bottom: 4vh solid transparent;\n}\n\n.boutonUpload:hover\n{\n  font-size: 3.5vh;\n  background-color: green;\n}\n\n.boutonUpload:hover:before\n{\n  border-right: 4vh solid green;\n}\n\n.boutonUpload:hover:after\n{\n  border-left: 4vh solid green;\n}\n.boutonUpload:nth-child(4)\n{\n  margin-left: 12%;\n  margin-bottom: 6%;\n  width: 20vh;\n  height: 4vh;\n  font-size: 2.4vh;\n}\n.boutonUpload:nth-child(4):before\n{\n  right: 20vh;\n  border-right: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonUpload:nth-child(4):after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonUpload:nth-child(4):hover:before\n{\n  border-right: 2vh solid green;\n}\n\n.boutonUpload:nth-child(4):hover:after\n{\n  border-left: 2vh solid green;\n}\n\n.boutonUpload[id=\"exit\"]\n{\n  margin-left: 12%;\n  margin-bottom: 6%;\n  width: 20vh;\n  height: 4vh;\n  font-size: 2.4vh;\n}\n.boutonUpload[id=\"exit\"]:before\n{\n  right: 20vh;\n  border-right: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonUpload[id=\"exit\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonSubmit[id=\"exit\"]:hover:before\n{\n  border-right: 2vh solid green;\n}\n\n.boutonSubmit[id=\"exit\"]:hover:after\n{\n  border-left: 2vh solid green;\n}\n\n.boutonSubmit\n{\n  margin-top: 6%;\n  color: white;\n  text-align: center; \n  list-style-type: none;\n  overflow: visible;\n  width: 20vh;\n  height: 4vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  font-size: 2.4vh;\n}\n\n.boutonSubmit:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 20vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonSubmit:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -2vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonSubmit:hover\n{\n  font-size: 2.5vh;\n  background-color: green;\n}\n\n.boutonSubmit:hover:before\n{\n  border-right: 2vh solid green;\n}\n\n.boutonSubmit:hover:after\n{\n  border-left: 2vh solid green;\n}\n\n/*--------- Zone upload ------------*/\n\n.ecritureUp\n{\n  color: #54C472;\n  font-size: 2vh;\n}\n\n.texteBase[id=title]\n{\n  margin-top: 3%;\n  margin-left: 35%;\n  margin-right: 35%;\n  margin-bottom: 3%;\n  padding: 0;\n  font-size: 2.2vh;\n  text-align : center;\n}\n.texteBase[id=subTitle]\n{\n  padding: 0;\n  border-radius: 2px;\n  font-size: 2vh;\n  text-align : center;\n}\n\n.upMargin\n{\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.buttonNew\n{\n  -moz-border-radius: 2px;\n  border-radius:2px;\n  border: 3px #54C472 solid;\n  background-color: #54C472;\n  padding: -2vh;\n  font-size: 2vh;\n}\n.buttonNew:hover\n{\n  background-color: green;\n}\n.EpisodeSize\n{\n  -moz-border-radius: 2px;\n  border-radius:2px;\n  border: 3px #54C472 solid;\n  background-color: #3D3D3D;\n  padding: -2vh;\n  font-size: 2vh;\n  color: #54C472;\n  text-align: right;\n}\n.progresseBar\n{\n  border: 3px black groove;\n  margin-top: 2%;\n  height: 6%;  /* Can be anything */\n  position: relative;\n  background: #2d2d2d;\n\n}\n.progresseBar > div\n{\n  display: block;\n  height: 1.5vh;\n  background-color: rgb(194,43,43);\n  box-shadow: \n    inset 0 2px 9px  rgba(255,255,255,0.3),\n    inset 0 -2px 6px rgba(0,0,0,0.4);\n  position: relative;\n  overflow: hidden;\n}\n\n.classError\n{\n\n  margin-right: 12%;\n  margin-left: 12%;\n  margin-bottom: 2%;\n  padding: 1%;\n  background: #2f2e2e;\n  color: #BC240D;\n\n}\n.selectModal\n{\n  font-size: 2.7vh;\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 4px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}",
+			"file": "Res/style.css",
+			"file_size": 13073,
+			"file_write_time": 132119722002708234,
+			"settings":
+			{
+				"buffer_size": 12312,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "user.php",
+			"settings":
+			{
+				"buffer_size": 4903,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Com/TestNewPassWord.php",
+			"settings":
+			{
+				"buffer_size": 16871,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "upload/Upload.php",
 			"settings":
 			{
 				"buffer_size": 5572,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/style.css",
-			"settings":
-			{
-				"buffer_size": 12044,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptModal.php",
-			"settings":
-			{
-				"buffer_size": 11168,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "upload/verifDonner.php",
-			"settings":
-			{
-				"buffer_size": 367,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -681,20 +701,33 @@
 		"/D/Wamp/www/HighMediaServeur",
 		"/D/Wamp/www/HighMediaServeur/Com",
 		"/D/Wamp/www/HighMediaServeur/Res",
-		"/D/Wamp/www/HighMediaServeur/Res/Framework",
 		"/D/Wamp/www/HighMediaServeur/upload",
 		"/D/Wamp/www/HighMediaServeur/User"
 	],
 	"file_history":
 	[
-		"/D/Wamp/www/HighMediaServeur/global.php",
-		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
-		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
-		"/D/Wamp/www/HighMediaServeur/Com/Conexion.php",
+		"/D/Wamp/www/test2/index.php",
+		"/D/Wamp/alias/phpmyadmin.conf",
+		"/D/Wamp/bin/apache/apache2.4.39/conf/httpd.conf",
+		"/D/Wamp/bin/apache/apache2.4.39/conf/extra/httpd-vhosts.conf",
+		"/D/Wamp/www/HighMediaServeur/php.ini",
+		"/D/Wamp/alias/HighMediaServeur.conf",
 		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
-		"/D/Wamp/www/HighMediaServeur/Res/style.css",
 		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
+		"/D/Wamp/www/HighMediaServeur/Com/ModifCompte.php",
+		"/D/Wamp/www/HighMediaServeur/Com/verifiLoad.php",
+		"/D/Wamp/www/HighMediaServeur/Com/Conexion.php",
+		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
+		"/D/Wamp/www/HighMediaServeur/perso/changeImage.php",
+		"/D/Wamp/www/HighMediaServeur/upload/verifDonner.php",
+		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
+		"/D/Wamp/www/HighMediaServeur/global.php",
+		"/D/Wamp/www/HighMediaServeur/video.php",
+		"/D/Wamp/www/HighMediaServeur/upload/addUpload.php",
+		"/D/Wamp/www/HighMediaServeur/Res/style.css",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
+		"/D/Wamp/www/HighMediaServeur/info.php",
+		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
 		"/D/Wamp/www/TEST/index.html",
 		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/www/HighMediaServeur/Res/popup.php",
@@ -705,7 +738,6 @@
 		"/D/Wamp/www/TEST/.htaccess",
 		"/D/Wamp/www/TEST/file-upload-progress-bar.js",
 		"/D/Wamp/www/TEST/styles.css",
-		"/D/Wamp/www/HighMediaServeur/info.php",
 		"/D/Wamp/www/TEST/Javascript/UploadAjaxABCI.js",
 		"/D/Wamp/www/TEST/index.php",
 		"/D/Wamp/www/TEST/upload.php",
@@ -715,7 +747,6 @@
 		"/D/Wamp/www/HighMediaServeur/Res/Framework/jquery",
 		"/D/Wamp/www/HighMediaServeur/HighMediaProject.sublime-project",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModalB.js",
-		"/D/Wamp/www/HighMediaServeur/Com/verifiLoad.php",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.js",
 		"/D/Wamp/www/HighMediaServeur/popup.php",
 		"/D/Wamp/www/HighMediaServeur/test.html",
@@ -731,10 +762,8 @@
 		"/D/Wamp/www/HighMediaServeur/scriptModal.js",
 		"/C/Users/Matheo/Desktop/Visual Studio 2019.lnk",
 		"/D/Wamp/www/HighMediaServeur/Upload.php",
-		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
 		"/C/Users/Matheo/Desktop/test.php",
 		"/C/Users/Matheo/Desktop/test.html",
-		"/D/Wamp/www/HighMediaServeur/video.php",
 		"/D/Wamp/www/HighMediaServeur/jeux_video.php",
 		"/D/Wamp/www/HighMediaServeur/admin.php",
 		"/C/Users/Matheo/Downloads/lecteur-video/index.html",
@@ -799,7 +828,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -813,6 +842,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"changeUseIm",
+			"7168",
+			"user.php",
+			"iamge",
+			"include",
+			"zone",
+			"window.location",
+			"newVideo",
+			"newZone",
+			"newEp",
+			"nameSerie",
+			"newBonus",
+			"totalVideo",
+			"addUpload",
+			"Eisode",
 			"innerHTML",
 			"callback",
 			"form",
@@ -927,7 +971,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -936,15 +980,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3307,
+						"buffer_size": 4127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89,
-								89
+								951,
+								951
 							]
 						],
 						"settings":
@@ -957,24 +1001,129 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "VLecteur.php",
+					"file": "global.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3862,
+						"buffer_size": 4435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1071,
-								1071
+								1431,
+								1431
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 805.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Res/popUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19630,
+								19630
+							],
+							[
+								20574,
+								20574
+							],
+							[
+								21545,
+								21545
+							],
+							[
+								22508,
+								22508
+							],
+							[
+								23471,
+								23471
+							],
+							[
+								24434,
+								24434
+							],
+							[
+								25397,
+								25397
+							],
+							[
+								26360,
+								26360
+							],
+							[
+								27323,
+								27323
+							],
+							[
+								28266,
+								28266
+							],
+							[
+								29107,
+								29107
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 163.0,
+						"translation.y": 2779.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "VLecteur.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6583,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3046,
+								3046
 							]
 						],
 						"settings":
@@ -982,31 +1131,32 @@
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 351.0,
+						"translation.y": 804.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "video.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8450,
+						"buffer_size": 10070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3056,
-								3056
+								7499,
+								7499
 							]
 						],
 						"settings":
@@ -1019,52 +1169,52 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 858.0,
+						"translation.y": 3217.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Res/popUpload.php",
+					"buffer": 5,
+					"file": "User/changeImage.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27998,
+						"buffer_size": 1251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1762,
-								1762
+								841,
+								841
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
+							"translate_tabs_to_spaces": false,
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "Res/styleVideo.css",
 					"semi_transient": false,
 					"settings":
@@ -1083,17 +1233,116 @@
 						"settings":
 						{
 							"is_init_dirty_state": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 585.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
+					"file": "Res/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								98
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "user.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3641,
+								3641
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Com/TestNewPassWord.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3823,
+								3879
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 991.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "upload/Upload.php",
 					"semi_transient": false,
 					"settings":
@@ -1105,8 +1354,8 @@
 						"selection":
 						[
 							[
-								1999,
-								1852
+								1631,
+								1631
 							]
 						],
 						"settings":
@@ -1114,105 +1363,13 @@
 							"is_init_dirty_state": false,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 195.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Res/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12044,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11958,
-								11958
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9070.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Res/scriptModal.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11168,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10620,
-								10632
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5514.0,
+						"translation.y": 333.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "upload/verifDonner.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 367,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								347
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1220,11 +1377,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 43.0
 	},
 	"layout":
 	{
@@ -1246,7 +1403,7 @@
 		"cols":
 		[
 			0.0,
-			0.60522875817,
+			0.0706214689268,
 			1.0
 		],
 		"rows":
@@ -1272,7 +1429,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":

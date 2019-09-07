@@ -3,8 +3,15 @@
 
 v - 0.0.15A
 
+- Correction de l'optimisation du multi upload
+- Correctin de l'affichage de l'upload
+- Modification des affiches pour les video
+- Modification on peut selectioner seulement les video dans le navigateur
+- Correction ajout de la verification de fichier sur chaque input
+- Modification sele les images son visible
+- Ajout de supression de l'ancienne image
 - Correction accée a la page user
-- Corection ajout de l'image utilisateur page video sur la liste d'image
+- Corection ajout de l'image utilisatetur page video sur la liste d'image
 
 v - 0.0.14A
 

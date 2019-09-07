@@ -12,7 +12,7 @@ $Rimage = $ImageUs->fetch();
 
 $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-$NameVideo = $bdd->query("SELECT nom FROM titre ORDER BY nom   ");
+$NameVideo = $bdd->query("SELECT nom, Affiche FROM titre ORDER BY nom   ");
 
 if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
     # code...
@@ -134,9 +134,9 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
         
                 echo '<div align="left" onclick="newZone('; echo "'"; echo $donnes['nom']; echo "'"; echo ')">
                           <table align="left" class="caseBottom">
-                                    <tr><td align="left" class="borderBottom"><img class="image" src="upload/video/DVideo.jpg"></td>
+                                    <tr><td class="class="" ><img class="caseImg" src="' . $donnes['Affiche'] .'"></td></tr>
                                     
-                                      <td align="center"><span class="whiteCase">'. $donnes['nom'] . '</span></td>  
+                                      <tr align="center"><td><span class="whiteCase">'. $donnes['nom'] . '</span></td></tr>  
                                     </tr>
                           </table>
         

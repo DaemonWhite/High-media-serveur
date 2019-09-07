@@ -105,10 +105,10 @@ $Rimage = $ImageUs->fetch();
         	<div  style="margin-left: 20vh;">
         		<div style="display: flex;">
         			<form style="margin-top: 2%; margin-left: 20vh;" name="newImage" method="post" enctype="multipart/form-data">
-        				<input class="buttonBase" type="file" id="imageUpl" name="imageUpl" onchange="changeUseIm()" value="Choisire la nouvelle image de profile">
+        				<input class="buttonBase" type="file" id="imageUpl" name="imageUpl" onchange="changeUseIm()" accept="image/png, image/jpeg , image/jpg" value="Choisire la nouvelle image de profile">
         			</form>
                     <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button href="com/testnewpassword.php" class="buttonBase">Admin</button>
+                    <button class="buttonBase" onclick="window.location = 'com/testnewpassword.php'" >Admin</button>
                     <?php } ?>
         		</div>
         	</div>
