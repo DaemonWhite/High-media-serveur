@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+$typeFavor = 1; // 1 = acueille;
+
 $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
@@ -14,6 +16,7 @@ $Rimage = $ImageUs->fetch();
 $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10");
 
 $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
+$Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +45,7 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
                     
                     <div>
                         <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
@@ -71,7 +74,7 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
                         </form>
                          <?php } else { ?>
                         <div>
-                            <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
+                            <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
                         </div>
 
                         <?php } ?>
@@ -80,13 +83,17 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
 
                     <div class="separationB">
 
-                        <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Favori</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
                         <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <button class="bottomMenu" id="#Upload">Uploade</button>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                          <button class="bottomMenu" id="#Favor">Favori</button>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                          <button class="bottomMenu" id="#Upload">Uploade</button>
                         <?php } else { ?>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                          <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                          <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                           <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
                         <?php } ?>
 
@@ -140,7 +147,7 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
                                     <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
 
                                         <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                        <td class="borderS"><span><?php echo $Nvideo['titre'] ; ?></span></td>
+                                        <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
                                         <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
                                             <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
 
@@ -154,6 +161,39 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
                     <section class="Box">
                         <div class="BoxTitle"><span>Favori</span></div>
 
+                        <div  align="left" class="overFlaw">
+                                <table class="listenBoxV">
+                                    <?php while ($Favo = $Fav->fetch()) {
+            
+                                        $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Favo['Favori'] . '\' AND Episode=\'' . $Favo['Ep'] . '\' AND Saison=\'' . $Favo['S'] . '\' ');
+                                        $Nvideo = $FavoVideo->fetch();
+        
+                                        $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Favo['Favori'] . '\'');
+                                        $Aff = $Affiche->fetch(); ?>
+
+                                            <?php if ($Favo['type'] == 1) { ?>
+                                                <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+            
+                                                    <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                                    <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
+                                                    <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
+                                                        <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
+            
+                                                </tr>
+                                            <?php } else { ?>
+
+                                                <tr class="ChoiceV" onclick='appListVideo(<?php echo '"'.$Aff['nom'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+            
+                                                    <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                                    <td class="tdTexte"><span><?php echo $Aff['nom'] ; ?></span></td>
+                                                    <td></td>
+            
+                                                </tr>
+
+                                            <?php } ?>
+                                    <?php } ?>
+                                </table>
+                            </div>
                         
                     </section>
 
@@ -178,7 +218,7 @@ $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique 
                                             <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
         
                                                 <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                                <td class="borderS"><span><?php echo $Nvideo['titre'] ; ?></span></td>
+                                                <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
                                                 <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
                                                     <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
         

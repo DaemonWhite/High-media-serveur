@@ -6,6 +6,9 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+$GetV = 1;
+$typeFavor = 2;
+
 $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
@@ -127,14 +130,18 @@ if ($video['titre'] != "") {
   
               <div class="separationB">
   
-                  <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Favori</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                  <button class="bottomMenu" id="Res/popup.php#" download>Télècharger</button>
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                  <button class="bottomMenu" id="#Upload">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="#Favor">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="#Upload">Uploade</button>
                   <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
                   <?php } ?>
   
               </div>  
@@ -203,6 +210,7 @@ if ($video['titre'] != "") {
     <script type="text/javascript">
           <?php include("Res/scriptModal.php"); ?>
     </script>
+    <script type="text/javascript" src="Res/scriptFavori.js"></script>
 </body>
 </html>
 <?php } ?>

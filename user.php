@@ -1,5 +1,7 @@
 <?php
 
+$typeFavor = 1;
+
 $moveUrl = "global.php";
 
 include("Com/Conexion.php");

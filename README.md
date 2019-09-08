@@ -3,6 +3,10 @@
 
 v - 0.0.16A
 
+- Ajout du reverse pour les favori
+- Ajout les 10 dernier favori son visible
+- Ajout des favori par l'utilisateur
+- correction les utilisateur normaux ne peux plus uploader sur la liste des épisode
 - Ajout de l'historique intelligent
 - Ajout de l'historique visible menu principale
 - Correction de certain problème avec Firefox

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 07 sep. 2019 à 20:33
+-- Généré le :  Dim 08 sep. 2019 à 13:45
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -30,14 +30,24 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `favori`;
 CREATE TABLE IF NOT EXISTS `favori` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `User` int(11) NOT NULL,
   `Favori` text NOT NULL,
   `S` int(11) DEFAULT NULL,
   `Ep` int(11) DEFAULT NULL,
   `type` int(11) NOT NULL,
-  `Genre` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `Genre` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `favori`
+--
+
+INSERT INTO `favori` (`ID`, `User`, `Favori`, `S`, `Ep`, `type`, `Genre`) VALUES
+(5, 1, 'Date a Live', 0, 0, 0, 0),
+(7, 1, 'Date a Live', 1, 1, 1, 1),
+(8, 1, 'Date a Live', 8, 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -54,7 +64,21 @@ CREATE TABLE IF NOT EXISTS `historique` (
   `Episode` varchar(255) NOT NULL,
   `Saison` int(11) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `historique`
+--
+
+INSERT INTO `historique` (`ID`, `User_ID`, `Name`, `type`, `Episode`, `Saison`) VALUES
+(1, 1, 'Another', 0, '10', 1),
+(2, 1, 'Another', 0, '1 ', 1),
+(3, 1, 'Angel beats', 0, '1 ', 1),
+(4, 1, 'Akame ga kill', 0, '7 ', 1),
+(10, 1, 'Absolut Duo', 0, '1 ', 1),
+(8, 1, 'Date a Live', 0, '1 ', 1),
+(9, 1, 'Date a Live', 0, '8', 1),
+(11, 1, 'Absolut Duo', 0, '2 ', 1);
 
 -- --------------------------------------------------------
 

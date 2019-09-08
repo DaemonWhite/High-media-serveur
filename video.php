@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+$typeFavor = 1;
+
 $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 $ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
@@ -27,40 +29,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
       <link rel="stylesheet" href="Res/styleVideo.css" />
   </head>
 
-  <script type="text/javascript">
-    
-    function ChangePAGE(Type)
-    {
-        if (Type === "Acueil") 
-        {
-            window.location = "global.php";
-        }
-        if (Type === "Audio") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Perso") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Serv") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Propo") 
-        {
-            NonDisponible()
-        }
-
-    }
-
-    function newZone(Page){
-
-      window.location = "?name=" + Page;
-
-     }
-
-</script>
+  <script type="text/javascript" src="Res/scriptZone.js" ></script>
 
 
 <body class="BackgroundA">
@@ -108,13 +77,17 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   
               <div class="separationB">
   
-                  <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                  <button class="bottomMenu" id="" onclick="NonDisponible()">Favori</button>
-                  <button class="bottomMenu" id="" onclick="NonDisponible()">Suprimer</button>
-                  <button class="bottomMenu" id="" onclick="NonDisponible()">Télècharger</button>
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                  <button class="bottomMenu" id="#Upload">Uploade</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="#Favor">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="#Upload">Uploade</button>
                   <?php } else { ?>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
                   <?php } ?>
   
@@ -172,6 +145,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
 
 <!DOCTYPE html>
   <html lang="fr-FR">
+  <?php $typeFavor = 2; 
+        $GetV = 0;  ?>
   <head>
       <title>High media serveur - Video</title>
       <meta charset="utf-8" />
@@ -179,38 +154,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
       <link rel="stylesheet" href="Res/styleVideo.css" />
   </head>
 
-  <script type="text/javascript">
-    
-    function ChangePAGE(Type)
-    {
-        if (Type === "Acueil") 
-        {
-            window.location = "global.php";
-        }
-        if (Type === "Video") 
-        {
-            window.location = "video.php";
-        }
-        if (Type === "Audio") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Perso") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Serv") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Propo") 
-        {
-            NonDisponible()
-        }
-
-    }
-
-</script>
+  <script type="text/javascript" src="Res/scriptZone.js">
+  </script>
 
 
   <body class="BackgroundA">
@@ -219,8 +164,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
           
               
               <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')">Video</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
+                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')">Vidéo</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
@@ -234,7 +179,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
   
                   <div class="imageUser">
                       <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                          <img src="<?php echo $Rimage['image'];?>" class="image">
+                          <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
                       <?php } else { ?>
                           <img src="User/Default/User.png" class="image">
                       <?php } ?>
@@ -249,7 +194,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
                   </form>
                    <?php } else { ?>
                   <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
+                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
                   </div>
   
                   <?php } ?>
@@ -258,11 +203,19 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
   
               <div class="separationB">
   
-                  <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Favori</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                  <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
-                  <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="#Favor">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <?php } else { ?>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                  <?php } ?>
   
               </div>  
       
@@ -309,8 +262,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
       <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
       </script>
+      <script type="text/javascript" src="Res/scriptFavori.js"></script>
 
-    <a href=""></a>
   </body>
   </html>
 
