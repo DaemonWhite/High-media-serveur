@@ -24,6 +24,10 @@
         {
             NonDisponible()
         }
+        if (Type === "user") 
+        {
+            window.location = "User.php";
+        }
 
     }
 
@@ -37,4 +41,9 @@
 
         window.location = "VLecteur?Name=" + name + "&Ep=" + ep + "&S=" + sai;
 
+     }
+
+     function appListVideo(name)
+     {
+        window.location = "Video?name=" + name;
      }

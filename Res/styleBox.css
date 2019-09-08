@@ -51,9 +51,8 @@
 	border: 4px black solid;
 	background-color: #3D3D3D; 
 	width: 100%;
-	height: 150px;
+	
 }
-
 .ChoiceV
 {
 	padding: 0vh;
@@ -69,9 +68,10 @@
 
 .Vaffiche
 {
-	margin: 0vh;
-	width: 106px;
-	height: 150px;
+	margin: 0 auto;
+	padding: 0vh;
+	width: 100%;
+	height: 100%;
 }
 .tdTexte
 {
@@ -81,6 +81,19 @@
 }
 .borderS
 {
+	text-align: center;
+	width: 106px;
+	height: 150px;
+	margin: 0%;
+	padding: 0vh;
+	border: 4px black solid;
+}
+.borderTi
+{
+	text-align: center;
+	width: 45%;
+	height: 150px;
+	margin: 0%;
 	padding: 0vh;
 	border: 4px black solid;
 }

@@ -406,3 +406,61 @@
 
   
 </section>
+<?php if ($typeFavor != 1) {  ?>
+ <section id="Favor" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+
+          <div class="modal-bloc js-stope-modale">
+              
+              <?php if (!empty($_GET['name']) AND empty($_GET['Ep'])) { 
+
+                $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
+
+                $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep="0" AND S="0" AND Favori=\'' . $_GET['name'] . '\' AND type=\'' . $GetV . '\' AND Genre="0" ');
+                $exiFavir = $vefFavor->fetch();
+
+                if ($exiFavir['Favori'] == "") { ?>
+
+                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'0')">Ajouter au favori</button>
+
+                <?php } else { ?>
+
+                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'1')">Supprimer des favoris</button>
+
+                <?php } ?>
+
+                <?php } else {
+
+                  $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
+
+                  $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep=\'' . $_GET['Ep'] . '\' AND S=\'' . $_GET['S'] . '\' AND Favori=\'' . $_GET['Name'] . '\' AND type=\'' . $GetV . '\' AND Genre="1" ');
+                  $exiFavir = $vefFavor->fetch();
+  
+                  if ($exiFavir['Favori'] == "") { ?>
+    
+                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "', '" . $_GET['Ep'] . "'"; ?>,'0')">Ajouter au favori</button>
+    
+                    <?php } else { ?>
+    
+                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "','" . $_GET['Ep'] . "'"; ?>,'1')">Supprimer des favoris</button>
+    
+                    <?php }
+                  } ?>
+
+              <button id="#viewFavor" class="boutonUpload">Voire les favoris</button>
+
+              <button class="boutonUpload js-close-modale">Fermer</button>
+          
+      
+          </div>
+      
+  </section>
+
+<?php } ?>
+
+  <section id="<?php if ($typeFavor == 1) { echo "Favor"; } else {echo "viewFavor";} ?>" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+    <div class="modal-bloc js-stope-modale">
+
+      <button id="#SUpload" class="boutonUpload">Ajouter au favori</button>
+
+    </div>
+  </section>
