@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"margin",
+				"margin-bottom\tproperty"
+			],
+			[
+				"d",
+				"display\tproperty"
+			],
+			[
+				"flex",
+				"flex-flow\tproperty"
+			],
+			[
+				"r",
+				"row\tflex-direction"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"ima",
+				"imageUser"
+			],
+			[
+				"R",
+				"Rimage"
+			],
+			[
+				"im",
+				"imageUser"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"Plein",
+				"pg_client_encoding"
+			],
+			[
+				"FIL",
+				"_FILES"
+			],
+			[
+				"ma",
+				"margin-top\tproperty"
+			],
+			[
+				"text",
+				"text-decoration\tproperty"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"margin-",
+				"margin-top\tproperty"
+			],
+			[
+				"re",
+				"column-reverse\tflex-direction"
+			],
+			[
+				"dire",
+				"flex-direction\tproperty"
+			],
+			[
+				"tex",
+				"texteBase"
+			],
+			[
+				"sele",
+				"selectBase"
+			],
+			[
+				"ca",
+				"cadreBaseZ"
+			],
+			[
+				"colo",
+				"colorTitle"
+			],
+			[
+				"whi",
+				"width\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"col",
+				"colorTitle"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"sc",
+				"scriptZone"
+			],
+			[
+				"s",
+				"src\tAttr"
+			],
+			[
+				"S",
+				"Saison"
+			],
+			[
+				"su",
+				"Supr"
+			],
+			[
+				"int",
+				"intval"
+			],
+			[
+				"ty",
+				"typeFavor"
+			],
+			[
 				"Us",
 				"User_ID"
 			],
@@ -40,14 +172,6 @@
 				"width\tproperty"
 			],
 			[
-				"pad",
-				"padding\tproperty"
-			],
-			[
-				"margin-",
-				"margin-right\tproperty"
-			],
-			[
 				"tit",
 				"titre"
 			],
@@ -76,24 +200,12 @@
 				"padding-right\tproperty"
 			],
 			[
-				"mar",
-				"margin\tproperty"
-			],
-			[
 				"chan",
 				"ChangePAGE"
 			],
 			[
 				"bu",
 				"buttonBase"
-			],
-			[
-				"im",
-				"Image"
-			],
-			[
-				"margin",
-				"margin-top\tproperty"
 			],
 			[
 				"marg",
@@ -132,10 +244,6 @@
 				"visual2"
 			],
 			[
-				"s",
-				"style\tAttr"
-			],
-			[
 				"i",
 				"innerHTML"
 			],
@@ -172,10 +280,6 @@
 				"donnes"
 			],
 			[
-				"ma",
-				"margin-left\tproperty"
-			],
-			[
 				"en",
 				"entreVideo"
 			],
@@ -208,28 +312,12 @@
 				"flex-start\tjustify-content"
 			],
 			[
-				"flex",
-				"flex-wrap\tproperty"
-			],
-			[
-				"pa",
-				"padding-left\tproperty"
-			],
-			[
 				"fle",
 				"flex-direction\tproperty"
 			],
 			[
-				"se",
-				"section\tTag"
-			],
-			[
 				"t",
 				"td\tTag"
-			],
-			[
-				"col",
-				"color\tproperty"
 			],
 			[
 				"pro",
@@ -256,10 +344,6 @@
 				"onclick\tAttr"
 			],
 			[
-				"d",
-				"display"
-			],
-			[
 				"c",
 				"class\tAttr"
 			],
@@ -270,10 +354,6 @@
 			[
 				"get",
 				"getElementById"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"num",
@@ -396,10 +476,6 @@
 				"Video"
 			],
 			[
-				"ty",
-				"type"
-			],
-			[
 				"_",
 				"_COOKIE"
 			],
@@ -438,146 +514,46 @@
 			[
 				"chambr",
 				"Chambre"
-			],
-			[
-				"Passw",
-				"Password"
-			],
-			[
-				"exe",
-				"execute"
-			],
-			[
-				"CONS",
-				"console"
-			],
-			[
-				"in",
-				"input\tTag"
-			],
-			[
-				"ac",
-				"action\tAttr"
-			],
-			[
-				"for",
-				"form\tTag"
-			],
-			[
-				"Else",
-				"elseif\telse-if"
-			],
-			[
-				"Acto",
-				"actor\tscript"
-			],
-			[
-				"Act",
-				"actor\tscript"
-			],
-			[
-				"Set",
-				"setvalue\tfunc. (globalvariable)"
-			],
-			[
-				"Getva",
-				"getvalue\tfloat func. (globalvariable)"
-			],
-			[
-				"GetVal",
-				"getvalue\tfloat func. (globalvariable)"
-			],
-			[
-				"Els",
-				"else\telse"
-			],
-			[
-				"Cli",
-				"clientmax\tint prop. (self)"
-			],
-			[
-				"Au",
-				"auto\tkeyword"
-			],
-			[
-				"Start",
-				"start\tfunc. (scene)"
-			],
-			[
-				"PCSXClien",
-				"pcsxclientscene\tint param."
-			],
-			[
-				"Pro",
-				"property\tproperty def."
-			],
-			[
-				"else",
-				"else\telse"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "# High media serveur\n\nV - 0.0.17A\n\n- Ajout de l’este-tique pour la page de gestion de compte\n- Ajout des fonction dans les paramètre (non Fonctionnelle)\n- Ajout d'un bouton paramètre\n- Correction on peut aller a l'accueil depuis les paramètre\n\n\nv - 0.0.16A\n\n- Ajout du reverse pour les favori\n- Ajout les 10 dernier favori son visible\n- Ajout des favori par l'utilisateur\n- correction les utilisateur normaux ne peux plus uploader sur la liste des épisode\n- Ajout de l'historique intelligent\n- Ajout de l'historique visible menu principale\n- Correction de certain problème avec Firefox\n- Ajout de l'implant de l'historique (¨Pas visible pour les utilisateur)\n- Correction de l'enre  gistrement des fichier\n- Correction du bouton fermer\n\nv - 0.0.15A\n\n- Modification ajout de l'image utilisateur (def)\n- Ajout de la miniature par défaut (tmp)\n- Ajout des miniature\n- Correction de l'optimisation du multi upload\n- Correction de l'affichage de l'upload\n- Modification des affiches pour les vidéo\n- Modification on peut sélectionner seulement les video dans le navigateur\n- Correction ajout de la vérification de fichier sur chaque input\n- Modification sele les images son visible\n- Ajout de suppression de l'ancienne image\n- Correction accès a la page user\n- Correction ajout de l'image utilisateur page vidéo sur la liste d'image\n\nv - 0.0.14A\n\n- Ajout de la page paramétrage\n- Ajout d'un alt sur chaque page\n- Ajout changement d'image utilisateur\n\nv - 0.0.13A\n\n- Modification enlevé de certain debug nuisible\n- Ajout des bouton d'épisode de la saison pour le Vlecteur\n- Optimisation du css\n- correction Du bouton vidéo dans Vupload\n- Modification rajout de securiter\n- Ajout des fonctionnalité non disponible\n- Ajout des fonctionnalité réserver au membre\n\nV - 0.0.12A\n\n- Ajout du multi upload dans la section ajouter\n- Ajout d'un Shell pour présenter les épisode présent\n- Ajout de l'interface d'ajout d'épisode\n\n\nv - 0.0.11A\n\n- Ajout de l'interface de base vidéo\n- Correctif d’affichage sur les autre navigateur que chrome\n- Modification les case upload son mit en include\n- Ajout de la référence de saison\n\nV - 0.0.10A\n\n- Ajout de la vue du synopsis\n- Ajout de la vue par saison\n- ajout de la liste d’épisode\n- Correction les vidéo seront enregistrée avec le bon répertoire\n- Ajout des case pour les vidéo\n- Ajout du menu de navigation dans le menu\n\nV - 0.0.09A\n\n- Ajout du genre\n- Ajout du synopsis\n- Correction le modal Upload est désormer bien alligner au centre\n- Ajout du genre\n- Correction de la taille de la fenêtre modale\n- Ajout de la barre de chargement + style css\n- Ajout d'un debug qui empêche l'envoi de fichier vide\n- Ajout d'un debug qui permet de ne pas avoirs le même épisode sur la feuille\n- Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre\n- Ajout du début du multi upload\n- Ajout du nombre épisode mit de manière logique\n- Ajout disparition des bouton - de manière procédurale\n- Ajout de bouton pour choisir le nombre de vidéo voulue\n- Ajout du début d'upload\n- Ajout de la fenêtre d'upload de nouveau fichier\n- correction le bouton connecte est placé correctement\n\nV - 0.0.08A\n\n- Ajout du bouton connexion si déconnecter\n- Bouton Uplaod du menu et fonctionnelle\n- Modification Des crypte son en inclûde\n- Correction le mode inviter fonctionne\n- Ajout du popup d'upload\n- Ajout d'un popup de connexion \n\nv - 0.0.07A\n\n- Ajout de l'image utilisateur par défaut\n- Ajout des bouton interactive \"Dossier, Favori, Supprimer, Télécharger,Upload\"\n- Ajout du texte d'identification\n- Ajout du placement pour l'image\n- Ajout d'un bouton \"Proposition\"\tnon fonctionnelle\n- Ajout d'un bouton \"Serveur\"\tnon fonctionnelle\n- Ajout d'un bouton \"Espace Personnelle\"\tnon fonctionelle\n- Ajout d'un bouton \"Acueil\"\tnon fonctionnelle\n- Ajout d'un bouton \"Audio\"\tnon fonctionnelle\n- Ajout d'un bouton \"video\"\tFonctionnelle\n- Ajout de la barre de navigation dans la page d'acueille\n- Ajout d'entée de texte personnaliser\n- Ajout de bouton personaliser\n\nV - 0.0.06A\n\n- Ajout d'information\n- Reorganisation des élémen\n- Ajout de l'interface organisé de la page d'acueille\n\nV - 0.0.05A\n\n- Ajout de la page de choix de l'épisode\n- Ajout de la page qui repertotrie les Série\n- Ajout d'un lient pour les video\n- Corection a l'upload il est impossible d'avoir deux video au même episode\n\n\nV - 0.0.04A\n\n- Correction de l'enregistrement des ip\n- Ajout de la base du systéme d'upload\n- Ajout d'un bloqueur de page\n- corection de la mise ajour des table pour les nouvelle session\n\nV - 0.0.03A\n\n- ajout d'un bouton de deconnexion\n- Ajout autorise seulement deux apparéille a se connecter au serveur\n- modification valeur sure pour la création de compte\n- correctif enléve un message de dbugage\n- Ajout d'une véritable page de connexion\n- Ammelioration ajout d'une méllieure organisation pour les inscription\n- Correction de la page index il ne définira plus les valeur qu'ant on apuie sur créer un compte\n\nV - 0.0.02A\n\n- ajout d'un méllieur rendu pour la zone de modification\n- Ajout de la modidication de donner\n\nV - 0.0.01A\n\n- Ajout du systeme de mot de passe ainsi que des zone de liason",
 			"file": "/D/Project/High-media-serveur/README.md",
+			"file_size": 5328,
+			"file_write_time": 132124330928553608,
 			"settings":
 			{
-				"buffer_size": 4676,
-				"encoding": "UTF-8",
+				"buffer_size": 5098,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "global.php",
+			"file": "User/changeImage.php",
 			"settings":
 			{
-				"buffer_size": 8984,
-				"encoding": "UTF-8",
+				"buffer_size": 1251,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "VLecteur.php",
-			"settings":
-			{
-				"buffer_size": 8160,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "video.php",
-			"settings":
-			{
-				"buffer_size": 10080,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptZone.js",
-			"settings":
-			{
-				"buffer_size": 754,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
+			"contents": "body\n{\n  display: flex;\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: Arial;\n}\n.colorTitle\n{\n    color: #54C472; \n}\n.BackgroundA\n{\n\tbackground-color: #2F2F2F; \n    color: white;\n}\n.BackgroundB\n{\t\n\tbackground-position: left;\n\tbackground-color: #3D3D3D; \n    color: white;\n}\n.CupeInfo\n{\t\n\tbackground-position: center;\n\twidth: 30%;\n\tmin-width: 400px;\n\tborder-radius: 10px;\n\tborder: 3px groove black;\n\tbackground-color: #3D3D3D; \n  color: white;\n  margin: auto;\n}\n.SelectionBase\n{\n\ttext-decoration: none;\n   \tcolor: #54C472;\n   \tfont-style: italic;\n}\n.SelectionBase:hover /* Apparence au survol des liens */\n{\n   text-decoration: underline;\n   color: green;\n}\n.cadreBaseT\n{\n    background: #2f2e2e;\n    padding-left: 5%;\n    padding-right: 5%;\n    color: white;\n}\n\n.cadreBaseS\n{\n\n    background: #2f2e2e;\n    margin-left: 5%;\n    margin-right: 5%;\n    margin-bottom: 5%;\n\n    padding-left: 5%;\n    padding-right: 5%;\n    color: white;\n}\n\n.cadreBaseZ\n{\n\n    margin-left: 5%;\n    margin-right: 5%;\n    color: white;\n}\n\n.viewList\n{\n  width: 100vh;\n  margin-right: 7%;\n  margin-top: 3%;\n  margin-bottom: 3%;\n  padding: 2%;\n  background-color: #3D3D3D;\n  \n}\n\n/* ------- Création du cube ----------*/\n\n.Conteneur\n{\t\n\tposition: absolute;\n\ttop: 0%;\n\tleft: 50%;\n  right: 50%;\n  bottom: 50%;\n\tjustify-content: center;\n  align-items: center;\n}\n\n.CupeInfo:nth-child(1)\n{\t\n\twidth: 30%;\n\tmin-width: 400px;\n\tborder-radius: 10px;\n\tborder: 3px groove #000001;\n\tbackground-color: #3D3D3D; \n  color: white;\n  margin: 0 auto;\n}\n\n/* ------- Entre Texte --------------*/\n\n.texteBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:hover\n{\n  border: 3px #54C472 groove;\n  background-color: #2F2F2F;\n  color: #54C472;\n}\n.texteBase:active\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:focus\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n.texteBase:visited\t\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n/* ------- Bouton base ----------*/\n\n.buttonBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px #54C472 solid;\n  background-color: #54C472;\n  padding-left:8px;\n}\n.buttonBase:hover\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 3px green solid;\n  background-color: green;\n  padding-left:8px;\n}\n\n\n/* -------Texte area base -----------*/\n\n.textareaBase\n{\n  width: 50vh;\n  height: 20vh;\n  resize: none;\n  padding: 1%;\n  margin-top: 2%;\n  background: #2d2d2d;\n  border: 2px #54C472 solid;\n  color: #54C472;\n  overflow: auto;\n}\n\n/* --------Selecte base ------------*/\n\n.selectBase\n{\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 2px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n\n/* ------- Création du menu ----------*/\n\n.ZoneM\n{\n  margin-right: 20vh;\n  width: 30vh;\n  border-right: 0.6vh black solid;\n}\n\n\n\n#menu\n{\n\tjustify-content: flex-start;\n\talign-items: flex-start;\n\tflex-direction: column;\n  background-color: #3D3D3D;\n  width: 30vh;\n  height: 100vh;\n  position: fixed;\n  overflow: visible;\n  margin-right: 20vh;\n  border-right: 0.5vh black solid;\n}\n.link\n{\n\n\twidth: 100%;\n\theight: 350px;\n}\n\n.linkSelect\n{\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  text-decoration: none;\n  color: white;\n  font-size: 3vh;\n  text-align: center;\n  margin-top: 1vh;\n  overflow: visible;\n  width: 32vh;\n  height: 3vh;\n  position: relative;\n  background: #3A874E;\n}\n.linkSelect:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -1.5vh;\n  bottom: 0vh;\n  width: 0vh;\n  height: 0vh;\n  border-left: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n.linkSelect:hover\n{\n  background: #4AAD64;\n}\n.linkSelect:hover:after\n{\n  border-left: 1.5vh solid #4AAD64;\n}\n\n.linkSelect[id=\"LinkDebutPassif\"]\n{\n  margin-top: 2vh;\n\twidth: 33vh;\n\theight: 4vh;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:hover\n{\n\t background: #3A874E;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n.linkSelect[id=\"LinkDebutPassif\"]:hover:after\n{\n  border-left: 2vh solid #3A874E;\n}\n\n.linkSelect[id=\"LinkDebutActif\"]\n{\n  margin-top: 2vh;\n  width: 33vh;\n  height: 4vh;\n}\n.linkSelect[id=\"LinkDebutActif\"]:hover\n{\n   background: #4AAD64;\n}\n.linkSelect[id=\"LinkDebutActif\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n.linkSelect[id=\"LinkDebutActif\"]:hover:after\n{\n  border-left: 2vh solid #4AAD64;\n}\n\n.linkSelect[id=\"linkCenter\"]\n{\n  margin-top: 2vh;\n  font-size: 2.3vh;\n}\n\n.linkSelect[id=\"LinkDown\"]\n{\n\tmargin-top: 2vh;\n\tfont-size: 2.3vh;\n\tmargin-bottom: 1.5vh;\n}\n\n.separationA\n{\n\ttext-align: center;\n\tpadding-left: 4.5vh;\n\tpadding-right: 4.5vh;\n\tpadding-top: 1vh; \n\tborder-top: 0.4vh black solid;\n\tpadding-bottom: 1vh; \n\tborder-bottom: 0.4vh black solid;\n}\n\n.infoUser\n{ \n\tfont-style: bold;\n\tfont-size: 2.3vh;\n\tcolor: red;\n\tpadding-top: 1vh; \n}\n\n.imageUser\n{\n  overflow: hidden;\n  margin-top: 1vh;\n  margin-bottom: 1vh;\n  background:#3D3D3D;\n  border-radius:50%;\n  width:20vh;\n  height:20vh;\n  border:0.5vh solid black; \n}\n.image\n{\n\twidth:100%; \n\theight:100%;\n}\n\n.UserName\n{\n\tfont-style: bold;\n\tfont-size: 2.3vh;\n\tcolor: white;\n\tmargin-bottom: 1vh;\n}\n\n.bottomDisconect\n{\n\tmargin-top: 1vh;\n\tpadding: 0.5vh;\n\tfont-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: red;\n\n}\n.bottomDisconect:hover\n{\n\tmargin-top: 1vh;\n\tpadding: 0.5vh;\n\tfont-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #262626;\n  padding-left:8px;\n  color: red;\n\n}\n\n.bottomConnect\n{\n  margin-top: 1vh;\n  padding: 0.5vh;\n  font-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #3A874E;\n}\n.bottomConnect:hover\n{\n  margin-top: 1vh;\n  padding: 0.5vh;\n  font-size: 1.7vh;\n  border-radius: 22vh;\n  border: 3px black solid;\n  background-color: #262626;\n  padding-left:8px;\n  color: #3A874E;\n\n}\n\n.separationB\n{\n\ttext-align: center;\n\tpadding-top: 1vh;\n\tpadding-left: 10vh;\n\tpadding-right: 10vh;\n}\n.bottomMenu\n{\n  color: white;\n  text-align: center; \n  margin-left: -6vh;\n  list-style-type: none;\n  overflow: visible;\n  width: 22vh;\n  height: 3vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  margin-bottom: 1vh;\n  font-size: 2vh;\n}\n\n.bottomMenu:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 22vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n.bottomMenu:nth-child(5)\n{\n  margin-bottom: 15vh;\n}\n\n.bottomMenu:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -1.5vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 1.5vh solid #3A874E;\n  border-top: 1.5vh solid transparent;\n  border-bottom: 1.5vh solid transparent;\n}\n.bottomMenu:hover\n{\n\tfont-size: 2.2vh;\n\tbackground: green;\n}\n.bottomMenu:hover:before\n{\n\tborder-right: 1.5vh solid green;\t\n}\n.bottomMenu:hover:after\n{\n\tborder-left: 1.5vh solid green;\t\n}\n\n/*-----------Création du modal-----------*/\n\n.modal-back\n{\n  position: fixed;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.8);\n}\n\n.modal-bloc \n{\n  display: column;\n  color: black;\n  overflow: auto;\n  min-width: calc(100vw - 40%);\n  max-width: calc(100vw - 15%);\n  min-height: calc(100vh - 20%);\n  max-height: calc(100vh - 8%);\n  background-color: #4a4a4a;\n}\n\n.boutonUpload\n{\n  margin-left: 35%;\n  margin-top: 7%;\n  color: white;\n  text-align: center; \n  list-style-type: none;\n  overflow: visible;\n  width: 35vh;\n  height: 8vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  font-size: 3vh;\n}\n\n.boutonUpload:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 35vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 4vh solid #3A874E;\n  border-top: 4vh solid transparent;\n  border-bottom: 4vh solid transparent;\n}\n\n.boutonUpload:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -4vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 4vh solid #3A874E;\n  border-top: 4vh solid transparent;\n  border-bottom: 4vh solid transparent;\n}\n\n.boutonUpload:hover\n{\n  font-size: 3.5vh;\n  background-color: green;\n}\n\n.boutonUpload:hover:before\n{\n  border-right: 4vh solid green;\n}\n\n.boutonUpload:hover:after\n{\n  border-left: 4vh solid green;\n}\n.boutonUpload:bottomMenu\n{\n  margin-left: 12%;\n  margin-bottom: 6%;\n  width: 20vh;\n  height: 4vh;\n  font-size: 2.4vh;\n}\n\n.boutonUpload[id=\"exit\"]\n{\n  margin-left: 12%;\n  margin-bottom: 6%;\n  width: 20vh;\n  height: 4vh;\n  font-size: 2.4vh;\n}\n.boutonUpload[id=\"exit\"]:before\n{\n  right: 20vh;\n  border-right: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonUpload[id=\"exit\"]:after\n{\n  right: -2vh;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonUpload[id=\"exit\"]:hover:before\n{\n  border-right: 2vh solid green;\n}\n\n.boutonUpload[id=\"exit\"]:hover:after\n{\n  border-left: 2vh solid green;\n}\n\n.boutonSubmit\n{\n  margin-top: 6%;\n  color: white;\n  text-align: center; \n  list-style-type: none;\n  overflow: visible;\n  width: 20vh;\n  height: 4vh;\n  position: relative;\n  background: #3A874E;\n  border-top: none; \n  border-bottom: none; \n  border-right: none; \n  border-left: none; \n  font-size: 2.4vh;\n}\n\n.boutonSubmit:before\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: 20vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-right: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonSubmit:after\n{\n  overflow: visible;\n  content: \"\";\n  position: absolute;\n  right: -2vh;\n  bottom: 0;\n  width: 0;\n  height: 0;\n  border-left: 2vh solid #3A874E;\n  border-top: 2vh solid transparent;\n  border-bottom: 2vh solid transparent;\n}\n\n.boutonSubmit:hover\n{\n  font-size: 2.5vh;\n  background-color: green;\n}\n\n.boutonSubmit:hover:before\n{\n  border-right: 2vh solid green;\n}\n\n.boutonSubmit:hover:after\n{\n  border-left: 2vh solid green;\n}\n\n/*--------- Zone upload ------------*/\n\n.ecritureUp\n{\n  color: #54C472;\n  font-size: 2vh;\n}\n\n.texteBase[id=title]\n{\n  margin-top: 3%;\n  margin-left: 35%;\n  margin-right: 35%;\n  margin-bottom: 3%;\n  padding: 0;\n  font-size: 2.2vh;\n  text-align : center;\n}\n.texteBase[id=subTitle]\n{\n  padding: 0;\n  border-radius: 2px;\n  font-size: 2vh;\n  text-align : center;\n}\n\n.upMargin\n{\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.buttonNew\n{\n  -moz-border-radius: 2px;\n  border-radius:2px;\n  border: 3px #54C472 solid;\n  background-color: #54C472;\n  padding: -2vh;\n  font-size: 2vh;\n}\n.buttonNew:hover\n{\n  background-color: green;\n}\n.EpisodeSize\n{\n  border-radius:2px;\n  border: 3px #54C472 solid;\n  background-color: #3D3D3D;\n  width: 10vh;\n  padding: -2vh;\n  font-size: 2vh;\n  color: #54C472;\n  text-align: right;\n}\n.progresseBar\n{\n  border: 3px #000001 groove;\n  margin-top: 2%;\n  height: 6%;  /* Can be anything */\n  position: relative;\n  background: #2d2d2d;\n\n}\n.progresseBar > div\n{\n  display: block;\n  height: 1.5vh;\n  background-color: rgb(194,43,43);\n  box-shadow: \n  inset 0 2px 9px  rgba(255,255,255,0.3),\n  inset 0 -2px 6px rgba(0,0,0,0.4);\n  position: relative;\n  overflow: hidden;\n}\n\n.classError\n{\n\n  margin-right: 12%;\n  margin-left: 12%;\n  margin-bottom: 2%;\n  padding: 1%;\n  background: #2f2e2e;\n  color: #BC240D;\n\n}\n.selectModal\n{\n  font-size: 2.7vh;\n  -moz-border-radius:4px;\n  border-radius:4px;\n  border: 4px #54C472 solid;\n  background-color: #2F2F2F;\n  padding-left:8px;\n  color: #54C472;\n}\n\n/* ------Ped de page ------*/\n\nfooter\n{\n  display: flex;\n  text-align: center;\n  border-top: 0.4vh solid black;\n  position: absolute;\n  margin-top: 95vh;\n  padding-bottom: 0.2vh;\n  background: #3D3D3D;\n  width: 100%;\n  height: 4vh;\n}\n\n.FooterA\n{\n    color: white;\n    text-decoration: none;\n    margin-right: 3vh;\n}\n.FooterA:hover\n{\n  text-decoration: underline;\n}",
 			"file": "Res/style.css",
+			"file_size": 13528,
+			"file_write_time": 132127612844784028,
 			"settings":
 			{
-				"buffer_size": 12261,
-				"encoding": "UTF-8",
+				"buffer_size": 12718,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Res/styleBox.css",
+			"file": "Res/popUpload.php",
 			"settings":
 			{
-				"buffer_size": 1102,
+				"buffer_size": 33587,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -586,7 +562,102 @@
 			"file": "Res/styleVideo.css",
 			"settings":
 			{
-				"buffer_size": 1239,
+				"buffer_size": 1237,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleBox.css",
+			"settings":
+			{
+				"buffer_size": 1213,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Com/addFavor.php",
+			"settings":
+			{
+				"buffer_size": 1016,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/scriptModal.php",
+			"settings":
+			{
+				"buffer_size": 15236,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "global.php",
+			"settings":
+			{
+				"buffer_size": 12545,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n$typeFavor = 1;\n\n$moveUrl = \"global.php\";\n\ninclude(\"Com/Conexion.php\");\n\ninclude(\"Com/verifiLoad.php\");\n\n$img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));\n$ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\\'' . $_SESSION['ID'] . '\\'');\n$Rimage = $ImageUs->fetch();\n\n\n?>\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>HighMediaServeur</title>\n        <meta charset=\"utf-8\" />\n        <link rel=\"stylesheet\" href=\"Res/style.css\" />\n    </head>\n\n    <header>\n       \n    </header>\n\n<script type=\"text/javascript\" src=\"Res/scriptZone.js\">\n\n</script>\n    \n\n\n    <body class=\"BackgroundA\">\n\n        <div class=\"ZoneM\">\n          \n          <nav class=\"menu\">\n                \n                    \n                    <div>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Acueil')\">Accueil</button>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Video')\">Vidéo</button>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Audio')\">Audio</button>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Perso')\">Espace personnelle</button>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Serv')\">Serveur</button>\n                        <button class=\"linkSelect\" id=\"linkCenter\" onclick=\"ChangePAGE('Propo')\">Proposition</button>\n                        <button class=\"linkSelect\" id=\"LinkDebutPassif\" style=\"margin-bottom: 5%;\">Paramètre</button>\n\n                    </div>\n\n                    <div class=\"separationA\">\n\n                        <span class=\"infoUser\"><?php echo $typeUser; ?></span>\n\n                        <div class=\"imageUser\">\n                          <?php if ($_SESSION['Securiter'] >= 1) { ?>\n                              <img src=\"<?php echo $Rimage['image'];?>\" class=\"image\">\n                            <?php } else { ?>\n                              <img src=\"User/Default/User.png\" class=\"image\">\n                          <?php } ?>\n                        </div>\n\n                        <span class=\"UserName\"><?php echo $Pseudo; ?></span>\n\n                    </div>\n\n                    <div class=\"separationB\">\n\n                        <button class=\"bottomMenu\" id=\"Res/popup.php#\">Dossier</button>\n                        <button class=\"bottomMenu\" id=\"Res/popup.php#\">Favori</button>\n                        <button class=\"bottomMenu\" id=\"Res/popup.php#\">Supprimer</button>\n                        <button class=\"bottomMenu\" id=\"Res/popup.php#\">Télécharger</button>\n                        <?php if ($_SESSION['Securiter'] >= 1) { ?>\n                        <button class=\"bottomMenu\" id=\"#Upload\">Uploade</button>\n                        <?php } else { ?>\n                          <button class=\"bottomMenu\" id=\"\" onclick=\"Reserver()\">Uploade</button>\n                        <?php } ?>\n\n                    </div>\n            \n          </nav>\n\n        </div>\n\n        <section>\n\n                <div>\n                    <div class=\"viewList\">\n                        \n                        <div align=\"center\">\n                          \n                          <header class=\"cadreBaseT\">Profile</header>\n\n                          <section>\n                            \n                            <div>\n                              \n                                <div class=\"imageUser\">\n\n                                 <img class=\"image\" src=\"<?php echo $Rimage['image']; ?> \">\n\n                                </div>\n\n                            </div>\n\n                            <div>\n                              \n                              \n\n                              <table class=\"colorTitle\">\n                                  \n                                  <tr>\n                                      <td>\n                                          Pseudo : \n                                      </td>\n                                      <td>\n                                          <input type=\"text\" class=\"texteBase\" value=\"<?php echo $_SESSION['Pseudo']; ?>\">  \n                                      </td>\n                                  </tr>\n\n                                  <tr>\n\n                                    <td>\n                                        Mot de passe\n                                    </td>\n\n                                    <td>\n                                        <input type=\"text\" class=\"texteBase\" name=\"\">\n                                    </td>\n                                      \n                                  </tr>\n\n                              </table>\n                              \n\n                            </div>\n\n                        \n                          </section>\n\n                          <section>\n                            <div style=\"margin-top: 5%;\">\n                                \n                                <div class=\"cadreBaseT\">Thème</div>\n\n                                <table>\n                                    \n                                    <tr>\n                                        \n                                    </tr>\n\n                                </table>\n\n                            </div>\n                          </section>\n\n                        </div>\n\n                    </div>\n                </div>\n\n        </section>\n\n        <?php if ($_SESSION['Securiter'] >= 1 ) { include(\"Res/popUpload.php\"); } ?>\n\n        <script type=\"text/javascript\">\n        \t\t\n        \tfunction changeUseIm() {\n\t\t\n\t       \t\tvar form = document.forms.namedItem(\"newImage\");\n\t\t\t\n\t\t\t      var oData = new FormData(document.forms.namedItem(\"newImage\"));\n\t\t\t\n\t\t\t  oData.append(\"CustomField\", \"This is some extra data\");\n\t\t\t\n\t\t\t  let oReq = new XMLHttpRequest();\n\t\t\n\t\t\t  oReq.open(\"POST\", \"user/changeImage.php\", true);\n\t\t\t  oReq.onload = function(oEvent) {\n\t\t\t    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {\n\t\t\t      window.location = \"user.php\"\n\t\t\t    } else {\n\t\t\t      oOutput.innerHTML = \"Error \" + oReq.status + \" occurred uploading your file.<br \\/>\";\n\t\t\t    }\n\t\t\t  };\n\t\t\t\n\t\t\t  oReq.send(oData);\n\t\t}\n\n        </script>\n\n        <script type=\"text/javascript\">\n            <?php include(\"Res/scriptModal.php\"); ?>\n        </script>\n\n   </body>\n</html>",
+			"file": "user.php",
+			"file_size": 6416,
+			"file_write_time": 132127670198770652,
+			"settings":
+			{
+				"buffer_size": 6465,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\nsession_start();\n\n$UserName = $_SESSION['ID'];\n\nvar_dump($_FILES);\n\n// Debug episode\nif ($_POST['Ep13'] != 0) {$Episode[0] = $_POST['Ep13']; $Saison[0] = $_POST['Saison01'];}\nif ($_POST['Ep14'] != 0) {$Episode[1] = $_POST['Ep14']; $Saison[1] = $_POST['Saison02'];}\nif ($_POST['Ep15'] != 0) {$Episode[2] = $_POST['Ep15']; $Saison[2] = $_POST['Saison03'];}\nif ($_POST['Ep16'] != 0) {$Episode[3] = $_POST['Ep16']; $Saison[3] = $_POST['Saison04'];}\nif ($_POST['Ep17'] != 0) {$Episode[4] = $_POST['Ep17']; $Saison[4] = $_POST['Saison05'];}\nif ($_POST['Ep18'] != 0) {$Episode[5] = $_POST['Ep18']; $Saison[5] = $_POST['Saison06'];}\nif ($_POST['Ep19'] != 0) {$Episode[6] = $_POST['Ep19']; $Saison[6] = $_POST['Saison07'];}\nif ($_POST['Ep20'] != 0) {$Episode[7] = $_POST['Ep20']; $Saison[7] = $_POST['Saison08'];}\nif ($_POST['Ep21'] != 0) {$Episode[8] = $_POST['Ep21'];  $Saison[8] = $_POST['Saison09'];}\nif ($_POST['Ep22'] != 0) {$Episode[9] = $_POST['Ep22'];  $Saison[9] = $_POST['Saison10'];}\nif ($_POST['Ep23'] != 0) {$Episode[10] = $_POST['Ep23']; $Saison[10] = $_POST['Saison11'];}\nif ($_POST['Ep24'] != 0) {$Episode[11] = $_POST['Ep24']; $Saison[11] = $_POST['Saison12'];}\n\nif (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}\n\n\n\n\n\n$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));\n//(file_exists($dossier)\n\n\tif (!empty($_POST['GenreName'])) {\n\n\t\t$TitrePrincip = $_POST['GenreName'];\n\n\t\techo \"papa2\";\n\n\t\t\n\n\t\t\tif (!empty($_FILES)) {\n\t\t\n\t\t\t\t$file_name = $_FILES['Video']['name'][0];\n\t\t\t\t$file_extension = strrchr($file_name, \".\");\n\t\t\n\t\t\t\t$valide_extention = $arrayName = array('.mp4', '.MP4');\n\t\t\n\t\t\t\t//if (in_array($file_extension, $valide_extention)) {\n\t\t\t\t\t\n\t\t\t\t\t$ExisteVideo = 0;\n\n\t\t\t\t\twhile (!empty($_FILES['Video']['name'][$ExisteVideo])) {\n\n\t\t\t\t\t\t$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\\'' . $TitrePrincip . '\\' AND Episode=\\'' . $Episode[$ExisteVideo] . '\\'');\n\t\t\t\t\t\t$vEp = $reqEpisode->fetch();\n\n\t\t\t\t\t\tif (empty($vEp)) {\n\n\t\t\t\t\t\t\t$Vdoss1 = \"upload/Video/\" . $TitrePrincip . \"/\";\n\t\t\t\t\t\t\t$Vdoss2 = $Vdoss1 . \"S\" . $Saison[$ExisteVideo] . \"/\";\n\n\t\t\t\t\t\t\t$nameV = $_FILES['Video']['name'][$ExisteVideo];\n\t\t\t\t\t\t\t$ReperV = $_FILES['Video']['tmp_name'][$ExisteVideo];\n\t\n\t\t\t\t\t\t\tif (!file_exists($Vdoss2 . $_FILES['Video']['name'][$ExisteVideo])) {\n\t\t\t\t\n\t\t\t\t\t\t\t\tif (!file_exists($Vdoss1)) {\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tCreateRepertoire(2, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t} elseif (!file_exists($Vdoss2)) {\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tCreateRepertoire(1, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t} else {CreateRepertoire(0, $_POST['GenreName'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);} \n\t\n\t\t\t\t\t\t\t} else {$Uerreur = \"La video existe d篓娄ja\";}\n\n\t\t\t\t\t\t} else {echo \"Ep existant\";}\n\n\t\t\t\t\t\techo $ExisteVideo++;\n\t\t\t\t\t\t# code...\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t//} else {$Uerreur = \"seule les video au extention suivante son autoris篓娄s\";}\n\t\t\t\t# code...\n\t\t\t} else {$Uerreur = \"Veulier m'etres une video\";}\n\n\t} else {echo \"Le titre est obligatoire\";}\n\n\n\n\tfunction CreateRepertoire($Season, $name, $Ep, $Saison, $nameVideo, $tmpRepertori, $Synopsis, $bda, $user) {\n\n\t\t$GetTitle = $name ;\n\t\t$GetSubtitle = \"NoValide\"; //$_POST['subtitle'] \n\t\t$GetSeson = $Saison;\n\t\t$GetEp = $Ep;\n\t\t$GetGen =  $_POST['Genre'];\n\t\t$GetTyp = \"no\"; //$_POST['typ']\n\t\t$Format = \"0\";\n\n\t\t$reqNombre = $bda->query('SELECT Nombre FROM titre');\n\n\t\t$DefaultDaus = \"Video/\";\n\t\t$dossier = $DefaultDaus . $_POST[\"GenreName\"];\n\n\t\tif ($Season > 1) {\n\t\t\tmkdir($dossier);\n\t\t}\n\t\t\n\n\t\t$dossier = $dossier . \"/S\" . $GetSeson . \"/\";\n\n\t\tif ($Season > 0) {\n\t\t\tmkdir($dossier);\n\t\t}\n\n\t\t$Ressource = \"upload/\" . $dossier . \"/\" . $nameVideo;\n\n\t\t$Uerreur = null;\n\n\t\t$AddVideo = $bda->prepare(\"INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)\");\n                                          $AddVideo->execute(array( \n                                          \t'titre' => $GetTitle,\n                                          \t'SousTitre' => $GetSubtitle,\n                                          \t'Saison' => $GetSeson,\n                                          \t'Episode' => $GetEp,\n                                          \t'Repertoire' => $Ressource,\n                                          \t'Proprietaire' => $user));\n\n\t\tmove_uploaded_file($tmpRepertori, $dossier .  $nameVideo);\n\n\t}\n\n\n\n?>\n\n",
+			"file": "upload/addUpload.php",
+			"file_size": 4808,
+			"file_write_time": 132125767478797842,
+			"settings":
+			{
+				"buffer_size": 4666,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"file": "VLecteur.php",
+			"settings":
+			{
+				"buffer_size": 8827,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "upload/Upload.php",
+			"settings":
+			{
+				"buffer_size": 6174,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "video.php",
+			"settings":
+			{
+				"buffer_size": 10456,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "audio.php",
+			"settings":
+			{
+				"buffer_size": 10572,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -673,24 +744,27 @@
 		"/D/Wamp/www/HighMediaServeur/Com",
 		"/D/Wamp/www/HighMediaServeur/Res",
 		"/D/Wamp/www/HighMediaServeur/upload",
+		"/D/Wamp/www/HighMediaServeur/upload/Audio",
 		"/D/Wamp/www/HighMediaServeur/User"
 	],
 	"file_history":
 	[
+		"/D/Wamp/www/HighMediaServeur/Res/scriptFavori.js",
+		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
+		"/D/Wamp/www/HighMediaServeur/Res/scriptZone.js",
+		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
+		"/D/Wamp/www/HighMediaServeur/Res/styleBox.css",
+		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
+		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
+		"/D/Wamp/www/HighMediaServeur/Res/style.css",
 		"/D/Wamp/www/HighMediaServeur/upload/addUpload.php",
 		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/alias/HighMediaServeur.conf",
 		"/D/Wamp/bin/apache/apache2.4.39/conf/httpd.conf",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptFavori.js",
-		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
-		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
 		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
 		"/D/Wamp/bin/apache/apache2.4.39/conf/extra/httpd-vhosts.conf",
 		"/D/Wamp/alias/phpmyadmin.conf",
 		"/D/Wamp/www/HighMediaServeur/user.php",
-		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
-		"/D/Wamp/www/HighMediaServeur/Res/style.css",
 		"/D/Wamp/www/HighMediaServeur/User/changeImage.php",
 		"/D/Wamp/www/HighMediaServeur/admin.php",
 		"/D/Wamp/www/test2/index.php",
@@ -802,7 +876,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -816,6 +890,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?>\n",
+			"cadreBaseT",
+			"video",
+			"blockListeVideo",
+			"entreVideo",
+			"ZoneM",
+			"box",
+			"back",
+			"Box",
+			"imageUser",
+			"viewList",
+			"imageUser",
+			"_FILES",
+			"entreVideo",
+			">\n",
+			"body",
+			"viewList",
+			"body",
+			"viewList",
+			"display:",
+			"user",
+			"Proprietaire",
+			"user",
+			"boutonUpload",
+			"position",
+			"bottomMenu",
+			"caseBottom",
+			"menu",
+			"select",
+			"cadre",
+			"center",
+			"user",
+			"del",
+			"Pseudo",
+			"serr",
 			"vefHist",
 			"bottom",
 			"EpisodeSize",
@@ -908,42 +1017,7 @@
 			"ZoneEp",
 			"id=\"ep",
 			"totalVideo",
-			"reponse",
-			"echo",
-			"User",
-			"DefaultDaus",
-			"vTitre",
-			"name",
-			"Vdoss1",
-			"Saison",
-			"Seson",
-			"_FILES",
-			"file_name",
-			"Vdoss1",
-			"video",
-			"text",
-			"i1",
-			"destination_ajax",
-			"form2",
-			"upload_1",
-			"form_files2",
-			"reponse_upload2",
-			"  ",
-			"UploadAjaxABCIServeur",
-			"class",
-			"fichier_en_cours",
-			"destination_ajax",
-			"UpAbci_uniqidForm",
-			"form2",
-			"title",
-			"span",
-			"envo",
-			"urlaction",
-			"url",
-			"fileUpload",
-			"E",
-			"                        </",
-			"modal"
+			"reponse"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -962,7 +1036,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -971,200 +1045,23 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4676,
+						"buffer_size": 5098,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								71,
-								71
+								683,
+								683
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
+							"is_init_dirty_state": true,
 							"origin_encoding": "ASCII",
 							"spell_check": true,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "global.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								611,
-								533
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"spell_check": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "VLecteur.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8160,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1536,
-								1536
-							],
-							[
-								1575,
-								1575
-							],
-							[
-								1605,
-								1605
-							],
-							[
-								1644,
-								1644
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "video.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10080,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9298,
-								9377
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2241.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Res/scriptZone.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 754,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								642,
-								650
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "Res/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12261,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								46,
-								62
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1174,52 +1071,156 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Res/styleBox.css",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "User/changeImage.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1102,
+						"buffer_size": 1251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								333,
-								333
+								348,
+								355
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 213.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 2,
+					"file": "Res/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1540,
+								1549
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1176.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Res/popUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 33587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15868,
+								15868
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 170.0,
+						"translation.y": 3294.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "Res/styleVideo.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1239,
+						"buffer_size": 1237,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								413,
-								421
+								1219,
+								1219
+							],
+							[
+								1232,
+								1232
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 726.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Res/styleBox.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
@@ -1228,7 +1229,304 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "Com/addFavor.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1016,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Res/scriptModal.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10307,
+								10314
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6224.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "global.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2763,
+								2763
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2821.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "user.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5265,
+								5265
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": true,
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1485.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "upload/addUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4656,
+								4656
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"is_init_dirty_state": false,
+							"origin_content": "<?php\n\nsession_start();\n\n$UserName = $_SESSION['ID'];\n\nvar_dump($_FILES);\n\n// Debug episode\nif ($_POST['Ep13'] != 0) {$Episode[0] = $_POST['Ep13']; $Saison[0] = $_POST['Saison01'];}\nif ($_POST['Ep14'] != 0) {$Episode[1] = $_POST['Ep14']; $Saison[1] = $_POST['Saison02'];}\nif ($_POST['Ep15'] != 0) {$Episode[2] = $_POST['Ep15']; $Saison[2] = $_POST['Saison03'];}\nif ($_POST['Ep16'] != 0) {$Episode[3] = $_POST['Ep16']; $Saison[3] = $_POST['Saison04'];}\nif ($_POST['Ep17'] != 0) {$Episode[4] = $_POST['Ep17']; $Saison[4] = $_POST['Saison05'];}\nif ($_POST['Ep18'] != 0) {$Episode[5] = $_POST['Ep18']; $Saison[5] = $_POST['Saison06'];}\nif ($_POST['Ep19'] != 0) {$Episode[6] = $_POST['Ep19']; $Saison[6] = $_POST['Saison07'];}\nif ($_POST['Ep20'] != 0) {$Episode[7] = $_POST['Ep20']; $Saison[7] = $_POST['Saison08'];}\nif ($_POST['Ep21'] != 0) {$Episode[8] = $_POST['Ep21'];  $Saison[8] = $_POST['Saison09'];}\nif ($_POST['Ep22'] != 0) {$Episode[9] = $_POST['Ep22'];  $Saison[9] = $_POST['Saison10'];}\nif ($_POST['Ep23'] != 0) {$Episode[10] = $_POST['Ep23']; $Saison[10] = $_POST['Saison11'];}\nif ($_POST['Ep24'] != 0) {$Episode[11] = $_POST['Ep24']; $Saison[11] = $_POST['Saison12'];}\n\nif (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}\n\n\n\n\n\n$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));\n//(file_exists($dossier)\n\n\tif (!empty($_POST['GenreName'])) {\n\n\t\t$TitrePrincip = $_POST['GenreName'];\n\n\t\techo \"papa2\";\n\n\t\t\n\n\t\t\tif (!empty($_FILES)) {\n\t\t\n\t\t\t\t$file_name = $_FILES['Video']['name'][0];\n\t\t\t\t$file_extension = strrchr($file_name, \".\");\n\t\t\n\t\t\t\t$valide_extention = $arrayName = array('.mp4', '.MP4');\n\t\t\n\t\t\t\t//if (in_array($file_extension, $valide_extention)) {\n\t\t\t\t\t\n\t\t\t\t\t$ExisteVideo = 0;\n\n\t\t\t\t\twhile (!empty($_FILES['Video']['name'][$ExisteVideo])) {\n\n\t\t\t\t\t\t$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\\'' . $TitrePrincip . '\\' AND Episode=\\'' . $Episode[$ExisteVideo] . '\\'');\n\t\t\t\t\t\t$vEp = $reqEpisode->fetch();\n\n\t\t\t\t\t\tif (empty($vEp)) {\n\n\t\t\t\t\t\t\t$Vdoss1 = \"upload/Video/\" . $TitrePrincip . \"/\";\n\t\t\t\t\t\t\t$Vdoss2 = $Vdoss1 . \"S\" . $Saison[$ExisteVideo] . \"/\";\n\n\t\t\t\t\t\t\t$nameV = $_FILES['Video']['name'][$ExisteVideo];\n\t\t\t\t\t\t\t$ReperV = $_FILES['Video']['tmp_name'][$ExisteVideo];\n\t\n\t\t\t\t\t\t\tif (!file_exists($Vdoss2 . $_FILES['Video']['name'][$ExisteVideo])) {\n\t\t\t\t\n\t\t\t\t\t\t\t\tif (!file_exists($Vdoss1)) {\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tCreateRepertoire(2, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t} elseif (!file_exists($Vdoss2)) {\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\tCreateRepertoire(1, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t} else {CreateRepertoire(0, $_POST['GenreName'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);} \n\t\n\t\t\t\t\t\t\t} else {$Uerreur = \"La video existe d篓娄ja\";}\n\n\t\t\t\t\t\t} else {echo \"Ep existant\";}\n\n\t\t\t\t\t\techo $ExisteVideo++;\n\t\t\t\t\t\t# code...\n\t\t\t\t\t}\n\t\t\t\t\t\n\t\t\t\t//} else {$Uerreur = \"seule les video au extention suivante son autoris篓娄s\";}\n\t\t\t\t# code...\n\t\t\t} else {$Uerreur = \"Veulier m'etres une video\";}\n\n\t} else {echo \"Le titre est obligatoire\";}\n\n\n\n\tfunction CreateRepertoire($Season, $name, $Ep, $Saison, $nameVideo, $tmpRepertori, $Synopsis, $bda, $user) {\n\n\t\t$GetTitle = $name ;\n\t\t$GetSubtitle = \"NoValide\"; //$_POST['subtitle'] \n\t\t$GetSeson = $Saison;\n\t\t$GetEp = $Ep;\n\t\t$GetGen =  $_POST['Genre'];\n\t\t$GetTyp = \"no\"; //$_POST['typ']\n\t\t$Format = \"0\";\n\n\t\t$reqNombre = $bda->query('SELECT Nombre FROM titre');\n\n\t\t$DefaultDaus = \"Video/\";\n\t\t$dossier = $DefaultDaus . $_POST[\"GenreName\"];\n\n\t\tif ($Season > 1) {\n\t\t\tmkdir($dossier);\n\t\t}\n\t\t\n\n\t\t$dossier = $dossier . \"/S\" . $GetSeson . \"/\";\n\n\t\tif ($Season > 0) {\n\t\t\tmkdir($dossier);\n\t\t}\n\n\t\t$Ressource = \"upload/\" . $dossier . \"/\" . $nameVideo;\n\n\t\t$Uerreur = null;\n\n\t\t$AddVideo = $bda->prepare(\"INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)\");\n                                          $AddVideo->execute(array( \n                                          \t'titre' => $GetTitle,\n                                          \t'SousTitre' => $GetSubtitle,\n                                          \t'Saison' => $GetSeson,\n                                          \t'Episode' => $GetEp,\n                                          \t'Repertoire' => $Ressource,\n                                          \t'Proprietaire' => $user));\n\n\t\tmove_uploaded_file($tmpRepertori, $dossier .  $nameVideo);\n\n\t}\n\n\n\n?>\n\n",
+							"origin_encoding": "GBK",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2061.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "VLecteur.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3477,
+								3477
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 955.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "upload/Upload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "video.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9114,
+								9129
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3313.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "audio.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4248,
+								4248
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -1236,11 +1534,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 43.0
+		"height": 39.0
 	},
 	"layout":
 	{
@@ -1262,7 +1560,7 @@
 		"cols":
 		[
 			0.0,
-			0.971751412429,
+			0.390075236337,
 			1.0
 		],
 		"rows":
@@ -1288,7 +1586,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1322,7 +1620,7 @@
 		],
 		"width": 542.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

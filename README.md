@@ -1,5 +1,15 @@
 # High media serveur
 
+V - 0.0.17A
+
+- Refonte de l'estetique pur la gestion des compte
+- Optiimisation de l'affichage
+- Correction de l'interface pour les écrans en mode portrait
+- Ajout de l’este-tique pour la page de gestion de compte
+- Ajout des fonction dans les paramètre (non Fonctionnelle)
+- Ajout d'un bouton paramètre
+- Correction on peut aller a l'accueil depuis les paramètre
+
 
 v - 0.0.16A
 

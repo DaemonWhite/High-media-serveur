@@ -87,6 +87,8 @@ if ($video['titre'] != "") {
 
 <body class="BackgroundA">
 
+    <div class="ZoneM"></div>
+
 	 <nav id="menu">
           
               
@@ -96,8 +98,9 @@ if ($video['titre'] != "") {
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
-  
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
+                  
               </div>
   
               <div class="separationA">
@@ -152,15 +155,15 @@ if ($video['titre'] != "") {
     
     <section>
       <div align="center">
-        <div class="entreVideo">
+        <div class="">
           <div class="blockListeVideo">
             
             <div class="titleVideo"><?php echo $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?></div>
 
           	<div >
-          		<video class="video" controls>
-		  			<source src="<?php echo $video['Repertoire']; ?>">
-				</video>
+          	<video class="video" controls>
+		  			   <source src="<?php echo $video['Repertoire']; ?>">
+				    </video>
           	</div>
 
           	<div align="center" style="margin-top: 2%;">

@@ -40,70 +40,74 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
     <body class="BackgroundA">
 
-        <nav id="menu">
+        <div class="ZoneM"> </div>
+            
+            <nav id="menu">
                 
                     
-                    <div>
-                        <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                        <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
-
-                    </div>
-
-                    <div class="separationA">
-
-                        <span class="infoUser"><?php echo $typeUser; ?></span>
-
-                        <div class="imageUser">
-                            <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                                <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                            <?php } else { ?>
-                                <img src="User/Default/User.png" class="image">
-                            <?php } ?>
-                        </div>
-
-                        <span class="UserName"><?php echo $Pseudo ?></span>
-                        <?php if ($_SESSION['Securiter'] != "-1") {
-                            # code...
-                        ?>
-                        <form action="?Deco=1" method="post">
-                            <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                        </form>
-                         <?php } else { ?>
                         <div>
-                            <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
+                            <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
+                            <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
+    
                         </div>
+    
+                        <div class="separationA">
+    
+                            <span class="infoUser"><?php echo $typeUser; ?></span>
+    
+                            <div class="imageUser">
+                                <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                                    <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
+                                <?php } else { ?>
+                                    <img src="User/Default/User.png" class="image">
+                                <?php } ?>
+                            </div>
+    
+                            <span class="UserName"><?php echo $Pseudo ?></span>
+                            <?php if ($_SESSION['Securiter'] != "-1") {
+                                # code...
+                            ?>
+                            <form action="?Deco=1" method="post">
+                                <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
+                            </form>
+                             <?php } else { ?>
+                            <div>
+                                <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
+                            </div>
+    
+                            <?php } ?>
+    
+                        </div>
+    
+                        <div class="separationB">
+    
+                            <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                              <button class="bottomMenu" id="#Favor">Favori</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                              <button class="bottomMenu" id="#Upload">Uploade</button>
+                            <?php } else { ?>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                              <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                              <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
+                            <?php } ?>
+    
+                        </div>
+                
+            </nav>
 
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="separationB">
-
-                        <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                          <button class="bottomMenu" id="#Favor">Favori</button>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                          <button class="bottomMenu" id="#Upload">Uploade</button>
-                        <?php } else { ?>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                          <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
-                          <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                          <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
-                        <?php } ?>
-
-                    </div>
-            
-        </nav>
 
         <section>
             
-            <div align="center" style="margin-left: 20vh;">
+            <div align="center">
 
                 <div class="back">
 
@@ -113,7 +117,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                             <table>
                                 <tr>
                                     <td>Album</td>
-                                    <td>Title</td>
+                                    <td>Titre</td>
                                 </tr>
                             </table>
                         </div>
@@ -122,7 +126,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                             <table>
                                 <tr>
                                     <td>Album</td>
-                                    <td>Title</td>
+                                    <td>Titre</td>
                                 </tr>
                             </table>
                         </div>
@@ -247,9 +251,16 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
     
     <!-- Le pied de page -->
     
-    <!-- <footer id="pied_de_page">
-        <p>Copyright moi, tous droits réservés</p>
-    </footer> -->
+    <footer id="pied_de_page">
+        <table align="center">
+            <tr>
+                <td><a class="FooterA" href="">bug</a></td>
+                <td><a class="FooterA" href="">Idée</a></td>
+                <td><span>Copyright DaemonWhite</span></td>
+            </tr>
+
+        </table>
+    </footer>
         
     </body>
 </html>

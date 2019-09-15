@@ -20,37 +20,30 @@ $Rimage = $ImageUs->fetch();
         <title>HighMediaServeur</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="Res/style.css" />
+        <style type="text/css">
+            
+            .bacgroundUser
+            {
+                background-image:  url("<?php echo $Rimage['image']; ?>");
+                background-position:center center;
+                background-size: 100% 100% ;
+            }
+
+            .bacgroundModif
+            {
+                background-image:  url("User/Default/User.png");
+                background-position:center center;
+                background-size: 100% 100% ;
+            }
+
+        </style>
     </head>
 
     <header>
        
     </header>
 
-<script type="text/javascript">
-    
-    function ChangePAGE(Type)
-    {
-        if (Type === "Video") 
-        {
-            window.location = "Video.php";
-        }
-        if (Type === "Audio") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Perso") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Serv") 
-        {
-            NonDisponible()
-        } 
-        if (Type === "Propo") 
-        {
-            NonDisponible()
-        } 
-    }
+<script type="text/javascript" src="Res/scriptZone.js">
 
 </script>
     
@@ -58,16 +51,19 @@ $Rimage = $ImageUs->fetch();
 
     <body class="BackgroundA">
 
-        <nav id="menu">
+        <div class="ZoneM">
+          
+          <nav class="menu">
                 
                     
                     <div>
-                        <button class="linkSelect" id="LinkDebutPassif">Acueil</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                        <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('Propo')">Proposition</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
+                        <button class="linkSelect" id="LinkDebutPassif" style="margin-bottom: 5%;">Paramètre</button>
 
                     </div>
 
@@ -76,11 +72,11 @@ $Rimage = $ImageUs->fetch();
                         <span class="infoUser"><?php echo $typeUser; ?></span>
 
                         <div class="imageUser">
-                        	<?php if ($_SESSION['Securiter'] >= 1) { ?>
-                            	<img src="<?php echo $Rimage['image'];?>" class="image">
+                          <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                              <img src="<?php echo $Rimage['image'];?>" class="image">
                             <?php } else { ?>
-                            	<img src="User/Default/User.png" class="image">
-							<?php } ?>
+                              <img src="User/Default/User.png" class="image">
+                          <?php } ?>
                         </div>
 
                         <span class="UserName"><?php echo $Pseudo; ?></span>
@@ -91,8 +87,8 @@ $Rimage = $ImageUs->fetch();
 
                         <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
                         <button class="bottomMenu" id="Res/popup.php#">Favori</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Suprimer</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Télècharger</button>
+                        <button class="bottomMenu" id="Res/popup.php#">Supprimer</button>
+                        <button class="bottomMenu" id="Res/popup.php#">Télécharger</button>
                         <?php if ($_SESSION['Securiter'] >= 1) { ?>
                         <button class="bottomMenu" id="#Upload">Uploade</button>
                         <?php } else { ?>
@@ -101,19 +97,166 @@ $Rimage = $ImageUs->fetch();
 
                     </div>
             
-        </nav>
+          </nav>
 
-        <section>
-        	<div  style="margin-left: 20vh;">
-        		<div style="display: flex;">
-        			<form style="margin-top: 2%; margin-left: 20vh;" name="newImage" method="post" enctype="multipart/form-data">
-        				<input class="buttonBase" type="file" id="imageUpl" name="imageUpl" onchange="changeUseIm()" accept="image/png, image/jpeg , image/jpg" value="Choisire la nouvelle image de profile">
-        			</form>
-                    <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="buttonBase" onclick="window.location = 'com/testnewpassword.php'" >Admin</button>
-                    <?php } ?>
-        		</div>
-        	</div>
+        </div>
+
+        <section class="colorTitle">
+
+                <div>
+                    <div class="viewList">
+                        
+                        <div align="center">
+                          
+                          <header class="cadreBaseT">Profile</header>
+
+                          <section>
+                            
+                            <div>
+                              
+                                <div class="imageUser bacgroundUser">
+
+                                    <form name="newImage" method="post" enctype="multipart/form-data" >
+
+                                     <!-- <img class="image" src="<?php echo $Rimage['image']; ?> ">--> 
+
+
+                                    <input style="display: none;" type="file" id="imageUpl" name="imageUpl"  onchange="changeUseIm()" accept="image/png, image/jpeg , image/jpg" value="Choisire la nouvelle image de profile">
+
+                                     
+                                    <label for="imageUpl" class="chngeImg">
+
+                                        <img class="chngeImg" src="User/Default/ModifImage.png">
+                                        
+                                    </label>
+        
+                                    </form>
+                                 
+
+                                </div>
+
+                            </div>
+
+                            <div>
+                              
+                              
+
+                              <table class="colorTitle">
+                                  
+                                  <tr>
+                                      <td>
+                                          Pseudo : 
+                                      </td>
+                                      <td>
+                                          <input type="text" class="texteBase" value="<?php echo $_SESSION['Pseudo']; ?>">  
+                                      </td>
+
+                                      <td style="padding-left: 2vh;"><input class="buttonBase" type="" name="" value="Changer le mot de passe"> </td>
+                                  </tr>
+
+                                  <tr>
+
+                                    <td>
+                                        Mot de passe
+                                    </td>
+
+                                    <td>
+                                        <input type="text" class="texteBase" name="">
+                                    </td>
+                                      
+                                  </tr>
+
+                              </table>
+                              
+
+                            </div>
+
+                            <input class="buttonBase" type="submit" name="" value="Confirmer">
+
+                        
+                          </section>
+
+                          <section>
+                            <div style="margin-top: 5%;">
+                                
+                                <div class="cadreBaseT">Thème</div>
+
+                                <table>
+                                    
+                                    <tr>
+                                        <td>
+                                            Thème pc :
+                                        </td>
+
+                                        <td>
+                                            
+                                            <select class="selectBase" >
+                                                <option>Defaut</option>
+                                            </select>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <table>
+                                    
+                                    <tr>
+                                        <td>
+                                            Thème Mobile :
+                                        </td>
+
+                                        <td>
+                                            
+                                            <select class="selectBase" >
+                                                <option>Defaut</option>
+                                            </select>
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                          </section>
+
+                            <?php if ($_SESSION['Securiter'] >= 2) {  ?>
+
+                                <section>
+                              
+                                    <div>
+                                        
+                                        <div class="cadreBaseT">Modérateur</div>
+
+                                        <div></div>
+
+                                    </div>
+
+                                </section>
+                            <?php } ?>
+
+                            <?php if ($_SESSION['Securiter'] >= 3) {  ?>
+
+                                <section>
+                              
+                                    <div>
+                                        
+                                        <div class="cadreBaseT">Administrateur</div>
+
+                                        <div>
+                                            <button class="buttonBase" onclick="window.location = 'com/testNewPassword.php';">Géré les utilisateur</button>
+                                        </div>
+
+                                    </div>
+
+                                </section>
+                            <?php } ?>
+
+                        </div>
+
+                    </div>
+                </div>
+
         </section>
 
         <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
@@ -122,9 +265,9 @@ $Rimage = $ImageUs->fetch();
         		
         	function changeUseIm() {
 		
-			var form = document.forms.namedItem("newImage");
+	       		var form = document.forms.namedItem("newImage");
 			
-			  var oData = new FormData(document.forms.namedItem("newImage"));
+			      var oData = new FormData(document.forms.namedItem("newImage"));
 			
 			  oData.append("CustomField", "This is some extra data");
 			
@@ -133,7 +276,7 @@ $Rimage = $ImageUs->fetch();
 			  oReq.open("POST", "user/changeImage.php", true);
 			  oReq.onload = function(oEvent) {
 			    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
-			      window.location = "global.php"
+			      //window.location = "user.php"
 			    } else {
 			      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
 			    }
