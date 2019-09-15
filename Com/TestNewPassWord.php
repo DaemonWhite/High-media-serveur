@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
 	<title>HighMediaServeur - Password</title>
+  <link rel="stylesheet" href="../Res/style.css" />
 </head>
 
 <?php
@@ -276,21 +277,21 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
 
 
 
-<body onload="valeurToTen()">
+<body onload="valeurToTen()" class="BackgroundA" style="color: #54C472;  flex-direction: column; ">
 
 <div align="center">
             <?php if(isset($erreur)) {echo '<font color="red">'.$erreur."</font>";}?>
 <table>
 <tr>
 	<form action="" method="post">
-        <td><label for="UsName"> Nom et prenom :  </label> </td><td>  <input type="text" name="Name" id="pseudo"/></td></tr>
-        <td><a>Pseudo :         </a>  </td><td> <input type="text" name="Pseudo" /></td></tr>
-        <td><a>mot de passe :   </a> </td><td>  <input type="text" name="Pass" /></td></tr>
-        <td><a>Confirmer le mot de passe : </a>  </td><td>  <input type="text" name="VerifPass" /></td></tr>
-        <td><a>Chambre :        </a> </td><td>  <input type="text" name="Chambr" /></td></tr><br><br>
+        <td><label for="UsName"> Nom et prénom :  </label> </td><td>  <input class="texteBase" type="text" name="Name" id="pseudo"/></td></tr>
+        <td><a>Pseudo :         </a>  </td><td> <input class="texteBase" type="text" name="Pseudo" /></td></tr>
+        <td><a>mot de passe :   </a> </td><td>  <input class="texteBase" type="text" name="Pass" /></td></tr>
+        <td><a>Confirmer le mot de passe : </a>  </td><td>  <input class="texteBase" type="text" name="VerifPass" /></td></tr>
+        <td><a>Chambre :        </a> </td><td>  <input class="texteBase" type="text" name="Chambr" /></td></tr><br><br>
 
         <tr><td>
-          <select name="Securiter">
+          <select class="selectBase" name="Securiter">
             <option value="1">Utilisateur</option>
             <option value="2">Modérateur</option>
             <option value="3">Administrateur</option>
@@ -301,7 +302,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
 <br><br><br><br>
     
       <tr><td align="center"><td>
-        <input type="submit" value="Condirmer" />
+        <input class="buttonBase" type="submit" value="Condirmer" />
       </td></td>
     </tr>
     </form>
@@ -315,8 +316,8 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
     <h3>Changer les informations sur un utilisateur</h2>
     <form action="" id="Search" method="post">
 
-        <label> Nom et prenom :  </label></li>   <select name="choix" id="choixName" onchange="RegistreOnchage()">
-                                                                <option value=""> Selectioner? </option>
+        <label> Nom et prénom :  </label></li>   <select class="selectBase" name="choix" id="choixName" onchange="RegistreOnchage()">
+                                                                <option value=""> Sélectionner? </option>
 
         														<?php
                                                                 
@@ -334,9 +335,9 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
    																	?>
 
 																</select>
-		 <label> Pseudo :  </label></li>   <select name="choix2" id="choixUsName" onchange="RegistreOnchage()">
+		 <label> Pseudo :  </label></li>   <select class="selectBase" name="choix2" id="choixUsName" onchange="RegistreOnchage()">
 
-                                                                <option value=""> Selectioner? </option>
+                                                                <option value=""> Sélectionner? </option>
         														<?php
 
  
@@ -354,9 +355,9 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
    																	?>
 																</select>
 
-		 <label> Chambre :  </label></li>   <select  name="choix3"  id="ChoixCha" onchange="RegistreOnchage()">
+		 <label> Chambre :  </label></li>   <select  class="selectBase" name="choix3"  id="ChoixCha" onchange="RegistreOnchage()">
 
-                                                                <option value=""> Selectioner? </option>
+                                                                <option value=""> Sélectionner? </option>
 
         														<?php
  
@@ -369,7 +370,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
         														}
    																	
    																	?>
-																</select> <input type="submit" value="Rechercher" /><br><br>
+																</select> <input class="buttonBase" type="submit" value="Rechercher" /><br><br>
 
           <h3>Resultat des recherche de par non et prénom : </h3>
 
@@ -393,29 +394,29 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
 <form action="ModifCompte.php" method="post">
     <tr>
         <td align="right">
-            Nom et prenom : 
+            Nom et prénom : 
         </td> 
         <td align="right">
-                <input type="text" name="NName" value="<?php if(isset($_GET['D1'])) { echo $_GET['D1']; }?>"/> 
+                <input class="texteBase" type="text" name="NName" value="<?php if(isset($_GET['D1'])) { echo $_GET['D1']; }?>"/> 
         </td>
         <td align="right">
                 <a>Changer en : </a>
         </td>
         <td align="right">
-                <input type="text" name="NNameV" value="<?php if(isset($_GET['D1'])) { echo $_GET['D1']; }?>"/>
+                <input class="texteBase" type="text" name="NNameV" value="<?php if(isset($_GET['D1'])) { echo $_GET['D1']; }?>"/>
         </td>
     </tr>
     <tr>
         <td align="right"><a>Pseudo : </a>
         </td>
         <td align="right">
-             <input type="text" name="NPseudo" value="<?php if(isset($_GET['D2'])) { echo $_GET['D2']; }?>"/> 
+             <input class="texteBase" type="text" name="NPseudo" value="<?php if(isset($_GET['D2'])) { echo $_GET['D2']; }?>"/> 
         </td>
         <td align="right">
              <a>Changer en : </a>
         </td>
         <td align="right">
-             <input type="text" name="NPseudoV" value="<?php if(isset($_GET['D2'])) { echo $_GET['D2']; }?>"/>
+             <input class="texteBase" type="text" name="NPseudoV" value="<?php if(isset($_GET['D2'])) { echo $_GET['D2']; }?>"/>
          </td>
     </tr>
     <tr>
@@ -423,7 +424,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
             <a>mot de passe : </a>
         </td>
         <td align="right">
-            <input type="text" name="NPassV" />
+            <input class="texteBase" type="text" name="NPassV" />
         </td>
     </tr>
     <tr>
@@ -431,7 +432,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
             <a>Confirmer le mot de passe : </a>
         </td>
         <td align="left">
-            <input type="text" name="NVerifPassV" />
+            <input class="texteBase" type="text" name="NVerifPassV" />
         </td>
     </tr>
     <tr>
@@ -439,18 +440,18 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
                 <a>Chambre :        </a>
         </td>
         <td align="right">
-                <input type="text" name="NChambr" value="<?php if(isset($_GET['D3'])) { echo $_GET['D3']; }?>" />
+                <input class="texteBase" type="text" name="NChambr" value="<?php if(isset($_GET['D3'])) { echo $_GET['D3']; }?>" />
         </td>
         <td align="right">
                 <a>Changer en : </a>
         </td>
         <td align="right">
-                <input type="text" name="NChambrV" value="<?php if(isset($_GET['D3'])) { echo $_GET['D3']; }?>" />
+                <input class="texteBase" type="text" name="NChambrV" value="<?php if(isset($_GET['D3'])) { echo $_GET['D3']; }?>" />
         </td>
      </tr>
 
      <tr><td><td><br>
-        <select id="Secu" name="Securiter">
+        <select class="selectBase" id="Secu" name="Securiter">
                 <option value="1">Utilisateur</option>
                 <option value="2">Modérateur</option>
                 <option value="3">Administrateur</option>
@@ -459,7 +460,7 @@ if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Secur
     </td></td></tr>
 
     <tr><td align="center"><td><td>
-        <input type="submit" value="Condirmer" />
+        <input class="buttonBase" type="submit" value="Condirmer" />
     </td></td></td>
     </tr>
 
