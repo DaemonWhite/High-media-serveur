@@ -2,7 +2,7 @@
 
 session_start();
 
-$UserName = $_SESSION['Pseudo'];
+$UserName = $_SESSION['ID'];
 
 
 // Debug episode
@@ -19,13 +19,13 @@ if ($_POST['Ep10'] != 0) {$Episode[9] = $_POST['Ep10']; $Saison[9] = $_POST['Sai
 if ($_POST['Ep11'] != 0) {$Episode[10] = $_POST['Ep11'];  $Saison[10] = $_POST['Saison11'];}
 if ($_POST['Ep12'] != 0) {$Episode[11] = $_POST['Ep12'];  $Saison[11] = $_POST['Saison12'];}
 
-if (!empty($_FILES['miniature'])) { $min = $_FILES['miniature']['name']; } else { $min = "DVideo.jpg";}
+if (($_FILES['miniature']['name']) != "" AND !empty($_FILES['miniature'])) { $min = $_FILES['miniature']['name']; } else { $min = "DVideo.jpg";}
 
 
 if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}
 
 
-//var_dump($_FILES);
+var_dump($_FILES);
 
 
 $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -131,7 +131,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
                                           	'nom' => $GetTitle,
                                           	'Format' => $Format,
                                           	'Genre' => $GetGen,
-                                          	'type' => $GetTyp,
+                                          	'type' => $_POST['IsMusic'],
                                           	'Affiche' => $GetMin,
                                           	'Synopsis' => $Synopsis));
 
@@ -152,7 +152,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 			mkdir($dossier);
 		}
 
-		$Ressource = "upload/" . $dossier . "/" . $nameVideo;
+		$Ressource = "upload/" . $dossier . $nameVideo;
 
 		$Uerreur = null;
 
@@ -167,7 +167,9 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 		move_uploaded_file($tmpRepertori, $dossier .  $nameVideo);
 
+
 		move_uploaded_file($_FILES['miniature']['tmp_name'], $dossMini . $_FILES['miniature']['name'] );
+		
 
 	}
 

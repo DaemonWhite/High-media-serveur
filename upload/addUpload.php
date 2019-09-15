@@ -2,7 +2,7 @@
 
 session_start();
 
-$UserName = $_SESSION['Pseudo'];
+$UserName = $_SESSION['ID'];
 
 var_dump($_FILES);
 
@@ -73,7 +73,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 					
 								} else {CreateRepertoire(0, $_POST['GenreName'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);} 
 	
-							} else {$Uerreur = "La video existe d¨¦ja";}
+							} else {$Uerreur = "La video existe dÂ¨Â¦ja";}
 
 						} else {echo "Ep existant";}
 
@@ -81,7 +81,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 						# code...
 					}
 					
-				//} else {$Uerreur = "seule les video au extention suivante son autoris¨¦s";}
+				//} else {$Uerreur = "seule les video au extention suivante son autorisÂ¨Â¦s";}
 				# code...
 			} else {$Uerreur = "Veulier m'etres une video";}
 
