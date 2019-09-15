@@ -12,10 +12,12 @@ $deletOld = $updateImage->fetch();
 echo $deletOld['image'] . "</br>";
 
 echo $deletOld = strrchr($deletOld['image'], "/");
+
 $dell = $user . $deletOld;
 unlink($dell);
 
 var_dump($_FILES);
+
 	if (!empty($_FILES['imageUpl'])) {
 
 		$file_name = $_FILES['imageUpl']['name'];
