@@ -15,7 +15,9 @@
 
               <button id="#addUpload" onclick="verifEpisode()" class="boutonUpload">Ajouter un épisode</button>
 
-              <button class="boutonUpload js-close-modale">Fermer</button>
+              <button id="#gestUpload" onclick="appTitleM()" class="boutonUpload">Gérer mes vidéo</button>
+
+              <button class="boutonUpload js-close-modale" style="margin-bottom: 7%;">Fermer</button>
           
       
           </div>
@@ -54,13 +56,13 @@
                                   <option value="Anime">Animé</option>
                                   <option value="Docu">Documentaire</option>
                                   <option value="Movie">Filme</option>
-                                  <option value="TV">Serie télè</option>
+                                  <option value="TV">Série télé</option>
                               </select></td>
 
                               <td><select name="type" class="selectBase">
                                 <option value="no">Genre ?</option>
                                 <option value="Kodomo">Kodomo</option>
-                                <option value="Shonen">Shonener</option>
+                                <option value="Shonen">Shonene</option>
                                 <option value="Shojo">Shojo</option>
                                 <option value="Seinen">Seinen</option>
                                 <option value="Josei">Josei</option>
@@ -79,10 +81,10 @@
                           </table>
                           <table>
                           <tr><td></td>
-                              <td align="center"><span class="ecritureUp">Episode</span></td>
+                              <td align="center"><span class="ecritureUp">Épisode</span></td>
                               <td align="center"><span class="ecritureUp">Saison</span></td>
                               <td align="center"><span class="ecritureUp">Titre Secondaire</span></td>
-                              <td align="center"><span class="ecritureUp">Ajouter la video</span></td>
+                              <td align="center"><span class="ecritureUp">Ajouter la vidéo</span></td>
                           </tr>
 
                           <tr>
@@ -208,7 +210,7 @@
                           </div>
                           <div>
   
-                              <button type="button" onclick="newUpload()" class="boutonSubmit" id="Upl" style="display: ;">Upload</button>
+                              <button type="button" onclick="newUpload(0)" class="boutonSubmit" id="Upl" style="display: ;">Upload</button>
                               <button type="button" class="boutonUpload js-close-modale" id="exit">Fermer</button></br>
       
                           </div>
@@ -237,7 +239,7 @@
                   <form action="global.php" name="formAddUpload" method="post" enctype="multipart/form-data">
                       <table>
                           <tr><td></td>
-                              <td align="center"><span class="ecritureUp">Episode</span></td>
+                              <td align="center"><span class="ecritureUp">Épisode</span></td>
                               <td align="center"><span class="ecritureUp">Saison</span></td>
                               <td align="center"><span class="ecritureUp">Titre Secondaire</span></td>
                               <td align="center"><span class="ecritureUp">Ajouter la video</span></td>
@@ -403,9 +405,30 @@
           </div>
   
       </div>
-
   
 </section>
+
+
+<section id="gestUpload" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+
+  <div class="modal-bloc js-stope-modale">
+    
+    <div align="center" style="padding: 2%;">
+  
+      <span>Gérer mes fichier</span>
+
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
 <?php if ($typeFavor != 1) {  ?>
  <section id="Favor" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
 

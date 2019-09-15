@@ -10,7 +10,7 @@
         }
         if (Type === "Audio") 
         {
-            NonDisponible()
+            window.location = "audio.php"
         } 
         if (Type === "Perso") 
         {

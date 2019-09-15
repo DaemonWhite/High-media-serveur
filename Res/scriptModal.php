@@ -390,7 +390,7 @@ function verif(champ, Objet, ZoneEp) {
 
 callback = readData;
 
-function newUpload() {
+function newUpload(is) {
 	numVideo = 0;
 	vide = 1;
 	ErrVideo = 25;
@@ -456,6 +456,7 @@ function newUpload() {
 	    oData = new FormData(document.forms.namedItem("formUpload"));
 	
 	  oData.append("CustomField", "This is some extra data");
+	  oData.append("IsMusic", is);
 	
 	  let oReq = new XMLHttpRequest();
 	  oReq.upload.onloadstart = function (e) {
@@ -610,4 +611,38 @@ function NonDisponible()
 function Reserver()
 {
 	alert("Il faut vous abonée pour utiliser cette fonctionaliter")
+}
+
+function appTitleM()
+{
+
+	v = 0;
+
+		genre = 1;
+
+		var text = document.getElementById("Shell")
+	
+		var oData = new FormData();
+	
+		oData.append("Name", nom);
+		oData.append("type", v);
+		oData.append("genre", genre);
+		oData.append("Epi", s);
+		oData.append("Sai", ep);
+		oData.append("Suprimer", Supr);	
+
+	
+		vef = new XMLHttpRequest();
+		vef.open("POST", "Com/addFavor.php", true);
+		 vef.onload = function(oEvent) {
+		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+		      window.location = "?Name=" + nom + "&Ep=" + ep + "&S=" + s ;
+		    } else {
+		      text.innerHTML = "Error --> Impossible de recupérer les donner";
+		    }
+		  };
+	
+		vef.send(oData);
+
+
 }

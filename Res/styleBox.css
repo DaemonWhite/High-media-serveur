@@ -1,7 +1,6 @@
 .back
 {
 	position: absolute;
-	margin-left: 20vh;
 	margin-top: 3%;
 	display: flex;
 	overflow: auto;
@@ -18,7 +17,6 @@
 	background-color: #898989;
 	height: 40vh;
 	width: 44vh;
-	margin-left: 5vh;
 	margin-bottom: 5vh;
 }
 .BoxTitle
@@ -75,8 +73,6 @@
 }
 .tdTexte
 {
-	border-left: 5px;
-	padding: 5px;
 	text-align: center;
 }
 .borderS
