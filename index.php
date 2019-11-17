@@ -88,7 +88,7 @@ include("Com/Conexion.php");?>
 <section class="Conteneur">
     
     <div align="center" class="CupeInfo">
-         <p class="colorTitle">Bienvenu sur high media serveur </p>
+         <p class="colorTitle">Bienvenue sur High Media Serveur </p>
     
          <?php if(isset($erreur)) {echo '<font color="red">'.$erreur."</font>";}?>
     
@@ -106,13 +106,11 @@ include("Com/Conexion.php");?>
         </form><br>
     
         <ul>
-            <li><a href="?invite=1" class="SelectionBase">Se connecter en temp que invité</a></li>
+            <li><a href="?invite=1" class="SelectionBase"><S></S>e connecter en temps qu'invité</a></li>
         </ul>
         <!-- Le pied de page -->
         
-        <footer id="pied_de_page">
-            <p>Copyright moi, tous droits réservés</p>
-        </footer>
+            
     </div>
 
 </section>

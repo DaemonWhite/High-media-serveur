@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+
+
 $typeFavor = 1; // 1 = acueille;
 
 $img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -40,7 +42,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
     <body class="BackgroundA">
 
-        <div class="ZoneM"> </div>
+        <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
             
             <nav id="menu">
                 
@@ -49,7 +51,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                             <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
                             <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
                             <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
                             <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
                             <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
                             <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
@@ -88,22 +90,24 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
     
                             <?php if ($_SESSION['Securiter'] >= 1) { ?>
                               <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="#Favor">Favori</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                              <button class="bottomMenu" id="#Favor">Favoris</button>
+                              <button class="bottomMenu" id="#Gestion">Gestionaire</button>
                               <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                              <button class="bottomMenu" id="#Upload">Uploade</button>
+                              <button class="bottomMenu" id="#Upload">Upload</button>
                             <?php } else { ?>
                               <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                              <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
+                              <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
                               <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                               <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                             <?php } ?>
     
-                        </div>
+                           </div>
                 
             </nav>
 
+            </td>
+            <td class="noneBorder">
 
         <section>
             
@@ -163,7 +167,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Favori</span></div>
+                        <div class="BoxTitle"><span>Favoris</span></div>
 
                         <div  align="left" class="overFlaw">
                                 <table class="listenBoxV">
@@ -239,6 +243,10 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
         </section>
 
+    </td>
+    </tr>
+    </table>
+
         <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
         <script type="text/javascript">
@@ -250,17 +258,6 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
    <!-- ?php include("Com/main.php"); ?> -->
     
     <!-- Le pied de page -->
-    
-    <footer id="pied_de_page">
-        <table align="center">
-            <tr>
-                <td><a class="FooterA" href="">bug</a></td>
-                <td><a class="FooterA" href="">Idée</a></td>
-                <td><span>Copyright DaemonWhite</span></td>
-            </tr>
-
-        </table>
-    </footer>
         
     </body>
 </html>

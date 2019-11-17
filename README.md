@@ -1,9 +1,21 @@
 # High media serveur
 
+V - 0.0.18A
+
+- Correction Les titres apparaisse dans l'ordre
+- Correction les episode apparaisse dans l'ordre
+- Ajout de la page personnaliser pour les vidéos non existante
+- Ajout de la page D'erreur 404
+- Possibilité de modifier le contenu présent
+- Possibilité de supprimer les vidéos
+- Ajout du gestionnaire de vidéo USER
+- Correction de faute
+
+
 V - 0.0.17A
 
 - Refonte de l'estetique pur la gestion des compte
-- Optiimisation de l'affichage
+- Optimisation de l'affichage
 - Correction de l'interface pour les écrans en mode portrait
 - Ajout de l’este-tique pour la page de gestion de compte
 - Ajout des fonction dans les paramètre (non Fonctionnelle)

@@ -16,7 +16,20 @@ $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 $NameVideo = $bdd->query("SELECT nom, Affiche, type FROM titre WHERE type='0' ORDER BY nom   ");
 
-if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
+if (stristr($_SERVER['HTTP_USER_AGENT'], "Android")
+   || strpos($_SERVER['HTTP_USER_AGENT'], "iPod")
+   || strpos($_SERVER['HTTP_USER_AGENT'], "iphone"))
+   {
+     echo "C'est un télèphone";
+
+     
+
+   }
+   else {
+     // Et ici du code php classique...Pas forcement optimisé
+   }
+
+if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) { 
     # code...
 
   ?>
@@ -29,12 +42,22 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
       <link rel="stylesheet" href="Res/styleVideo.css" />
   </head>
 
+<?php
+
+  if (strpos($_SERVER['HTTP_USER_AGENT'], "iPod") || strpos($_SERVER['HTTP_USER_AGENT'], "iPhone")) {
+
+        echo "<script type='text/javascript'> alert('Vos appareille pue la merde du coup sa fonctione mal sorry mais c'a vas t'es cool ) </script> ";
+       
+     }
+
+?>
+
   <script type="text/javascript" src="Res/scriptZone.js" ></script>
 
 
 <body class="BackgroundA">
 
-<div class="ZoneM"></div>
+<table class="startPage"><tr class="noneBorder"><td class="noneBorder">
 
   <nav id="menu">
           
@@ -43,7 +66,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
                   <button class="linkSelect" id="LinkDebutPassif">Vidéo</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
                   <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
@@ -82,14 +105,14 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="#Favor">Favoris</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="#Upload">Upload</button>
                   <?php } else { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                   <?php } ?>
@@ -97,7 +120,8 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
               </div>  
       
   </nav>
-
+  </td>
+  <td class="noneBorder">
   
     
     <section>
@@ -126,6 +150,10 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
         </div>
       </div>
     </section>
+
+    </td>
+    </tr>
+    </table>
   
   <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
     
@@ -139,7 +167,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
 <?php } else {
 
-$EpVideo = $bdd->query('SELECT titre, SousTitre, Saison, Episode FROM video WHERE titre=\'' . $_GET['name'] . '\'');
+$EpVideo = $bdd->query('SELECT titre, SousTitre, Saison, Episode FROM video WHERE titre=\'' . $_GET['name'] . '\' ORDER BY Episode ASC');
 
 $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET['name'] . '\'');
         
@@ -163,8 +191,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
 
   <body class="BackgroundA">
 
-    <div class="ZoneM"></div>
-
+   <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
+    
     <nav id="menu">
           
               
@@ -211,14 +239,14 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="#Favor">Favoris</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="#Upload">Uploade</button>
                   <?php } else { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
                   <?php } ?>
@@ -227,10 +255,11 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
       
   </nav>
 
-  
+  </td>  
+  <td class="noneBorder">
     
     <section>
-        <div align="center" class="">
+        <div align="center" class="zoneListe">
           <div class="blockListeVideo">
             
             <?php
@@ -261,6 +290,10 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
           </div>
         </div>
     </section>
+
+  </td>
+  </tr>
+  </table>
 
   
   <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>

@@ -73,6 +73,7 @@ if ($video['titre'] != "") {
   
   }
 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,7 +88,7 @@ if ($video['titre'] != "") {
 
 <body class="BackgroundA">
 
-    <div class="ZoneM"></div>
+    <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
 
 	 <nav id="menu">
           
@@ -135,14 +136,14 @@ if ($video['titre'] != "") {
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="#Favor">Favoris</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="#Upload">Uploade</button>
                   <?php } else { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favori</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Supprimer</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
                   <?php } ?>
@@ -151,11 +152,14 @@ if ($video['titre'] != "") {
       
   </nav>
 
+</td>
+<td class="noneBorder">>
+
   
     
     <section>
       <div align="center">
-        <div class="">
+        <div class="zoneListe">
           <div class="blockListeVideo">
             
             <div class="titleVideo"><?php echo $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?></div>
@@ -197,6 +201,10 @@ if ($video['titre'] != "") {
       </div>
     </section>
 
+  </td>
+  </tr>
+  </table>
+
  	<?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 
  	<script type="text/javascript">
@@ -216,4 +224,4 @@ if ($video['titre'] != "") {
     <script type="text/javascript" src="Res/scriptFavori.js"></script>
 </body>
 </html>
-<?php } ?>
+<?php } else {  header('Location: Error/404.php?Error=video'); }?>

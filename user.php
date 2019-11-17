@@ -25,15 +25,9 @@ $Rimage = $ImageUs->fetch();
             .bacgroundUser
             {
                 background-image:  url("<?php echo $Rimage['image']; ?>");
-                background-position:center center;
-                background-size: 100% 100% ;
-            }
-
-            .bacgroundModif
-            {
-                background-image:  url("User/Default/User.png");
-                background-position:center center;
-                background-size: 100% 100% ;
+                background-position:left center;
+                background-repeat: no-repeat;
+                background-size: auto 100% ;
             }
 
         </style>
@@ -60,7 +54,7 @@ $Rimage = $ImageUs->fetch();
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
                         <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
                         <button class="linkSelect" id="LinkDebutPassif" style="margin-bottom: 5%;">Paramètre</button>
@@ -86,13 +80,13 @@ $Rimage = $ImageUs->fetch();
                     <div class="separationB">
 
                         <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Favori</button>
+                        <button class="bottomMenu" id="Res/popup.php#">Favoris</button>
                         <button class="bottomMenu" id="Res/popup.php#">Supprimer</button>
                         <button class="bottomMenu" id="Res/popup.php#">Télécharger</button>
                         <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <button class="bottomMenu" id="#Upload">Uploade</button>
+                        <button class="bottomMenu" id="#Upload">Upload</button>
                         <?php } else { ?>
-                          <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                          <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                         <?php } ?>
 
                     </div>
