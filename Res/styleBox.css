@@ -1,8 +1,7 @@
 .back
 {
-	position: absolute;
-	margin-top: 3%;
 	display: flex;
+	padding-left: 10%;
 	overflow: auto;
 	font-size: 3.2vh;
 	font-family: "Arial black";
@@ -34,6 +33,7 @@
 
 .listenBoxM
 {
+	color: white;
 	border-collapse: collapse;
 	border-bottom: 4px black solid;
 	background-color: #3D3D3D; 
@@ -45,6 +45,7 @@
 
 .listenBoxV
 {
+	color: white;	
 	border-collapse: collapse;
 	border: 4px black solid;
 	background-color: #3D3D3D; 

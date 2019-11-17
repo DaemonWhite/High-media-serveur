@@ -2,7 +2,7 @@
 
  $ana = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
- $reqCine = $ana->query('SELECT nom, Format FROM titre WHERE Format="0" ');
+ $reqCine = $ana->query('SELECT nom, Format FROM titre WHERE Format="0" ORDER BY nom ');
 
 
  ?> 
@@ -15,7 +15,7 @@
 
               <button id="#addUpload" onclick="verifEpisode()" class="boutonUpload">Ajouter un épisode</button>
 
-              <button id="#gestUpload" onclick="appTitleM()" class="boutonUpload">Gérer mes vidéo</button>
+              <button id="#gestUpload" onclick="appMyVideo('1')" class="boutonUpload">Gérer mes vidéos</button>
 
               <button class="boutonUpload js-close-modale" style="margin-bottom: 7%;">Fermer</button>
           
@@ -415,7 +415,15 @@
     
     <div align="center" style="padding: 2%;">
   
-      <span>Gérer mes fichier</span>
+      <div class="cadreBaseT">
+        
+        <span class="colorTitle" style="font-size: 4.6vh;">Gérer mes fichier</span>
+
+      </div>
+
+      <div id="gestVideo"></div>
+
+      <button type="button" class="boutonUpload js-close-modale" id="exit">Fermer</button></br>
 
 
 
@@ -443,7 +451,7 @@
 
                 if ($exiFavir['Favori'] == "") { ?>
 
-                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'0')">Ajouter au favori</button>
+                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'0')">Ajouter au favoris</button>
 
                 <?php } else { ?>
 
@@ -460,7 +468,7 @@
   
                   if ($exiFavir['Favori'] == "") { ?>
     
-                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "', '" . $_GET['Ep'] . "'"; ?>,'0')">Ajouter au favori</button>
+                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "', '" . $_GET['Ep'] . "'"; ?>,'0')">Ajouter au favoris</button>
     
                     <?php } else { ?>
     
@@ -471,7 +479,7 @@
 
               <button id="#viewFavor" class="boutonUpload">Voire les favoris</button>
 
-              <button class="boutonUpload js-close-modale">Fermer</button>
+              <button class="boutonUpload js-close-modale"> </button>
           
       
           </div>
@@ -483,7 +491,19 @@
   <section id="<?php if ($typeFavor == 1) { echo "Favor"; } else {echo "viewFavor";} ?>" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
     <div class="modal-bloc js-stope-modale">
 
-      <button id="#SUpload" class="boutonUpload">Ajouter au favori</button>
+      <button id="#SUpload" class="boutonUpload">Ajouter au favoris</button>
 
     </div>
+  </section>
+
+  <section id="Gestion" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+    
+      <div class="modal-bloc js-stope-modale">
+
+              <button id="#gestUpload" onclick="appMyVideo('1')" class="boutonUpload">Gérer mes vidéos</button>
+
+              <button class="boutonUpload js-close-modale" style="margin-bottom: 7%;">Fermer</button>
+          
+          </div>
+
   </section>
