@@ -1,10 +1,15 @@
 # High media serveur
 
+V - 0.0.20A
+
+
+
 V - 0.0.19A
 
 - Ajout de filtre de recherches
 - Ajout d'unsystéme de recherche
 - Amélioartion de supression de donné il suprime les video dans l'historique
+- Amélioration de la supretion de vidéos
 - Amélioration et correction de bug de l'interface pc
 
 V - 0.0.18A
