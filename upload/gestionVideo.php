@@ -155,6 +155,7 @@ if ($tp == "0") {
 
 
 		$title = $search->query('DELETE FROM video WHERE titre=\'' . $_POST["NameTi"] . '\' AND Episode=\'' . $_POST["Episode"] .  '\' AND SousTitre=\'' . $_POST["Sub"] .  '\' AND Saison=\'' .$_POST["Saison"] .  '\'  AND Proprietaire=\'' . $User . '\'');
+		$title = $search->query('DELETE FROM historique WHERE Name=\'' . $_POST["NameTi"] . '\' AND Episode=\'' . $_POST["Episode"] .  '\' AND Saison=\'' .$_POST["Saison"] .  '\' ');
 		unlink($Repert);
 
 		$title = $search->query('SELECT titre FROM video WHERE titre=\'' . $_POST["NameTi"] . '\' ');
@@ -164,6 +165,9 @@ if ($tp == "0") {
 		echo $donnes['titre'];
 
 		if (empty($donnes['titre'])) {
+
+			$title = $search->query('SELECT titre FROM video WHERE titre=\'' . $_POST["NameTi"] . '\' ');
+			
 			
 			$title = $search->query('DELETE FROM titre WHERE nom=\'' . $_POST["NameTi"] . '\' AND Format=0');
 
