@@ -41,8 +41,6 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
 
     <body class="BackgroundA">
-
-        <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
             
             <nav id="menu">
                 
@@ -106,15 +104,9 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                 
             </nav>
 
-            </td>
-            <td class="noneBorder">
-
-        <section>
-            
-            <div align="center">
-
-                <div class="back">
-
+            <section class="" style="width: 200vh; height: 100vh; overflow: auto;" >
+                <div class="back" align="center" style="overflow: hidden;">
+                    
                     <section class="Box">
                         <div class="BoxTitle"><span>Nouvelle musique</span></div>
                         <div class="listenBoxM">
@@ -156,7 +148,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                                         <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
                                         <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                        <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
+                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span>
                                             <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
 
                                     </tr>
@@ -165,6 +157,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                         </div>
                         
                     </section>
+
 
                     <section class="Box">
                         <div class="BoxTitle"><span>Favoris</span></div>
@@ -210,7 +203,8 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                         
                     </section>
-
+                    
+                    
                     <section class="Box">
                         <div class="BoxTitle"><span>Historique</span></div>
                             <div  align="left" class="overFlaw">
@@ -227,7 +221,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
         
                                                 <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
                                                 <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                                <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
+                                                <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
                                                     <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
         
                                             </tr>
@@ -237,15 +231,12 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                         
                     </section>  
-                    
+
+
                 </div>
-            </div>
+            </section>
 
-        </section>
 
-    </td>
-    </tr>
-    </table>
 
         <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 

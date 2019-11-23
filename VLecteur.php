@@ -88,8 +88,6 @@ if ($video['titre'] != "") {
 
 <body class="BackgroundA">
 
-    <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
-
 	 <nav id="menu">
           
               
@@ -152,15 +150,11 @@ if ($video['titre'] != "") {
       
   </nav>
 
-</td>
-<td class="noneBorder">>
-
   
     
-    <section>
-      <div align="center">
-        <div class="zoneListe">
-          <div class="blockListeVideo">
+    <section class="zoneListe">
+      <div class="blockListeVideo" align="center">
+          <div>
             
             <div class="titleVideo"><?php echo $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?></div>
 
@@ -197,13 +191,8 @@ if ($video['titre'] != "") {
           	</div>
 
           </div>
-        </div>
       </div>
     </section>
-
-  </td>
-  </tr>
-  </table>
 
  	<?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
 

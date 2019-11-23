@@ -47,51 +47,67 @@ $Rimage = $ImageUs->fetch();
 
         <div class="ZoneM">
           
-          <nav class="menu">
-                
-                    
-                    <div>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                        <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                        <button class="linkSelect" id="LinkDebutPassif" style="margin-bottom: 5%;">Paramètre</button>
-
-                    </div>
-
-                    <div class="separationA">
-
-                        <span class="infoUser"><?php echo $typeUser; ?></span>
-
-                        <div class="imageUser">
-                          <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                              <img src="<?php echo $Rimage['image'];?>" class="image">
-                            <?php } else { ?>
-                              <img src="User/Default/User.png" class="image">
-                          <?php } ?>
-                        </div>
-
-                        <span class="UserName"><?php echo $Pseudo; ?></span>
-
-                    </div>
-
-                    <div class="separationB">
-
-                        <button class="bottomMenu" id="Res/popup.php#">Dossier</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Favoris</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Supprimer</button>
-                        <button class="bottomMenu" id="Res/popup.php#">Télécharger</button>
-                        <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <button class="bottomMenu" id="#Upload">Upload</button>
-                        <?php } else { ?>
-                          <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
-                        <?php } ?>
-
-                    </div>
-            
-          </nav>
+          <nav id="menu">
+          
+              
+              <div>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
+                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('user')" style="margin-bottom: 5%;">Paramètre</button>
+                  
+              </div>
+  
+              <div class="separationA">
+  
+                  <span class="infoUser"><?php echo $typeUser; ?></span>
+  
+                  <div class="imageUser">
+                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                        <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
+                      <?php } else { ?>
+                        <img src="User/Default/User.png" class="image">
+                      <?php } ?>
+                   </div>
+  
+                  <span class="UserName"><?php echo $Pseudo ?></span>
+                  <?php if ($_SESSION['Securiter'] != "-1") {
+                      # code...
+                  ?>
+                  <form action="?Deco=1" method="post">
+                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
+                  </form>
+                   <?php } else { ?>
+                  <div>
+                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
+                  </div>
+  
+                  <?php } ?>
+  
+              </div>
+  
+              <div class="separationB">
+  
+                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="#Favor">Favoris</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="#Upload">Uploade</button>
+                  <?php } else { ?>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                  <?php } ?>
+  
+              </div>  
+      
+  </nav>
 
         </div>
 

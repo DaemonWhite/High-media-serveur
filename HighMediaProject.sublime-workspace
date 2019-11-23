@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getElementById"
+			],
+			[
+				"a",
+				"appVideo"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"Type",
+				"type"
+			],
+			[
+				"margon",
+				"margin-bottom\tproperty"
+			],
+			[
+				"pad",
+				"padding-bottom\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"mar",
+				"margin-right\tproperty"
+			],
+			[
+				"sap",
+				"space-between\tjustify-content"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"bor",
+				"border-top\tproperty"
+			],
+			[
+				"mra",
+				"margin\tproperty"
+			],
+			[
+				"Sear",
+				"SearchV"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"Bor",
+				"borderS"
+			],
+			[
+				"ob",
+				"object-fit\tproperty"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"hei",
+				"height\tproperty"
+			],
+			[
+				"he",
+				"height\tproperty"
+			],
+			[
 				"els",
 				"else"
 			],
@@ -12,20 +108,8 @@
 				"Error"
 			],
 			[
-				"mar",
-				"margin-top\tproperty"
-			],
-			[
-				"pad",
-				"padding\tproperty"
-			],
-			[
 				"Col",
 				"color\tproperty"
-			],
-			[
-				"marg",
-				"margin-right\tproperty"
 			],
 			[
 				"h",
@@ -34,10 +118,6 @@
 			[
 				"Res",
 				"Reserver"
-			],
-			[
-				"se",
-				"section\tTag"
 			],
 			[
 				"Reper",
@@ -56,24 +136,12 @@
 				"RestoreModiEp"
 			],
 			[
-				"in",
-				"input"
-			],
-			[
 				"ver",
 				"verifMod"
 			],
 			[
-				"get",
-				"getAttribute"
-			],
-			[
 				"border-co",
 				"border-collapse\tproperty"
-			],
-			[
-				"bor",
-				"border\tproperty"
 			],
 			[
 				"margin",
@@ -94,10 +162,6 @@
 			[
 				"backgr",
 				"background-color\tproperty"
-			],
-			[
-				"ba",
-				"background-image\tproperty"
 			],
 			[
 				"st",
@@ -148,10 +212,6 @@
 				"_FILES"
 			],
 			[
-				"ma",
-				"margin-top\tproperty"
-			],
-			[
 				"text",
 				"text-decoration\tproperty"
 			],
@@ -190,14 +250,6 @@
 			[
 				"whi",
 				"width\tproperty"
-			],
-			[
-				"col",
-				"colorTitle"
-			],
-			[
-				"he",
-				"header\tTag"
 			],
 			[
 				"sc",
@@ -244,10 +296,6 @@
 				"Historique"
 			],
 			[
-				"a",
-				"auto\toverflow"
-			],
-			[
 				"font",
 				"font-style\tproperty"
 			],
@@ -282,10 +330,6 @@
 			[
 				"chan",
 				"ChangePAGE"
-			],
-			[
-				"bu",
-				"buttonBase"
 			],
 			[
 				"al",
@@ -470,114 +514,36 @@
 			[
 				"background-",
 				"background-color\tproperty"
-			],
-			[
-				"g",
-				"groove"
-			],
-			[
-				"mo",
-				"modal-bloc"
-			],
-			[
-				"glo",
-				"global"
-			],
-			[
-				"loca",
-				"Location"
-			],
-			[
-				"boo",
-				"bottomConnect"
-			],
-			[
-				"ta",
-				"target"
-			],
-			[
-				"box",
-				"box-shadow\tproperty"
-			],
-			[
-				"focu",
-				"FocusSelect"
-			],
-			[
-				"q",
-				"querySelectorAll"
-			],
-			[
-				"f",
-				"focusValide"
-			],
-			[
-				"cl",
-				"closeModal"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "# High media serveur\n\nV - 0.0.19A\n\n\n- Ajout de filtre de recherches\n- Ajout d'unsystéme de recherche\n- Amélioartion de supression de donné il suprime les video dans l'historique\n- Amélioration et correction de bug de l'interface pc\n\nV - 0.0.18A\n\n- Debut de l'interface mobile\n- Teste d'une nouvelle génération de l'interface\n- Correction De faute d'ortographe\n- Correction Les titres apparaisse dans l'ordre\n- Correction les episode apparaisse dans l'ordre\n- Ajout de la page personnaliser pour les vidéos non existante\n- Ajout de la page D'erreur 404\n- Possibilité de modifier le contenu présent\n- Possibilité de supprimer les vidéos\n- Ajout du gestionnaire de vidéo USER\n- Correction de faute\n\n\nV - 0.0.17A\n\n- Refonte de l'estetique pur la gestion des compte\n- Optimisation de l'affichage\n- Correction de l'interface pour les écrans en mode portrait\n- Ajout de l’este-tique pour la page de gestion de compte\n- Ajout des fonction dans les paramètre (non Fonctionnelle)\n- Ajout d'un bouton paramètre\n- Correction on peut aller a l'accueil depuis les paramètre\n\n\nv - 0.0.16A\n\n- Ajout du reverse pour les favori\n- Ajout les 10 dernier favori son visible\n- Ajout des favori par l'utilisateur\n- correction les utilisateur normaux ne peux plus uploader sur la liste des épisode\n- Ajout de l'historique intelligent\n- Ajout de l'historique visible menu principale\n- Correction de certain problème avec Firefox\n- Ajout de l'implant de l'historique (¨Pas visible pour les utilisateur)\n- Correction de l'enregistrement des fichier\n- Correction du bouton fermer\n\nv - 0.0.15A\n\n- Modification ajout de l'image utilisateur (def)\n- Ajout de la miniature par défaut (tmp)\n- Ajout des miniature\n- Correction de l'optimisation du multi upload\n- Correction de l'affichage de l'upload\n- Modification des affiches pour les vidéo\n- Modification on peut sélectionner seulement les video dans le navigateur\n- Correction ajout de la vérification de fichier sur chaque input\n- Modification sele les images son visible\n- Ajout de suppression de l'ancienne image\n- Correction accès a la page user\n- Correction ajout de l'image utilisateur page vidéo sur la liste d'image\n\nv - 0.0.14A\n\n- Ajout de la page paramétrage\n- Ajout d'un alt sur chaque page\n- Ajout changement d'image utilisateur\n\nv - 0.0.13A\n\n- Modification enlevé de certain debug nuisible\n- Ajout des bouton d'épisode de la saison pour le Vlecteur\n- Optimisation du css\n- correction Du bouton vidéo dans Vupload\n- Modification rajout de securiter\n- Ajout des fonctionnalité non disponible\n- Ajout des fonctionnalité réserver au membre\n\nV - 0.0.12A\n\n- Ajout du multi upload dans la section ajouter\n- Ajout d'un Shell pour présenter les épisode présent\n- Ajout de l'interface d'ajout d'épisode\n\n\nv - 0.0.11A\n\n- Ajout de l'interface de base vidéo\n- Correctif d’affichage sur les autre navigateur que chrome\n- Modification les case upload son mit en include\n- Ajout de la référence de saison\n\nV - 0.0.10A\n\n- Ajout de la vue du synopsis\n- Ajout de la vue par saison\n- ajout de la liste d’épisode\n- Correction les vidéo seront enregistrée avec le bon répertoire\n- Ajout des case pour les vidéo\n- Ajout du menu de navigation dans le menu\n\nV - 0.0.09A\n\n- Ajout du genre\n- Ajout du synopsis\n- Correction le modal Upload est désormer bien alligner au centre\n- Ajout du genre\n- Correction de la taille de la fenêtre modale\n- Ajout de la barre de chargement + style css\n- Ajout d'un debug qui empêche l'envoi de fichier vide\n- Ajout d'un debug qui permet de ne pas avoirs le même épisode sur la feuille\n- Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre\n- Ajout du début du multi upload\n- Ajout du nombre épisode mit de manière logique\n- Ajout disparition des bouton - de manière procédurale\n- Ajout de bouton pour choisir le nombre de vidéo voulue\n- Ajout du début d'upload\n- Ajout de la fenêtre d'upload de nouveau fichier\n- correction le bouton connecte est placé correctement\n\nV - 0.0.08A\n\n- Ajout du bouton connexion si déconnecter\n- Bouton Uplaod du menu et fonctionnelle\n- Modification Des crypte son en inclûde\n- Correction le mode inviter fonctionne\n- Ajout du popup d'upload\n- Ajout d'un popup de connexion \n\nv - 0.0.07A\n\n- Ajout de l'image utilisateur par défaut\n- Ajout des bouton interactive \"Dossier, Favori, Supprimer, Télécharger,Upload\"\n- Ajout du texte d'identification\n- Ajout du placement pour l'image\n- Ajout d'un bouton \"Proposition\"\tnon fonctionnelle\n- Ajout d'un bouton \"Serveur\"\tnon fonctionnelle\n- Ajout d'un bouton \"Espace Personnelle\"\tnon fonctionelle\n- Ajout d'un bouton \"Acueil\"\tnon fonctionnelle\n- Ajout d'un bouton \"Audio\"\tnon fonctionnelle\n- Ajout d'un bouton \"video\"\tFonctionnelle\n- Ajout de la barre de navigation dans la page d'acueille\n- Ajout d'entée de texte personnaliser\n- Ajout de bouton personaliser\n\nV - 0.0.06A\n\n- Ajout d'information\n- Reorganisation des élémen\n- Ajout de l'interface organisé de la page d'acueille\n\nV - 0.0.05A\n\n- Ajout de la page de choix de l'épisode\n- Ajout de la page qui repertotrie les Série\n- Ajout d'un lient pour les video\n- Corection a l'upload il est impossible d'avoir deux video au même episode\n\n\nV - 0.0.04A\n\n- Correction de l'enregistrement des ip\n- Ajout de la base du systéme d'upload\n- Ajout d'un bloqueur de page\n- corection de la mise ajour des table pour les nouvelle session\n\nV - 0.0.03A\n\n- ajout d'un bouton de deconnexion\n- Ajout autorise seulement deux apparéille a se connecter au serveur\n- modification valeur sure pour la création de compte\n- correctif enléve un message de dbugage\n- Ajout d'une véritable page de connexion\n- Ammelioration ajout d'une méllieure organisation pour les inscription\n- Correction de la page index il ne définira plus les valeur qu'ant on apuie sur créer un compte\n\nV - 0.0.02A\n\n- ajout d'un méllieur rendu pour la zone de modification\n- Ajout de la modidication de donner\n\nV - 0.0.01A\n\n- Ajout du systeme de mot de passe ainsi que des zone de liason",
 			"file": "/D/Project/High-media-serveur/README.md",
+			"file_size": 6181,
+			"file_write_time": 132187602177558997,
 			"settings":
 			{
-				"buffer_size": 5588,
+				"buffer_size": 5913,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "video.php",
+			"settings":
+			{
+				"buffer_size": 12754,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Res/style.css",
+			"file": "global.php",
 			"settings":
 			{
-				"buffer_size": 14112,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "user.php",
-			"settings":
-			{
-				"buffer_size": 10088,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/styleVideo.css",
-			"settings":
-			{
-				"buffer_size": 1327,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/popUpload.php",
-			"settings":
-			{
-				"buffer_size": 34260,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptModal.php",
-			"settings":
-			{
-				"buffer_size": 18456,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/styleBox.css",
-			"settings":
-			{
-				"buffer_size": 1226,
+				"buffer_size": 12297,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -586,16 +552,25 @@
 			"file": "upload/gestionVideo.php",
 			"settings":
 			{
-				"buffer_size": 3907,
+				"buffer_size": 4186,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "video.php",
+			"file": "user.php",
 			"settings":
 			{
-				"buffer_size": 11237,
+				"buffer_size": 10910,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "upload/appVideo.php",
+			"settings":
+			{
+				"buffer_size": 1835,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -610,10 +585,46 @@
 			}
 		},
 		{
-			"file": "Com/TestNewPassWord.php",
+			"file": "upload/Upload.php",
 			"settings":
 			{
-				"buffer_size": 17383,
+				"buffer_size": 6174,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/scriptModal.php",
+			"settings":
+			{
+				"buffer_size": 18456,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleVideo.css",
+			"settings":
+			{
+				"buffer_size": 2277,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/style.css",
+			"settings":
+			{
+				"buffer_size": 14132,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleBox.css",
+			"settings":
+			{
+				"buffer_size": 1329,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -698,23 +709,31 @@
 	[
 		"/D/Wamp/www/HighMediaServeur",
 		"/D/Wamp/www/HighMediaServeur/Com",
+		"/D/Wamp/www/HighMediaServeur/Error",
 		"/D/Wamp/www/HighMediaServeur/Res",
 		"/D/Wamp/www/HighMediaServeur/upload",
-		"/D/Wamp/www/HighMediaServeur/upload/Audio",
-		"/D/Wamp/www/HighMediaServeur/User",
-		"/D/Wamp/www/HighMediaServeur/upload"
+		"/D/Wamp/www/HighMediaServeur/User"
 	],
 	"file_history":
 	[
+		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
+		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
+		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
+		"/D/Wamp/www/HighMediaServeur/video.php",
+		"/D/Wamp/www/HighMediaServeur/upload/gestionVideo.php",
+		"/D/Wamp/www/HighMediaServeur/Res/styleBox.css",
+		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
+		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
+		"/D/Wamp/www/HighMediaServeur/user.php",
+		"/D/Wamp/www/HighMediaServeur/Res/style.css",
+		"/D/Project/High-media-serveur/README.md",
+		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/www/HighMediaServeur/Com/addFavor.php",
 		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
 		"/D/Wamp/www/HighMediaServeur/upload/addUpload.php",
-		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
-		"/D/Wamp/www/HighMediaServeur/video.php",
 		"/D/Wamp/www/HighMediaServeur/Error/404.php",
 		"/D/Wamp/bin/apache/apache2.4.39/conf/httpd.conf",
 		"/D/Wamp/www/TEST/.htaccess",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.php",
 		"/D/Wamp/www/HighMediaServeur/global.php",
 		"/D/Wamp/alias/HighMediaServeur.conf",
 		"/C/Users/Matheo/Desktop/.htaccess",
@@ -728,17 +747,10 @@
 		"/C/Program Files (x86)/Steam/steamapps/common/KingdomComeDeliverance/Mods/optimized_graphic_presets/README.md",
 		"/C/Users/Matheo/Downloads/kcd_optimized_graphic_presets_3-6-2_unofficial-743-3-6-2-1559809784/Mods/optimized_graphic_presets/Data/zzzzzz_kcd_flowgraph_hook.pak",
 		"/D/Wamp/www/HighMediaServeur/User/changeImage.php",
-		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
-		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptFavori.js",
 		"/D/Wamp/www/HighMediaServeur/Res/scriptZone.js",
-		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/www/HighMediaServeur/audio.php",
-		"/D/Wamp/www/HighMediaServeur/user.php",
 		"/D/Wamp/www/HighMediaServeur/Res/popup.php",
-		"/D/Wamp/www/HighMediaServeur/Res/styleBox.css",
-		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
-		"/D/Wamp/www/HighMediaServeur/Res/style.css",
 		"/D/Wamp/bin/apache/apache2.4.39/conf/extra/httpd-vhosts.conf",
 		"/D/Wamp/alias/phpmyadmin.conf",
 		"/D/Wamp/www/HighMediaServeur/admin.php",
@@ -831,13 +843,11 @@
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D257.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D25B.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF__0304D246.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/PCSXChestNoPLayerScript.pex",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/QF_PCSXSceneEntre_030485E1.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXThiefKilledAlias.psc"
+		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/PCSXChestNoPLayerScript.pex"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -851,6 +861,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"vef.",
+			"cat",
+			"appVideo",
+			"SearchRV",
+			"SearchVideo",
+			"tdTexte",
+			"choi",
+			"Vaffiche",
+			"link",
+			"order",
+			"bacgroundUser",
+			"caseImg",
+			"zoneListe",
+			"back",
+			"/table",
+			"/td",
+			"/tr",
+			"td/",
+			"tr",
+			"td",
+			"zoneListe",
+			"entreVideo",
+			"table",
+			"/table",
+			"/td",
+			"/tr",
+			"/td",
+			"startPage",
 			"user",
 			"INSERT",
 			"min",
@@ -950,39 +988,11 @@
 			"tmpRepertori",
 			"Error",
 			"ErrorTitle",
-			"readData",
-			"callback",
-			"Vminiature",
-			"image",
-			"NameVideo",
-			"width",
-			"caseBottom",
-			"borderBottom",
-			"changeUseIm",
-			"7168",
-			"user.php",
-			"iamge",
-			"include",
-			"zone",
-			"window.location",
-			"newVideo",
-			"newZone",
-			"newEp",
-			"nameSerie",
-			"newBonus",
-			"totalVideo",
-			"addUpload",
-			"Eisode",
-			"innerHTML",
-			"callback",
-			"form",
-			"EpisodeSize",
-			"selectBase",
-			"overflow"
+			"readData"
 		],
 		"highlight": true,
 		"in_selection": false,
-		"preserve_case": false,
+		"preserve_case": true,
 		"regex": false,
 		"replace_history":
 		[
@@ -997,7 +1007,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -1006,78 +1016,78 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5588,
+						"buffer_size": 5913,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								82,
-								82
+								35,
+								35
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
+							"is_init_dirty_state": true,
 							"origin_encoding": "ASCII",
-							"spell_check": true,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Res/style.css",
+					"file": "video.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14112,
+						"buffer_size": 12754,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								83
+								5085,
+								5085
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 307.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "user.php",
+					"file": "global.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10088,
+						"buffer_size": 12297,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2196,
-								2198
+								11476,
+								11476
 							]
 						],
 						"settings":
@@ -1089,58 +1099,58 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1030.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "Res/styleVideo.css",
+					"file": "upload/gestionVideo.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1327,
+						"buffer_size": 4186,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								348,
-								348
+								557,
+								595
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "Res/popUpload.php",
+					"file": "user.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34260,
+						"buffer_size": 10910,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1598,
-								1598
+								825,
+								797
 							]
 						],
 						"settings":
@@ -1152,14 +1162,111 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 572.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "upload/appVideo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								398,
+								398
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 208.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "index.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2056,
+								2056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 73.0,
+						"translation.y": 110.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "upload/Upload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6002,
+								6004
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1729.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "Res/scriptModal.php",
 					"semi_transient": false,
 					"settings":
@@ -1171,38 +1278,39 @@
 						"selection":
 						[
 							[
-								13950,
-								13958
+								15720,
+								15703
 							]
 						],
 						"settings":
 						{
-							"spell_check": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7204.0,
+						"translation.y": 8306.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Res/styleBox.css",
+					"buffer": 9,
+					"file": "Res/styleVideo.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1226,
+						"buffer_size": 2277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								104,
-								105
+								173,
+								173
 							]
 						],
 						"settings":
@@ -1213,142 +1321,73 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 380.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "upload/gestionVideo.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								405,
-								405
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 64.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "video.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5568,
-								5568
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1705.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 9,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1206,
-								1174
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 819.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "Com/TestNewPassWord.php",
+					"file": "Res/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17383,
+						"buffer_size": 14132,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1363,
-								1367
+								3811,
+								3811
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 210.0,
+						"translation.y": 3058.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Res/styleBox.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1329,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1382,7 +1421,7 @@
 		"cols":
 		[
 			0.0,
-			0.0478011472275,
+			0.0690607734807,
 			1.0
 		],
 		"rows":
@@ -1408,7 +1447,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":

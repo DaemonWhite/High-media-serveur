@@ -20,7 +20,6 @@ if (stristr($_SERVER['HTTP_USER_AGENT'], "Android")
    || strpos($_SERVER['HTTP_USER_AGENT'], "iPod")
    || strpos($_SERVER['HTTP_USER_AGENT'], "iphone"))
    {
-     echo "C'est un télèphone";
 
      
 
@@ -46,7 +45,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
   if (strpos($_SERVER['HTTP_USER_AGENT'], "iPod") || strpos($_SERVER['HTTP_USER_AGENT'], "iPhone")) {
 
-        echo "<script type='text/javascript'> alert('Vos appareille pue la merde du coup sa fonctione mal sorry mais c'a vas t'es cool ) </script> ";
+        echo "<script type='text/javascript'> alert('Vos appareille pue la merde du coup sa fonctionne mal sorry, mais c'a vas t'es cool ) </script> ";
        
      }
 
@@ -57,7 +56,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
 <body class="BackgroundA">
 
-<table class="startPage"><tr class="noneBorder"><td class="noneBorder">
+
 
   <nav id="menu">
           
@@ -106,13 +105,13 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
                     <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="#Upload">Upload</button>
                   <?php } else { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                   <?php } ?>
@@ -120,40 +119,55 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
               </div>  
       
   </nav>
-  </td>
-  <td class="noneBorder">
-  
-    
-    <section>
-      <div align="center">
-        <div class="entreVideo">
 
-            <?php 
-    
-            while ($donnes = $NameVideo->fetch()) {
+    <section class="entreVideo">
         
-                echo '<div align="left" onclick="newZone('; echo "'"; echo $donnes['nom']; echo "'"; echo ')">
-                          <table align="left" class="caseBottom">
-                                    <tr><td class="class="" ><img class="caseImg" src="' . $donnes['Affiche'] .'"></td></tr>
-                                    
-                                      <tr align="center"><td><span class="whiteCase">'. $donnes['nom'] . '</span></td></tr>  
-                                    </tr>
-                          </table>
-        
-                      </div>'; 
-            }
-        
-          
-      
-          ?>
+            <div class="SearchVideo" align="center">
 
-        </div>
-      </div>
+              <div class="SearchV">
+                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme()">
+              </div>
+
+              <div>
+
+                      <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme()">
+                        <option value="">Catégorie?</option>
+                        <option value="Anime">Animé</option>
+                        <option value="Docu">Documentaire</option>
+                        <option value="Movie">Filme</option>
+                        <option value="TV">Série télé</option>
+                      </select>
+
+                      <select name="Gen" class="selectBase" style="margin-right: 5%;">
+                        <option value="">Genre?</option>
+                      </select>
+                      
+                      <select name="Langue" class="selectBase">
+                        <option value="">Lang?</option>
+                      </select>
+              </div>
+
+            </div>
+
+            <div class="entreViewVideo" id="zoneVideo">
+               <?php 
+        
+               while ($donnes = $NameVideo->fetch()) { ?>
+            
+                  <div class="caseBottom" onclick="newZone('<?php echo $donnes['nom'];?>')">
+                    
+                    <table align="center">
+                     <tr style=""><img class="caseImg" src="<?php echo $donnes['Affiche'] ?>"></tr>
+                     <tr class="whiteCase"><td><span style=" font-size: 150%;"><?php echo $donnes['nom']; ?></span></td> </tr>
+                      
+                    </table>
+    
+                  </div>
+    
+              <?php } ?>
+           </div>
+
     </section>
-
-    </td>
-    </tr>
-    </table>
   
   <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>
     
@@ -163,6 +177,60 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
       </script>
       
   </body>
+
+
+    <script type="text/javascript">
+
+    function touche(e){
+
+      var touche = event.keyCode;
+
+      console.log(touche)
+      
+      if (touche == 13) {
+
+        GernreAnme(0)
+
+      }
+
+    }
+    
+    function GernreAnme(type)
+    {
+      
+
+      var sizeVideo = document.getElementById("zoneVideo");
+
+       var oData = new FormData();
+       var text = document.getElementById("barSearch").value
+       var Gen = document.getElementById("cat").value
+
+       
+       oData.append("Search", text)
+       oData.append("Genre", Gen)
+
+    
+      
+       vef = new XMLHttpRequest();
+       vef.open("POST", "Upload/appVideo.php", true);
+        vef.onload = function(oEvent) {
+           if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+             
+             sizeVideo.innerHTML = vef.responseText;
+             
+    
+           } else {
+    
+           }
+         };
+      
+       vef.send(oData);
+
+       }
+
+  </script>
+
+
   </html>
 
 <?php } else {
@@ -190,8 +258,6 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
 
 
   <body class="BackgroundA">
-
-   <table class="startPage"><tr class="noneBorder"><td class="noneBorder">
     
     <nav id="menu">
           
@@ -240,27 +306,24 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
                     <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
+                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Uploade</button>
+                    <button class="bottomMenu" id="#Upload">Upload</button>
                   <?php } else { ?>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
                     <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
                     <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
+                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
                   <?php } ?>
   
               </div>  
       
   </nav>
-
-  </td>  
-  <td class="noneBorder">
     
-    <section>
-        <div align="center" class="zoneListe">
-          <div class="blockListeVideo">
+    <section class="zoneListe">
+        <div  class="blockListeVideo">
+          <div align="center">
             
             <?php
             $view = 0;
@@ -290,10 +353,6 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
           </div>
         </div>
     </section>
-
-  </td>
-  </tr>
-  </table>
 
   
   <?php if ($_SESSION['Securiter'] >= 1 ) { include("Res/popUpload.php"); } ?>

@@ -1,7 +1,17 @@
 # High media serveur
 
+V - 0.0.19A
+
+- Ajout de filtre de recherches
+- Ajout d'unsystéme de recherche
+- Amélioartion de supression de donné il suprime les video dans l'historique
+- Amélioration et correction de bug de l'interface pc
+
 V - 0.0.18A
 
+- Debut de l'interface mobile
+- Teste d'une nouvelle génération de l'interface
+- Correction De faute d'ortographe
 - Correction Les titres apparaisse dans l'ordre
 - Correction les episode apparaisse dans l'ordre
 - Ajout de la page personnaliser pour les vidéos non existante
