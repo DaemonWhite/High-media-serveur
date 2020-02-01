@@ -2,6 +2,14 @@
 
 V - 0.0.20A
 
+- Ajout d'une fonctionaliter de langage Generaliser
+- Optimisation du script d'popUpload
+- Correction de qu'elle que faute d'ortographe
+- Ajout des condition d'utilisation
+- Ajout des information sur le serveur
+- Ajout d'un font a la page de connexion
+- Optimisation du système de connexion
+- Correction de la conexion rapide
 
 
 V - 0.0.19A
