@@ -6,15 +6,15 @@ $UserName = $_SESSION['ID'];
 
 
 // Debug episode
-if ($_POST['Ep1'] != 0) {$Episode[0] = $_POST['Ep1']; $Saison[0] = $_POST['Saison01'];}
-if ($_POST['Ep2'] != 0) {$Episode[1] = $_POST['Ep2']; $Saison[1] = $_POST['Saison02'];}
-if ($_POST['Ep3'] != 0) {$Episode[2] = $_POST['Ep3']; $Saison[2] = $_POST['Saison03'];}
-if ($_POST['Ep4'] != 0) {$Episode[3] = $_POST['Ep4']; $Saison[3] = $_POST['Saison04'];}
-if ($_POST['Ep5'] != 0) {$Episode[4] = $_POST['Ep5']; $Saison[4] = $_POST['Saison05'];}
-if ($_POST['Ep6'] != 0) {$Episode[5] = $_POST['Ep6']; $Saison[5] = $_POST['Saison06'];}
-if ($_POST['Ep7'] != 0) {$Episode[6] = $_POST['Ep7']; $Saison[6] = $_POST['Saison07'];}
-if ($_POST['Ep8'] != 0) {$Episode[7] = $_POST['Ep8']; $Saison[7] = $_POST['Saison08'];}
-if ($_POST['Ep9'] != 0) {$Episode[8] = $_POST['Ep9']; $Saison[8] = $_POST['Saison09'];}
+if ($_POST['Ep1'] != 0) {$Episode[0] = $_POST['Ep1']; $Saison[0] = $_POST['Saison1'];}
+if ($_POST['Ep2'] != 0) {$Episode[1] = $_POST['Ep2']; $Saison[1] = $_POST['Saison2'];}
+if ($_POST['Ep3'] != 0) {$Episode[2] = $_POST['Ep3']; $Saison[2] = $_POST['Saison3'];}
+if ($_POST['Ep4'] != 0) {$Episode[3] = $_POST['Ep4']; $Saison[3] = $_POST['Saison4'];}
+if ($_POST['Ep5'] != 0) {$Episode[4] = $_POST['Ep5']; $Saison[4] = $_POST['Saison5'];}
+if ($_POST['Ep6'] != 0) {$Episode[5] = $_POST['Ep6']; $Saison[5] = $_POST['Saison6'];}
+if ($_POST['Ep7'] != 0) {$Episode[6] = $_POST['Ep7']; $Saison[6] = $_POST['Saison7'];}
+if ($_POST['Ep8'] != 0) {$Episode[7] = $_POST['Ep8']; $Saison[7] = $_POST['Saison8'];}
+if ($_POST['Ep9'] != 0) {$Episode[8] = $_POST['Ep9']; $Saison[8] = $_POST['Saison9'];}
 if ($_POST['Ep10'] != 0) {$Episode[9] = $_POST['Ep10']; $Saison[9] = $_POST['Saison10'];}
 if ($_POST['Ep11'] != 0) {$Episode[10] = $_POST['Ep11'];  $Saison[10] = $_POST['Saison11'];}
 if ($_POST['Ep12'] != 0) {$Episode[11] = $_POST['Ep12'];  $Saison[11] = $_POST['Saison12'];}

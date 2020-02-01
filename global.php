@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+include("lang/FR.php"); 
+
 
 
 $typeFavor = 1; // 1 = acueille;
@@ -46,13 +48,13 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                 
                     
                         <div>
-                            <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                            <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
+                            <button class="linkSelect" id="LinkDebutPassif"> <?php echo $_Lang_Gen_Homme; ?> </button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')"> <?php echo $_Lang_Gen_Video; ?> </button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')"> <?php echo $_Lang_Gen_Audio; ?> </button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"> <?php echo $_Lang_Gen_Perso; ?> </button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"> <?php echo $_Lang_Gen_Serve; ?> </button>
+                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"> <?php echo $_Lang_Gen_Propo; ?> </button>
+                            <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')"> <?php echo $_Lang_Gen_Param; ?> </button>
     
                         </div>
     
@@ -73,11 +75,11 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                                 # code...
                             ?>
                             <form action="?Deco=1" method="post">
-                                <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
+                                <input name="Deco" id="Deco" type="submit" value="<?php echo $_Lang_Gen_Deco; ?>" class="bottomDisconect" />
                             </form>
                              <?php } else { ?>
                             <div>
-                                <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
+                                <button name="Co" id="Res/popup.php#Conex" class="bottomConnect"><?php echo $_Lang_Gen_Conex; ?></button>
                             </div>
     
                             <?php } ?>
@@ -87,17 +89,17 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                         <div class="separationB">
     
                             <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="#Favor">Favoris</button>
-                              <button class="bottomMenu" id="#Gestion">Gestionaire</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                              <button class="bottomMenu" id="#Upload">Upload</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Doss; ?>    </button>
+                              <button class="bottomMenu" id="#Favor"><?php echo $_Lang_Gen_Favoris; ?> </button>
+                              <button class="bottomMenu" id="#Gestion"><?php echo $_Lang_Gen_Fichi; ?></button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Down; ?> </button>
+                              <button class="bottomMenu" id="#Upload"><?php echo $_Lang_Gen_Upload; ?></button>
                             <?php } else { ?>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Doss; ?> </button>
+                              <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Favoris; ?> </button>
+                              <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Fichi; ?> </button>
+                              <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Down; ?> </button>
+                              <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Upload; ?> </button>
                             <?php } ?>
     
                            </div>
@@ -108,7 +110,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                 <div class="back" align="center" style="overflow: hidden;">
                     
                     <section class="Box">
-                        <div class="BoxTitle"><span>Nouvelle musique</span></div>
+                        <div class="BoxTitle"><span> <?php echo $_Lang_ACC_Nmus;?> </span></div>
                         <div class="listenBoxM">
                             <table>
                                 <tr>
@@ -131,12 +133,12 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Serveur</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Serv; ?></span></div>
                         
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Nouvelle vidéo</span></div>
+                        <div class="BoxTitle"><span> <?php echo $_Lang_Acc_Nvid; ?></span></div>
 
                         <div align="left" class="overFlaw">
                             <table class="listenBoxV">
@@ -160,7 +162,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Favoris</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Gen_Favoris; ?></span></div>
 
                         <div  align="left" class="overFlaw">
                                 <table class="listenBoxV">
@@ -199,7 +201,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Information</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Info; ?></span></div>
 
                         
                     </section>

@@ -12,6 +12,7 @@ if (!empty($_GET['invite'])) {
 }
 
 $ip_Visiteur = $_SERVER['REMOTE_ADDR'];
+$vertion = "0.0.20";
 
 $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
@@ -41,12 +42,11 @@ if (isset($_POST['DemandeConexion'])) {
 
                 if (!empty($_POST['SaveMe'])) {
 
-                    if (($_SERVER['REMOTE_ADDR'] = $UserInfo['IP1']) OR ($_SERVER['REMOTE_ADDR'] = $UserInfo['IP2'])) {
+                    if (($_SERVER['REMOTE_ADDR'] == $UserInfo['IP1']) OR ($_SERVER['REMOTE_ADDR'] == $UserInfo['IP2'])) {
     
-                                header("Location: Global.php");
+                                header("Location: " . $moveUrl);
                         # code...
                     } else {
-
                         if ($UserInfo['Modif_IP'] == 0) {
     
                                 $mod = 1;
@@ -58,9 +58,7 @@ if (isset($_POST['DemandeConexion'])) {
                                     'ID' => $_SESSION['ID']
                                     ));
     
-                                header("Location: Global.php");
-
-
+                                header("Location: " . $moveUrl);
     
                             } else { 
     
@@ -71,10 +69,9 @@ if (isset($_POST['DemandeConexion'])) {
                                     'IP2' => $ip_Visiteur,
                                     'modif' => $mod,
                                     'ID' => $UserInfo['ID_user']
-                                    ));  header("Location: Global.php");
+                                    ));  header("Location: " . $moveUrl);
                                     echo "Choix D"; 
                             }
-
                     }
 
                     setcookie('IP', $_SERVER['REMOTE_ADDR'], time() + 365*24*3600, null, null, false, true);
@@ -82,6 +79,8 @@ if (isset($_POST['DemandeConexion'])) {
                     setcookie('ID', $UserInfo['ID_user'], time() + 365*24*3600, null, null, false, true);
                     setcookie('Pseudo', $UserInfo['UserName'], time() + 365*24*3600, null, null, false, true);
                     setcookie('Securiter', $UserInfo['Securiter'], time() + 365*24*3600, null, null, false, true);
+
+                    setcookie('Welcome', $vertion, time() + 365*24*3600, null, null, false, true);
                 }
                 # code...
             } else {$erreur = "Identifiant ou mot de passe incorecte";}
