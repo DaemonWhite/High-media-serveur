@@ -1,4 +1,8 @@
 <?php 
+
+include("lang/fr.php");
+
+
 session_start();
 
 if (!empty($_GET['invite'])) {
@@ -83,11 +87,11 @@ if (isset($_POST['DemandeConexion'])) {
                     setcookie('Welcome', $vertion, time() + 365*24*3600, null, null, false, true);
                 }
                 # code...
-            } else {$erreur = "Identifiant ou mot de passe incorecte";}
+            } else {$erreur = $_Lang_Con_ErrR;}
             # code...
-        } else {$erreur = "Veulier mettre votre mot de passe";}
+        } else {$erreur = $_Lang_Con_ErrD;}
         # code...
-    } else {$erreur = "Veulier entrer un nom d'utilisateur";}
+    } else {$erreur = $_Lang_Con_ErrI;}
     # code...
 }
 

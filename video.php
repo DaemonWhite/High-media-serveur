@@ -1,5 +1,7 @@
 <?php
 
+include("lang/fr.php");
+
 $moveUrl = "Video.php";
 
 include("Com/Conexion.php");
@@ -62,13 +64,13 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
           
               
               <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
-                  <button class="linkSelect" id="LinkDebutPassif">Vidéo</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')"><?php echo $_Lang_Gen_Homme; ?></button>
+                  <button class="linkSelect" id="LinkDebutPassif"><?php echo $_Lang_Gen_Video; ?></button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?></button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?></button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"><?php echo $_Lang_Gen_Serve; ?></button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"><?php echo $_Lang_Gen_Propo; ?></button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')"><?php echo $_Lang_Gen_Param; ?></button>
   
               </div>
   
@@ -89,11 +91,11 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
                       # code...
                   ?>
                   <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
+                      <input name="Deco" id="Deco" type="submit" value="<?php echo $_Lang_Gen_Deco; ?>" class="bottomDisconect" />
                   </form>
                    <?php } else { ?>
                   <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
+                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect"><?php echo $_Lang_Gen_Conex; ?></button>
                   </div>
   
                   <?php } ?>
@@ -103,17 +105,17 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
               <div class="separationB">
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Doss; ?></button>
+                    <button class="bottomMenu" id="#Favor"><?php echo $_Lang_Gen_Favoris; ?></button>
+                    <button class="bottomMenu" id="#Gestion"><?php echo $_Lang_Gen_Fichi; ?></button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Down; ?></button>
+                    <button class="bottomMenu" id="#Upload"><?php echo $_Lang_Gen_Upload; ?></button>
                   <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Doss; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"><?php echo $_Lang_Gen_Favoris; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"><?php echo $_Lang_Gen_Fichi; ?></button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"><?php echo $_Lang_Gen_Down; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"><?php echo $_Lang_Gen_Upload; ?></button>
                   <?php } ?>
   
               </div>  
@@ -131,19 +133,19 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
               <div>
 
                       <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme()">
-                        <option value="">Catégorie?</option>
-                        <option value="Anime">Animé</option>
-                        <option value="Docu">Documentaire</option>
-                        <option value="Movie">Filme</option>
-                        <option value="TV">Série télé</option>
+                        <option value=""><?php echo $_Lang_Cat_Nop; ?></option>
+                        <option value="Anime"><?php echo $_Lang_Cat_Anim; ?></option>
+                        <option value="Docu"><?php echo $_Lang_Cat_Docu; ?></option>
+                        <option value="Movie"><?php echo $_Lang_Cat_Film; ?></option>
+                        <option value="TV"><?php echo $_Lang_Cat_Setv; ?> télé</option>
                       </select>
 
                       <select name="Gen" class="selectBase" style="margin-right: 5%;">
-                        <option value="">Genre?</option>
+                        <option value=""> <?php echo $_Lang_Cat_Gen; ?> </option>
                       </select>
                       
                       <select name="Langue" class="selectBase">
-                        <option value="">Lang?</option>
+                        <option value=""> <?php echo $_Lang_Cat_Lang; ?></option>
                       </select>
               </div>
 
@@ -263,13 +265,13 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
           
               
               <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
-                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')">Vidéo</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')"><?php echo $_Lang_Gen_Homme; ?> </button>
+                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')"><?php echo $_Lang_Gen_Video; ?> </button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?> </button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?>  personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"><?php echo $_Lang_Gen_Serve; ?> </button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"><?php echo $_Lang_Gen_Propo; ?> </button>
+                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')"><?php echo $_Lang_Gen_Param; ?> </button>
   
               </div>
   
@@ -290,11 +292,11 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
                       # code...
                   ?>
                   <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
+                      <input name="Deco" id="Deco" type="submit" value="<?php echo $_Lang_Gen_Deco; ?>" class="bottomDisconect" />
                   </form>
                    <?php } else { ?>
                   <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
+                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect"><?php echo $_Lang_Gen_Conex; ?> </button>
                   </div>
   
                   <?php } ?>
@@ -304,17 +306,17 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
               <div class="separationB">
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_ACC_Nmus; ?> </button>
+                    <button class="bottomMenu" id="#Favor"> <?php echo $_Lang_Acc_Nvid; ?> </button>
+                    <button class="bottomMenu" id="#Gestion"> <?php echo $_Lang_Acc_Serv; ?> </button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Acc_Info; ?> </button>
+                    <button class="bottomMenu" id="#Upload"> <?php echo $_Lang_Acc_Hist; ?> </button>
                   <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_ACC_Nmus; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Nvid; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Serv; ?></button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Acc_Info; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Hist; ?></button>
                   <?php } ?>
   
               </div>  

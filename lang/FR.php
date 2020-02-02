@@ -127,6 +127,25 @@
 
 # Video
 
+    #Catégorie
+
+    	$_Lang_Cat_Nop 	=	"Catégorie?";
+    	$_Lang_Cat_Anim	=	"Animé";
+		$_Lang_Cat_Docu	=	"Documentaire";
+		$_Lang_Cat_Film	=	"Filme";
+		$_Lang_Cat_Setv	=	"Série télé";
+
+		#Lang
+
+			$_Lang_Cat_Lang	= 	"Lang?";
+			$_Lang_Cat_VFyStr =	"Vostfr";
+			$_Lang_Cat_VFnStr = "VF";
+
+		#Sous_Genre
+
+			$_Lang_Cat_Gen	= "Genre?";
+
+
 
 
 # Audio
