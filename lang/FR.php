@@ -8,20 +8,20 @@
 	$_Lang_Gen_Video = "Video";
 	$_Lang_Gen_Audio = "Audio";
 	$_Lang_Gen_Perso = "Espace personnel";
-	$_Lang_Gen_Serve = "Serveur";
+	$_Lang_Gen_Serve = "Serveurs";
 	$_Lang_Gen_Propo = "Proposition";
 	$_Lang_Gen_Param = "Paramètre";
 
 
-	$_Lang_Gen_Doss		= "Dossier";
+	$_Lang_Gen_Doss		= "Dossiers";
 	$_Lang_Gen_Favoris 	= "Favoris";
 	$_Lang_Gen_Fichi	= "Gestionaire";
-	$_Lang_Gen_Down 	= "Télèchrger";
+	$_Lang_Gen_Down 	= "télécharger";
 	$_Lang_Gen_Upload 	= "Upload";
 
 
 	$_Lang_Gen_Conex = "Connexion";
-	$_Lang_Gen_Deco  = "Deconexion";
+	$_Lang_Gen_Deco  = "Déconnexion";
 
 	
 # Accueille
@@ -29,11 +29,11 @@
 	$_Lang_ACC_Nmus = "Nouvelle musique";
 	$_Lang_Acc_Nvid = "Nouvelle vidéo";
 	$_Lang_Acc_Serv = "Serveur";
-	$_Lang_Acc_Info = "Information";
+	$_Lang_Acc_Info = "Informations";
 	$_Lang_Acc_Hist = "Historique";
 
 	$_Lang_Acc_Admn = "Admin";
-	$_Lang_Acc_Modo = "modérateur";
+	$_Lang_Acc_Modo = "Modérateur";
 	$_Lang_Acc_Norm = "Utilisateur";
 	$_Lang_Acc_Invi = "Inviter" ;
 
@@ -48,7 +48,7 @@
 
 	#Erreur
 
-		$_Lang_Con_ErrR	= "Connexion refuser, la conexion automatique n'acsepte que deux appareille simultanément.";
+		$_Lang_Con_ErrR	= "Connexion refuser, la conexion automatique n'acsepte que 2appareils simultanément.";
 		$_Lang_Con_ErrD	= "information de la base de donner modifier";
 		$_Lang_Con_ErrI	= "Impossible de trouver votre compte";
 
@@ -131,9 +131,9 @@
 
     	$_Lang_Cat_Nop 	=	"Catégorie?";
     	$_Lang_Cat_Anim	=	"Animé";
-		$_Lang_Cat_Docu	=	"Documentaire";
-		$_Lang_Cat_Film	=	"Filme";
-		$_Lang_Cat_Setv	=	"Série télé";
+		$_Lang_Cat_Docu	=	"Documentaires";
+		$_Lang_Cat_Film	=	"Films";
+		$_Lang_Cat_Setv	=	"Séries télé";
 
 		#Lang
 
