@@ -2,6 +2,7 @@
 
 V - 0.0.20A
 
+- Optimisation du pdo
 - Ajout d'une fonctionaliter de langage Generaliser
 - Optimisation du script d'popUpload
 - Correction de qu'elle que faute d'ortographe
