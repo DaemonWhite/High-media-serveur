@@ -2,19 +2,19 @@
 
 $moveUrl = "global.php";
 
-include("Com/Conexion.php");
+include("Com/Conexion.php"); // Programe de connexion
 
-include("Com/verifiLoad.php");
+include("Com/verifiLoad.php"); // Verification de la conexion rapide
 
-include("Com/userSetings.php");
+include("Com/userSetings.php"); //Parametre utilisateur
 
-include("lang/FR.php"); 
+include("lang/FR.php");  //Fichier de lang
 
 
 
 $typeFavor = 1; // 1 = acueille;
 
-$ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
+$ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\''); //Charge les image utilisateur
 $Rimage = $ImageUs->fetch();
 
 

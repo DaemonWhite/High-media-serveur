@@ -2,6 +2,8 @@
 
 V - 0.0.20A
 
+- Amélioration du systéme de debugage
+- Optimisation du scriptModal
 - Ajout du debut d'upload Audio
 - Ajout du parametre debugMode
 - Corection des miniature l'ors de l'upload

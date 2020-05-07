@@ -13,60 +13,9 @@ var totalVideo = 1
 var addTotalVideo = 13
 var Envoi = 0
 var Erreur = []
+var II = 1 //Generateur de variable
 // Erreur type Titre
 Erreur[0] = 0;
-// Erreur type Episode
-Erreur[1] = 0;
-Erreur[2] = 0;
-Erreur[3] = 0;
-Erreur[4] = 0;
-Erreur[5] = 0;
-Erreur[6] = 0;
-Erreur[7] = 0;
-Erreur[8] = 0;
-Erreur[9] = 0;
-Erreur[10] = 0;
-Erreur[11] = 0;
-Erreur[12] = 0;
-// Erreur type Episode "2"
-Erreur[13] = 0;
-Erreur[14] = 0;
-Erreur[15] = 0;
-Erreur[16] = 0;
-Erreur[17] = 0;
-Erreur[18] = 0;
-Erreur[19] = 0;
-Erreur[20] = 0;
-Erreur[21] = 0;
-Erreur[22] = 0;
-Erreur[23] = 0;
-Erreur[24] = 0;
-// Erreur type File eùpty
-Erreur[25] = 0;
-Erreur[26] = 0;
-Erreur[27] = 0;
-Erreur[28] = 0;
-Erreur[29] = 0;
-Erreur[30] = 0;
-Erreur[31] = 0;
-Erreur[32] = 0;
-Erreur[33] = 0;
-Erreur[34] = 0;
-Erreur[35] = 0;
-Erreur[36] = 0;
-// Erreur type File eùpty 2
-Erreur[37] = 0;
-Erreur[38] = 0;
-Erreur[39] = 0;
-Erreur[40] = 0;
-Erreur[41] = 0;
-Erreur[42] = 0;
-Erreur[43] = 0;
-Erreur[44] = 0;
-Erreur[45] = 0;
-Erreur[46] = 0;
-Erreur[47] = 0;
-Erreur[48] = 0;
 
 var RestoreModiEp = [];
 var RestoreModiSa = [];
@@ -76,6 +25,14 @@ var RestoreModiSu = [];
 const FocusSelect = "button, a, input,textarea"
 let focusValide = []
 
+var derErreur
+
+var displayNum1 = []
+	while ( II < 65) {
+	displayNum1["bonus"+II] = 0;
+	Erreur[II] = 0;
+	II++;
+	}
 
 function menuUpload(Loc)
     {
@@ -195,50 +152,6 @@ window.addEventListener('keydown', function (e) {
 
 })
 	
-	var displayNum1 = []
-	displayNum1["bonus1"] = 0
-	displayNum1["bonus2"] = 0
-	displayNum1["bonus3"] = 0
-	displayNum1["bonus4"] = 0
-	displayNum1["bonus5"] = 0
-	displayNum1["bonus6"] = 0
-	displayNum1["bonus7"] = 0
-	displayNum1["bonus8"] = 0
-	displayNum1["bonus9"] = 0
-	displayNum1["bonus10"] = 0
-	displayNum1["bonus11"] = 0
-
-	displayNum1["bonus13"] = 0
-	displayNum1["bonus14"] = 0
-	displayNum1["bonus15"] = 0
-	displayNum1["bonus16"] = 0
-	displayNum1["bonus17"] = 0
-	displayNum1["bonus18"] = 0
-	displayNum1["bonus19"] = 0
-	displayNum1["bonus20"] = 0
-	displayNum1["bonus21"] = 0
-	displayNum1["bonus22"] = 0
-	displayNum1["bonus23"] = 0
-
-	displayNum1["bonus24"] = 0
-	displayNum1["bonus25"] = 0
-	displayNum1["bonus26"] = 0
-	displayNum1["bonus27"] = 0
-	displayNum1["bonus28"] = 0
-	displayNum1["bonus29"] = 0
-	displayNum1["bonus30"] = 0
-	displayNum1["bonus31"] = 0
-	displayNum1["bonus33"] = 0
-	displayNum1["bonus34"] = 0
-	displayNum1["bonus35"] = 0
-	displayNum1["bonus36"] = 0
-	displayNum1["bonus37"] = 0
-	displayNum1["bonus38"] = 0
-	displayNum1["bonus39"] = 0
-	displayNum1["bonus30"] = 0
-	displayNum1["bonus31"] = 0
-	displayNum1["bonus32"] = 0
-	displayNum1["bonus33"] = 0
 
 function newBonus(num, type) {
 
@@ -351,29 +264,45 @@ function noVideo() {
 
 }
 
-function verif(champ, Objet, ZoneEp) {
+function ErreurVerif(TypeEr, champ , erro = 0){
 
-	if (Objet == "titre") {
+	if (TypeEr == -1) 
+	{
+		surligne(champ, false);
+	} else if (TypeEr == 0) 
+	{
+	  document.getElementById("ErrorTitle0" ).innerHTML = "Titre déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Exemple ''Hunter X Hunter'' (2011) pour le diférencier de sa vertion de 1999";
+	} else if (TypeEr == 1) {
+
+	} else if (TypeEr == 2) {
+
+	}
+
+	if (TypeEr >= 0) {surligne(champ, true);}
+}
+
+function verif(champ, Objet, ZoneEp, mus=0) {
+	var Title0
+	if (mus == 0){ Title0 = document.getElementById("title");  } 
+			else { Title0 = document.getElementById("titleA"); }
+
+	if (Objet == 0) {
 
 		if(champ.value.length < 1)
 		{
 		   surligne(champ, true);
-		   document.getElementById("ErrorTitle" ).innerHTML = "Tittre obligatoire";
+		   document.getElementById("ErrorTitle0" ).innerHTML = "Titre obligatoire";
 		   return false;
-		<?php while ($donnees = $TitleExiste->fetch()) {
-			
-			echo '} else if(champ.value === "' . $donnees["nom"] . '") { 
-				surligne(champ, true);
-		   		document.getElementById("ErrorTitle" ).innerHTML = "Titre déja existan allez dans ajouter un épisode";
-		   		 ';
-		}  ?>
+		
 		} else {
-		 	document.getElementById("ErrorTitle" ).innerHTML = null;
+		 	document.getElementById("ErrorTitle0" ).innerHTML = null;
 		   	surligne(champ, false);
-		   	return true;
-		}
+		   	
+		} 
 
-	} else if (Objet == "numero") {
+		verifiMyChest(Objet, 0, champ, champ)
+
+	} else if (Objet == 1) {
 
 		if (true) {
 
@@ -383,17 +312,19 @@ function verif(champ, Objet, ZoneEp) {
 
 
 				VerifEp = document.getElementById("Ep" + numEp).value
+				VerSaison = document.getElementById("S" + numEp).value
+
 
 				if ((champ.value === VerifEp) && (VerifEp != ZoneEp)) {
 
-					document.getElementById("ErrorTitle" ).innerHTML = "Vous ne pouver avoir qu'un épisode";
+					document.getElementById("ErrorTitle2" ).innerHTML = "Vous ne pouver avoir qu'un épisode a la même valeur";
 					surligne(champ, true);
 					aplError(ZoneEp, 1);
 					return false;
 
 				} else {
 
-					document.getElementById("ErrorTitle" ).innerHTML = null;
+					document.getElementById("ErrorTitle2" ).innerHTML = null;
 					surligne(champ, false);
 					aplError(ZoneEp, 0);
 
@@ -671,7 +602,7 @@ function appTitleM()
 
 }
 
-function appMyVideo(type)
+function appMyVideo(type) // Ramener les vidéo pour la gestion
 {
 
 		var text = document.getElementById("gestVideo")
@@ -689,6 +620,48 @@ function appMyVideo(type)
 		      text.innerHTML = vef.responseText;
 		    } else {
 		      text.innerHTML = "Error --> Impossible de recupérer les donner";
+		    }
+		  };
+	
+		vef.send(oData);
+
+
+
+
+}
+
+function verifiMyChest(type, gere, titre, champ, value = null, value2 = null) // Verfi si le contenu n'esxiste pas
+{//Type 0 = Titre; 1 = Ep; ST = 2
+ //Gere 0 = Video; 1 = Music
+
+		var mErreur = document.getElementById("ErrorTitle")
+		if (type == 0) {
+			var donner = document.getElementById("ErrorTitle")
+		} else if (type == 1){
+		}
+		var oData = new FormData();
+	
+		oData.append("Type", type);
+		oData.append("Gere", "0");
+		oData.append("Titre", titre.value);
+		if (value != null) { 
+		oData.append("Text", value);
+			if (value2 != null) {
+				oData.append("Text2", value2);
+			}
+		}
+
+	
+		vef = new XMLHttpRequest();
+		vef.open("POST", "Com/verifiTitre.php", true);
+		 vef.onload = function(oEvent) {
+		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+		      if (vef.responseText != null) {
+		      ErreurVerif(vef.responseText, champ)
+		      console.log(vef.responseText)
+		  	}
+		    } else {
+		      mErreur.innerHTML = "Error --> Impossible de recupérer les donner";
 		    }
 		  };
 	

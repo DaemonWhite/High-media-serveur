@@ -69,8 +69,11 @@ while ( $i <= 1) { ?>
                               <div id="progress1" style="width: 0%"></div>
                           </div>
                           <div>
-                              <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Titre" onblur="verif(this, 'titre', '0')">
-                              <div class="classError" align="center" id="ErrorTitle"></div>
+                              <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Titre" onblur="verif(this, '0', '0')">
+                              <div class="classError" align="center">
+                                <div id="ErrorTitle0"></div>
+                                <div id="ErrorTitle2"></div>
+                              </div>
                           </div>
                           <div>
                             
@@ -129,7 +132,7 @@ while ( $i <= 1) { ?>
                                 <td><input id="bouton<?php echo $butID; ?>" type="button" onclick="newBonus(<?php echo $butID; ?>, 0)" class="buttonNew" value="+" style="display: ;" ></td>
 
                               <?php } else {echo "<td></td>";} ?>
-                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'numero','<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
+                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this, 1,'<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" value="1"></td>
                                 <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Titre Secondaire"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
@@ -283,7 +286,7 @@ while ( $i <= 1) { ?>
                               <div id="progress1" style="width: 0%"></div>
                           </div>
                           <div>
-                              <input class="texteBase" id="title" type="text" name="nameSerie" placeholder="Album" onblur="verif(this, 'titre', '0')">
+                              <input class="texteBase" id="titleA" type="text" name="nameSerie" placeholder="Album" onblur="verif(this, 'titre', '0')">
                               <div class="classError" align="center" id="ErrorTitle"></div>
                           </div>
                           <div>
@@ -319,8 +322,6 @@ while ( $i <= 1) { ?>
 
                           <?php
 
-                          echo $BonusID;
-
                           while ($BonusID <= 43) {
 
                             $butID = $BonusID + 1;
@@ -344,8 +345,6 @@ while ( $i <= 1) { ?>
                           $BonusID++;
 
                           }
-
-                          echo $BonusID;
 
                           ?>
 
@@ -382,10 +381,10 @@ while ( $i <= 1) { ?>
                   <form action="global.php" name="formAddUpload" method="post" enctype="multipart/form-data">
                       <table>
                           <tr><td></td>
-                              <td align="center"><span class="ecritureUp">Épisode</span></td>
-                              <td align="center"><span class="ecritureUp">Saison</span></td>
-                              <td align="center"><span class="ecritureUp">Titre Secondaire</span></td>
-                              <td align="center"><span class="ecritureUp">Ajouter la video</span></td>
+                              <td align="center"><span class="ecritureUp">Piste</span></td>
+                              <td align="center"><span class="ecritureUp">Disk</span></td>
+                              <td align="center"><span class="ecritureUp">Titre</span></td>
+                              <td align="center"><span class="ecritureUp">Ajouter la musique</span></td>
                           </tr>
                           <div id="output2"></div>
 
@@ -420,14 +419,14 @@ while ( $i <= 1) { ?>
 
                           <?php
 
-                          while ($BonusID <= 23) {
+                          while ($BonusID <= 64) {
 
                             $butID = $BonusID + 1;
 
                           ?>
 
-                            <tr id="<?php if ($BonusID != 12) {echo 'bonus' . $BonusID; } ?>" style="display: <?php if ($BonusID != 12) { echo "none;";} ?>">
-                              <?php if ($BonusID != 23) { ?>
+                            <tr id="<?php if ($BonusID != 43) {echo 'bonus' . $BonusID; } ?>" style="display: <?php if ($BonusID != 43) { echo "none;";} ?>">
+                              <?php if ($BonusID != 64) { ?>
 
                                 <td><input id="bouton<?php echo $butID; ?>" type="button" onclick="newBonus(<?php echo $butID; ?>, 0)" class="buttonNew" value="+" style="display: ;" ></td>
 
