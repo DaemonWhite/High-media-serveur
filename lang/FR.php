@@ -73,7 +73,7 @@
     	            - Amusez vous bien <br> <br>
 	
     	            <span style='color: red;'>Attention" . '"'. "j'". 'accepte"' . "ne sera pris en compte que lors de la connexion aux site si vous avez un compte!!!<br><br>
-    	            - Nous ne garentison pas le fonctionement du serveur pour les appareilles Apple <br>
+    	            - Nous ne garentison pas le fonctionement du serveur pour les appareilles Apple (Si vous rencontrer des probléme n'esiter pas a nous faire un retour) <br>
     	            - Les navigateur fierfox ont des léger probléme daffichange<br>
     	            - Les spmartphone (ou tout appareille utilisant un affichage mobile) Auront des probléme pour l'affichage de certaine page nous vous recomondont d'activer la version ordinateur et de l'utiliser au format paysage j'usqua on est fini de déveloper l'édition mobile merci de votre compréention</span>
 	

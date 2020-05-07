@@ -3,6 +3,8 @@
 session_start();
 
 $UserName = $_SESSION['ID'];
+$VerifMusic = 0;
+
 
 
 // Debug episode
@@ -35,8 +37,12 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 		$TitrePrincip = $_POST['nameSerie'];
 
-		$minia = 'upload/' . "Video/" . $TitrePrincip ."/". $min;
-
+		if ($min != "DVideo.jpg")
+		{ 
+			$minia = 'upload/' . "Video/" . $TitrePrincip ."/". $min;
+		} else {
+			'upload/' . "Video/" . $min;
+		}
 		echo "papa2";
 
 		

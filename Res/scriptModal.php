@@ -220,13 +220,33 @@ window.addEventListener('keydown', function (e) {
 	displayNum1["bonus22"] = 0
 	displayNum1["bonus23"] = 0
 
+	displayNum1["bonus24"] = 0
+	displayNum1["bonus25"] = 0
+	displayNum1["bonus26"] = 0
+	displayNum1["bonus27"] = 0
+	displayNum1["bonus28"] = 0
+	displayNum1["bonus29"] = 0
+	displayNum1["bonus30"] = 0
+	displayNum1["bonus31"] = 0
+	displayNum1["bonus33"] = 0
+	displayNum1["bonus34"] = 0
+	displayNum1["bonus35"] = 0
+	displayNum1["bonus36"] = 0
+	displayNum1["bonus37"] = 0
+	displayNum1["bonus38"] = 0
+	displayNum1["bonus39"] = 0
+	displayNum1["bonus30"] = 0
+	displayNum1["bonus31"] = 0
+	displayNum1["bonus32"] = 0
+	displayNum1["bonus33"] = 0
+
 function newBonus(num, type) {
 
 	var num2 = num
 	var num3 = num
     num2 - 1;
     num3 + 1;
-	if (num < 26) 
+	if (num < 100) 
 	{
 		var did = document.getElementById("bonus" + num)
 		var visual = document.getElementById("bouton" + num)
@@ -249,7 +269,7 @@ function newBonus(num, type) {
 			visual.setAttribute('value', '-')
 			
  
-			if (num > 1 && num != 13) {
+			if (num > 1 && num != 13 && num != 25) {
 				visual2.style.display = "none"
 			}
 
@@ -265,7 +285,7 @@ function newBonus(num, type) {
 
 		} else {
 
-			if (num > 1 && num != 13) {
+			if (num > 1 && num != 13 && num != 25) {
 				visual.setAttribute('value', '+')
 				visual2.style.display = null;
 			}

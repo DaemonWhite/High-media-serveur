@@ -265,7 +265,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')"><?php echo $_Lang_Gen_Homme; ?> </button>
                   <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')"><?php echo $_Lang_Gen_Video; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?> </button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?>  personnelle</button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"><?php echo $_Lang_Gen_Serve; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"><?php echo $_Lang_Gen_Propo; ?> </button>
                   <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')"><?php echo $_Lang_Gen_Param; ?> </button>
@@ -303,17 +303,17 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
               <div class="separationB">
   
                   <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_ACC_Nmus; ?> </button>
-                    <button class="bottomMenu" id="#Favor"> <?php echo $_Lang_Acc_Nvid; ?> </button>
-                    <button class="bottomMenu" id="#Gestion"> <?php echo $_Lang_Acc_Serv; ?> </button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Acc_Info; ?> </button>
-                    <button class="bottomMenu" id="#Upload"> <?php echo $_Lang_Acc_Hist; ?> </button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Doss; ?> </button>
+                    <button class="bottomMenu" id="#Favor"> <?php echo $_Lang_Gen_Favoris; ?> </button>
+                    <button class="bottomMenu" id="#Gestion"> <?php echo $_Lang_Gen_Fichi; ?> </button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Down; ?> </button>
+                    <button class="bottomMenu" id="#Upload"> <?php echo $_Lang_Gen_Upload; ?> </button>
                   <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_ACC_Nmus; ?></button>
-                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Nvid; ?></button>
-                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Serv; ?></button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Acc_Info; ?></button>
-                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Acc_Hist; ?></button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Doss; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Favoris; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Fichi; ?></button>
+                    <button class="bottomMenu" id="" onclick="NonDisponible()"> <?php echo $_Lang_Gen_Down; ?></button>
+                    <button class="bottomMenu" id="" onclick="Reserver()"> <?php echo $_Lang_Gen_Upload; ?></button>
                   <?php } ?>
   
               </div>  

@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+include("Com/userSetings.php");
+
 include("lang/FR.php"); 
 
 

@@ -1,4 +1,4 @@
-p<?php
+<?php
 
 $moveUrl = "Video.php";
 

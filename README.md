@@ -2,6 +2,9 @@
 
 V - 0.0.20A
 
+- Ajout du debut d'upload Audio
+- Ajout du parametre debugMode
+- Corection des miniature l'ors de l'upload
 - Optimisation du pdo
 - Ajout d'une fonctionaliter de langage Generaliser
 - Optimisation du script d'popUpload
