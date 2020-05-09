@@ -2,7 +2,9 @@
 
 V - 0.0.20A
 
-- Amélioration du systéme de debugage
+
+- Correctif ci il y'a des episode de saison diférente il ne sont plus vue comme une erreur
+- Amélioration du systéme de protection d'erreur pour l'upload
 - Optimisation du scriptModal
 - Ajout du debut d'upload Audio
 - Ajout du parametre debugMode

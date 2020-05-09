@@ -264,14 +264,29 @@ function noVideo() {
 
 }
 
-function ErreurVerif(TypeEr, champ , erro = 0){
+function ErreurVerif(TypeEr, champ , erro){
+	var errorTitleTT
+
+	if (erro == 0){ 
+		Title0 = document.getElementById("title");
+		var errorTitle0 = document.getElementById("ErrorTitle0")
+		var errorTitle1 = document.getElementById("ErrorTitle1")
+		errorTitleTT = "Titre déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Exemple ''Hunter X Hunter'' (2011) pour le diférencier de sa vertion de 1999";
+	} else { 
+		Title0 = document.getElementById("titleA");
+		var errorTitle0 = document.getElementById("ErrorTitle2")
+		var errorTitle1 = document.getElementById("ErrorTitle3")
+		 errorTitleTT = "Album déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Entre parantése si c'est un remaster ou par un autre artiste";
+	}
+
 
 	if (TypeEr == -1) 
 	{
 		surligne(champ, false);
 	} else if (TypeEr == 0) 
 	{
-	  document.getElementById("ErrorTitle0" ).innerHTML = "Titre déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Exemple ''Hunter X Hunter'' (2011) pour le diférencier de sa vertion de 1999";
+	  errorTitle0.innerHTML = errorTitleTT;
+	  aplError(0, 1);
 	} else if (TypeEr == 1) {
 
 	} else if (TypeEr == 2) {
@@ -283,48 +298,79 @@ function ErreurVerif(TypeEr, champ , erro = 0){
 
 function verif(champ, Objet, ZoneEp, mus=0) {
 	var Title0
-	if (mus == 0){ Title0 = document.getElementById("title");  } 
-			else { Title0 = document.getElementById("titleA"); }
+	
+	if (mus == 0){ 
+		Title0 = document.getElementById("title");
+		var errorTitle0 = document.getElementById("ErrorTitle0")
+		var errorTitle1 = document.getElementById("ErrorTitle1")
+	} else { 
+		Title0 = document.getElementById("titleA");
+		var errorTitle0 = document.getElementById("ErrorTitle2")
+		var errorTitle1 = document.getElementById("ErrorTitle3")
+	}
+
+	if (errorTitle0.innerHTML != ""){
+		errorTitle1.style.marginTop = "1%";
+	} else {
+		errorTitle1.style.marginTop = "0%";
+	}
 
 	if (Objet == 0) {
 
 		if(champ.value.length < 1)
 		{
 		   surligne(champ, true);
-		   document.getElementById("ErrorTitle0" ).innerHTML = "Titre obligatoire";
+		   var ErrorTitleTT // Diférence music et video
+		   if (mus = 0) {ErrorTitleTT = "Titre obligatoire"} else { ErrorTitleTT =  "Titre de l'Album obligatoire"}
+		   errorTitle0.innerHTML = ErrorTitleTT;
 		   return false;
 		
 		} else {
-		 	document.getElementById("ErrorTitle0" ).innerHTML = null;
+		 	errorTitle0.innerHTML = null;
 		   	surligne(champ, false);
 		   	
 		} 
 
-		verifiMyChest(Objet, 0, champ, champ)
+		verifiMyChest(Objet, mus, champ, champ)
 
 	} else if (Objet == 1) {
 
 		if (true) {
 
 			numEp = 1;
+			var numIdent
+
+		   var ErrorTitleTT // Diférence music et video
+		   if (mus = 0) {ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"} else { ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"}
 
 			while (totalVideo > numEp) {
 
 
-				VerifEp = document.getElementById("Ep" + numEp).value
+				VerifEp = document.getElementById("Ep" + numEp)
 				VerSaison = document.getElementById("S" + numEp).value
 
+				VerifEp0 = document.getElementById("Ep" + ZoneEp)
+				VerSaison0 = document.getElementById("S" + ZoneEp).value
 
-				if ((champ.value === VerifEp) && (VerifEp != ZoneEp)) {
+				if ((VerifEp0.value === VerifEp.value) && (VerifEp != champ)) {
 
-					document.getElementById("ErrorTitle2" ).innerHTML = "Vous ne pouver avoir qu'un épisode a la même valeur";
-					surligne(champ, true);
-					aplError(ZoneEp, 1);
+					if (VerSaison == VerSaison0){
+
+						errorTitle1.innerHTML = ErrorTitleTT;
+						surligne(VerifEp0, true);
+						aplError(ZoneEp, 1);
+					} else {
+						errorTitle1.innerHTML = "";
+						surligne(VerifEp0, false);
+						aplError(ZoneEp, 1);
+					}
+
+					
 					return false;
 
 				} else {
 
-					document.getElementById("ErrorTitle2" ).innerHTML = null;
+					errorTitle1.innerHTML = null;
 					surligne(champ, false);
 					aplError(ZoneEp, 0);
 
@@ -350,7 +396,7 @@ function newUpload(is) {
 	vide = 1;
 	ErrVideo = 25;
 
-	aTitle = document.getElementById("title" )
+	aTitle = document.getElementById("title")
 	vTitle = aTitle.value
 	console.log(vTitle);
 
@@ -365,6 +411,8 @@ function newUpload(is) {
 		aplError(0, 0);
 
 	}
+
+	verifiMyChest(0, 0, aTitle, aTitle)
 
 	console.log(Erreur[0]+ Erreur[1] + Erreur[2] + Erreur[3] + Erreur[4] + Erreur[5] + Erreur[6]+ Erreur[7] + Erreur[8] + Erreur[9] + Erreur[10] + Erreur[11] + Erreur[12] + Erreur[13] + Erreur[14] + Erreur[15] + Erreur[16]+ Erreur[17] + Erreur[18] + Erreur[19] + Erreur[20] + Erreur[21] + Erreur[22] + Erreur[23] + Erreur[24])
 		
@@ -642,7 +690,7 @@ function verifiMyChest(type, gere, titre, champ, value = null, value2 = null) //
 		var oData = new FormData();
 	
 		oData.append("Type", type);
-		oData.append("Gere", "0");
+		oData.append("Gere", gere);
 		oData.append("Titre", titre.value);
 		if (value != null) { 
 		oData.append("Text", value);
@@ -657,7 +705,7 @@ function verifiMyChest(type, gere, titre, champ, value = null, value2 = null) //
 		 vef.onload = function(oEvent) {
 		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
 		      if (vef.responseText != null) {
-		      ErreurVerif(vef.responseText, champ)
+		      ErreurVerif(vef.responseText, champ, gere)
 		      console.log(vef.responseText)
 		  	}
 		    } else {

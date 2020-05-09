@@ -34,19 +34,32 @@
 		$Exact = true;
 
 	} elseif ($Gere == "1"){
-		$Genre == "audio";
+		$Genre = "audio";
+
+		$Generate = "album";
+		$GenTest = "album='" . $Titre ."'";
+
+		if ($Type >= "1") {
+			$Generate = $Generate . ",Disk ,Piste";
+			$GenTest  = $GenTest . "AND Disk='". $Text2 ."' AND Piste= '" . $Text ."'";
+		}
+
+		$Exact = true;
 
 	} else {
 
+		echo "error ---> Script corompue veulier rechrage la page";
+
 	}
-	$figure = 'SELECT ' . $Generate . ' FROM ' . $Genre . ' WHERE ' . $GenTest . ' ORDER BY titre';
+
+	$figure = 'SELECT ' . $Generate . ' FROM ' . $Genre . ' WHERE ' . $GenTest . ' ORDER BY ' . $Generate;
 	//echo $figure;
 	if ($Exact == true) {
 	 $title = $bdd->query($figure);
 
 	$donnes = $title->fetch();
 
-	if (!empty($donnes['titre'])) {
+	if (!empty($donnes[$Generate])) {
 		echo $Type;	
 	} else {
 		echo "-1";
