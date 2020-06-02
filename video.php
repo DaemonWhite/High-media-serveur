@@ -1,12 +1,14 @@
 <?php
 
-include("lang/fr.php");
+include("lang/FR.php");
 
 $moveUrl = "Video.php";
 
 include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
+
+include("Com/userSetings.php"); 
 
 $typeFavor = 1;
 
@@ -55,7 +57,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
 <body class="BackgroundA">
 
-
+  <?php echo $Dmode; ?>
 
   <nav id="menu">
           
@@ -211,7 +213,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
     
       
        vef = new XMLHttpRequest();
-       vef.open("POST", "Upload/appVideo.php", true);
+       vef.open("POST", "upload/appVideo.php", true);
         vef.onload = function(oEvent) {
            if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
              
@@ -238,6 +240,7 @@ $EpVideo = $bdd->query('SELECT titre, SousTitre, Saison, Episode FROM video WHER
 
 $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET['name'] . '\'');
         
+        $moveUrl = "Video.php?=" . $_GET['name'];
 
     ?>
 
@@ -339,7 +342,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
             
               }
         
-             echo '<div> <a class="listeEpisode" href="VLecteur?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .' &S='. $view .' ">Episode ' . $donnes['Episode'] . '</a> </div>' ;
+             echo '<div> <a class="listeEpisode" href="VLecteur.php?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .' &S='. $view .' ">Episode ' . $donnes['Episode'] . '</a> </div>' ;
             }
         
             ?>

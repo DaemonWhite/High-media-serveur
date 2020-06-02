@@ -8,6 +8,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+include("Com/userSetings.php"); 
+
 $ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
 
@@ -43,6 +45,8 @@ $Rimage = $ImageUs->fetch();
 
 
     <body class="BackgroundA">
+
+      <?php echo $Dmode; ?>
 
         <div class="ZoneM">
           
@@ -135,7 +139,7 @@ $Rimage = $ImageUs->fetch();
                                      
                                     <label for="imageUpl" class="chngeImg">
 
-                                        <img class="chngeImg" src="User/Default/ModifImage.png">
+                                        <img class="chngeImg" src="user/Default/ModifImage.png">
                                         
                                     </label>
         

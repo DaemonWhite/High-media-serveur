@@ -20,7 +20,7 @@ $Rimage = $ImageUs->fetch();
 
 $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10");
 
-$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
+$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
 $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
@@ -44,6 +44,8 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
 
     <body class="BackgroundA">
+
+        <?php echo $Dmode; ?> 
             
             <nav id="menu">
                 

@@ -73,6 +73,7 @@ while ( $i <= 1) { ?>
                               <div class="classError" align="center">
                                 <div id="ErrorTitle0"></div>
                                 <div id="ErrorTitle1" style="margin-top: 0%;"></div>
+                                <div id="ErrorTitle4"></div>
                               </div>
                           </div>
                           <div>
@@ -290,6 +291,8 @@ while ( $i <= 1) { ?>
                               <div class="classError" align="center">
                                 <div id="ErrorTitle2"></div>
                                 <div id="ErrorTitle3"></div>
+                                <div id="ErrorTitle5"></div>
+                                <div id="ErrorTitle6"></div>
                               </div>
                           </div>
                           <div>

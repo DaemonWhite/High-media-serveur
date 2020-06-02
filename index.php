@@ -3,7 +3,7 @@
 $moveUrl = "global.php";
 
 include("Com/Conexion.php");
-include("lang/fr.php"); ?>
+include("lang/FR.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr-FR">
@@ -22,7 +22,7 @@ include("lang/fr.php"); ?>
 
         <?php
 
-
+        echo $Dmode;
        
 
         

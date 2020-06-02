@@ -6,7 +6,7 @@
         }
         if (Type === "Video") 
         {
-            window.location = "Video.php";
+            window.location = "video.php";
         }
         if (Type === "Audio") 
         {
@@ -26,7 +26,7 @@
         }
         if (Type === "user") 
         {
-            window.location = "User.php";
+            window.location = "user.php";
         }
 
     }

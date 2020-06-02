@@ -2,7 +2,9 @@
 
 V - 0.0.20A
 
-
+- Correction le serveur en prend charge l'indexion de linux
+- Correction de la page 404
+- Correctif Corriger l'erreur quant on mes le même episode et qu'il est identique au dernier il n'étais pas vues
 - Correctif ci il y'a des episode de saison diférente il ne sont plus vue comme une erreur
 - Amélioration du systéme de protection d'erreur pour l'upload
 - Optimisation du scriptModal

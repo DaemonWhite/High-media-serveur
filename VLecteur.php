@@ -6,6 +6,8 @@ include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+include("Com/userSetings.php"); 
+
 $GetV = 1;
 $typeFavor = 2;
 
@@ -85,6 +87,8 @@ if ($video['titre'] != "") {
  </script>
 
 <body class="BackgroundA">
+
+  <?php echo $Dmode;?> 
 
 	 <nav id="menu">
           
