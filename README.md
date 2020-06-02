@@ -2,6 +2,7 @@
 
 V - 0.0.20A
 
+- Correction Ajout d'une verification si le champ EP n'est pas remplie corectement
 - Modification PDO est un user ---> User "HMS" Password ---> "Secure45RootHGMProject"
 - Correction le serveur en prend charge l'indexion de linux
 - Correction de la page 404

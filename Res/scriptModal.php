@@ -331,6 +331,7 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		var errorTitle0 = document.getElementById("ErrorTitle2")
 		var errorTitle1 = document.getElementById("ErrorTitle3")
 		TotalCons = totalAudio
+		console.log(mus)
 	}
 
 	if (errorTitle0.innerHTML != ""){
@@ -357,7 +358,7 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 		verifiMyChest(Objet, mus, champ, champ)
 
-	} else if (Objet == 1) {
+	} else if (Objet == 1) { // verification des episeode ou des piste
 
 		if (true) {
 
@@ -370,7 +371,17 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 			}
 
 		   var ErrorTitleTT // Diférence music et video
-		   if (mus = 0) {ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"} else { ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"}
+		   if (mus = 0) {
+		   	
+		   		ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"
+		   		ErrorTitleTN = "L'episode doit étre remplie par une valleur numerique ou ne doit êtres NULL" 
+
+		   	} else { 
+		   	
+		   		ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"
+		   		ErrorTitleTN =  "La piste doit étre remplie par une valleur numerique ou ne doit êtres NULL"
+		   	
+		   	}
 
 			while (TotalCons >= numEp) {
 
@@ -399,12 +410,23 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 				} else {
 
-					console.log(numEpC, numEp, TotalCons)
-					errorTitle1.innerHTML = null;
-					surligne(champ, false);
-					aplError(ZoneEp, 0);
+					if (champ.value == "") {
 
+					surligne(VerifEp0, true);
+					aplError(ZoneEp, 1);
+					errorTitle1.innerHTML = ErrorTitleTN;
+
+					} else {
+
+						console.log(numEpC, numEp, TotalCons)
+						errorTitle1.innerHTML = null;
+						surligne(champ, false);
+						aplError(ZoneEp, 0);
+
+					}
+					
 				}
+
 				numEp++;
 				numEpC++;
 
@@ -414,6 +436,53 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 			return true;
 
 		}
+
+	} else if (Objet == 2) { // verification de Titre des pistes
+		var num = 1
+		var numSub = 25
+
+		while (TotalCons >= num) {
+
+				VerifSub = document.getElementById("subTitle" + numSub)
+
+				VerifSub0 = document.getElementById("subTitle" + ZoneEp)
+
+				if ((VerifSub0.value === VerifSub.value) && (VerifSub != champ)) {
+
+					if (VerSaison == VerSaison0){
+
+						errorTitle1.innerHTML = ErrorTitleTT;
+						surligne(VerifSub0, true);
+						aplError(ZoneEp, 1);
+					} else {
+						errorTitle1.innerHTML = "";
+						surligne(VerifSub, false);
+						aplError(ZoneEp, 1);
+					}
+
+					
+					return false;
+
+				} else {
+
+					if (champ.value == "") {
+
+					surligne(VerifSub0, true);
+					aplError(ZoneEp, 1);
+					//errorTitle1.innerHTML = ErrorTitleTN;
+
+					} else {
+
+						console.log(VerifSub0, TotalCons)
+						errorTitle1.innerHTML = null;
+						surligne(champ, false);
+						aplError(ZoneEp, 0);
+
+					}
+				}
+				num++;
+
+			}
 
 	}
 
@@ -435,7 +504,7 @@ function newUpload(is) {
 	} else {
 		aTitle = document.getElementById("titleA")
 		vide = 25;
-		totalIs = totalAudio + 1
+		totalIs = totalAudio
 	}
 
 	if (aTitle.value == "") {
