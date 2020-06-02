@@ -5,7 +5,7 @@ session_start();
 $UserName = $_SESSION['ID'];
 $VerifMusic = 0;
 
-
+var_dump($_FILES);
 
 // Debug episode
 if ($_POST['Ep1'] != 0) {$Episode[0] = $_POST['Ep1']; $Saison[0] = $_POST['Saison1'];}
@@ -27,10 +27,10 @@ if (($_FILES['miniature']['name']) != "" AND !empty($_FILES['miniature'])) { $mi
 if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}
 
 
-var_dump($_FILES);
 
 
-$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //(file_exists($dossier)
 
 	if (!empty($_POST['nameSerie'])) {
@@ -41,7 +41,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 		{ 
 			$minia = 'upload/' . "Video/" . $TitrePrincip ."/". $min;
 		} else {
-			'upload/' . "Video/" . $min;
+			$minia = 'upload/' . "Video/" . $min;
 		}
 		echo "papa2";
 
@@ -115,6 +115,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(P
 
 		$reqTitre = $bda->query('SELECT nom FROM titre WHERE nom=\'' . $GetTitle . '\'');
 		$vTitre = $reqTitre->fetch();
+
+		echo $vTitre['nom'];
 
 		if ($vTitre['nom'] == $GetTitle) {
 

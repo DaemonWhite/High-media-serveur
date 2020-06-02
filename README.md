@@ -2,6 +2,7 @@
 
 V - 0.0.20A
 
+- Modification PDO est un user ---> User "HMS" Password ---> "Secure45RootHGMProject"
 - Correction le serveur en prend charge l'indexion de linux
 - Correction de la page 404
 - Correctif Corriger l'erreur quant on mes le même episode et qu'il est identique au dernier il n'étais pas vues

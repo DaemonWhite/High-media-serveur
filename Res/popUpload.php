@@ -495,14 +495,16 @@ while ( $i <= 1) { ?>
 
 
 
-<?php if ($typeFavor != 1) {  ?>
+<?php if ($typeFavor != 1) {  
+
+  $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+  ?>
  <section id="Favor" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
 
           <div class="modal-bloc js-stope-modale">
               
-              <?php if (!empty($_GET['name']) AND empty($_GET['Ep'])) { 
-
-                $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
+              <?php if (!empty($_GET['name']) AND empty($_GET['Ep'])) {  
 
                 $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep="0" AND S="0" AND Favori=\'' . $_GET['name'] . '\' AND type=\'' . $GetV . '\' AND Genre="0" ');
                 $exiFavir = $vefFavor->fetch();
@@ -518,8 +520,6 @@ while ( $i <= 1) { ?>
                 <?php } ?>
 
                 <?php } else {
-
-                  $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
 
                   $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep=\'' . $_GET['Ep'] . '\' AND S=\'' . $_GET['S'] . '\' AND Favori=\'' . $_GET['Name'] . '\' AND type=\'' . $GetV . '\' AND Genre="1" ');
                   $exiFavir = $vefFavor->fetch();
