@@ -4,7 +4,7 @@ session_start();
 $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $user = $_SESSION['ID'];
-$dRepertoire = $user . "/";
+$dRepertoire = "user/" . $user . "/";
 
 $updateImage = $bdd->query('SELECT image FROM user');
 $deletOld = $updateImage->fetch();
@@ -13,7 +13,7 @@ echo $deletOld['image'] . "</br>";
 
 echo $deletOld = strrchr($deletOld['image'], "/");
 
-$dell = $user . $deletOld;
+$dell = "user/" . $user . $deletOld;
 unlink($dell);
 
 var_dump($_FILES);
@@ -39,7 +39,7 @@ var_dump($_FILES);
 
 				echo "Fonctione";
 
-			echo $dRepertoire = "user/" . $user . "/" . $_FILES['imageUpl']['name'];
+			echo $dRepertoire = "user/user/" . $user . "/" . $_FILES['imageUpl']['name'];
 			$updateImage = $bdd->prepare('UPDATE user SET image = :image WHERE ID = :user');
 							$updateImage->execute(array('image' => $dRepertoire, 'user' => $user));
 

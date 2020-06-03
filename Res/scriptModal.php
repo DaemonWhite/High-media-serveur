@@ -297,6 +297,7 @@ function ErreurVerif(TypeEr, champ , erro){
 		var errorTitle1 = document.getElementById("ErrorTitle3")
 		var errorTitle2 = document.getElementById("ErrorTitle5")
 		var errorTitle3 = document.getElementById("ErrorTitle6")
+		var errorTitle4 = document.getElementById("ErrorTitle7")
 		 errorTitleTT ="Album déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Entre parantése si c'est un remaster ou par un autre artiste";
 	}
 
@@ -312,6 +313,8 @@ function ErreurVerif(TypeEr, champ , erro){
 	  errorTitle2.innerHTML = "Il manque votre fichier à uploader veulier le rajouter ou suprimer la ou les lignes non nécessaire"
 	} else if (TypeEr == 2) {
 	  errorTitle3.innerHTML = "Le titre des pistes sont obligatoires"
+	} else if (TypeEr == 3) {
+			errorTitle4.innerHTML = "Nom de l'artiste obligatoire";
 	}
 
 	if (TypeEr >= 0) {surligne(champ, true);}
@@ -484,12 +487,82 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 			}
 
+	} else if (Objet == 3) {
+
+		artiste = document.getElementById("subTitleA")
+
+		if (subTitleA.value == "") 
+		{
+			ErreurVerif(3, artiste , 1)
+
+		} else {
+
+			ErreurVerif(-1, artiste , 1)
+			document.getElementById('ErrorTitle7').innerHTML = ""
+
+		}
+
 	}
 
 }
 
 
 callback = readData;
+
+function uploadFile(formulaire){
+
+	if (formulaire == "formUpload") {
+
+		loadBar = "progress1"
+		is = 0
+
+	} else if ("formUploadA") 
+	{
+
+		loadBar = "progress3"
+		is = 1
+	}
+
+	form = document.forms.namedItem(formulaire);
+	progressBare = document.getElementById(loadBar);
+	
+	  var
+	    oOutput = document.getElementById("ErrorTitle"),
+	    oData = new FormData(document.forms.namedItem(formulaire));
+	
+	  oData.append("CustomField", "This is some extra data");
+	  oData.append("IsMusic", is);
+	
+	  let oReq = new XMLHttpRequest();
+	  oReq.upload.onloadstart = function (e) {
+	  	progressBare.style.display = null;
+	  	progressBare.style.width = "0%";
+	  	progressBare.max = e.total;
+	  	form.disabled = true;
+	  }
+
+	  oReq.upload.onprogress = function (e) {
+	  	var charge =  ((e.loaded / e.total)*100 )
+	  	progressBare.style.width = charge + "%";
+	  }
+
+	  oReq.upload.onloadend = function (e) {
+	  	form.disabled = true;
+	  }
+
+
+
+	  oReq.open("POST", "upload/Upload.php", true);
+	  oReq.onload = function(oEvent) {
+	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
+	      callback(oReq.responseText);
+	    } else {
+	      oOutput.innerHTML = "ErrorTitle " + oReq.status + " occurred uploading your file.<br \/>";
+	    }
+	  };
+	
+	  oReq.send(oData);
+}
 
 function newUpload(is) {
 	var numVideo = 0;
@@ -535,7 +608,7 @@ function newUpload(is) {
 
 			} else {
 
-				ErreurVerif("1", verifVideo , is)
+				ErreurVerif("-1", verifVideo , is)
 
 			}
 
@@ -572,45 +645,15 @@ function newUpload(is) {
 	{
 		console.log(verifVideo.value)
 
-	form = document.forms.namedItem("formUpload");
-	progressBare = document.getElementById("progress1");
-	
-	  var
-	    oOutput = document.getElementById("ErrorTitle"),
-	    oData = new FormData(document.forms.namedItem("formUpload"));
-	
-	  oData.append("CustomField", "This is some extra data");
-	  oData.append("IsMusic", is);
-	
-	  let oReq = new XMLHttpRequest();
-	  oReq.upload.onloadstart = function (e) {
-	  	progressBare.style.display = null;
-	  	progressBare.style.width = "0%";
-	  	progressBare.max = e.total;
-	  	form.disabled = true;
-	  }
+		if (is == 0) {
 
-	  oReq.upload.onprogress = function (e) {
-	  	var charge =  ((e.loaded / e.total)*100 )
-	  	progressBare.style.width = charge + "%";
-	  }
+			uploadFile("formUpload")
 
-	  oReq.upload.onloadend = function (e) {
-	  	form.disabled = true;
-	  }
+		} else if(is == 1) {
 
+			uploadFile("formUploadA")
 
-
-	  oReq.open("POST", "upload/Upload.php", true);
-	  oReq.onload = function(oEvent) {
-	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
-	      callback(oReq.responseText);
-	    } else {
-	      oOutput.innerHTML = "ErrorTitle " + oReq.status + " occurred uploading your file.<br \/>";
-	    }
-	  };
-	
-	  oReq.send(oData);
+		}
 	}
 }
 
@@ -783,7 +826,7 @@ function appMyVideo(type) // Ramener les vidéo pour la gestion
 
 	
 		vef = new XMLHttpRequest();
-		vef.open("POST", "Upload/gestionVideo.php", true);
+		vef.open("POST", "upload/gestionVideo.php", true);
 		 vef.onload = function(oEvent) {
 		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
 		      text.innerHTML = vef.responseText;

@@ -279,12 +279,12 @@ while ( $i <= 1) { ?>
   
                   <div id="error"></div>
   
-                  <form action="global.php" name="formUpload" method="post" enctype="multipart/form-data">
+                  <form action="global.php" name="formUploadA" method="post" enctype="multipart/form-data">
                       
                           
                           <div id="output"></div>
                           <div class="progresseBar" >
-                              <div id="progress1" style="width: 0%"></div>
+                              <div id="progress3" style="width: 0%"></div>
                           </div>
                           <div>
                               <input class="texteBase" id="titleA" type="text" name="nameSerie" placeholder="Album" onblur="verif(this, '0', '0', '1')">
@@ -293,6 +293,7 @@ while ( $i <= 1) { ?>
                                 <div id="ErrorTitle3"></div>
                                 <div id="ErrorTitle5"></div>
                                 <div id="ErrorTitle6"></div>
+                                <div id="ErrorTitle7"></div>
                               </div>
                           </div>
                           <div>
@@ -310,7 +311,7 @@ while ( $i <= 1) { ?>
                                   <option value="Rap">Rap</option>
                                   <option value="Rock">Rock</option>
                               </select></td><td>
-                                <input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Artiste">
+                                <input class="texteBase" id="subTitleA" type="text" name="titleName" placeholder="Artiste" onblur="verif(this,'3', '0', '1')">
                               </td>
 
                             <td><input id="min" type="file" name="miniature" style="display: none;" accept="image/jpg, image/png, image/jpeg">
@@ -343,7 +344,7 @@ while ( $i <= 1) { ?>
                                 <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'1','<?php echo $butID; ?>', '1')" value="<?php echo $realValue; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" onblur="verif(this,'1','<?php echo $butID; ?>', '1')" value="1"></td>
                                 <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Titre Secondaire" onblur="verif(this, '2', '<?php echo $butID; ?>', '1')"></td>
-                                <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
+                                <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" accept="audio/*" ></td>
                                 <td><input type='hidden' id="fileUpload1" name='MAX_FILE_SIZE' value='7516192768'></td>
                             </tr>
                           <?php

@@ -257,7 +257,7 @@ $Rimage = $ImageUs->fetch();
                                         <div class="cadreBaseT">Administrateur</div>
 
                                         <div>
-                                            <button class="buttonBase" onclick="window.location = 'com/testNewPassword.php';">Géré les utilisateur</button>
+                                            <button class="buttonBase" onclick="window.location = 'Com/TestNewPassWord.php';">Géré les utilisateur</button>
                                         </div>
 
                                     </div>
@@ -289,7 +289,7 @@ $Rimage = $ImageUs->fetch();
 			  oReq.open("POST", "user/changeImage.php", true);
 			  oReq.onload = function(oEvent) {
 			    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
-			      //window.location = "user.php"
+			      window.location = "user.php"
 			    } else {
 			      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
 			    }

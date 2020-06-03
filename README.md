@@ -2,6 +2,11 @@
 
 V - 0.0.20A
 
+- Netoyage de la base SQL
+- Modification réactive ler refresh de la page aprées le changement de l'image utilisateur
+- Modification du repertoire d'image pour s'adapter au sytéme de protection linux
+- Correction de bug liée a php 7.4
+- Prise en charge du subTitle
 - Correction Ajout d'une verification si le champ EP n'est pas remplie corectement
 - Modification PDO est un user ---> User "HMS" Password ---> "Secure45RootHGMProject"
 - Correction le serveur en prend charge l'indexion de linux
