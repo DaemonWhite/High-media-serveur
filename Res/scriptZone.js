@@ -39,11 +39,11 @@
 
      function appVideo(name, ep, sai){
 
-        window.location = "VLecteur?Name=" + name + "&Ep=" + ep + "&S=" + sai;
+        window.location = "VLecteur.php?Name=" + name + "&Ep=" + ep + "&S=" + sai;
 
      }
 
      function appListVideo(name)
      {
-        window.location = "Video?name=" + name;
+        window.location = "Video.php?name=" + name;
      }

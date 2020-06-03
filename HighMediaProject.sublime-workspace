@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"ver",
+				"VerifMusic"
+			],
+			[
+				"def",
+				"DefChem"
+			],
+			[
+				"s",
+				"subTitle"
+			],
+			[
+				"de",
+				"defChe"
+			],
+			[
 				"D",
 				"display\tproperty"
 			],
@@ -184,10 +200,6 @@
 				"RestoreModiEp"
 			],
 			[
-				"ver",
-				"verifMod"
-			],
-			[
 				"border-co",
 				"border-collapse\tproperty"
 			],
@@ -218,10 +230,6 @@
 			[
 				"sec",
 				"Securiter"
-			],
-			[
-				"s",
-				"section\tTag"
 			],
 			[
 				"flex",
@@ -506,33 +514,16 @@
 			[
 				"ep",
 				"Ep"
-			],
-			[
-				"uploa",
-				"uploadFile"
-			],
-			[
-				"pre",
-				"preventDefault"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/D/Project/High-media-serveur/README.md",
-			"settings":
-			{
-				"buffer_size": 6294,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 8400,
+				"buffer_size": 4679,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -541,34 +532,7 @@
 			"file": "global.php",
 			"settings":
 			{
-				"buffer_size": 12880,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Com/Conexion.php",
-			"settings":
-			{
-				"buffer_size": 3504,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/style.css",
-			"settings":
-			{
-				"buffer_size": 14186,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptModal.php",
-			"settings":
-			{
-				"buffer_size": 18456,
+				"buffer_size": 12955,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -577,7 +541,34 @@
 			"file": "Res/popUpload.php",
 			"settings":
 			{
-				"buffer_size": 24713,
+				"buffer_size": 26461,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Com/Conexion.php",
+			"settings":
+			{
+				"buffer_size": 3486,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/style.css",
+			"settings":
+			{
+				"buffer_size": 14349,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/scriptModal.php",
+			"settings":
+			{
+				"buffer_size": 23235,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -586,21 +577,9 @@
 			"file": "upload/Upload.php",
 			"settings":
 			{
-				"buffer_size": 6165,
+				"buffer_size": 6916,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\n\n\n# Generique\n\n# --- Menu\n\t$_Lang_Gen_Homme = \"Accueil\";\n\t$_Lang_Gen_Video = \"Video\";\n\t$_Lang_Gen_Audio = \"Audio\";\n\t$_Lang_Gen_Perso = \"Espace personnel\";\n\t$_Lang_Gen_Serve = \"Serveur\";\n\t$_Lang_Gen_Propo = \"Proposition\";\n\t$_Lang_Gen_Param = \"Paramètre\";\n\n\n\t$_Lang_Gen_Doss\t\t= \"Dossier\";\n\t$_Lang_Gen_Favoris \t= \"Favoris\";\n\t$_Lang_Gen_Fichi\t= \"Gestionaire\";\n\t$_Lang_Gen_Down \t= \"Télèchrger\";\n\t$_Lang_Gen_Upload \t= \"Upload\";\n\n\n\t$_Lang_Gen_Conex = \"Connexion\";\n\t$_Lang_Gen_Deco  = \"Deconexion\";\n\n\t\n# Accueille\n\n\t$_Lang_ACC_Nmus = \"Nouvelle musique\";\n\t$_Lang_Acc_Nvid = \"Nouvelle vidéo\";\n\t$_Lang_Acc_Serv = \"Serveur\";\n\t$_Lang_Acc_Info = \"Information\";\n\t$_Lang_Acc_Hist = \"Historique\";\n\n\t$_Lang_Acc_Admn = \"Admin\";\n\t$_Lang_Acc_Modo = \"modérateur\";\n\t$_Lang_Acc_Norm = \"Utilisateur\";\n\t$_Lang_Acc_Invi = \"Inviter\" ;\n\n\n# Connexion\n\n\n\n# Video\n\n\n\n# Audio\n\n\n\n# Parametre\n\n\n# Lecteur Video\n\n\n?>\n",
-			"file": "lang/FR.php",
-			"file_size": 892,
-			"file_write_time": 132249582975894301,
-			"settings":
-			{
-				"buffer_size": 887,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -632,6 +611,10 @@
 		"selected_items":
 		[
 			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
 				"Package Control: ",
 				"Package Control: Install Package"
 			],
@@ -642,10 +625,6 @@
 			[
 				"papyrus",
 				"Build With: Papyrus - Skyrim"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"sub",
@@ -681,14 +660,15 @@
 	},
 	"expanded_folders":
 	[
-		"/D/wamp64/www/High-media-serveur",
-		"/D/wamp64/www/High-media-serveur/Com",
-		"/D/wamp64/www/High-media-serveur/Res",
-		"/D/wamp64/www/High-media-serveur/upload",
-		"/D/wamp64/www/High-media-serveur/upload"
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res"
 	],
 	"file_history":
 	[
+		"/home/matheo/.config/sublime-text-3/Packages/User/JavaScript-Completions.sublime-settings",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res/scriptModal.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/lang/FR.php",
+		"/D/Project/High-media-serveur/README.md",
 		"/C/Users/Matheo/Documents/Electronic Arts/Les Sims 4/Mods/Resource.cfg",
 		"/D/wamp64/alias/high-media-serveur.conf",
 		"/D/wamp64/www/High-media-serveur/Com/ModifCompte.php",
@@ -708,7 +688,6 @@
 		"/D/wamp64/www/High-media-serveur/upload/gestionVideo.php",
 		"/D/wamp64/www/High-media-serveur/global.php",
 		"/D/wamp64/www/High-media-serveur/video.php",
-		"/D/Project/High-media-serveur/README.md",
 		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
 		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
 		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
@@ -813,18 +792,15 @@
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXSceneEventGeneriqueScript.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXRandomProstitution.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXGeneralScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSX.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/DialogueFollowerScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXEntreToSalleSrcipt.psc",
-		"/D/Project/Mod/PCSX/Data/scripts/source/PCSXRandomProstitution.psc"
+		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSX.psc"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 98.0,
 		"where_history":
 		[
 		]
@@ -985,49 +961,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Project/High-media-serveur/README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6294,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1132,
-								1132
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8400,
+						"buffer_size": 4679,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								89,
-								63
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1042,24 +988,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "global.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12880,
+						"buffer_size": 12955,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12710,
-								12710
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1070,10 +1016,42 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Res/popUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17207,
+								17207
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 494.0,
+						"translation.y": 4759.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1082,15 +1060,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3504,
+						"buffer_size": 3486,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3202,
-								3124
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1105,13 +1083,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1120,15 +1098,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14186,
+						"buffer_size": 14349,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12268,
-								12268
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1143,87 +1121,53 @@
 						"translation.y": 9692.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
 					"file": "Res/scriptModal.php",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 18456,
+						"buffer_size": 23235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5446,
-								5449
+								11773,
+								11773
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2836.0,
+						"translation.y": 7684.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "Res/popUpload.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24713,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7013,
-								7013
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 690.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "upload/Upload.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6165,
+						"buffer_size": 6916,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1639,
-								1639
+								5674,
+								5674
 							]
 						],
 						"settings":
@@ -1234,41 +1178,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2704.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "lang/FR.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 887,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								652,
-								620
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1276,7 +1189,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -1302,7 +1215,7 @@
 		"cols":
 		[
 			0.0,
-			0.602151966647,
+			0.0370529829054,
 			1.0
 		],
 		"rows":
@@ -1328,7 +1241,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1362,7 +1275,7 @@
 		],
 		"width": 542.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

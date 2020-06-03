@@ -135,7 +135,7 @@ while ( $i <= 1) { ?>
                               <?php } else {echo "<td></td>";} ?>
                                 <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this, 1,'<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" onblur="verif(this,'1','<?php echo $butID; ?>')" value="1"></td>
-                                <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Titre Secondaire"></td>
+                                <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="subTitle<?php echo $butID; ?>" placeholder="Titre Secondaire"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
                                 <td><input type='hidden' id="fileUpload1" name='MAX_FILE_SIZE' value='7516192768'></td>
                             </tr>
@@ -343,7 +343,7 @@ while ( $i <= 1) { ?>
                               <?php } else {echo "<td></td>";} ?>
                                 <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'1','<?php echo $butID; ?>', '1')" value="<?php echo $realValue; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" onblur="verif(this,'1','<?php echo $butID; ?>', '1')" value="1"></td>
-                                <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Titre Secondaire" onblur="verif(this, '2', '<?php echo $butID; ?>', '1')"></td>
+                                <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="subTitle<?php echo $butID; ?>" placeholder="Titre Secondaire" onblur="verif(this, '2', '<?php echo $butID; ?>', '1')"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" accept="audio/*" ></td>
                                 <td><input type='hidden' id="fileUpload1" name='MAX_FILE_SIZE' value='7516192768'></td>
                             </tr>
