@@ -133,7 +133,7 @@ while ( $i <= 1) { ?>
                                 <td><input id="bouton<?php echo $butID; ?>" type="button" onclick="newBonus(<?php echo $butID; ?>, 0)" class="buttonNew" value="+" style="display: ;" ></td>
 
                               <?php } else {echo "<td></td>";} ?>
-                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this, 1,'<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
+                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" style="" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this, 1,'<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" onblur="verif(this,'1','<?php echo $butID; ?>')" value="1"></td>
                                 <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="subTitle<?php echo $butID; ?>" placeholder="Titre Secondaire"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
@@ -311,7 +311,7 @@ while ( $i <= 1) { ?>
                                   <option value="Rap">Rap</option>
                                   <option value="Rock">Rock</option>
                               </select></td><td>
-                                <input class="texteBase" id="subTitleA" type="text" name="titleName" placeholder="Artiste" onblur="verif(this,'3', '0', '1')">
+                                <input class="texteBase" id="Artiste" type="text" name="titleName" placeholder="Artiste" onblur="verif(this,'3', '0', '1')">
                               </td>
 
                             <td><input id="min" type="file" name="miniature" style="display: none;" accept="image/jpg, image/png, image/jpeg">

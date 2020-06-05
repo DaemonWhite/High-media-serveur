@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"numEp",
+				"numEp"
+			],
+			[
+				"ErrorT",
+				"ErrorTitle1"
+			],
+			[
+				"TotalC",
+				"TotalCons"
+			],
+			[
+				"Tot",
+				"TotalCons"
+			],
+			[
+				"totla",
+				"TotalCons"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"num",
+				"numMessage"
+			],
+			[
+				"nu",
+				"numMessage"
+			],
+			[
+				"Erre",
+				"ErreurVerif"
+			],
+			[
+				"getElem",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"Err",
+				"Erreur"
+			],
+			[
 				"ver",
 				"VerifMusic"
 			],
@@ -380,10 +428,6 @@
 				"newEp"
 			],
 			[
-				"nu",
-				"numEpDown"
-			],
-			[
 				"Ep",
 				"Episode"
 			],
@@ -470,50 +514,6 @@
 			[
 				"pro",
 				"progressBare"
-			],
-			[
-				"pr",
-				"progressBare"
-			],
-			[
-				"tmp",
-				"tmp_name"
-			],
-			[
-				"err",
-				"ErrorMessage"
-			],
-			[
-				"oncc",
-				"onclick\tAttr"
-			],
-			[
-				"c",
-				"class\tAttr"
-			],
-			[
-				"e",
-				"Erreur"
-			],
-			[
-				"num",
-				"numEp"
-			],
-			[
-				"Ver",
-				"verif"
-			],
-			[
-				"Get",
-				"getElementById"
-			],
-			[
-				"nam",
-				"nameSerie"
-			],
-			[
-				"ep",
-				"Ep"
 			]
 		]
 	},
@@ -541,7 +541,7 @@
 			"file": "Res/popUpload.php",
 			"settings":
 			{
-				"buffer_size": 26461,
+				"buffer_size": 26468,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -568,7 +568,7 @@
 			"file": "Res/scriptModal.php",
 			"settings":
 			{
-				"buffer_size": 23235,
+				"buffer_size": 23131,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -577,7 +577,7 @@
 			"file": "upload/Upload.php",
 			"settings":
 			{
-				"buffer_size": 6916,
+				"buffer_size": 6925,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -610,6 +610,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -665,6 +673,7 @@
 	],
 	"file_history":
 	[
+		"/home/matheo/Documents/GitHub/High-media-serveur/Res/scriptModal.php",
 		"/home/matheo/.config/sublime-text-3/Packages/User/JavaScript-Completions.sublime-settings",
 		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res/scriptModal.php",
 		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/lang/FR.php",
@@ -791,8 +800,7 @@
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0300460A.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXSceneEventGeneriqueScript.psc",
 		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXRandomProstitution.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXGeneralScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSX.psc"
+		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXGeneralScript.psc"
 	],
 	"find":
 	{
@@ -803,6 +811,8 @@
 		"height": 98.0,
 		"where_history":
 		[
+			"<open folders>",
+			"/"
 		]
 	},
 	"find_state":
@@ -810,6 +820,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"numEp",
+			"numEpC",
+			"=\"\"",
+			"RestoreModiEp",
+			"ern",
+			"aplError",
+			"#SUpload",
+			"aplError",
+			"verifiMyChest",
+			"1",
+			"titre",
+			"verifiTitre",
+			"titre",
 			"Saison1",
 			" \";}",
 			"disp",
@@ -924,20 +947,7 @@
 			"viewList",
 			"body",
 			"viewList",
-			"display:",
-			"user",
-			"Proprietaire",
-			"user",
-			"boutonUpload",
-			"position",
-			"bottomMenu",
-			"caseBottom",
-			"menu",
-			"select",
-			"cadre",
-			"center",
-			"user",
-			"del"
+			"display:"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1028,15 +1038,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 26461,
+						"buffer_size": 26468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17207,
-								17207
+								6081,
+								6081
 							]
 						],
 						"settings":
@@ -1047,11 +1057,11 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 494.0,
-						"translation.y": 4759.0,
+						"translation.x": 488.0,
+						"translation.y": 1292.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1089,7 +1099,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1127,30 +1137,31 @@
 				{
 					"buffer": 5,
 					"file": "Res/scriptModal.php",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23235,
+						"buffer_size": 23131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11773,
-								11773
+								8669,
+								8669
 							]
 						],
 						"settings":
 						{
+							"spell_check": true,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7684.0,
+						"translation.y": 4806.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1159,15 +1170,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6916,
+						"buffer_size": 6925,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5674,
-								5674
+								5633,
+								5633
 							]
 						],
 						"settings":
@@ -1178,10 +1189,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2704.0,
+						"translation.y": 2440.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1189,7 +1200,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1215,7 +1226,7 @@
 		"cols":
 		[
 			0.0,
-			0.0370529829054,
+			0.266560819345,
 			1.0
 		],
 		"rows":
@@ -1241,7 +1252,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1250,6 +1261,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Res/scriptModal.php"
+			]
 		],
 		"width": 0.0
 	},
@@ -1283,7 +1298,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 234.0,
+	"side_bar_width": 146.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

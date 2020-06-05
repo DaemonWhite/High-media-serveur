@@ -17,7 +17,7 @@ var Envoi = 0
 var Erreur = []
 var II = 1 //Generateur de variable
 // Erreur type Titre
-Erreur[0] = 0;
+var Erreur = 0;
 
 var RestoreModiEp = [];
 var RestoreModiSa = [];
@@ -30,11 +30,19 @@ let focusValide = []
 var derErreur
 
 var displayNum1 = []
+
 	while ( II < 65) {
 	displayNum1["bonus"+II] = 0;
-	Erreur[II] = 0;
 	II++;
 	}
+
+// Erreur = 0 Titre; -1 Artiste
+
+function erorInitilise() {
+
+	Erreur = 0;
+
+}
 
 function menuUpload(Loc)
     {
@@ -233,7 +241,10 @@ function newBonus(num, type) {
 
 function surligne(champ, EnvEroor)
 {
-   if(EnvEroor){
+	//console.log(champ, EnvEroor)
+
+   if(EnvEroor == true){
+
          champ.style.border = "3px #BC240D solid";
          
      } else {
@@ -246,14 +257,6 @@ function surligne(champ, EnvEroor)
 function ErrorMessage() {
 
 	alert("coriger les erreur")
-
-}
-
-
-function aplError(Err, type) {
-	console.log(Err, type)
-
-	Erreur[Err] = type;
 
 }
 
@@ -308,7 +311,6 @@ function ErreurVerif(TypeEr, champ , erro){
 	} else if (TypeEr == 0) 
 	{
 	  errorTitle0.innerHTML = errorTitleTT;
-	  aplError(0, 1);
 	} else if (TypeEr == 1) {
 	  errorTitle2.innerHTML = "Il manque votre fichier à uploader veulier le rajouter ou suprimer la ou les lignes non nécessaire"
 	} else if (TypeEr == 2) {
@@ -320,9 +322,80 @@ function ErreurVerif(TypeEr, champ , erro){
 	if (TypeEr >= 0) {surligne(champ, true);}
 }
 
+function anaEp(Ep, total, isMus , ErrorArea ,champ=false, ignore=0) { // vérifie si les episode son complétement rensegner
+
+	console.log(total)
+
+	var numEp = 1
+	var numEpC = numEp
+
+	if (isMus != 0) 
+	{
+	 	numEpC = 25;
+	}
+
+	  var ErrorTitleTT // Diférence music et video
+	  if (isMus == 0) {
+	  	
+	  		ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"
+	  		ErrorTitleTN = "L'episode doit étre remplie par une valleur numerique ou ne doit êtres NULL ainsi que la saison" 
+
+	  	} else { 
+	  	
+	  		ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"
+	  		ErrorTitleTN =  "La piste doit étre remplie par une valleur numerique ou ne doit êtres NULL de meme que le disque"
+	  	
+	  	}
+
+	while (total >= numEp) {
+			
+
+				VerifEp = document.getElementById("Ep" + numEpC)
+				VerSaison = document.getElementById("S" + numEpC).value
+
+				VerifEp0 = document.getElementById("Ep" + Ep)
+				VerSaison0 = document.getElementById("S" + Ep)
+
+				surligne(VerifEp0, false)
+				surligne(VerSaison0, false)
+
+				if ((VerifEp0.value === VerifEp.value) && (VerifEp != VerifEp0)) {
+
+					if (VerSaison == VerSaison0.value){
+
+						ErrorArea.innerHTML = ErrorTitleTT;
+						ignore = numEp
+						return ignore;
+
+					}
+
+
+				} else {
+
+					if (VerifEp0.value == "" || VerSaison0.value == "") {
+						console.log(VerSaison0)
+					ErrorArea.innerHTML = ErrorTitleTN;
+					ignore = numEp
+					return ignore;
+
+					}
+					
+				}
+
+				numEp++;
+				numEpC++;
+
+	}
+	console.log("Tous vas bien")
+	numEp =0;
+	return ignore;
+}
+
+
 function verif(champ, Objet, ZoneEp, mus=0) {
 	var Title0
 	var TotalCons
+	var retError = []
 	
 	if (mus == 0){ 
 		Title0 = document.getElementById("title");
@@ -351,7 +424,6 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		   var ErrorTitleTT // Diférence music et video
 		   if (mus == 0) {ErrorTitleTT = "Titre obligatoire"} else { ErrorTitleTT =  "Titre de l'Album obligatoire"}
 		   errorTitle0.innerHTML = ErrorTitleTT;
-		   return false;
 		
 		} else {
 		 	errorTitle0.innerHTML = null;
@@ -362,83 +434,37 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		verifiMyChest(Objet, mus, champ, champ)
 
 	} else if (Objet == 1) { // verification des episeode ou des piste
+		num = 1;
+		var ern = 0;
+		var i = 0;
 
-		if (true) {
+		while (TotalCons >= num) {
 
-			var numEp = 1
-			var numEpC = numEp
+				anErro = anaEp(num, TotalCons, mus, ErrorTitle1)
 
-			if (mus != 0) 
-			{
-			 	numEpC = 25;
-			}
+				if (anErro != 0) {
 
-		   var ErrorTitleTT // Diférence music et video
-		   if (mus = 0) {
-		   	
-		   		ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"
-		   		ErrorTitleTN = "L'episode doit étre remplie par une valleur numerique ou ne doit êtres NULL" 
-
-		   	} else { 
-		   	
-		   		ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"
-		   		ErrorTitleTN =  "La piste doit étre remplie par une valleur numerique ou ne doit êtres NULL"
-		   	
-		   	}
-
-			while (TotalCons >= numEp) {
-
-
-				VerifEp = document.getElementById("Ep" + numEpC)
-				VerSaison = document.getElementById("S" + numEpC).value
-
-				VerifEp0 = document.getElementById("Ep" + ZoneEp)
-				VerSaison0 = document.getElementById("S" + ZoneEp).value
-
-				if ((VerifEp0.value === VerifEp.value) && (VerifEp != champ)) {
-
-					if (VerSaison == VerSaison0){
-
-						errorTitle1.innerHTML = ErrorTitleTT;
-						surligne(VerifEp0, true);
-						aplError(ZoneEp, 1);
-					} else {
-						errorTitle1.innerHTML = "";
-						surligne(VerifEp0, false);
-						aplError(ZoneEp, 1);
-					}
-
-					
-					return false;
-
-				} else {
-
-					if (champ.value == "") {
-
-					surligne(VerifEp0, true);
-					aplError(ZoneEp, 1);
-					errorTitle1.innerHTML = ErrorTitleTN;
-
-					} else {
-
-						console.log(numEpC, numEp, TotalCons)
-						errorTitle1.innerHTML = null;
-						surligne(champ, false);
-						aplError(ZoneEp, 0);
-
-					}
-					
+					retError.push(anErro)
+					ern++;
 				}
 
-				numEp++;
-				numEpC++;
-
-			}
-
-			numEp =0;
-			return true;
-
+			num++;
 		}
+
+		while (ern > i) {
+			Ep = document.getElementById("Ep"+retError[i])
+			Sa = document.getElementById("S"+retError[i])
+			//console.log(Ep, retError[i], i)
+			surligne(Ep, true)
+			surligne(Sa, true)
+			i++;
+		}
+
+		if (Ern =! 0 ) {
+			return champ;
+		}
+
+		console.log(retError)
 
 	} else if (Objet == 2) { // verification de Titre des pistes
 		var num = 1
@@ -456,11 +482,9 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 						errorTitle1.innerHTML = ErrorTitleTT;
 						surligne(VerifSub0, true);
-						aplError(ZoneEp, 1);
 					} else {
 						errorTitle1.innerHTML = "";
 						surligne(VerifSub, false);
-						aplError(ZoneEp, 1);
 					}
 
 					
@@ -471,15 +495,13 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 					if (champ.value == "") {
 
 					surligne(VerifSub0, true);
-					aplError(ZoneEp, 1);
-					//errorTitle1.innerHTML = ErrorTitleTN;
+					errorTitle1.innerHTML = ErrorTitleTN;
 
 					} else {
 
 						console.log(VerifSub0, TotalCons)
 						errorTitle1.innerHTML = null;
 						surligne(champ, false);
-						aplError(ZoneEp, 0);
 
 					}
 				}
@@ -489,7 +511,7 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 	} else if (Objet == 3) {
 
-		artiste = document.getElementById("subTitleA")
+		artiste = document.getElementById("Artiste")
 
 		if (subTitleA.value == "") 
 		{
@@ -567,8 +589,9 @@ function uploadFile(formulaire){
 function newUpload(is) {
 	var numVideo = 0;
 	var ErrVideo = 25;
-	var numMessage = 0
-	var totalIs
+	var numMessage = 0;
+	var totalIs;
+	var erreur = false;
 
 	if (is == 0) {
 		aTitle = document.getElementById("title")
@@ -576,31 +599,39 @@ function newUpload(is) {
 		totalIs = totalVideo 
 	} else {
 		aTitle = document.getElementById("titleA")
+		aRtiste = document.getElementById("Artiste")
 		vide = 25;
 		totalIs = totalAudio
+
+		if (aRtiste == "")// Verifi so artiste n'est pas vide
+		{
+		 	verif(aRtiste, 3 , 0, 1)
+			numMessage++;
+		} else {
+
+			verif(aRtiste, 3 , 0, 1)
+
+		}
+
 	}
 
-	if (aTitle.value == "") {
+	if (aTitle.value == "") {// verifi si titre n'est pas vide
 
 		verif(aTitle, 0 , 0, is)
-		aplError(0, 1);
 		numMessage++;
 
 	} else {
 
-		aplError(0, 0);
 		verifiMyChest(0, is, aTitle, aTitle)
 
 	}
-
-	console.log(Erreur[0]+ Erreur[1] + Erreur[2] + Erreur[3] + Erreur[4] + Erreur[5] + Erreur[6]+ Erreur[7] + Erreur[8] + Erreur[9] + Erreur[10] + Erreur[11] + Erreur[12] + Erreur[13] + Erreur[14] + Erreur[15] + Erreur[16]+ Erreur[17] + Erreur[18] + Erreur[19] + Erreur[20] + Erreur[21] + Erreur[22] + Erreur[23] + Erreur[24])
 		
 		while (totalIs > numVideo) {
 
 			var verifVideo = document.getElementById("fileUpload" + vide)
 			var verifTitre = document.getElementById("subTitle" + vide)
 	
-			if (verifVideo.value == "") {
+			if (verifVideo.value == "") {// verifi si les fichier ne son vide
 				
 				ErreurVerif("1", verifVideo , is)
 				numMessage++;
@@ -612,9 +643,15 @@ function newUpload(is) {
 
 			}
 
+			erreur = verif(null, 1, vide, is); // verifi tout les episode
+
+			if (erreur == true) {
+				numMessage++;
+			}
+
 			if (is != 0) {
 
-				if (verifTitre.value == "") {
+				if (verifTitre.value == "") { // Verifi l'existance des Titre des piste
 
 					ErreurVerif("2", verifTitre, is)
 					console.log(verifTitre)
@@ -633,15 +670,10 @@ function newUpload(is) {
 		console.log(vide,numVideo,ErrVideo)
 
 		}
-
-		if (numMessage >= 1) 
-		{
-			ErrorMessage()
-			return false;
-		}
 	
+	console.log(numMessage);
 
-	if ((Erreur[0] == 0 )&& (Erreur[1] == 0) && (Erreur[2] == 0) && (Erreur[3] == 0) && (Erreur[4] == 0) && (Erreur[5] == 0) && (Erreur[6] == 0 )&& (Erreur[7] == 0) && (Erreur[8] == 0) && (Erreur[9] == 0) && (Erreur[10] == 0) && (Erreur[11] == 0) && (Erreur[12] == 0) && (Erreur[25] == 0) && (Erreur[26] == 0) && (Erreur[27] == 0 )&& (Erreur[28] == 0) && (Erreur[29] == 0) && (Erreur[30] == 0) && (Erreur[31] == 0) && (Erreur[32] == 0) && (Erreur[33] == 0) && (Erreur[34] == 0) && (Erreur[35] == 0) && (Erreur[36] == 0)) 
+	if (numMessage === 0) 
 	{
 		console.log(verifVideo.value)
 
@@ -654,6 +686,11 @@ function newUpload(is) {
 			uploadFile("formUploadA")
 
 		}
+
+	} else {
+
+		ErrorMessage()
+
 	}
 }
 
@@ -674,7 +711,6 @@ function addUpload() {
 	
 				surligne(verifVideo, true);
 				document.getElementById("ErrorTitle" ).innerHTML = "Veulier choisire une video";
-				aplError(ErrVideo, 1);
 				ErrorMessage()
 				return false;
 
@@ -682,7 +718,6 @@ function addUpload() {
 
 				document.getElementById("ErrorTitle" ).innerHTML = null;
 				surligne(verifVideo, false);
-				aplError(ErrVideo, 0);
 
 			}
 	
@@ -982,3 +1017,35 @@ function modifScript(Modif)
 
 
 }
+
+function test2(value){
+
+	console.log("resue:", value);
+
+}
+
+function test(){
+
+	var vala = []
+
+	vala.push(1,4)
+
+	vala.push(7,19)
+
+	vala.push(20,3)
+
+	i=0
+
+	console.log(vala)
+
+	while (i < 6){
+
+		item = vala[i]
+		console.log("envoie", item)
+  		test2(item)
+		i++;
+	}
+
+}
+
+test()

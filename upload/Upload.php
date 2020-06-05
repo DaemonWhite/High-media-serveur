@@ -196,7 +196,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		if ($upError == false) {
 
 			echo "chemin A";
-			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Affiche, :Genre, :type, :Synopsis)");
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Affiche, :Genre, :type, :Synopsis)");
   	                                  $AddTitre->execute(array( 
   	                                  	'nom' => $GetTitle,
   	                                  	'Format' => $Format,
