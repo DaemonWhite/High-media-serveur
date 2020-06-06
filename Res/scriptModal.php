@@ -424,6 +424,8 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		   var ErrorTitleTT // Diférence music et video
 		   if (mus == 0) {ErrorTitleTT = "Titre obligatoire"} else { ErrorTitleTT =  "Titre de l'Album obligatoire"}
 		   errorTitle0.innerHTML = ErrorTitleTT;
+
+			return champ;
 		
 		} else {
 		 	errorTitle0.innerHTML = null;
