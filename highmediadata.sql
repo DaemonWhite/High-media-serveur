@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 03 juin 2020 à 14:13
+-- Généré le : Dim 07 juin 2020 à 19:14
 -- Version du serveur :  10.3.22-MariaDB-1ubuntu1
 -- Version de PHP : 7.4.3
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `audio` (
   `ID` int(11) NOT NULL,
   `album` text NOT NULL,
-  `Artiste` text NOT NULL,
+  `Titre` text NOT NULL,
   `Disk` int(11) NOT NULL,
   `Piste` int(11) NOT NULL,
   `Repertoire` text NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE `titre` (
   `nom` text NOT NULL,
   `Format` int(11) NOT NULL COMMENT '0 = video 1 = music',
   `Nombre` int(11) NOT NULL DEFAULT 1,
-  `Saison` int(11) DEFAULT NULL,
+  `Artiste` text DEFAULT NULL,
   `Synopsis` text DEFAULT NULL,
   `Affiche` varchar(255) NOT NULL DEFAULT 'upload/Video/DVideo.jpg',
   `Genre` varchar(255) NOT NULL,
