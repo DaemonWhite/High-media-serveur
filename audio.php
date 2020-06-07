@@ -2,7 +2,7 @@
 
 include("lang/FR.php");
 
-$moveUrl = "Video.php";
+$moveUrl = "Audio.php";
 
 include("Com/Conexion.php");
 
@@ -36,10 +36,10 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   <!DOCTYPE html>
   <html lang="fr-FR">
   <head>
-      <title>High media serveur - Video</title>
+      <title>High media serveur - Audio</title>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="Res/style.css" />
-      <link rel="stylesheet" href="Res/styleVideo.css" />
+      <link rel="stylesheet" href="Res/styleAudio.css" />
   </head>
 
 <?php
@@ -64,8 +64,8 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
               
               <div>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')"><?php echo $_Lang_Gen_Homme; ?></button>
-                  <button class="linkSelect" id="linkCenter"><?php echo $_Lang_Gen_Video; ?></button>
-                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?></button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')"><?php echo $_Lang_Gen_Video; ?></button>
+                  <button class="linkSelect" id="LinkDebutPassif"><?php echo $_Lang_Gen_Audio; ?></button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?></button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"><?php echo $_Lang_Gen_Serve; ?></button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"><?php echo $_Lang_Gen_Propo; ?></button>
@@ -126,7 +126,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
             <div class="SearchVideo" align="center">
 
               <div class="SearchV">
-                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme('1')">
+                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event, 1)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme('1')">
               </div>
 
               <div>
@@ -191,9 +191,9 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
 <?php } else {
 
-$EpVideo = $bdd->query('SELECT titre, SousTitre, Saison, Episode FROM video WHERE titre=\'' . $_GET['name'] . '\' ORDER BY Episode ASC');
+$EpVideo = $bdd->query('SELECT album, Titre, Disk, Piste FROM audio WHERE album=\'' . $_GET['name'] . '\' ORDER BY Piste ASC');
 
-$epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET['name'] . '\'');
+$epSynops = $bdd->query('SELECT  nom FROM titre WHERE nom=\'' . $_GET['name'] . '\'');
         
         $moveUrl = "Video.php?=" . $_GET['name'];
 
@@ -207,7 +207,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
       <title>High media serveur - Video</title>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="Res/style.css" />
-      <link rel="stylesheet" href="Res/styleVideo.css" />
+      <link rel="stylesheet" href="Res/styleAudio.css" />
   </head>
 
   <script type="text/javascript" src="Res/scriptZone.js">
@@ -221,8 +221,8 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
               
               <div>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')"><?php echo $_Lang_Gen_Homme; ?> </button>
-                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')"><?php echo $_Lang_Gen_Video; ?> </button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?> </button>
+                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')"><?php echo $_Lang_Gen_Video; ?> </button>
+                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Audio')"><?php echo $_Lang_Gen_Audio; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')"><?php echo $_Lang_Gen_Perso; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')"><?php echo $_Lang_Gen_Serve; ?> </button>
                   <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')"><?php echo $_Lang_Gen_Propo; ?> </button>
@@ -289,23 +289,20 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
         
             while ($donnes = $EpVideo->fetch()) {
 
-              if ($view < $donnes['Saison']) {
+              if ($view < $donnes['Disk']) {
 
-                echo '<div class="saisonVideo"> <span> Saison : ' . $donnes['Saison'] . '</span> </div>';
+                echo '<div class="saisonVideo"> <span> Diske : ' . $donnes['Disk'] . '</span> </div>';
 
-                $view = $donnes['Saison'];
+                $view = $donnes['Disk'];
             
               }
-        
-             echo '<div> <a class="listeEpisode" href="VLecteur.php?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .' &S='. $view .' ">Episode ' . $donnes['Episode'] . '</a> </div>' ;
+            
+             echo '<div class="pisteMargin" align="left"> 
+                       <a class="listeEpisode" href="ALecteur.php?Name='. $_GET['name'] .'&Ep='. $donnes['Piste'] .' &S='. $view .' ">Piste ' . $donnes['Piste'] . ' : ' . $donnes['Titre'] . '</a> 
+                  </div>' ;
             }
         
             ?>
-            <div>
-              
-              <textarea class="textareaBase" name="Synopsis" placeholder="synopsis" disabled><?php $syn = $epSynops->fetch(); echo $syn['Synopsis'] ?></textarea>
-
-            </div>
 
           </div>
         </div>

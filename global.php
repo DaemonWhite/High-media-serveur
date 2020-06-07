@@ -19,6 +19,7 @@ $Rimage = $ImageUs->fetch();
 
 
 $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10");
+$NameAudio = $bdd->query("SELECT ID, album, Titre, Piste, Disk FROM audio ORDER BY ID DESC LIMIT 0, 10");
 
 $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
 $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
@@ -114,21 +115,24 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     
                     <section class="Box">
                         <div class="BoxTitle"><span> <?php echo $_Lang_ACC_Nmus;?> </span></div>
-                        <div class="listenBoxM">
-                            <table>
-                                <tr>
-                                    <td>Album</td>
-                                    <td>Titre</td>
-                                </tr>
-                            </table>
-                        </div>
+                        
+                        <div align="left" class="overFlaw">
+                            <table class="listenBoxA">
+                                <?php while ($Naudio = $NameAudio->fetch()) {
 
-                        <div class="listenBoxM">
-                            <table>
-                                <tr>
-                                    <td>Album</td>
-                                    <td>Titre</td>
-                                </tr>
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Naudio['album'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+                                    <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Naudio['Titre'].'", "'. $Naudio['Piste'] .'", "'. $Naudio['Disk'] .'"'; ?> )'>
+
+                                        <td class="borderS"><img class="Aaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                        <td class="borderTi"><span><?php echo $Naudio['Titre'] . " - " . $Naudio['album']; ?></span></td>
+                                        <td class="borderS">
+                                            <span>Diske: <?php echo $Naudio['Disk']; ?></span><br>
+                                            <span>Piste: <?php echo $Naudio['Piste']; ?></span>
+                                            </td>
+
+                                    </tr>
+                                <?php } ?>
                             </table>
                         </div>
 

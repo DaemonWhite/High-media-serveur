@@ -1,4 +1,4 @@
-function touche(e){
+function touche(e, is){
 
       var touche = event.keyCode;
 
@@ -6,7 +6,7 @@ function touche(e){
       
       if (touche == 13) {
 
-        GernreAnme(0)
+        GernreAnme(is)
 
       }
 

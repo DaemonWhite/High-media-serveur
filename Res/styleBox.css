@@ -96,3 +96,25 @@
 	padding: 0vh;
 	border: 4px black solid;
 }
+
+/* Audio */
+
+.listenBoxA
+{
+	overflow: hidden;
+	padding: 0px;
+	color: white;	
+	border-collapse: collapse;
+	border: 4px black solid;
+	background-color: #3D3D3D; 
+	width: 100%;
+	text-align: left;
+	
+}
+
+.Aaffiche
+{
+	object-fit: cover;
+	width: 106px;
+	height: 106px;
+}

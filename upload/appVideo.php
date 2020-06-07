@@ -67,7 +67,7 @@
 
 	$appVideo.= " Type= '" . $_POST['Type'] . "'";
 
-	echo $appVideo;
+	//echo $appVideo;
 
 	$appVideo.= "ORDER BY nom";
 

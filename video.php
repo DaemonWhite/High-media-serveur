@@ -126,7 +126,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
             <div class="SearchVideo" align="center">
 
               <div class="SearchV">
-                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme()">
+                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event, 0)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme()">
               </div>
 
               <div>

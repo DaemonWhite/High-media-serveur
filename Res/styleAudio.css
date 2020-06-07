@@ -1,0 +1,198 @@
+.entreVideo
+{
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+		
+}
+
+.entreViewVideo
+{
+
+	padding-left: 10%;
+	display: flex;
+	height: 85%;
+	width: 90%;
+	overflow: auto;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+}
+
+.SearchVideo
+{	
+	padding-left: 10%;
+	margin: 2%;
+	width: 70%;
+	overflow: auto;
+}
+
+.SearchV
+{
+	border-radius: 2vh;
+	width: 60%;
+	height: 2vh;
+	padding: 0vh;
+	margin: 0vh;
+	border: 0.9vh #54C472 solid;
+	background-color:  #54C472;
+	color: #54C472;
+	margin-bottom: 2%;
+	overflow: hidden;	
+
+}
+.searchBV
+{
+
+	width: 20px;
+
+}
+.SearchRV
+{
+	border-top-left-radius: 1vh;
+	border-bottom-left-radius: 1vh;	
+	border: none;
+	text-align: center;
+	width: 80%;
+	height: 80%;
+	background-color:  #3D3D3D;
+	color: #54C472;
+
+}
+
+.SearchSV
+{
+	border: none;
+	height: 100%;
+	margin: 0vh;
+	padding: 0vh;
+	width: 19%;
+	border-top-right-radius: 1vh;
+	border-bottom-right-radius: 1vh;
+	background-color: #54C472;
+}
+
+.SearchSV:hover
+{
+	background-color: green;
+}
+
+.caseBottom
+{
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+	border-collapse: collapse;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-right: 4vh;
+
+	width: 200px;
+	max-height: 275px;
+
+		
+	border: 4px black solid;
+	background-color: #3D3D3D; 
+	color: #54C472;
+	font-style: bold;
+}
+
+.caseBottom:hover
+{
+	cursor: pointer;
+	background-color: #1b1a1a69; 
+}
+
+.caseImg
+{
+	object-fit: cover ;
+	width: 100%;
+	height: 200px;
+}
+
+.borderBottom
+{
+	width: 18%;
+	height: 100%;
+	border-bottom: 4px black solid;
+
+}
+.whiteCase
+{
+	
+	max-height: 200px;
+	width: 200px;
+	text-decoration: normal;
+}
+
+.whiteCase:hover
+{
+	text-decoration: underline;
+}
+
+.zoneListe
+{
+	overflow: auto;
+	justify-content: left;
+	width: 200vh;
+	height: 100vh;
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-bottom: 15%;
+}
+
+.blockListeVideo
+{
+	align-items: left;
+	width: 100vh;
+	margin-bottom: 5%;
+	border: 4px;
+	margin-right: 7%;
+	margin-top: 3%;
+	padding: 5%;
+	background-color: #3D3D3D;
+	
+}
+
+.titleVideo
+{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #272424ad;
+	color: #54C472;
+	font-size: 7vh;
+	width: 95%;
+}
+.saisonVideo
+{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #272424ad;
+	color: #54C472;
+	font-size: 5vh;
+	width: 85%;
+}
+.listeEpisode
+{
+	margin-top: 1%;
+	font-size: 4vh;
+	color: #54C472;
+}
+.listeEpisode:hover
+{
+	color: green;
+}
+
+.video
+{
+	margin-top: -1%;
+	height: 90%;
+	width: 90%;
+}
+.pisteMargin
+{
+	margin-left: 10%;
+}
