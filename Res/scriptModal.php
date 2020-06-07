@@ -192,7 +192,7 @@ function newBonus(num, type) {
 			visual.setAttribute('value', '-')
 			
  
-			if (num > 1 && num != 13 && num != 25) {
+			if (num > 1 && num != 13 && num != 25 && num != 45) {
 				visual2.style.display = "none"
 			}
 
@@ -216,7 +216,7 @@ function newBonus(num, type) {
 
 		} else {
 
-			if (num > 1 && num != 13 && num != 25) {
+			if (num > 1 && num != 13 && num != 25 && num != 45) {
 				visual.setAttribute('value', '+')
 				visual2.style.display = null;
 			}
@@ -515,9 +515,11 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 
 		artiste = document.getElementById("Artiste")
 
-		if (subTitleA.value == "") 
+		if (artiste.value == "") 
 		{
+			champ = true;
 			ErreurVerif(3, artiste , 1)
+			return champ;
 
 		} else {
 
@@ -782,14 +784,26 @@ function readData(sData) {
 	verifEpisode()
 }
 
-function verifEpisode() {
+function verifEpisode(isMus) {
+	var serr
+	var text
 
-	var serr = document.getElementById('nameSerr').value
-	var text = document.getElementById("Shell")
+	if (isMus === 0) {
+		serr = document.getElementById('nameSerr').value
+		text = document.getElementById("Shell")
+		isMus = "0";
+	} else {
+		serr = document.getElementById('nameSerrA').value
+		text = document.getElementById("ShellA")
+		isMus = "1";
+	}
+
+	console.log(serr, text, isMus)
 
 	var oData = new FormData();
 
 	oData.append("Name", serr);
+	oData.append("Type", isMus);
 
 	vef = new XMLHttpRequest();
 	vef.open("POST", "upload/verifDonner.php", true);

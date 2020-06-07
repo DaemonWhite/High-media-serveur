@@ -26,7 +26,7 @@ if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = nu
 
 
 
-$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //(file_exists($dossier)
 
 	if (!empty($_POST['GenreName'])) {

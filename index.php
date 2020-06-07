@@ -21,10 +21,6 @@ include("lang/FR.php"); ?>
     <body class="BackgroundA" >
 
         <?php
-
-        echo $Dmode;
-       
-
         
 
         if   (isset($_COOKIE["Welcome"]))  // Si les cookie son présent

@@ -12,11 +12,15 @@ if ($VerifMusic == "0") {
 
 	$repGen = 1;
 	$maxGen = 11;
+	$defMin = "DVideo.jpg";
+	$defChe = "Video/";
 
 } elseif($VerifMusic == 1) {
 
 	$repGen = 25;
 	$maxGen = 19;
+	$defMin = "DAudio.png";
+	$defChe = "Audio/";
 
 }
 
@@ -53,19 +57,7 @@ while ($numGen <= $maxGen) {
 
 // Debug episode
 
-// if ($_POST['Ep2'] != 0) {$Episode[1] = $_POST['Ep2']; $Saison[1] = $_POST['Saison2'];}
-// if ($_POST['Ep3'] != 0) {$Episode[2] = $_POST['Ep3']; $Saison[2] = $_POST['Saison3'];}
-// if ($_POST['Ep4'] != 0) {$Episode[3] = $_POST['Ep4']; $Saison[3] = $_POST['Saison4'];}
-// if ($_POST['Ep5'] != 0) {$Episode[4] = $_POST['Ep5']; $Saison[4] = $_POST['Saison5'];}
-// if ($_POST['Ep6'] != 0) {$Episode[5] = $_POST['Ep6']; $Saison[5] = $_POST['Saison6'];}
-// if ($_POST['Ep7'] != 0) {$Episode[6] = $_POST['Ep7']; $Saison[6] = $_POST['Saison7'];}
-// if ($_POST['Ep8'] != 0) {$Episode[7] = $_POST['Ep8']; $Saison[7] = $_POST['Saison8'];}
-// if ($_POST['Ep9'] != 0) {$Episode[8] = $_POST['Ep9']; $Saison[8] = $_POST['Saison9'];}
-// if ($_POST['Ep10'] != 0) {$Episode[9] = $_POST['Ep10']; $Saison[9] = $_POST['Saison10'];}
-// if ($_POST['Ep11'] != 0) {$Episode[10] = $_POST['Ep11'];  $Saison[10] = $_POST['Saison11'];}
-// if ($_POST['Ep12'] != 0) {$Episode[11] = $_POST['Ep12'];  $Saison[11] = $_POST['Saison12'];}
-
-if (($_FILES['miniature']['name']) != "" AND !empty($_FILES['miniature'])) { $min = $_FILES['miniature']['name']; } else { $min = "DVideo.jpg";}
+if (($_FILES['miniature']['name']) != "" AND !empty($_FILES['miniature'])) { $min = $_FILES['miniature']['name']; } else { $min = $defMin;}
 
 
 if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}
@@ -81,11 +73,11 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		$TitrePrincip = $_POST['nameSerie'];
 
-		if ($min != "DVideo.jpg")
+		if ($min != $defMin)
 		{ 
-			$minia = 'upload/' . "Video/" . $TitrePrincip ."/". $min;
+			$minia = 'upload/' . $defChe . $TitrePrincip ."/". $min;
 		} else {
-			$minia = 'upload/' . "Video/" . $min;
+			$minia = 'upload/' . $defChe . $min;
 		}
 		echo "papa2";
 
@@ -104,12 +96,20 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 					while (!empty($_FILES['Video']['name'][$ExisteVideo])) {
 
-						$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\'');
+						if ($_POST['IsMusic'] != 1) {
+
+							$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\' ');
+							
+						} else {
+
+							$reqEpisode = $bdb->query('SELECT album, Disk, Piste FROM audio WHERE album=\'' . $TitrePrincip . '\' AND Disk=\'' . $Episode[$ExisteVideo] . '\' AND Piste=\'' . $subTitle[$ExisteVideo] . '\'');
+
+						}
 						$vEp = $reqEpisode->fetch();
 
 						if (empty($vEp)) {
 
-							$Vdoss1 = "Video/" . $TitrePrincip . "/";
+							$Vdoss1 = $defChe . $TitrePrincip . "/";
 							$Vdoss2 = $Vdoss1 . "S" . $Saison[$ExisteVideo] . "/";
 
 							$nameV = $_FILES['Video']['name'][$ExisteVideo];
@@ -147,27 +147,39 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		$bda = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
+		$VerifMusic = $_POST['IsMusic'];
+
 		$GetTitle = $name ;
 		$GetSubtitle = $sTitle; //$_POST['subtitle'] 
 		$GetSeson = $Saison;
 		$GetEp = $Ep;
-		$GetGen =  $_POST['Genre'];
-		$GetTyp = $_POST['type']; //$_POST['typ']
-		$GetLang = $_POST['Lang'];
 		$GetMin = $miniature;
-		$Format = "0";
+		$Format = $VerifMusic;
 		$upError = false;
+		$GetGen =  $_POST['Genre'];
+		if ($VerifMusic == 0) {
+		
+			$GetTyp = $_POST['type']; //$_POST['typ']
+			$GetLang = $_POST['Lang'];
+			$DefChem = "Video/";
+			$Artiste = "NoValide";
 
+		} else {
+
+			$GetTyp = "NonValide"; //$_POST['typ']
+			$GetLang = "NonValide";
+			$DefChem = "Audio/";
+			$Artiste = $_POST['titleName'];
+		}
 		echo $GetTitle;
 
 		//$reqNombre = $bda->query('SELECT Nombre FROM titre');
 
-		$reqTitre = $bda->query('SELECT nom FROM titre WHERE nom=\'' . $GetTitle . '\'');
+		$reqTitre = $bda->query('SELECT nom, Type FROM titre WHERE nom=\'' . $GetTitle . '\' AND Type=\'' . $VerifMusic . '\'');
 		$vTitre = $reqTitre->fetch();
 
 		var_dump($vTitre);
 
-		echo $vTitre;
 
 
 		if ($vTitre == false) { // verifi juste si les condition son Operrationelle
@@ -186,20 +198,21 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		if ($upError == false) {
 
 			echo "chemin A";
-			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Affiche, :Genre, :type, :Synopsis)");
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Artiste, :Affiche, :Genre, :type, :Synopsis)");
   	                                  $AddTitre->execute(array( 
   	                                  	'nom' => $GetTitle,
   	                                  	'Format' => $Format,
+  	                                  	'Artiste' => $Artiste,
   	                                  	'Genre' => $GetGen,
-  	                                  	'type' => $_POST['IsMusic'],
+  	                                  	'type' => $VerifMusic,
   	                                  	'Affiche' => $GetMin,
   	                                  	'Synopsis' => $Synopsis));
 
 		}
 
-		$DefaultDaus = "Video/";
+		$DefaultDaus = $DefChem;
 		$dossier = $DefaultDaus . $_POST["nameSerie"];
-		$dossMini = "Video/" . $GetTitle. "/";
+		$dossMini = $DefChem . $GetTitle. "/";
 
 		echo $dossier;
 
@@ -218,7 +231,17 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		$Uerreur = null;
 
-		$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+		if ($VerifMusic == 0) {
+			 
+			$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+
+		} else {
+
+			$AddVideo = $bda->prepare("INSERT INTO audio(album, Titre, Disk, Piste, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+
+
+		}
+
                                           $AddVideo->execute(array( 
                                           	'titre' => $GetTitle,
                                           	'SousTitre' => $GetSubtitle,

@@ -19,7 +19,7 @@ if ($VerifMusic == "0") {
 
 	$repGen = 25;
 	$maxGen = 19;
-	$defMin = "DAudio.jpg";
+	$defMin = "DAudio.png";
 	$defChe = "Audio/";
 
 }
@@ -162,12 +162,14 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 			$GetTyp = $_POST['type']; //$_POST['typ']
 			$GetLang = $_POST['Lang'];
 			$DefChem = "Video/";
-		
+			$Artiste = "NoValide";
+
 		} else {
 
 			$GetTyp = "NonValide"; //$_POST['typ']
 			$GetLang = "NonValide";
 			$DefChem = "Audio/";
+			$Artiste = $_POST['titleName'];
 		}
 		echo $GetTitle;
 
@@ -196,10 +198,11 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		if ($upError == false) {
 
 			echo "chemin A";
-			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Affiche, :Genre, :type, :Synopsis)");
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Artiste, :Affiche, :Genre, :type, :Synopsis)");
   	                                  $AddTitre->execute(array( 
   	                                  	'nom' => $GetTitle,
   	                                  	'Format' => $Format,
+  	                                  	'Artiste' => $Artiste,
   	                                  	'Genre' => $GetGen,
   	                                  	'type' => $VerifMusic,
   	                                  	'Affiche' => $GetMin,
@@ -234,7 +237,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		} else {
 
-			$AddVideo = $bda->prepare("INSERT INTO audio(album, Artiste, Disk, Piste, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+			$AddVideo = $bda->prepare("INSERT INTO audio(album, Titre, Disk, Piste, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
 
 
 		}

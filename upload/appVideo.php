@@ -2,7 +2,7 @@
 	
 	$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-	$appVideo = "SELECT * FROM titre ";
+	$appVideo = "SELECT * FROM titre";
 
 	$_POST['Search'];
 
@@ -35,7 +35,7 @@
 
 	} else {
 
-		if ($_POST['Search'] != "" || $_POST['Genre']) {
+		if ($_POST['Search'] != " ") {
 			
 			$appVideo.= " WHERE ";
 
@@ -55,30 +55,19 @@
 
 	if (!empty($_POST['Genre'])) {
 		
-
-		if ($_POST['Genre'] == "Anime") {
-			
-			$appVideo.= "Genre = 'Anime' ";
-
-		} elseif ($_POST['Genre'] == "Docu") {
-			
-			$appVideo.= "Genre = 'Docu' ";
-
-		} elseif ($_POST['Genre'] == "Movie") {
-			
-			$appVideo.= "Genre = 'Movie' ";
-
-		} elseif ($_POST['Genre'] == "TV") {
-
-			$appVideo.= "Genre = 'TV' ";
-
-		}
-
-
+		$appVideo.= "Genre= '" . $_POST['Genre'] . "'";
 
 	}
 
-	//echo $appVideo;
+	if ($_POST['Search'] != "" || !empty($_POST['Genre'])) {
+		
+		$appVideo.= " AND";
+
+	}
+
+	$appVideo.= " Type= '" . $_POST['Type'] . "'";
+
+	echo $appVideo;
 
 	$appVideo.= "ORDER BY nom";
 

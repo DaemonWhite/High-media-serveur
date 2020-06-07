@@ -31,14 +31,14 @@ while ( $i <= 1) { ?>
 
                 <button id="#SUpload" class="boutonUpload">Créer une série</button>
 
-                <button id="#addUpload" onclick="verifEpisode()" class="boutonUpload">Ajouter un épisode(s)</button>
+                <button id="#addUpload" onclick="verifEpisode('0')" class="boutonUpload">Ajouter un épisode(s)</button>
 
                 <button id="#gestUpload" onclick="appMyVideo('1')" class="boutonUpload">Gérer mes vidéos</button>
                 
               <?php } else { ?>
                 <button id="#SUploadA" class="boutonUpload">Créer un album</button>
 
-                <button id="#addUploadA" onclick="verifEpisode()" class="boutonUpload">Ajouter une Piste(s)</button>
+                <button id="#addUploadA" onclick="verifEpisode('1')" class="boutonUpload">Ajouter une Piste(s)</button>
 
                 <button id="#gestUpload" onclick="appMyVideo('1')" class="boutonUpload">Gérer mes Albums</button>
               <?php } ?>
@@ -203,7 +203,7 @@ while ( $i <= 1) { ?>
                               <div align="center">
                                 <form name="serrFomr">
                                   
-                                  <select id="nameSerr" onchange="verifEpisode()" name="GenreName" class="selectModal" style="height: 2%; margin-top: 2%; margin-bottom: 2%;"><?php 
+                                  <select id="nameSerr" onchange="verifEpisode('0')" name="GenreName" class="selectModal" style="height: 2%; margin-top: 2%; margin-bottom: 2%;"><?php 
 
                                   while ($NameDonne = $reqCine->fetch()) {
                                     echo '<option value="' . $NameDonne['nom'] . '">'.$NameDonne['nom'] .'</option>';
@@ -404,7 +404,7 @@ while ( $i <= 1) { ?>
                               <div align="center">
                                 <form name="serrFomr">
                                   
-                                  <select id="nameSerr" onchange="verifEpisode()" name="GenreName" class="selectModal" style="height: 2%; margin-top: 2%; margin-bottom: 2%;"><?php 
+                                  <select id="nameSerrA" onchange="verifEpisode('1')" name="GenreName" class="selectModal" style="height: 2%; margin-top: 2%; margin-bottom: 2%;"><?php 
 
                                   while ($NameDonne = $reqCine->fetch()) {
                                     echo '<option value="' . $NameDonne['nom'] . '">'.$NameDonne['nom'] .'</option>';
@@ -416,29 +416,29 @@ while ( $i <= 1) { ?>
 
                                 </form>
                               </div>
-                              <span class="ecritureUp" style="margin-top: 2%;">Episode présent</span>
+                              <span class="ecritureUp" style="margin-top: 2%;">Piste présente</span>
                               <div align="center">
-                                <textarea class="textareaBase" id="Shell" name="Synopsis" placeholder="synopsis" style="margin-bottom: 2%;" disabled></textarea>
+                                <textarea class="textareaBase" id="ShellA" name="Synopsis" placeholder="synopsis" style="margin-bottom: 2%;" disabled></textarea>
                               </div>
 
                               <div class="classError" align="center" id="ErrorTitle"></div>
                           </div>
 
                           <?php
-
-                          while ($BonusID <= 64) {
+                          while ($BonusID <= 65) {
 
                             $butID = $BonusID + 1;
+                            $realValue = $butID - 44;
 
                           ?>
 
-                            <tr id="<?php if ($BonusID != 43) {echo 'bonus' . $BonusID; } ?>" style="display: <?php if ($BonusID != 43) { echo "none;";} ?>">
-                              <?php if ($BonusID != 64) { ?>
+                            <tr id="<?php if ($BonusID != 44) {echo 'bonus' . $BonusID; } ?>" style="display: <?php if ($BonusID != 44) { echo "none;";} ?>">
+                              <?php if ($BonusID != 63) { ?>
 
                                 <td><input id="bouton<?php echo $butID; ?>" type="button" onclick="newBonus(<?php echo $butID; ?>, 0)" class="buttonNew" value="+" style="display: ;" ></td>
 
                               <?php } else {echo "<td></td>";} ?>
-                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'numero','<?php echo $butID; ?>')" value="<?php echo $butID; ?>"></td>
+                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'numero','<?php echo $butID; ?>')" value="<?php echo $realValue; ?>"></td>
                                 <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" value="1"></td>
                                 <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="titleName" placeholder="Titre Secondaire"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
