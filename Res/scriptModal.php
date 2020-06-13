@@ -199,7 +199,7 @@ function newBonus(num, type) {
 
 			did.style.display = null
 			var EpV = document.getElementById("Ep" + (num3 + 1))
-			console.log(EpV, num3)
+			console.log(EpV, num3, "test")
 
 			displayNum1["bonus" + num] = 1
 			EpV.setAttribute('value', Eisode)
@@ -219,6 +219,8 @@ function newBonus(num, type) {
 			if (num > 1 && num != 13 && num != 25 && num != 45) {
 				visual.setAttribute('value', '+')
 				visual2.style.display = null;
+			} else {
+				visual.setAttribute('value', '+')
 			}
 				
 			did.style.display = "none"
