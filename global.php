@@ -42,7 +42,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 <script type="text/javascript" src="Res/scriptZone.js">
 </script>
     
-
+    
 
     <body class="BackgroundA">
 

@@ -98,7 +98,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 						if ($_POST['IsMusic'] != 1) {
 
-							$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\' ');
+							$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\' AND Saison=\'' . $Episode[$ExisteVideo] . '\'  ');
 							
 						} else {
 
@@ -109,7 +109,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 						if (empty($vEp)) {
 
-							$Vdoss1 = $defChe . $TitrePrincip . "/";
+							$Vdoss1 = "upload/" . $defChe . $TitrePrincip . "/";
 							$Vdoss2 = $Vdoss1 . "S" . $Saison[$ExisteVideo] . "/";
 
 							$nameV = $_FILES['Video']['name'][$ExisteVideo];

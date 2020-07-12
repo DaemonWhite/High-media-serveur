@@ -2,6 +2,7 @@
 
 V - 0.0.20A
 
+- Ajout d'un lecteur avec tout sont contenu (Non dynamique )
 - Uniformisation du menu navigation (Com/mainMenu.php)
 - Optimisation du syteme de recherche
 - Netoyage de la base SQL

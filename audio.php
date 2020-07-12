@@ -93,23 +93,74 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
             </div>
 
-            <div class="entreViewVideo" id="zoneVideo">
-               <?php 
+            <div class="entreCorp">
+
+              <div class="entreViewAudio" id="zoneVideo">
+                  <div class="entreVideoStack"> 
+                     <?php 
+              
+                     while ($donnes = $NameVideo->fetch()) { ?>
+                
+                      <div class="caseBottom" onclick="newZone('<?php echo $donnes['nom'];?>')">
+                        
+                        <table align="center">
+                         <tr style=""><img class="caseImg" src="<?php echo $donnes['Affiche'] ?>"></tr>
+                         <tr class="whiteCase"><td><span style=" font-size: 150%;"><?php echo $donnes['nom']; ?></span></td> </tr>
+                          
+                        </table>
+          
+                      </div>
         
-               while ($donnes = $NameVideo->fetch()) { ?>
-            
-                  <div class="caseBottom" onclick="newZone('<?php echo $donnes['nom'];?>')">
-                    
-                    <table align="center">
-                     <tr style=""><img class="caseImg" src="<?php echo $donnes['Affiche'] ?>"></tr>
-                     <tr class="whiteCase"><td><span style=" font-size: 150%;"><?php echo $donnes['nom']; ?></span></td> </tr>
-                      
+                   <?php } ?>
+                 </div> 
+              </div>
+    
+              <div class="playerBase" style=" border-collapse: collapse;">
+                
+                  <div class="playerList">
+                    <table style="height: 100%; width: 100%; border-collapse: collapse;">
+                      <tr>
+                        <td class="playerPListA" ></td>
+                        <td class="playerPListB" ></td>
+                      </tr>
                     </table>
-    
                   </div>
-    
-              <?php } ?>
-           </div>
+
+                  <div class="playerListCorp">
+                    <div class="musicTd">
+                      <div id="iLove" style="width: 10%;"><div class="Love"></div></div>
+                      <div id="playTitleMus" style="width: 30%;">Le pyro barbare</div> 
+                      <div id="playTitleArt" style="width: 30%; text-align: center;">Bob lenon</div> 
+                      <div id="playTitleAlb" style="width: 30%; text-align: center;">Skyrim</div> 
+                    </div>
+                </div>
+
+                <div class="playListControl">
+
+                      <div class="controleA">
+                        <div class="Love" style="width: 30%"></div>
+                        <div style="width: 40%; font-size: 1.5vh;">Le pyro barbare</div>
+                        <div class="styleAlea" style="width: 30%"></div>
+                      </div>
+
+                      <div style="width: 35%;">
+                        <div class="retMus" align="center">
+                          <div class="avMus" style="transform: rotate(180deg)"></div>
+                          <div class="play"><div class="bPlay"></div></div>
+                          <div class="avMus"></div>
+                        </div>
+                      </div>
+
+                      <div class="controleA">
+                        <div class="styleBoucle"></div>
+                        <div class="styleVolume"></div>
+                        <div class="styleBoxSlide">
+                          <input type="range" min="1" max="100" value="100" class="styleSlide" id="myRange">
+                        </div>
+                      </div>
+                </div>
+
+            </div>
 
     </section>
   
