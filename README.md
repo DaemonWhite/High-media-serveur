@@ -1,6 +1,6 @@
 # High media serveur
 
-V - 0.0.20A
+V - 0.0.20A - 4 Janv 22h52
 
 - Ajout d'un lecteur avec tout sont contenu (Non dynamique )
 - Uniformisation du menu navigation (Com/mainMenu.php)
