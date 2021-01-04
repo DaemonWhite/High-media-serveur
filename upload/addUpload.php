@@ -7,20 +7,55 @@ $UserName = $_SESSION['ID'];
 var_dump($_FILES);
 
 // Debug episode
-if ($_POST['Ep13'] != 0) {$Episode[0] = $_POST['Ep13']; $Saison[0] = $_POST['Saison01'];}
-if ($_POST['Ep14'] != 0) {$Episode[1] = $_POST['Ep14']; $Saison[1] = $_POST['Saison02'];}
-if ($_POST['Ep15'] != 0) {$Episode[2] = $_POST['Ep15']; $Saison[2] = $_POST['Saison03'];}
-if ($_POST['Ep16'] != 0) {$Episode[3] = $_POST['Ep16']; $Saison[3] = $_POST['Saison04'];}
-if ($_POST['Ep17'] != 0) {$Episode[4] = $_POST['Ep17']; $Saison[4] = $_POST['Saison05'];}
-if ($_POST['Ep18'] != 0) {$Episode[5] = $_POST['Ep18']; $Saison[5] = $_POST['Saison06'];}
-if ($_POST['Ep19'] != 0) {$Episode[6] = $_POST['Ep19']; $Saison[6] = $_POST['Saison07'];}
-if ($_POST['Ep20'] != 0) {$Episode[7] = $_POST['Ep20']; $Saison[7] = $_POST['Saison08'];}
-if ($_POST['Ep21'] != 0) {$Episode[8] = $_POST['Ep21'];  $Saison[8] = $_POST['Saison09'];}
-if ($_POST['Ep22'] != 0) {$Episode[9] = $_POST['Ep22'];  $Saison[9] = $_POST['Saison10'];}
-if ($_POST['Ep23'] != 0) {$Episode[10] = $_POST['Ep23']; $Saison[10] = $_POST['Saison11'];}
-if ($_POST['Ep24'] != 0) {$Episode[11] = $_POST['Ep24']; $Saison[11] = $_POST['Saison12'];}
+$UserName = $_SESSION['ID'];
+$VerifMusic = $_POST['IsMusic'];
+$repGen = -1; // Valeur d'inisiolisation d'ep
+$numGen = 0; // valeur de la boucle et des nouvelle variable
+$maxGen = 0;
 
-if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = null;}
+if ($VerifMusic == "0") {
+
+	$repGen = 13;
+	$maxGen = 11;
+	$defChe = "Video/";
+
+} elseif($VerifMusic == "1") {
+
+	$repGen = 45;
+	$maxGen = 20;
+	$defChe = "Audio/";
+
+}
+
+var_dump($_FILES);
+
+while ($numGen <= $maxGen) {
+
+	echo $iniEpisode = "Ep" . $repGen;
+	echo $iniSaison = "Saison" . $repGen;
+	echo $iniSubTitle = "subTitle" . $repGen;
+
+	if ($_POST[$iniEpisode] != 0) {
+
+		$Episode[$numGen] = $_POST[$iniEpisode]; 
+		$Saison[$numGen] = $_POST[$iniSaison];
+
+		if ($_POST[$iniSubTitle] != "") {
+			
+			$subTitle[$numGen] = $_POST[$iniSubTitle];
+
+		} else {
+
+			$subTitle[$numGen] = "NoValide";
+
+		}
+
+	}
+
+	$numGen++;
+	$repGen++;
+
+}
 
 
 
@@ -50,12 +85,21 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 					while (!empty($_FILES['Video']['name'][$ExisteVideo])) {
 
-						$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\'');
+						if ($_POST['IsMusic'] != 1) {
+
+							$reqEpisode = $bdb->query('SELECT titre, Episode FROM video WHERE titre=\'' . $TitrePrincip . '\' AND Episode=\'' . $Episode[$ExisteVideo] . '\' AND Saison=\'' . $Episode[$ExisteVideo] . '\' ');
+							
+						} else {
+
+							$reqEpisode = $bdb->query('SELECT album, Disk, Piste FROM audio WHERE album=\'' . $TitrePrincip . '\' AND Disk=\'' . $Episode[$ExisteVideo] . '\' AND Piste=\'' . $subTitle[$ExisteVideo] . '\'');
+
+						}
+
 						$vEp = $reqEpisode->fetch();
 
 						if (empty($vEp)) {
 
-							$Vdoss1 = "upload/Video/" . $TitrePrincip . "/";
+							$Vdoss1 = $defChe . $TitrePrincip . "/";
 							$Vdoss2 = $Vdoss1 . "S" . $Saison[$ExisteVideo] . "/";
 
 							$nameV = $_FILES['Video']['name'][$ExisteVideo];
@@ -65,13 +109,13 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 				
 								if (!file_exists($Vdoss1)) {
 					
-									CreateRepertoire(2, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);
+									CreateRepertoire(2, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo],  $subTitle[$ExisteVideo], $nameV, $ReperV, $bdb, $UserName);
 					
 								} elseif (!file_exists($Vdoss2)) {
 					
-									CreateRepertoire(1, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);
+									CreateRepertoire(1, $_POST['GenreName'], $Episode[$ExisteVideo], $Saison[$ExisteVideo],  $subTitle[$ExisteVideo], $nameV, $ReperV, $bdb, $UserName);
 					
-								} else {CreateRepertoire(0, $_POST['GenreName'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $nameV, $ReperV, $Remue, $bdb, $UserName);} 
+								} else {CreateRepertoire(0, $_POST['GenreName'], $Episode[$ExisteVideo],$Saison[$ExisteVideo],  $subTitle[$ExisteVideo], $nameV, $ReperV, $bdb, $UserName);} 
 	
 							} else {$Uerreur = "La video existe d¨¦ja";}
 
@@ -89,19 +133,35 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 
 
-	function CreateRepertoire($Season, $name, $Ep, $Saison, $nameVideo, $tmpRepertori, $Synopsis, $bda, $user) {
+	function CreateRepertoire($Season, $name, $Ep, $Saison, $sTitle, $nameVideo, $tmpRepertori, $bda, $user) {
+
+		$VerifMusic = $_POST['IsMusic'];
 
 		$GetTitle = $name ;
-		$GetSubtitle = "NoValide"; //$_POST['subtitle'] 
+		$GetSubtitle = $sTitle; //$_POST['subtitle'] 
 		$GetSeson = $Saison;
 		$GetEp = $Ep;
-		$GetGen =  $_POST['Genre'];
-		$GetTyp = "no"; //$_POST['typ']
-		$Format = "0";
+		$Format = $VerifMusic;
+		$upError = false;
+		//$GetGen =  $_POST['Genre'];
+
+		if ($VerifMusic == 0) {
+		
+			$GetTyp = $_POST['type']; //$_POST['typ']
+			$GetLang = $_POST['Lang'];
+			$DefChem = "Video/";
+			$Artiste = "NoValide";
+
+		} else {
+
+			$GetTyp = "NonValide"; //$_POST['typ']
+			$GetLang = "NonValide";
+			$DefChem = "Audio/";
+		}
 
 		$reqNombre = $bda->query('SELECT Nombre FROM titre');
 
-		$DefaultDaus = "Video/";
+		$DefaultDaus = $DefChem;
 		$dossier = $DefaultDaus . $_POST["GenreName"];
 
 		if ($Season > 1) {
@@ -119,7 +179,16 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		$Uerreur = null;
 
-		$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+		if ($VerifMusic == 0){
+
+			$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+
+		} else {
+
+		$AddVideo = $bda->prepare("INSERT INTO audio(album, Titre, Disk, Piste, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+
+		}
+
                                           $AddVideo->execute(array( 
                                           	'titre' => $GetTitle,
                                           	'SousTitre' => $GetSubtitle,

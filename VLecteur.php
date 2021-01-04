@@ -1,6 +1,6 @@
 <?php
 
-$moveUrl = "Video.php";
+$moveUrl = "video.php";
 
 include("Com/Conexion.php");
 

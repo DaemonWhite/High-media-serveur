@@ -2,15 +2,15 @@
     {
         if (Type === "Acueil") 
         {
-            window.location = "global.php";
+            window.location = "home";
         }
         if (Type === "Video") 
         {
-            window.location = "video.php";
+            window.location = "video";
         }
         if (Type === "Audio") 
         {
-            window.location = "audio.php"
+            NonDisponible() // window.location = "audio";
         } 
         if (Type === "Perso") 
         {
@@ -26,7 +26,7 @@
         }
         if (Type === "user") 
         {
-            window.location = "user.php";
+            window.location = "parametre";
         }
 
     }
@@ -39,11 +39,11 @@
 
      function appVideo(name, ep, sai){
 
-        window.location = "VLecteur.php?Name=" + name + "&Ep=" + ep + "&S=" + sai;
+        window.location = "Vlecteur?Name=" + name + "&Ep=" + ep + "&S=" + sai;
 
      }
 
      function appListVideo(name)
      {
-        window.location = "Video.php?name=" + name;
+        window.location = "Video?name=" + name;
      }

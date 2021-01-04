@@ -1,6 +1,6 @@
 <?php 
 
-$moveUrl = "global.php";
+$moveUrl = "/home";
 
 include("Com/Conexion.php");
 include("lang/FR.php"); ?>

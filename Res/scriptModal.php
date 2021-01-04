@@ -11,8 +11,8 @@ let modalB = null
 let form, progressBare;
 var totalVideo = 1
 var totalAudio = 1
-var addTotalVideo = 13
-var addTotalAudio = 13 // Pour plus tart
+var addTotalVideo = 1
+var addTotalAudio = 1 // Pour plus tart
 var Envoi = 0
 var Erreur = []
 var II = 1 //Generateur de variable
@@ -163,10 +163,11 @@ window.addEventListener('keydown', function (e) {
 })
 	
 
-function newBonus(num, type) {
+function newBonus(num, type, is) {
 
 	var num2 = num
 	var num3 = num
+	var addTotal = 0
     num2 - 1;
     num3 + 1;
 	if (num < 100) 
@@ -199,43 +200,57 @@ function newBonus(num, type) {
 
 			did.style.display = null
 			var EpV = document.getElementById("Ep" + (num3 + 1))
-			console.log(EpV, num3)
+			console.log(EpV, num3, "test")
 
 			displayNum1["bonus" + num] = 1
 			EpV.setAttribute('value', Eisode)
-			if (type == 0) {
-
-				if (num < 24 ) {
-					totalVideo++ 
-				} else {
-					totalAudio++
-				}
-
-			}
-			if (type == 1) { addTotalVideo++ }
+			
+			addTotal++;
 
 		} else {
 
 			if (num > 1 && num != 13 && num != 25 && num != 45) {
 				visual.setAttribute('value', '+')
 				visual2.style.display = null;
+			} else {
+				visual.setAttribute('value', '+')
 			}
 				
 			did.style.display = "none"
 			displayNum1["bonus" + num] = 0
-			if (type == 0) {
-
-				if (num < 25 ) {
-					totalVideo-- 
-				} else {
-					totalAudio--
-				}
-
-			}
-			if (type == 1) { addTotalVideo-- }
 			
+
+			addTotal--;
+
 		}
 	}
+
+	if (type == 0) {
+
+		if (is == 0 ) {
+
+			totalVideo = totalVideo + addTotal;
+
+		} else {
+
+			totalAudio = totalAudio + addTotal;
+
+		}
+
+	} else {
+
+		if (is == 0) {
+
+			addTotalVideo = addTotalVideo + addTotal;
+
+		} else {
+
+			addTotalAudio = addTotalAudio + addTotal;
+
+		}
+
+	}
+	console.log(totalAudio, totalVideo, addTotalAudio, addTotalVideo)
 }
 
 
@@ -294,7 +309,7 @@ function ErreurVerif(TypeEr, champ , erro){
 		var errorTitle1 = document.getElementById("ErrorTitle1")
 		var errorTitle2 = document.getElementById("ErrorTitle4")
 		errorTitleTT = "Titre déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Exemple ''Hunter X Hunter'' (2011) pour le diférencier de sa vertion de 1999";
-	} else { 
+	} else if (erro == 1){ 
 		Title0 = document.getElementById("titleA");
 		var errorTitle0 = document.getElementById("ErrorTitle2")
 		var errorTitle1 = document.getElementById("ErrorTitle3")
@@ -302,6 +317,14 @@ function ErreurVerif(TypeEr, champ , erro){
 		var errorTitle3 = document.getElementById("ErrorTitle6")
 		var errorTitle4 = document.getElementById("ErrorTitle7")
 		 errorTitleTT ="Album déja existan allez dans ajouter un épisode <br> ou <br> ajouter une précision Entre parantése si c'est un remaster ou par un autre artiste";
+	} else if (erro == 2){
+
+		var errorTitle2 = document.getElementById("ErrorTitle8")
+
+	} else if (erro == 3) {
+
+		var errorTitle2 = document.getElementById("ErrorTitle11")
+
 	}
 
 
@@ -402,12 +425,20 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		var errorTitle0 = document.getElementById("ErrorTitle0")
 		var errorTitle1 = document.getElementById("ErrorTitle1")
 		TotalCons = totalVideo
-	} else { 
+	} else if (mus == 1) { 
 		Title0 = document.getElementById("titleA");
 		var errorTitle0 = document.getElementById("ErrorTitle2")
 		var errorTitle1 = document.getElementById("ErrorTitle3")
 		TotalCons = totalAudio
 		console.log(mus)
+	} else if (mus == 2) {
+		
+		totalCons = addTotalVideo
+
+	} else if (mus == 3) {
+		
+		totalCons = addTotalAudio
+
 	}
 
 	if (errorTitle0.innerHTML != ""){
@@ -537,17 +568,35 @@ callback = readData;
 
 function uploadFile(formulaire){
 
+	var is;
+
 	if (formulaire == "formUpload") {
 
 		loadBar = "progress1"
 		is = 0
+		src = "upload/Upload.php"
 
-	} else if ("formUploadA") 
-	{
+	} else if (formulaire == "formUploadA") {
 
 		loadBar = "progress3"
 		is = 1
+		src = "upload/Upload.php"
+
+	} else if (formulaire == "formAddUpload") {
+
+		loadBar = "progress2"
+		is = 0
+		src = "upload/addUpload.php"
+
+	} else if (formulaire == "formAddUploadA"){
+
+		loadBar = "progress4"
+		is = 1
+		src = "upload/addUpload.php"
+
 	}
+
+	console.log(formulaire, is)
 
 	form = document.forms.namedItem(formulaire);
 	progressBare = document.getElementById(loadBar);
@@ -578,7 +627,7 @@ function uploadFile(formulaire){
 
 
 
-	  oReq.open("POST", "upload/Upload.php", true);
+	  oReq.open("POST", src, true);
 	  oReq.onload = function(oEvent) {
 	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
 	      callback(oReq.responseText);
@@ -698,31 +747,60 @@ function newUpload(is) {
 	}
 }
 
-function addUpload() {
-	numVideo = 12;
+function addUpload(is) {
+	numVideo = 0;
 	vide = 13;
 	ErrVideo = 37;
-
-	console.log(Erreur[0]+ Erreur[1] + Erreur[2] + Erreur[3] + Erreur[4] + Erreur[5] + Erreur[6]+ Erreur[7] + Erreur[8] + Erreur[9] + Erreur[10] + Erreur[11] + Erreur[12] + Erreur[13] + Erreur[15] + Erreur[16]+ Erreur[17] + Erreur[18] + Erreur[19] + Erreur[20] + Erreur[21] + Erreur[22] + Erreur[23] + Erreur[24])
+	var numMessage = 0;
+	var is2 = is + 1; // Normalise is
 		
-		while (addTotalVideo > numVideo) {
+	if (is == 0) {
+		aTitle = document.getElementById("title")
+		vide = 13;
+		totalIs = addTotalVideo 
+	} else {
+		aTitle = document.getElementById("titleA")
+		aRtiste = document.getElementById("Artiste")
+		vide = 45;
+		totalIs = addTotalAudio
+
+	}
+
+		
+		while (totalIs > numVideo) {
 
 			var verifVideo = document.getElementById("fileUpload" + vide)
+			var verifTitre = document.getElementById("subTitle" + vide)
 	
-			console.log(verifVideo.value)
-	
-			if (verifVideo.value == "") {
-	
-				surligne(verifVideo, true);
-				document.getElementById("ErrorTitle" ).innerHTML = "Veulier choisire une video";
-				ErrorMessage()
-				return false;
+			if (verifVideo.value == "") {// verifi si les fichier ne son vide
+				
+				ErreurVerif("1", verifVideo , is2)
+				numMessage++;
+				
 
 			} else {
 
-				document.getElementById("ErrorTitle" ).innerHTML = null;
-				surligne(verifVideo, false);
+				ErreurVerif("-1", verifVideo , is2)
 
+			}
+
+			erreur = verif(null, 1, vide, is2); // verifi tout les episode
+
+			if (erreur == true) {
+				numMessage++;
+			}
+
+			if (is != 0) {
+
+				if (verifTitre.value == "") { // Verifi l'existance des Titre des piste
+
+					ErreurVerif("2", verifTitre, is)
+					console.log(verifTitre)
+					numMessage++;
+	
+				} else {
+					ErreurVerif("-1", verifTitre, is)
+				}
 			}
 	
 	
@@ -730,52 +808,25 @@ function addUpload() {
 		numVideo++;
 		ErrVideo++;
 
+		console.log(vide,numVideo,ErrVideo)
+
+		}
+	
+	console.log(numMessage);
+
+	if (numMessage == 0) 
+	{
+
+		if (is == 0) {
+
+			uploadFile("formAddUpload")
+
+		} else if(is == 1) {
+
+			uploadFile("formAddUploadA")
+
 		}
 
-	
-
-	if ((Erreur[1] == 0) && (Erreur[2] == 0) && (Erreur[3] == 0) && (Erreur[4] == 0) && (Erreur[5] == 0) && (Erreur[6] == 0 )&& (Erreur[7] == 0) && (Erreur[8] == 0) && (Erreur[9] == 0) && (Erreur[10] == 0) && (Erreur[11] == 0) && (Erreur[12] == 0) && (Erreur[37] == 0) && (Erreur[38] == 0) && (Erreur[39] == 0) && (Erreur[40] == 0 )&& (Erreur[41] == 0) && (Erreur[42] == 0) && (Erreur[43] == 0) && (Erreur[44] == 0) && (Erreur[45] == 0) && (Erreur[46] == 0) && (Erreur[47] == 0) && (Erreur[48] == 0)) 
-	{
-		console.log(verifVideo.value)
-
-	form = document.forms.namedItem("formAddUpload");
-	progressBare = document.getElementById("progress2");
-	
-	  var
-	    oOutput = document.getElementById("output2"),
-	    oData = new FormData(document.forms.namedItem("formAddUpload"));
-	
-	  oData.append("CustomField", "This is some extra data");
-	
-	  let oReq = new XMLHttpRequest();
-	  oReq.upload.onloadstart = function (e) {
-	  	progressBare.style.display = null;
-	  	progressBare.style.width = "0%";
-	  	progressBare.max = e.total;
-	  	form.disabled = true;
-	  }
-
-	  oReq.upload.onprogress = function (e) {
-	  	var charge =  ((e.loaded / e.total)*100 )
-	  	progressBare.style.width = charge + "%";
-	  }
-
-	  oReq.upload.onloadend = function (e) {
-	  	form.disabled = true;
-	  }
-
-
-
-	  oReq.open("POST", "upload/addUpload.php", true);
-	  oReq.onload = function(oEvent) {
-	    if (oReq.readyState == 4 && (oReq.status == 200 || oReq.status == 0)) {
-	      callback(oReq.responseText);
-	    } else {
-	      oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
-	    }
-	  };
-	
-	  oReq.send(oData);
 	} else { ErrorMessage() }
 }
 
@@ -788,7 +839,7 @@ function verifEpisode(isMus) {
 	var serr
 	var text
 
-	if (isMus === 0) {
+	if (isMus === '0') {
 		serr = document.getElementById('nameSerr').value
 		text = document.getElementById("Shell")
 		isMus = "0";
@@ -952,7 +1003,7 @@ function EnvModifscript(Title, Ep, S, Sub, numMode, type) {
 
 	
 		vef = new XMLHttpRequest();
-		vef.open("POST", "Upload/gestionVideo.php", true);
+		vef.open("POST", "upload/gestionVideo.php", true);
 		 vef.onload = function(oEvent) {
 		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
 		      

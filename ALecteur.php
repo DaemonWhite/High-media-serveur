@@ -1,6 +1,6 @@
 <?php
 
-$moveUrl = "Audio.php";
+$moveUrl = "audio.php";
 
 include("Com/Conexion.php");
 
@@ -47,68 +47,7 @@ if ($video['album'] != "") {
 
   <?php echo $Dmode;?> 
 
-	 <nav id="menu">
-          
-              
-              <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Video</button>
-                  <button class="linkSelect" id="LinkDebutActif" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
-                  
-              </div>
-  
-              <div class="separationA">
-  
-                  <span class="infoUser"><?php echo $typeUser; ?></span>
-  
-                  <div class="imageUser">
-                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                      <?php } else { ?>
-                        <img src="User/Default/User.png" class="image">
-                      <?php } ?>
-                   </div>
-  
-                  <span class="UserName"><?php echo $Pseudo ?></span>
-                  <?php if ($_SESSION['Securiter'] != "-1") {
-                      # code...
-                  ?>
-                  <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                  </form>
-                   <?php } else { ?>
-                  <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
-                  </div>
-  
-                  <?php } ?>
-  
-              </div>
-  
-              <div class="separationB">
-  
-                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Uploade</button>
-                  <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
-                  <?php } ?>
-  
-              </div>  
-      
-  </nav>
-
+	 <?php include('Com/mainMenu.php') ?>
   
     
     <section class="zoneListe">

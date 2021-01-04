@@ -2,6 +2,9 @@
 
 V - 0.0.20A
 
+- Ajout d'un lecteur avec tout sont contenu (Non dynamique )
+- Uniformisation du menu navigation (Com/mainMenu.php)
+- Optimisation du syteme de recherche
 - Netoyage de la base SQL
 - Modification réactive ler refresh de la page aprées le changement de l'image utilisateur
 - Modification du repertoire d'image pour s'adapter au sytéme de protection linux
