@@ -143,6 +143,10 @@ document.querySelectorAll('.bottomConnect').forEach(a => {
 	a.addEventListener('click', openModal)
 })
 
+document.querySelectorAll('.linkSelect').forEach(a => {
+	a.addEventListener('click', openModal)
+})
+
 document.querySelectorAll('.bottomMenu').forEach(a => {
 	a.addEventListener('click', openModal)
 })
@@ -870,16 +874,6 @@ function verifEpisode(isMus) {
 
 	console.log(serr)
 
-}
-
-function NonDisponible()
-{
-	alert("Cette fonctionaliter saura ajouter plus tard")
-}
-
-function Reserver()
-{
-	alert("Il faut vous abonèe pour utiliser cette fonctionaliter")
 }
 
 function appTitleM()

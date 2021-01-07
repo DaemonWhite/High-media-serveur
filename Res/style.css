@@ -305,57 +305,57 @@ body
   border-left: 1.5vh solid #4AAD64;
 }
 
-.linkSelect[id="LinkDebutPassif"]
+.linkSelect[name="LinkDebutPassif"]
 {
   margin-top: 2vh;
 	width: 33vh;
 	height: 4vh;
 }
-.linkSelect[id="LinkDebutPassif"]:hover
+.linkSelect[name="LinkDebutPassif"]:hover
 {
 	 background: #3A874E;
 }
-.linkSelect[id="LinkDebutPassif"]:after
+.linkSelect[name="LinkDebutPassif"]:after
 {
   right: -2vh;
   border-left: 2vh solid #3A874E;
   border-top: 2vh solid transparent;
   border-bottom: 2vh solid transparent;
 }
-.linkSelect[id="LinkDebutPassif"]:hover:after
+.linkSelect[name="LinkDebutPassif"]:hover:after
 {
   border-left: 2vh solid #3A874E;
 }
 
-.linkSelect[id="LinkDebutActif"]
+.linkSelect[name="LinkDebutActif"]
 {
   margin-top: 2vh;
   width: 33vh;
   height: 4vh;
 }
-.linkSelect[id="LinkDebutActif"]:hover
+.linkSelect[name="LinkDebutActif"]:hover
 {
    background: #4AAD64;
 }
-.linkSelect[id="LinkDebutActif"]:after
+.linkSelect[name="LinkDebutActif"]:after
 {
   right: -2vh;
   border-left: 2vh solid #3A874E;
   border-top: 2vh solid transparent;
   border-bottom: 2vh solid transparent;
 }
-.linkSelect[id="LinkDebutActif"]:hover:after
+.linkSelect[name="LinkDebutActif"]:hover:after
 {
   border-left: 2vh solid #4AAD64;
 }
 
-.linkSelect[id="linkCenter"]
+.linkSelect[name="linkCenter"]
 {
   margin-top: 2vh;
   font-size: 2.3vh;
 }
 
-.linkSelect[id="LinkDown"]
+.linkSelect[name="LinkDown"]
 {
 	margin-top: 2vh;
 	font-size: 2.3vh;

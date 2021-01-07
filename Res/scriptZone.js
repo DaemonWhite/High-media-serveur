@@ -10,19 +10,19 @@
         }
         if (Type === "Audio") 
         {
-            NonDisponible() // window.location = "audio";
+        // window.location = "audio";
         } 
         if (Type === "Perso") 
         {
-            NonDisponible()
+
         } 
         if (Type === "Serv") 
         {
-            NonDisponible()
+
         } 
         if (Type === "Propo") 
         {
-            NonDisponible()
+
         }
         if (Type === "user") 
         {

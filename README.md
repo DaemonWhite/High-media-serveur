@@ -1,7 +1,8 @@
 # High media serveur
 
-V - 0.0.20A - 7 Janv 17h35
+V - 0.0.20A - 8 Janv 00h12
 
+- Ajoute de modal Fonctionalité invalide ou interdit
 - Correction de la position Menu
 - Optimisation de l'affichage boite à l'accueille
 - Ajout d'un lecteur avec tout sont contenu (Non dynamique )
