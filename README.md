@@ -1,7 +1,9 @@
 # High media serveur
 
-V - 0.0.20A - 4 Janv 22h52
+V - 0.0.20A - 7 Janv 17h35
 
+- Correction de la position Menu
+- Optimisation de l'affichage boite à l'accueille
 - Ajout d'un lecteur avec tout sont contenu (Non dynamique )
 - Uniformisation du menu navigation (Com/mainMenu.php)
 - Optimisation du syteme de recherche
