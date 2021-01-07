@@ -2,7 +2,7 @@
 
 $typeFavor = 1;
 
-$moveUrl = "user.php";
+$moveUrl = "/parametre";
 
 include("Com/Conexion.php");
 

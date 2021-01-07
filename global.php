@@ -1,6 +1,6 @@
 <?php
 
-$moveUrl = "global.php";
+$moveUrl = "/home";
 
 include("Com/Conexion.php"); // Programe de connexion
 
@@ -97,7 +97,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                                         <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
                                         <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span>
+                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
                                             <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
 
                                     </tr>

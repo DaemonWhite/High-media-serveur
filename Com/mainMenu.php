@@ -8,11 +8,11 @@ $serPage04 = 'id="linkCenter" onclick="ChangePAGE(\'Serv\')"';
 $serPage05 = 'id="linkCenter" onclick="ChangePAGE(\'Propo\')"';
 $serPage06 = 'id="LinkDown" onclick="ChangePAGE(\'user\')"';
 
-if ($moveUrl == "global.php") {
+if ($moveUrl == "/home") {
 
     $serPage00 = "id='LinkDebutPassif'";
 
-} elseif ($moveUrl == "video.php") {
+} elseif ($moveUrl == "/video") {
 
     $serPage01 = "id='LinkDebutPassif'";
 
