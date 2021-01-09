@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 4.9.7deb1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : Dim 07 juin 2020 à 19:14
--- Version du serveur :  10.3.22-MariaDB-1ubuntu1
--- Version de PHP : 7.4.3
+-- Généré le : sam. 09 jan. 2021 à 23:15
+-- Version du serveur :  10.3.25-MariaDB-0ubuntu1
+-- Version de PHP : 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -92,7 +92,7 @@ CREATE TABLE `membre` (
 --
 
 INSERT INTO `membre` (`ID_user`, `UserName`, `Name_Surname`, `Password`, `Securiter`, `Chambre`, `IP1`, `IP2`, `Modif_IP`) VALUES
-(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 406, '::1', '192.168.1.26', 0),
+(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 406, '127.0.0.1', '::1', 0),
 (2, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1),
 (3, 'JordanSauvage', 'Renaudin NathanaÃ«l', '$2y$10$xP2gcKX7mrvAfs0OnIB8UuJZm4Z68vxpQC0sGFj445VpyhCRFTJgK', 2, 500, '192.168.43.91', NULL, 1),
 (4, 'Bradley', 'Miguel Bradly ', '$2y$10$wrg7IZdQcRZc1nBMV22VMOFqloTB72Xk7aXGRkqS8BHhqwJe6vREa', 1, 156, '192.168.43.91', NULL, 1),
@@ -122,6 +122,7 @@ CREATE TABLE `titre` (
   `Synopsis` text DEFAULT NULL,
   `Affiche` varchar(255) NOT NULL DEFAULT 'upload/Video/DVideo.jpg',
   `Genre` varchar(255) NOT NULL,
+  `subGenre` varchar(255) DEFAULT NULL,
   `Type` varchar(255) NOT NULL DEFAULT 'no'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -144,7 +145,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `theme`, `image`, `historique`, `debugMode`) VALUES
-(1, 'Default', 'user/user/1/LogoBack.png', 0, 1),
+(1, 'Default', 'user/user/1/LogoBack.png', 0, 0),
 (2, 'Default', 'user/Default/User.png', 0, 0),
 (3, 'Default', 'user/Default/User.png', 0, 0),
 (4, 'Default', 'user/Default/User.png', 0, 0),
@@ -164,7 +165,8 @@ CREATE TABLE `video` (
   `Saison` int(11) NOT NULL DEFAULT 1,
   `Episode` int(11) NOT NULL DEFAULT 1,
   `Repertoire` text NOT NULL,
-  `Proprietaire` int(11) NOT NULL
+  `Proprietaire` int(11) NOT NULL,
+  `Lang` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --

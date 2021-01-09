@@ -1,7 +1,12 @@
 # High media serveur
 
-V - 0.0.20A - 8 Janv 00h12
+V - 0.0.20A - 9 Janv 23h19
 
+- Optiomisation du sytéme de recherche
+- Ajout Search gère les Lang et sous Genre
+- Ajout Upload gère enfin les Lang
+- Ajout Upload gére enfin les genres et sous-genres
+- Correction search barre Tag
 - Ajoute de modal Fonctionalité invalide ou interdit
 - Correction de la position Menu
 - Optimisation de l'affichage boite à l'accueille

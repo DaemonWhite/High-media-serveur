@@ -145,6 +145,33 @@
 
 			$_Lang_Cat_Gen	= "Genre?";
 
+			#Animé
+				$_Lang_Sub_Kod = "Kodomo";
+				$_Lang_Sub_Shn = "Shonen";
+				$_Lang_Sub_Sho = "Shojo";
+				$_Lang_Sub_Sei = "Seinen";
+				$_Lang_Sub_Jos = "Josei";
+				$_Lang_Sub_Sej = "Sejin";
+
+			#Documentaire
+				$_Lang_Sub_Ani = "Animalier";
+				$_Lang_Sub_His = "Histoire";
+				$_Lang_Sub_Rep = "Reportage";
+				$_Lang_Sub_Sci = "Science";
+
+			#Filme
+
+				$_Lang_Sub_Faa = "Fantastique";
+				$_Lang_Sub_Fae = "Fantesique";
+				$_Lang_Sub_Hor = "Horreur";
+				$_Lang_Sub_Sci = "Science Fiction";
+				$_Lang_Sub_Pos = "Post Apocalyptique";
+
+			#Télé
+				$_Lang_Sub_Jeu = "Jeux télé";
+				$_Lang_Sub_Pol = "Policier";
+				$_Lang_Sub_Tel = "Télé réaliter";
+				$_Lang_Sub_Zap = "Zapping";
 
 
 

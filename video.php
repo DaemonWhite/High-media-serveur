@@ -71,19 +71,19 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
               <div>
 
-                      <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme()">
-                        <option value=""><?php echo $_Lang_Cat_Nop; ?></option>
-                        <option value="Anime"><?php echo $_Lang_Cat_Anim; ?></option>
-                        <option value="Docu"><?php echo $_Lang_Cat_Docu; ?></option>
-                        <option value="Movie"><?php echo $_Lang_Cat_Film; ?></option>
-                        <option value="TV"><?php echo $_Lang_Cat_Setv; ?> télé</option>
+                      <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="genreSelecte('2'); GernreAnme('0'); ">
+                        <option value="no" ><?php echo $_Lang_Cat_Nop; ?></option>
+                        <option value="Anime" ><?php echo $_Lang_Cat_Anim; ?></option>
+                        <option value="Docu" ><?php echo $_Lang_Cat_Docu; ?></option>
+                        <option value="Movie" ><?php echo $_Lang_Cat_Film; ?></option>
+                        <option value="TV" ><?php echo $_Lang_Cat_Setv; ?></option>
                       </select>
 
-                      <select name="Gen" class="selectBase" style="margin-right: 5%;">
-                        <option value=""> <?php echo $_Lang_Cat_Gen; ?> </option>
+                      <select id="subGen" name="Gen" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme('0')">
+                        <option value="no"> <?php echo $_Lang_Cat_Gen; ?> </option>
                       </select>
                       
-                      <select name="Langue" class="selectBase">
+                      <select id="suLang" name="Langue" class="selectBase">
                         <option value=""> <?php echo $_Lang_Cat_Lang; ?></option>
                       </select>
               </div>

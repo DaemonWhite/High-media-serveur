@@ -21,10 +21,14 @@ function touche(e, is){
        var oData = new FormData();
        var text = document.getElementById("barSearch").value
        var Gen = document.getElementById("cat").value
+       var subGen = document.getElementById("subGen").value
+       var Lang = document.getElementById("suLang").value
 
        
        oData.append("Search", text)
        oData.append("Genre", Gen)
+       oData.append("subGen", subGen)
+       oData.append("Lang", Lang)
        oData.append("Type", type)
 
     

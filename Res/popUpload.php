@@ -83,21 +83,16 @@ while ( $i <= 1) { ?>
                           <table>
                           <div align="center">
                             <tr><td></td>
-                              <td><select name="Genre" class="selectBase">
-                                  <option value="Anime">Animé</option>
-                                  <option value="Docu">Documentaire</option>
-                                  <option value="Movie">Filme</option>
-                                  <option value="TV">Série télé</option>
+                              <td><select id="typeSelect" name="Genre" class="selectBase" onchange="genreSelecte(0)" >
+                                    <option value="no"><?php echo $_Lang_Cat_Nop; ?></option>
+                                    <option value="Anime"><?php echo $_Lang_Cat_Anim; ?></option>
+                                    <option value="Docu"><?php echo $_Lang_Cat_Docu; ?></option>
+                                    <option value="Movie"><?php echo $_Lang_Cat_Film; ?></option>
+                                    <option value="TV"><?php echo $_Lang_Cat_Setv; ?></option>
                               </select></td>
 
-                              <td><select name="type" class="selectBase">
-                                <option value="no">Genre ?</option>
-                                <option value="Kodomo">Kodomo</option>
-                                <option value="Shonen">Shonene</option>
-                                <option value="Shojo">Shojo</option>
-                                <option value="Seinen">Seinen</option>
-                                <option value="Josei">Josei</option>
-                                <option value="Sejin">Sejin</option>
+                              <td><select id="genreSelect" name="type" class="selectBase">
+                                    <option value="no">Genre ?</option>
                               </select></td>
 
                               <td><select name="Lang" class="selectBase">

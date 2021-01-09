@@ -163,6 +163,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		$Format = $VerifMusic;
 		$upError = false;
 		$GetGen =  $_POST['Genre'];
+		$GetsubGen =  $_POST['type'];
+		$GetLang = ['Lang']; // Sous Genres
 		if ($VerifMusic == 0) {
 		
 			$GetTyp = $_POST['type']; //$_POST['typ']
@@ -204,12 +206,13 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		if ($upError == false) {
 
 			echo "chemin A ";
-			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, Type, Synopsis) VALUES  (:nom, :Format, :Artiste, :Affiche, :Genre, :type, :Synopsis)");
+			$AddTitre = $bda->prepare("INSERT INTO titre(nom, Format, Artiste, Affiche, Genre, subGenre, Type, Synopsis) VALUES  (:nom, :Format, :Artiste, :Affiche, :Genre, :subGenre, :type, :Synopsis)");
   	                                  $AddTitre->execute(array( 
   	                                  	'nom' => $GetTitle,
   	                                  	'Format' => $Format,
   	                                  	'Artiste' => $Artiste,
   	                                  	'Genre' => $GetGen,
+  	                                  	'subGenre' => $GetsubGen,
   	                                  	'type' => $VerifMusic,
   	                                  	'Affiche' => $GetMin,
   	                                  	'Synopsis' => $Synopsis));
@@ -241,11 +244,11 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		if ($VerifMusic == 0) {
 			 
-			$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+			$AddVideo = $bda->prepare("INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire, Lang) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire, :Lang)");
 
 		} else {
 
-			$AddVideo = $bda->prepare("INSERT INTO audio(album, Titre, Disk, Piste, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)");
+			$AddVideo = $bda->prepare("INSERT INTO audio(album, Titre, Disk, Piste, Repertoire, Proprietaire, Lang) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire, :Lang)");
 
 
 		}
@@ -256,7 +259,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
                                           	'Saison' => $GetSeson,
                                           	'Episode' => $GetEp,
                                           	'Repertoire' => $Ressource,
-                                          	'Proprietaire' => $user));
+                                          	'Proprietaire' => $user,
+                                           	'Lang' => $GetLang));
 
 		move_uploaded_file($tmpRepertori, $dossier .  $nameVideo);
 

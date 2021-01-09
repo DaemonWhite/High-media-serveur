@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"align-",
+				"align-items\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"bor",
+				"border-left\tproperty"
+			],
+			[
+				"fle",
+				"flex\tproperty"
+			],
+			[
 				"background-c",
 				"background-color\tproperty"
 			],
@@ -20,10 +40,6 @@
 				"div\tTag"
 			],
 			[
-				"back",
-				"background-repeat\tproperty"
-			],
-			[
 				"marg",
 				"margin-left\tproperty"
 			],
@@ -38,10 +54,6 @@
 			[
 				"pl",
 				"playerPListB"
-			],
-			[
-				"fle",
-				"flex-start\tjustify-content"
 			],
 			[
 				"max-",
@@ -232,10 +244,6 @@
 				"select\tTag"
 			],
 			[
-				"bor",
-				"border-top\tproperty"
-			],
-			[
 				"mra",
 				"margin\tproperty"
 			],
@@ -372,10 +380,6 @@
 				"_FILES"
 			],
 			[
-				"text",
-				"text-decoration\tproperty"
-			],
-			[
 				"pa",
 				"padding\tproperty"
 			],
@@ -510,20 +514,16 @@
 			[
 				"p",
 				"PDO"
-			],
-			[
-				"onc",
-				"onchange"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "audio.php",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 8211,
+				"buffer_size": 7547,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -532,7 +532,34 @@
 			"file": "Res/popUpload.php",
 			"settings":
 			{
-				"buffer_size": 26977,
+				"buffer_size": 26978,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/popup.php",
+			"settings":
+			{
+				"buffer_size": 3712,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Com/mainMenu.php",
+			"settings":
+			{
+				"buffer_size": 5006,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleBox.css",
+			"settings":
+			{
+				"buffer_size": 1593,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -541,33 +568,7 @@
 			"file": "Res/scriptZone.js",
 			"settings":
 			{
-				"buffer_size": 964,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/matheo/Documents/GitHub/High-media-serveur/Com/mainMenu.php",
-			"settings":
-			{
-				"buffer_size": 5105,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Com/Conexion.php",
-			"settings":
-			{
-				"buffer_size": 3486,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 7411,
+				"buffer_size": 863,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -576,34 +577,43 @@
 			"file": "Res/scriptModal.php",
 			"settings":
 			{
-				"buffer_size": 23354,
+				"buffer_size": 23279,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "upload/Upload.php",
+			"file": "global.php",
 			"settings":
 			{
-				"buffer_size": 7450,
+				"buffer_size": 9686,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "video.php",
+			"file": "/home/matheo/Bureau/HMSstop.sh",
 			"settings":
 			{
-				"buffer_size": 5957,
+				"buffer_size": 81,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Res/style.css",
+			"settings":
+			{
+				"buffer_size": 14370,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "VLecteur.php",
+			"file": "user.php",
 			"settings":
 			{
-				"buffer_size": 8623,
+				"buffer_size": 7723,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -709,15 +719,19 @@
 		"/mnt/DataLinux/var/www/HMS",
 		"/mnt/DataLinux/var/www/HMS/apache",
 		"/mnt/DataLinux/var/www/HMS/Com",
+		"/mnt/DataLinux/var/www/HMS/img",
 		"/mnt/DataLinux/var/www/HMS/Res",
 		"/mnt/DataLinux/var/www/HMS/upload",
-		"/mnt/DataLinux/var/www/HMS/upload/Video",
-		"/mnt/DataLinux/var/www/HMS/upload",
-		"/mnt/DataLinux/var/www/HMS/Res",
-		"/mnt/DataLinux/var/www/HMS/Com"
+		"/mnt/DataLinux/var/www/HMS/upload/Video"
 	],
 	"file_history":
 	[
+		"/etc/apache2/sites-available/HMS.conf",
+		"/home/matheo/Documents/GitHub/High-media-serveur/Com/mainMenu.php",
+		"/mnt/DataLinux/var/www/HMS/audio.php",
+		"/mnt/DataLinux/var/www/HMS/Res/scriptModal.php",
+		"/mnt/DataLinux/var/www/HMS/upload/Upload.php",
+		"/mnt/DataLinux/var/www/HMS/video.php",
 		"/home/matheo/Documents/GitHub/High-media-serveur/upload/Upload.php",
 		"/home/matheo/Documents/GitHub/High-media-serveur/video.php",
 		"/home/matheo/Documents/GitHub/High-media-serveur/Res/scriptModal.php",
@@ -727,8 +741,6 @@
 		"/mnt/DataLinux/var/www/HMS/Com/userSetings.php",
 		"/mnt/DataLinux/var/www/HMS/Com/mainMenu.php",
 		"/mnt/DataLinux/var/www/HMS/upload/addUpload.php",
-		"/mnt/DataLinux/var/www/HMS/upload/Upload.php",
-		"/mnt/DataLinux/var/www/HMS/Res/scriptModal.php",
 		"/mnt/DataLinux/var/www/HMS/Res/styleAudio.css",
 		"/mnt/Data/wamp64/www/hgm/Res/popUpload.php",
 		"/home/matheo/Bureau/pc.sh",
@@ -841,15 +853,11 @@
 		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.js",
 		"/D/Wamp/www/HighMediaServeur/popup.php",
 		"/D/Wamp/www/HighMediaServeur/test.html",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModal2.js",
-		"/D/Wamp/www/TEST/style-test.css",
-		"/D/Wamp/www/TEST/script.js",
-		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/D/Wamp/www/TEST/script"
+		"/D/Wamp/www/HighMediaServeur/Res/scriptModal2.js"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -865,6 +873,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bottomConnect",
+			"name",
+			"co",
+			"res/popup.php",
+			"Conex",
+			"#Conex",
+			"Res/popup.php#Conex",
+			"NonDisponible",
+			"borderS",
 			"VLecteur.php",
 			"VLecteur.phpz",
 			"VLecteur.php",
@@ -983,16 +1000,7 @@
 			"cat",
 			"appVideo",
 			"SearchRV",
-			"SearchVideo",
-			"tdTexte",
-			"choi",
-			"Vaffiche",
-			"link",
-			"order",
-			"bacgroundUser",
-			"caseImg",
-			"zoneListe",
-			"back"
+			"SearchVideo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1011,167 +1019,16 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "audio.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5721,
-								5721
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Res/popUpload.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 26977,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								694,
-								694
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Res/scriptZone.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 964,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								941,
-								941
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/matheo/Documents/GitHub/High-media-serveur/Com/mainMenu.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5105,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2512,
-								2512
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Com/Conexion.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2600,
-								2600
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 536.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7411,
+						"buffer_size": 7547,
 						"regions":
 						{
 						},
@@ -1184,6 +1041,7 @@
 						],
 						"settings":
 						{
+							"spell_check": true,
 							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"word_wrap": false
 						},
@@ -1191,36 +1049,242 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 3,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 6,
-					"file": "Res/scriptModal.php",
+					"buffer": 1,
+					"file": "Res/popUpload.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23354,
+						"buffer_size": 26978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4128,
-								4128
+								17760,
+								17760
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5073.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Res/popup.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2461,
+								2461
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 573.0,
+						"translation.y": 996.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Com/mainMenu.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5006,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4848,
+								4848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 199.0,
+						"translation.y": 1071.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Res/styleBox.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								884,
+								884
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "Res/scriptZone.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 863,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Res/scriptModal.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18057,
+								18057
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12746.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "global.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 807.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/matheo/Bureau/HMSstop.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								80,
+								80
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1230,92 +1294,63 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "upload/Upload.php",
+					"buffer": 9,
+					"file": "Res/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7450,
+						"buffer_size": 14370,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								288,
-								288
+								4476,
+								4476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "user.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								37
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "video.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5957,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5131,
-								5131
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2193.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "VLecteur.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 8623,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2919.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -1349,7 +1384,7 @@
 		"cols":
 		[
 			0.0,
-			0.631640996337,
+			0.555989310569,
 			1.0
 		],
 		"rows":
@@ -1413,7 +1448,7 @@
 		],
 		"width": 542.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
