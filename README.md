@@ -3,14 +3,14 @@
 # Instalation
 
 
-1 - Telecharger la dernière vertions
-2 - installer PHP MariaDB et Apache
-3 - Lancer l'installateur en admin ./install.sh sur le serveur
-4 - Créer l'utilisateur MariaDB HMS
-		User : HMS
-		Pass : Secure45RootHGMProject
-5 - Installer la base de donner highmediadata.sql
-6 - Testez et ce sera fini
+- 1 - Telecharger la dernière vertions
+- 2 - installer PHP MariaDB et Apache
+- 3 - Lancer l'installateur en admin ./install.sh sur le serveur
+- 4 - Créer l'utilisateur MariaDB HMS
+		- - User : HMS
+		- - Pass : Secure45RootHGMProject
+- 5 - Installer la base de donner highmediadata.sql
+- 6 - Testez et ce sera fini
 
 # Changelog
 
