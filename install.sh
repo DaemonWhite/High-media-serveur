@@ -42,7 +42,7 @@ startInstall() {
 	echo "Copie des fichier ... ";
 
 	mkdir $base/HMS;
-	cp -R ../ $base;
+	cp -R ../High-media-serveur $base;
 
 	echo "";
 	echo "installation du service";
