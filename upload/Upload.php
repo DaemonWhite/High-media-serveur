@@ -24,13 +24,13 @@ if ($VerifMusic == "0") {
 
 }
 
-var_dump($_FILES);
+//var_dump($_FILES);
 
 while ($numGen <= $maxGen) {
 
-	echo $iniEpisode = "Ep" . $repGen;
-	echo $iniSaison = "Saison" . $repGen;
-	echo $iniSubTitle = "subTitle" . $repGen;
+	$iniEpisode = "Ep" . $repGen;
+	$iniSaison = "Saison" . $repGen;
+	$iniSubTitle = "subTitle" . $repGen;
 
 	if ($_POST[$iniEpisode] != 0) {
 
@@ -79,7 +79,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		} else {
 			$minia = 'upload/' . $defChe . $min;
 		}
-		echo "papa2";
+		//echo "papa2";
 
 		
 
@@ -112,23 +112,28 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 							$Vdoss1 = $defChe . $TitrePrincip ;
 							$Vdoss2 = $Vdoss1 . "/S" . $Saison[$ExisteVideo] ;
 
-							$nameV = $_FILES['Video']['name'][$ExisteVideo];
+
+							$preNameV = $_FILES['Video']['name'][$ExisteVideo];
+							$path_parts = pathinfo($preNameV, PATHINFO_EXTENSION);
 							$ReperV = $_FILES['Video']['tmp_name'][$ExisteVideo];
 
-							echo $Vdoss2;
+							$nameV = $_POST['nameSerie'] . " S" . $Saison[$ExisteVideo] . " EP" . $Episode[$ExisteVideo] . "." . $path_parts;
+							//var_dump($_FILES['Video']);
+							echo $path_parts;
+							//echo $Vdoss2;
 	
 							if (!file_exists($Vdoss2 . $_FILES['Video']['name'][$ExisteVideo])) {
 				
 								if (!file_exists($Vdoss1)) { // Si le repertoire video n'existe pas
 					
-									echo "\npremière Video\n";
+									//echo "\npremière Video\n";
 									CreateRepertoire(2, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $subTitle[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);
 								} elseif (!file_exists($Vdoss2)) { // Si le repertoire saison n'existe pas
 									
-									echo "\nstNouvelle saison\n";
+									//echo "\nstNouvelle saison\n";
 									CreateRepertoire(1, $_POST['nameSerie'], $Episode[$ExisteVideo], $Saison[$ExisteVideo], $subTitle[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);
 								} else {
-									echo "\n pas de modifcation\n";
+									//echo "\n pas de modifcation\n";
 									CreateRepertoire(0, $_POST['nameSerie'], $Episode[$ExisteVideo],$Saison[$ExisteVideo], $subTitle[$ExisteVideo], $nameV, $ReperV, $Remue, $minia, $bdb, $UserName);
 								} 
 	
@@ -179,7 +184,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 			$DefChem = "Audio/";
 			$Artiste = $_POST['titleName'];
 		}
-		echo $GetTitle;
+		//echo $GetTitle;
 
 		//$reqNombre = $bda->query('SELECT Nombre FROM titre');
 
@@ -223,11 +228,11 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 		$dossier = $DefaultDaus . $_POST["nameSerie"];
 		$dossMini = $DefChem . $GetTitle. "/";
 
-		echo "\n" . $dossier;
+		//echo "\n" . $dossier;
 
 		if ($Season > 1) {
 			mkdir($dossier);
-			echo "Creation du dossier tritre" . $dossier;
+			//echo "Creation du dossier tritre" . $dossier;
 		}
 		
 
@@ -235,7 +240,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		if ($Season > 0) {
 			mkdir($dossier);
-			echo "Creation du dossier Saison " . $dossier . " ";
+			//echo "Creation du dossier Saison " . $dossier . " ";
 		}
 
 		$Ressource = "upload/" . $dossier . $nameVideo;

@@ -42,7 +42,7 @@ startInstall() {
 	echo "Copie des fichier ... ";
 
 	mkdir $base/HMS;
-	cp -R ../High-media-serveur/* $base;
+	cp -R ../High-media-serveur/* $basehms;
 
 	echo "";
 	echo "installation du service";
@@ -67,8 +67,8 @@ startInstall() {
 	chmod -R 730 $basehms/upload/Video/;
 	chmod -R 730 $basehms/upload/Audio/;
 	chmod -R 730 $basehms/user/user/;
-	chown -R $basehms/apache HMS;
-	chgrp -R $basehms/apache HMS;
+	chown -R apache $basehms;
+	chgrp -R apache $basehms;
 
 	echo "";
 	echo "Securisatio terminer";
