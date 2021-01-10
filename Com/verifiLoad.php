@@ -17,7 +17,7 @@ if (!empty($_GET['Deco'])) {
 
     echo "Deco";
 
-    header('Location: global.php');
+    header('Location: /home');
 }
 
 if (empty($_SESSION['ID']) OR empty($_SESSION['Pseudo'] OR empty($_SESSION['Securiter']))) {

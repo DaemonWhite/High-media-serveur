@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : sam. 09 jan. 2021 à 23:15
+-- Généré le : Dim 10 jan. 2021 à 16:24
 -- Version du serveur :  10.3.25-MariaDB-0ubuntu1
 -- Version de PHP : 7.4.9
 
@@ -84,20 +84,17 @@ CREATE TABLE `membre` (
   `Chambre` int(11) NOT NULL,
   `IP1` text DEFAULT NULL,
   `IP2` text DEFAULT NULL,
-  `Modif_IP` int(11) DEFAULT 0
+  `Modif_IP` int(11) DEFAULT 0,
+  `conf` int(11) NOT NULL DEFAULT 0
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `membre`
 --
 
-INSERT INTO `membre` (`ID_user`, `UserName`, `Name_Surname`, `Password`, `Securiter`, `Chambre`, `IP1`, `IP2`, `Modif_IP`) VALUES
-(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 406, '127.0.0.1', '::1', 0),
-(2, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1),
-(3, 'JordanSauvage', 'Renaudin NathanaÃ«l', '$2y$10$xP2gcKX7mrvAfs0OnIB8UuJZm4Z68vxpQC0sGFj445VpyhCRFTJgK', 2, 500, '192.168.43.91', NULL, 1),
-(4, 'Bradley', 'Miguel Bradly ', '$2y$10$wrg7IZdQcRZc1nBMV22VMOFqloTB72Xk7aXGRkqS8BHhqwJe6vREa', 1, 156, '192.168.43.91', NULL, 1),
-(5, 'KadoshiMiku', 'AmossÃ© AurÃ©lien', '$2y$10$uEOo4zdC9oAAYR1oHH5.F.2FOPgagI18xsvi5lve/Zwbfzb/r2Bie', 1, 409, '192.168.43.91', NULL, 1),
-(6, 'Solandar', 'Prou Alexandre', '$2y$10$6XUjCquyzqNrRIRCBfwglerZ94MEpGYbUxSz88.guHWFkUMsL6br2', 1, 414, NULL, NULL, 0);
+INSERT INTO `membre` (`ID_user`, `UserName`, `Name_Surname`, `Password`, `Securiter`, `Chambre`, `IP1`, `IP2`, `Modif_IP`, `conf`) VALUES
+(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 418, '127.0.0.1', '::1', 0, 1),
+(2, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1, 0);
 
 --
 -- Déclencheurs `membre`
@@ -146,11 +143,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`ID`, `theme`, `image`, `historique`, `debugMode`) VALUES
 (1, 'Default', 'user/user/1/LogoBack.png', 0, 0),
-(2, 'Default', 'user/Default/User.png', 0, 0),
-(3, 'Default', 'user/Default/User.png', 0, 0),
-(4, 'Default', 'user/Default/User.png', 0, 0),
-(5, 'Default', 'user/Default/User.png', 0, 0),
-(6, 'Default', 'user/Default/User.png', 0, 0);
+(2, 'Default', 'user/Default/User.png', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -241,7 +234,7 @@ ALTER TABLE `historique`
 -- AUTO_INCREMENT pour la table `membre`
 --
 ALTER TABLE `membre`
-  MODIFY `ID_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `titre`
@@ -253,7 +246,7 @@ ALTER TABLE `titre`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `video`

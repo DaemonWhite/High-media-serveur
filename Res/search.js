@@ -12,7 +12,7 @@ function touche(e, is){
 
     }
     
-    function GernreAnme(type)
+function GernreAnme(type)
     {
       
 

@@ -46,6 +46,15 @@
 	$_Lang_Con_Souv = "Se souvenir de moi";
 	$_Lang_Con_Invi = "Se connecter en temps qu'invité";
 
+# Creation de compte
+
+	$_Lang_Cre_pren = "Prénom Nom";
+	$_Lang_Cre_Conf = "Confirmer le mot de passe";
+	$_Lang_Cre_Cham = "Chambre";
+	$_Lang_Cre_Reto = "Retour";
+	$_Lang_Cre_Envo = "Envoyer";
+
+
 	#Erreur
 
 		$_Lang_Con_ErrR	= "Connexion refuser, la conexion automatique n'acsepte que 2appareils simultanément.";
