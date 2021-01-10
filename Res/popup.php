@@ -67,6 +67,32 @@
 
 	</section>
 
+	  <section id="NDispo" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+    
+ 	     <div class="CupeInfo js-stope-modale">
+
+             
+             <p style="text-align: center; margin-top: 5%; font-size: 3vh; color: white;"> Cette fonctionnalité saura ajouter plus tard. </p>
+
+              <button class="boutonUpload js-close-modale" style="margin-top: 5%; margin-bottom: 3%; margin-left: 20%">Fermer</button>
+          
+          </div>
+
+  	</section>
+
+  	<section id="YNConnecte" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+    
+ 	     <div class="CupeInfo js-stope-modale">
+
+             
+             <p style="text-align: center; margin-top: 5%; font-size: 3vh; color: white;"> Vous devez vous connecter pour profiter de ces fonctionnalités. </p>
+
+              <button class="boutonUpload js-close-modale" style="margin-top: 5%; margin-bottom: 3%; margin-left: 20%">Fermer</button>
+          
+          </div>
+
+  	</section>
+
 
 	<!-- <div>			Exemple popup
             

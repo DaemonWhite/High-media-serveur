@@ -1,18 +1,19 @@
 <?php
 
-$moveUrl = "Video.php";
+include("lang/FR.php");
+
+$moveUrl = "/video";
 
 include("Com/Conexion.php");
 
 include("Com/verifiLoad.php");
 
+include("Com/userSetings.php"); 
+
 $typeFavor = 1;
 
-$img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-$ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
+$ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
-
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $NameVideo = $bdd->query("SELECT nom, Affiche, type FROM titre WHERE type='0' ORDER BY nom   ");
 
@@ -56,94 +57,34 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
 
 <body class="BackgroundA">
 
+  <?php echo $Dmode; ?>
 
-
-  <nav id="menu">
-          
-              
-              <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
-                  <button class="linkSelect" id="LinkDebutPassif">Vidéo</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
-  
-              </div>
-  
-              <div class="separationA">
-  
-                  <span class="infoUser"><?php echo $typeUser; ?></span>
-  
-                  <div class="imageUser">
-                    <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                          <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                    <?php } else { ?>
-                          <img src="User/Default/User.png" class="image">
-                    <?php } ?>
-                  </div>
-  
-                  <span class="UserName"><?php echo $Pseudo ?></span>
-                  <?php if ($_SESSION['Securiter'] != "-1") {
-                      # code...
-                  ?>
-                  <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                  </form>
-                   <?php } else { ?>
-                  <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
-                  </div>
-  
-                  <?php } ?>
-  
-              </div>
-  
-              <div class="separationB">
-  
-                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Upload</button>
-                  <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
-                  <?php } ?>
-  
-              </div>  
-      
-  </nav>
+  <?php include('Com/mainMenu.php') ?>
 
     <section class="entreVideo">
         
             <div class="SearchVideo" align="center">
 
               <div class="SearchV">
-                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme()">
+                      <input type="text" id="barSearch" class="SearchRV" onkeydown="touche(event, 0)"><input type="button" name="SearchVB" class="SearchSV" value="Rechercher" onclick="GernreAnme('0')">
               </div>
 
               <div>
 
-                      <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme()">
-                        <option value="">Catégorie?</option>
-                        <option value="Anime">Animé</option>
-                        <option value="Docu">Documentaire</option>
-                        <option value="Movie">Filme</option>
-                        <option value="TV">Série télé</option>
+                      <select id="cat" class="selectBase" style="margin-right: 5%;" onchange="genreSelecte('2'); GernreAnme('0'); ">
+                        <option value="no" ><?php echo $_Lang_Cat_Nop; ?></option>
+                        <option value="Anime" ><?php echo $_Lang_Cat_Anim; ?></option>
+                        <option value="Docu" ><?php echo $_Lang_Cat_Docu; ?></option>
+                        <option value="Movie" ><?php echo $_Lang_Cat_Film; ?></option>
+                        <option value="TV" ><?php echo $_Lang_Cat_Setv; ?></option>
                       </select>
 
-                      <select name="Gen" class="selectBase" style="margin-right: 5%;">
-                        <option value="">Genre?</option>
+                      <select id="subGen" name="Gen" class="selectBase" style="margin-right: 5%;" onchange="GernreAnme('0')">
+                        <option value="no"> <?php echo $_Lang_Cat_Gen; ?> </option>
                       </select>
                       
-                      <select name="Langue" class="selectBase">
-                        <option value="">Lang?</option>
+                      <select id="suLang" name="Langue" class="selectBase">
+                        <option value=""> <?php echo $_Lang_Cat_Lang; ?></option>
                       </select>
               </div>
 
@@ -179,56 +120,7 @@ if ((empty($_GET['name'])) or ($_GET['name'] == "null") ) {
   </body>
 
 
-    <script type="text/javascript">
-
-    function touche(e){
-
-      var touche = event.keyCode;
-
-      console.log(touche)
-      
-      if (touche == 13) {
-
-        GernreAnme(0)
-
-      }
-
-    }
-    
-    function GernreAnme(type)
-    {
-      
-
-      var sizeVideo = document.getElementById("zoneVideo");
-
-       var oData = new FormData();
-       var text = document.getElementById("barSearch").value
-       var Gen = document.getElementById("cat").value
-
-       
-       oData.append("Search", text)
-       oData.append("Genre", Gen)
-
-    
-      
-       vef = new XMLHttpRequest();
-       vef.open("POST", "Upload/appVideo.php", true);
-        vef.onload = function(oEvent) {
-           if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
-             
-             sizeVideo.innerHTML = vef.responseText;
-             
-    
-           } else {
-    
-           }
-         };
-      
-       vef.send(oData);
-
-       }
-
-  </script>
+    <script type="text/javascript" src="Res/search.js"></script>
 
 
   </html>
@@ -239,6 +131,7 @@ $EpVideo = $bdd->query('SELECT titre, SousTitre, Saison, Episode FROM video WHER
 
 $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET['name'] . '\'');
         
+        $moveUrl = "/video?=";
 
     ?>
 
@@ -259,67 +152,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
 
   <body class="BackgroundA">
     
-    <nav id="menu">
-          
-              
-              <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Accueil</button>
-                  <button class="linkSelect" id="LinkDebutPassif" onclick="ChangePAGE('Video')">Vidéo</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
-  
-              </div>
-  
-              <div class="separationA">
-  
-                  <span class="infoUser"><?php echo $typeUser; ?></span>
-  
-                  <div class="imageUser">
-                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                          <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                      <?php } else { ?>
-                          <img src="User/Default/User.png" class="image">
-                      <?php } ?>
-                  </div>
-  
-                  <span class="UserName"><?php echo $Pseudo ?></span>
-                  <?php if ($_SESSION['Securiter'] != "-1") {
-                      # code...
-                  ?>
-                  <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                  </form>
-                   <?php } else { ?>
-                  <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
-                  </div>
-  
-                  <?php } ?>
-  
-              </div>
-  
-              <div class="separationB">
-  
-                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Upload</button>
-                  <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionnaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
-                  <?php } ?>
-  
-              </div>  
-      
-  </nav>
+    <?php include('Com/mainMenu.php') ?>
     
     <section class="zoneListe">
         <div  class="blockListeVideo">
@@ -340,7 +173,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
             
               }
         
-             echo '<div> <a class="listeEpisode" href="VLecteur?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .' &S='. $view .' ">Episode ' . $donnes['Episode'] . '</a> </div>' ;
+             echo '<div> <a class="listeEpisode" href="/Vlecteur?Name='. $_GET['name'] .'&Ep='. $donnes['Episode'] .' &S='. $view .' ">Episode ' . $donnes['Episode'] . '</a> </div>' ;
             }
         
             ?>

@@ -1,1 +1,2 @@
-ErrorDocument 404 /HighMediaServeur/error/404.php
+ErrorDocument 404 /Error/404.php
+ErrorDocument 403 /Error/404.php

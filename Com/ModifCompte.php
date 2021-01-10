@@ -11,7 +11,7 @@ echo $_POST['NVerifPassV'];
 echo $_POST['NChambr'];
 echo $_POST['NChambrV'];
 
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $reqsearchA = $bdd->prepare("SELECT ID_user, UserName, Name_Surname FROM membre WHERE Name_Surname = ?");
 $reqsearchA->execute(array($_POST['NName']));

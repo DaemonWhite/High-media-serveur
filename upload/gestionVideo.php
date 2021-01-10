@@ -2,7 +2,7 @@
 
 session_start();
 
- $search = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+ $search = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $User = $_SESSION['ID'];
 $gest = $_POST['Type'];

@@ -1,23 +1,27 @@
 <?php
 
-$moveUrl = "global.php";
+$moveUrl = "/home";
 
-include("Com/Conexion.php");
+include("Com/Conexion.php"); // Programe de connexion
 
-include("Com/verifiLoad.php");
+include("Com/verifiLoad.php"); // Verification de la conexion rapide
+
+include("Com/userSetings.php"); //Parametre utilisateur
+
+include("lang/FR.php");  //Fichier de lang
 
 
 
 $typeFavor = 1; // 1 = acueille;
 
-$img = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-$ImageUs = $img->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
+$ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\''); //Charge les image utilisateur
 $Rimage = $ImageUs->fetch();
 
 
 $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10");
+$NameAudio = $bdd->query("SELECT ID, album, Titre, Piste, Disk FROM audio ORDER BY ID DESC LIMIT 0, 10");
 
-$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM Historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
+$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
 $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
@@ -38,92 +42,37 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 <script type="text/javascript" src="Res/scriptZone.js">
 </script>
     
-
+    
 
     <body class="BackgroundA">
+
+        <?php echo $Dmode; ?> 
             
-            <nav id="menu">
-                
-                    
-                        <div>
-                            <button class="linkSelect" id="LinkDebutPassif">Accueil</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Video')">Vidéo</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnel</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                            <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                            <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
-    
-                        </div>
-    
-                        <div class="separationA">
-    
-                            <span class="infoUser"><?php echo $typeUser; ?></span>
-    
-                            <div class="imageUser">
-                                <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                                    <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                                <?php } else { ?>
-                                    <img src="User/Default/User.png" class="image">
-                                <?php } ?>
-                            </div>
-    
-                            <span class="UserName"><?php echo $Pseudo ?></span>
-                            <?php if ($_SESSION['Securiter'] != "-1") {
-                                # code...
-                            ?>
-                            <form action="?Deco=1" method="post">
-                                <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                            </form>
-                             <?php } else { ?>
-                            <div>
-                                <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Connexion</button>
-                            </div>
-    
-                            <?php } ?>
-    
-                        </div>
-    
-                        <div class="separationB">
-    
-                            <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="#Favor">Favoris</button>
-                              <button class="bottomMenu" id="#Gestion">Gestionaire</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                              <button class="bottomMenu" id="#Upload">Upload</button>
-                            <?php } else { ?>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
-                              <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                              <button class="bottomMenu" id="" onclick="Reserver()">Upload</button>
-                            <?php } ?>
-    
-                           </div>
-                
-            </nav>
+            <?php include('Com/mainMenu.php') ?>
 
             <section class="" style="width: 200vh; height: 100vh; overflow: auto;" >
                 <div class="back" align="center" style="overflow: hidden;">
                     
                     <section class="Box">
-                        <div class="BoxTitle"><span>Nouvelle musique</span></div>
-                        <div class="listenBoxM">
-                            <table>
-                                <tr>
-                                    <td>Album</td>
-                                    <td>Titre</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <div class="BoxTitle"><span> <?php echo $_Lang_ACC_Nmus;?> </span></div>
+                        
+                        <div align="left" class="overFlaw">
+                            <table class="listenBoxA">
+                                <?php while ($Naudio = $NameAudio->fetch()) {
 
-                        <div class="listenBoxM">
-                            <table>
-                                <tr>
-                                    <td>Album</td>
-                                    <td>Titre</td>
-                                </tr>
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Naudio['album'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+                                    <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Naudio['Titre'].'", "'. $Naudio['Piste'] .'", "'. $Naudio['Disk'] .'"'; ?> )'>
+
+                                        <td class="borderS"><img class="Aaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
+                                        <td class="borderTi"><span><?php echo $Naudio['Titre'] . " - " . $Naudio['album']; ?></span></td>
+                                        <td class="borderS">
+                                            <span>Diske: <?php echo $Naudio['Disk']; ?></span><br>
+                                            <span>Piste: <?php echo $Naudio['Piste']; ?></span>
+                                            </td>
+
+                                    </tr>
+                                <?php } ?>
                             </table>
                         </div>
 
@@ -131,12 +80,12 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Serveur</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Serv; ?></span></div>
                         
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Nouvelle vidéo</span></div>
+                        <div class="BoxTitle"><span> <?php echo $_Lang_Acc_Nvid; ?></span></div>
 
                         <div align="left" class="overFlaw">
                             <table class="listenBoxV">
@@ -148,7 +97,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                                         <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
                                         <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span>
+                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
                                             <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
 
                                     </tr>
@@ -160,7 +109,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Favoris</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Gen_Favoris; ?></span></div>
 
                         <div  align="left" class="overFlaw">
                                 <table class="listenBoxV">
@@ -199,7 +148,7 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     </section>
 
                     <section class="Box">
-                        <div class="BoxTitle"><span>Information</span></div>
+                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Info; ?></span></div>
 
                         
                     </section>

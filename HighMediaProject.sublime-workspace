@@ -4,16 +4,288 @@
 		"selected_items":
 		[
 			[
-				"get",
-				"getElementById"
+				"crea",
+				"createCompte"
+			],
+			[
+				"err",
+				"erreurCreate"
+			],
+			[
+				"cha",
+				"Chambre"
+			],
+			[
+				"creat",
+				"createCompt"
+			],
+			[
+				"modl",
+				"modal-bloc"
+			],
+			[
+				"mo",
+				"modal-back"
+			],
+			[
+				"s",
+				"section\tTag"
+			],
+			[
+				"ba",
+				"basehms"
+			],
+			[
+				"base",
+				"basehms"
+			],
+			[
+				"e",
+				"echo"
+			],
+			[
+				"insta",
+				"install"
+			],
+			[
+				"in",
+				"install"
+			],
+			[
+				"de",
+				"dell"
+			],
+			[
+				"n",
+				"numm"
+			],
+			[
+				"num",
+				"nummSearch"
+			],
+			[
+				"sub",
+				"subGenre"
+			],
+			[
+				"opt",
+				"option"
+			],
+			[
+				"f",
+				"fruits"
+			],
+			[
+				"genr",
+				"genreNumber"
+			],
+			[
+				"w",
+				"while"
+			],
+			[
+				"gne",
+				"genreNumber"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"align-",
+				"align-items\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"bor",
+				"border-left\tproperty"
+			],
+			[
+				"fle",
+				"flex\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
 			],
 			[
 				"a",
-				"appVideo"
+				"auto\tmargin"
+			],
+			[
+				"pl",
+				"playerPListB"
+			],
+			[
+				"max-",
+				"max-width\tproperty"
+			],
+			[
+				"entre",
+				"entreVideo"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"addT",
+				"addTotal"
+			],
+			[
+				"tot",
+				"totalAudio"
+			],
+			[
+				"addTotal",
+				"addTotalVideo"
+			],
+			[
+				"Tot",
+				"total"
+			],
+			[
+				"is",
+				"isMusic"
 			],
 			[
 				"for",
-				"foreach\tforeach …"
+				"formulaire"
+			],
+			[
+				"pro",
+				"progress3"
+			],
+			[
+				"load",
+				"loadBar"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"lin",
+				"linkCenter"
+			],
+			[
+				"numEp",
+				"numEp"
+			],
+			[
+				"ErrorT",
+				"ErrorTitle1"
+			],
+			[
+				"TotalC",
+				"TotalCons"
+			],
+			[
+				"totla",
+				"TotalCons"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"nu",
+				"numMessage"
+			],
+			[
+				"Erre",
+				"ErreurVerif"
+			],
+			[
+				"getElem",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"Err",
+				"Erreur"
+			],
+			[
+				"ver",
+				"VerifMusic"
+			],
+			[
+				"def",
+				"DefChem"
+			],
+			[
+				"D",
+				"display\tproperty"
+			],
+			[
+				"but",
+				"butID"
+			],
+			[
+				"spa",
+				"space-between\tjustify-content"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"margin-",
+				"margin-right\tproperty"
+			],
+			[
+				"fl",
+				"flex-end\tjustify-content"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"else",
+				"elseif\telseif …"
+			],
+			[
+				"ip",
+				"ip_Visiteur"
+			],
+			[
+				"get",
+				"getElementById"
 			],
 			[
 				"Type",
@@ -22,18 +294,6 @@
 			[
 				"margon",
 				"margin-bottom\tproperty"
-			],
-			[
-				"pad",
-				"padding-bottom\tproperty"
-			],
-			[
-				"marg",
-				"margin-left\tproperty"
-			],
-			[
-				"mar",
-				"margin-right\tproperty"
 			],
 			[
 				"sap",
@@ -48,10 +308,6 @@
 				"select\tTag"
 			],
 			[
-				"bor",
-				"border-top\tproperty"
-			],
-			[
 				"mra",
 				"margin\tproperty"
 			],
@@ -62,18 +318,6 @@
 			[
 				"bu",
 				"button"
-			],
-			[
-				"in",
-				"input\tTag"
-			],
-			[
-				"col",
-				"color\tproperty"
-			],
-			[
-				"ba",
-				"background-color\tproperty"
 			],
 			[
 				"Bor",
@@ -136,16 +380,8 @@
 				"RestoreModiEp"
 			],
 			[
-				"ver",
-				"verifMod"
-			],
-			[
 				"border-co",
 				"border-collapse\tproperty"
-			],
-			[
-				"margin",
-				"margin\tproperty"
 			],
 			[
 				"t",
@@ -176,14 +412,6 @@
 				"Securiter"
 			],
 			[
-				"s",
-				"section\tTag"
-			],
-			[
-				"d",
-				"display\tproperty"
-			],
-			[
 				"flex",
 				"flex-flow\tproperty"
 			],
@@ -212,16 +440,8 @@
 				"_FILES"
 			],
 			[
-				"text",
-				"text-decoration\tproperty"
-			],
-			[
 				"pa",
 				"padding\tproperty"
-			],
-			[
-				"margin-",
-				"margin-top\tproperty"
 			],
 			[
 				"re",
@@ -294,339 +514,27 @@
 			[
 				"His",
 				"Historique"
-			],
-			[
-				"font",
-				"font-style\tproperty"
-			],
-			[
-				"wid",
-				"width\tproperty"
-			],
-			[
-				"tit",
-				"titre"
-			],
-			[
-				"GetT",
-				"GetTyp"
-			],
-			[
-				"min",
-				"miniature"
-			],
-			[
-				"but",
-				"buttonNew"
-			],
-			[
-				"butt",
-				"buttonBase"
-			],
-			[
-				"padd",
-				"padding-right\tproperty"
-			],
-			[
-				"chan",
-				"ChangePAGE"
-			],
-			[
-				"al",
-				"alt\tAttr"
-			],
-			[
-				"ne",
-				"newEp"
-			],
-			[
-				"nu",
-				"numEpDown"
-			],
-			[
-				"Ep",
-				"Episode"
-			],
-			[
-				"vid",
-				"video"
-			],
-			[
-				"add",
-				"addTotalVideo"
-			],
-			[
-				"v",
-				"visual2"
-			],
-			[
-				"i",
-				"innerHTML"
-			],
-			[
-				"p",
-				"PDO"
-			],
-			[
-				"onc",
-				"onchange"
-			],
-			[
-				"cha",
-				"ChangePAGE"
-			],
-			[
-				"margi",
-				"margin-right\tproperty"
-			],
-			[
-				"align",
-				"align-items\tproperty"
-			],
-			[
-				"mrgin",
-				"margin-bottom\tproperty"
-			],
-			[
-				"na",
-				"name"
-			],
-			[
-				"do",
-				"donnes"
-			],
-			[
-				"en",
-				"entreVideo"
-			],
-			[
-				"on",
-				"onauxclick\tAttr"
-			],
-			[
-				"ali",
-				"align-items\tproperty"
-			],
-			[
-				"border-r",
-				"border-right\tproperty"
-			],
-			[
-				"font-s",
-				"font-size\tproperty"
-			],
-			[
-				"co",
-				"column\tflex-direction"
-			],
-			[
-				"fo",
-				"form"
-			],
-			[
-				"fl",
-				"flex-start\tjustify-content"
-			],
-			[
-				"fle",
-				"flex-direction\tproperty"
-			],
-			[
-				"pro",
-				"progressBare"
-			],
-			[
-				"pr",
-				"progressBare"
-			],
-			[
-				"tmp",
-				"tmp_name"
-			],
-			[
-				"err",
-				"ErrorMessage"
-			],
-			[
-				"oncc",
-				"onclick\tAttr"
-			],
-			[
-				"c",
-				"class\tAttr"
-			],
-			[
-				"e",
-				"Erreur"
-			],
-			[
-				"num",
-				"numEp"
-			],
-			[
-				"Ver",
-				"verif"
-			],
-			[
-				"Get",
-				"getElementById"
-			],
-			[
-				"nam",
-				"nameSerie"
-			],
-			[
-				"ep",
-				"Ep"
-			],
-			[
-				"uploa",
-				"uploadFile"
-			],
-			[
-				"pre",
-				"preventDefault"
-			],
-			[
-				"U",
-				"Upload"
-			],
-			[
-				"cons",
-				"console"
-			],
-			[
-				"Se",
-				"Serie"
-			],
-			[
-				"js",
-				"js-close-modale"
-			],
-			[
-				"oncli",
-				"onclick\tAttr"
-			],
-			[
-				"con",
-				"console"
-			],
-			[
-				"background-",
-				"background-color\tproperty"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "# High media serveur\n\nV - 0.0.19A\n\n\n- Ajout de filtre de recherches\n- Ajout d'unsystéme de recherche\n- Amélioartion de supression de donné il suprime les video dans l'historique\n- Amélioration et correction de bug de l'interface pc\n\nV - 0.0.18A\n\n- Debut de l'interface mobile\n- Teste d'une nouvelle génération de l'interface\n- Correction De faute d'ortographe\n- Correction Les titres apparaisse dans l'ordre\n- Correction les episode apparaisse dans l'ordre\n- Ajout de la page personnaliser pour les vidéos non existante\n- Ajout de la page D'erreur 404\n- Possibilité de modifier le contenu présent\n- Possibilité de supprimer les vidéos\n- Ajout du gestionnaire de vidéo USER\n- Correction de faute\n\n\nV - 0.0.17A\n\n- Refonte de l'estetique pur la gestion des compte\n- Optimisation de l'affichage\n- Correction de l'interface pour les écrans en mode portrait\n- Ajout de l’este-tique pour la page de gestion de compte\n- Ajout des fonction dans les paramètre (non Fonctionnelle)\n- Ajout d'un bouton paramètre\n- Correction on peut aller a l'accueil depuis les paramètre\n\n\nv - 0.0.16A\n\n- Ajout du reverse pour les favori\n- Ajout les 10 dernier favori son visible\n- Ajout des favori par l'utilisateur\n- correction les utilisateur normaux ne peux plus uploader sur la liste des épisode\n- Ajout de l'historique intelligent\n- Ajout de l'historique visible menu principale\n- Correction de certain problème avec Firefox\n- Ajout de l'implant de l'historique (¨Pas visible pour les utilisateur)\n- Correction de l'enregistrement des fichier\n- Correction du bouton fermer\n\nv - 0.0.15A\n\n- Modification ajout de l'image utilisateur (def)\n- Ajout de la miniature par défaut (tmp)\n- Ajout des miniature\n- Correction de l'optimisation du multi upload\n- Correction de l'affichage de l'upload\n- Modification des affiches pour les vidéo\n- Modification on peut sélectionner seulement les video dans le navigateur\n- Correction ajout de la vérification de fichier sur chaque input\n- Modification sele les images son visible\n- Ajout de suppression de l'ancienne image\n- Correction accès a la page user\n- Correction ajout de l'image utilisateur page vidéo sur la liste d'image\n\nv - 0.0.14A\n\n- Ajout de la page paramétrage\n- Ajout d'un alt sur chaque page\n- Ajout changement d'image utilisateur\n\nv - 0.0.13A\n\n- Modification enlevé de certain debug nuisible\n- Ajout des bouton d'épisode de la saison pour le Vlecteur\n- Optimisation du css\n- correction Du bouton vidéo dans Vupload\n- Modification rajout de securiter\n- Ajout des fonctionnalité non disponible\n- Ajout des fonctionnalité réserver au membre\n\nV - 0.0.12A\n\n- Ajout du multi upload dans la section ajouter\n- Ajout d'un Shell pour présenter les épisode présent\n- Ajout de l'interface d'ajout d'épisode\n\n\nv - 0.0.11A\n\n- Ajout de l'interface de base vidéo\n- Correctif d’affichage sur les autre navigateur que chrome\n- Modification les case upload son mit en include\n- Ajout de la référence de saison\n\nV - 0.0.10A\n\n- Ajout de la vue du synopsis\n- Ajout de la vue par saison\n- ajout de la liste d’épisode\n- Correction les vidéo seront enregistrée avec le bon répertoire\n- Ajout des case pour les vidéo\n- Ajout du menu de navigation dans le menu\n\nV - 0.0.09A\n\n- Ajout du genre\n- Ajout du synopsis\n- Correction le modal Upload est désormer bien alligner au centre\n- Ajout du genre\n- Correction de la taille de la fenêtre modale\n- Ajout de la barre de chargement + style css\n- Ajout d'un debug qui empêche l'envoi de fichier vide\n- Ajout d'un debug qui permet de ne pas avoirs le même épisode sur la feuille\n- Ajout d'un debug qui permet de ne pas envoyer des fichier au même titre\n- Ajout du début du multi upload\n- Ajout du nombre épisode mit de manière logique\n- Ajout disparition des bouton - de manière procédurale\n- Ajout de bouton pour choisir le nombre de vidéo voulue\n- Ajout du début d'upload\n- Ajout de la fenêtre d'upload de nouveau fichier\n- correction le bouton connecte est placé correctement\n\nV - 0.0.08A\n\n- Ajout du bouton connexion si déconnecter\n- Bouton Uplaod du menu et fonctionnelle\n- Modification Des crypte son en inclûde\n- Correction le mode inviter fonctionne\n- Ajout du popup d'upload\n- Ajout d'un popup de connexion \n\nv - 0.0.07A\n\n- Ajout de l'image utilisateur par défaut\n- Ajout des bouton interactive \"Dossier, Favori, Supprimer, Télécharger,Upload\"\n- Ajout du texte d'identification\n- Ajout du placement pour l'image\n- Ajout d'un bouton \"Proposition\"\tnon fonctionnelle\n- Ajout d'un bouton \"Serveur\"\tnon fonctionnelle\n- Ajout d'un bouton \"Espace Personnelle\"\tnon fonctionelle\n- Ajout d'un bouton \"Acueil\"\tnon fonctionnelle\n- Ajout d'un bouton \"Audio\"\tnon fonctionnelle\n- Ajout d'un bouton \"video\"\tFonctionnelle\n- Ajout de la barre de navigation dans la page d'acueille\n- Ajout d'entée de texte personnaliser\n- Ajout de bouton personaliser\n\nV - 0.0.06A\n\n- Ajout d'information\n- Reorganisation des élémen\n- Ajout de l'interface organisé de la page d'acueille\n\nV - 0.0.05A\n\n- Ajout de la page de choix de l'épisode\n- Ajout de la page qui repertotrie les Série\n- Ajout d'un lient pour les video\n- Corection a l'upload il est impossible d'avoir deux video au même episode\n\n\nV - 0.0.04A\n\n- Correction de l'enregistrement des ip\n- Ajout de la base du systéme d'upload\n- Ajout d'un bloqueur de page\n- corection de la mise ajour des table pour les nouvelle session\n\nV - 0.0.03A\n\n- ajout d'un bouton de deconnexion\n- Ajout autorise seulement deux apparéille a se connecter au serveur\n- modification valeur sure pour la création de compte\n- correctif enléve un message de dbugage\n- Ajout d'une véritable page de connexion\n- Ammelioration ajout d'une méllieure organisation pour les inscription\n- Correction de la page index il ne définira plus les valeur qu'ant on apuie sur créer un compte\n\nV - 0.0.02A\n\n- ajout d'un méllieur rendu pour la zone de modification\n- Ajout de la modidication de donner\n\nV - 0.0.01A\n\n- Ajout du systeme de mot de passe ainsi que des zone de liason",
-			"file": "/D/Project/High-media-serveur/README.md",
-			"file_size": 6181,
-			"file_write_time": 132187602177558997,
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 5913,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "video.php",
-			"settings":
-			{
-				"buffer_size": 12754,
+				"buffer_size": 3174,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "global.php",
+			"file": "install.sh",
 			"settings":
 			{
-				"buffer_size": 12297,
+				"buffer_size": 2307,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "upload/gestionVideo.php",
-			"settings":
-			{
-				"buffer_size": 4186,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "user.php",
-			"settings":
-			{
-				"buffer_size": 10910,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "upload/appVideo.php",
-			"settings":
-			{
-				"buffer_size": 1835,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 3374,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "upload/Upload.php",
-			"settings":
-			{
-				"buffer_size": 6174,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptModal.php",
-			"settings":
-			{
-				"buffer_size": 18456,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/styleVideo.css",
-			"settings":
-			{
-				"buffer_size": 2277,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/style.css",
-			"settings":
-			{
-				"buffer_size": 14132,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/styleBox.css",
-			"settings":
-			{
-				"buffer_size": 1329,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -658,7 +566,31 @@
 		"selected_items":
 		[
 			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Channel"
+			],
+			[
+				"packag",
+				"Install Package Control"
+			],
+			[
 				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -668,10 +600,6 @@
 			[
 				"papyrus",
 				"Build With: Papyrus - Skyrim"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"sub",
@@ -707,15 +635,101 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Wamp/www/HighMediaServeur",
-		"/D/Wamp/www/HighMediaServeur/Com",
-		"/D/Wamp/www/HighMediaServeur/Error",
-		"/D/Wamp/www/HighMediaServeur/Res",
-		"/D/Wamp/www/HighMediaServeur/upload",
-		"/D/Wamp/www/HighMediaServeur/User"
+		"/mnt/DataLinux/var/www/HMS",
+		"/mnt/DataLinux/var/www/HMS/apache",
+		"/mnt/DataLinux/var/www/HMS/Com",
+		"/mnt/DataLinux/var/www/HMS/img",
+		"/mnt/DataLinux/var/www/HMS/lang",
+		"/mnt/DataLinux/var/www/HMS/Res",
+		"/mnt/DataLinux/var/www/HMS/upload",
+		"/mnt/DataLinux/var/www/HMS/upload/Video"
 	],
 	"file_history":
 	[
+		"/mnt/DataLinux/var/www/HMS/changelog.log",
+		"/mnt/DataLinux/var/www/HMS/Com/verifiLoad.php",
+		"/mnt/DataLinux/var/www/HMS/Res/search.js",
+		"/mnt/DataLinux/var/www/HMS/Com/createCompte.php",
+		"/mnt/DataLinux/var/www/HMS/index.php",
+		"/mnt/DataLinux/var/www/HMS/lang/FR.php",
+		"/mnt/DataLinux/var/www/HMS/Res/popUpload.php",
+		"/mnt/DataLinux/var/www/HMS/Com/TestNewPassWord.php",
+		"/mnt/DataLinux/var/www/HMS/highmediadata.sql",
+		"/mnt/DataLinux/var/www/HMS/Res/styleBox.css",
+		"/mnt/DataLinux/var/www/HMS/video.php",
+		"/mnt/DataLinux/var/www/HMS/upload/appVideo.php",
+		"/mnt/DataLinux/var/www/HMS/Res/scriptZone.js",
+		"/mnt/DataLinux/var/www/HMS/Res/scriptModal.php",
+		"/mnt/DataLinux/var/www/HMS/upload/appVideo.php.old",
+		"/mnt/DataLinux/var/www/HMS/upload/Upload.php",
+		"/mnt/DataLinux/var/www/HMS/global.php",
+		"/home/matheo/Bureau/HMSstop.sh",
+		"/mnt/DataLinux/var/www/HMS/Res/style.css",
+		"/etc/apache2/sites-available/HMS.conf",
+		"/mnt/DataLinux/var/www/HMS/user.php",
+		"/home/matheo/Bureau/install.sh",
+		"/run/user/1000/gvfs/sftp:host=192.168.1.3/home/matheo/HMS/apache/HMS.conf",
+		"/run/user/1000/gvfs/sftp:host=192.168.1.3/home/matheo/HMS/install.sh",
+		"/media/matheo/toshiba/data/Project/fe/index.html",
+		"/mnt/DataLinux/var/www/HMS/Com/mainMenu.php",
+		"/mnt/DataLinux/var/www/HMS/Res/popup.php",
+		"/home/matheo/Documents/GitHub/High-media-serveur/Com/mainMenu.php",
+		"/mnt/DataLinux/var/www/HMS/audio.php",
+		"/home/matheo/Documents/GitHub/High-media-serveur/upload/Upload.php",
+		"/home/matheo/Documents/GitHub/High-media-serveur/video.php",
+		"/home/matheo/Documents/GitHub/High-media-serveur/Res/scriptModal.php",
+		"/mnt/DataLinux/var/www/HMS/upload/verifDonner.php",
+		"/mnt/DataLinux/var/www/HMS/verifDonner.php",
+		"/mnt/DataLinux/var/www/HMS/Com/userSetings.php",
+		"/mnt/DataLinux/var/www/HMS/upload/addUpload.php",
+		"/mnt/DataLinux/var/www/HMS/Res/styleAudio.css",
+		"/mnt/Data/wamp64/www/hgm/Res/popUpload.php",
+		"/home/matheo/Bureau/pc.sh",
+		"/mnt/Data/wamp64/www/hgm/apache/hms.conf",
+		"/mnt/Data/wamp64/www/hgm/video.php",
+		"/mnt/Data/wamp64/www/hgm/Res/search.js",
+		"/mnt/Data/wamp64/www/hgm/global.php",
+		"/mnt/Data/wamp64/www/hgm/ALecteur.php",
+		"/mnt/Data/wamp64/www/hgm/user.php",
+		"/mnt/Data/wamp64/www/hgm/README.md",
+		"/mnt/Data/wamp64/www/hgm/audio.php",
+		"/home/matheo/Documents/GitHub/High-media-serveur/HighMediaServeur - connexion_files/style.css",
+		"/mnt/Data/wamp64/www/hgm/Res/styleAudio.css",
+		"/mnt/Data/wamp64/www/hgm/Res/style.css",
+		"/mnt/Data/wamp64/www/hgm/Res/scriptModal.php",
+		"/mnt/Data/wamp64/www/hgm/upload/Upload.php",
+		"/mnt/Data/wamp64/www/hgm/Res/styleBox.css",
+		"/mnt/Data/wamp64/www/hgm/Com/mainMenu.php",
+		"/mnt/Data/wamp64/www/hgm/VLecteur.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res/search.js",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Com/Conexion.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res/popUpload.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/global.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/index.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/upload/appVideo.php",
+		"/home/matheo/.config/sublime-text-3/Packages/User/JavaScript-Completions.sublime-settings",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/Res/scriptModal.php",
+		"/run/user/1000/gvfs/smb-share:server=192.168.1.18,share=hms/lang/FR.php",
+		"/D/Project/High-media-serveur/README.md",
+		"/C/Users/Matheo/Documents/Electronic Arts/Les Sims 4/Mods/Resource.cfg",
+		"/D/wamp64/alias/high-media-serveur.conf",
+		"/D/wamp64/www/High-media-serveur/Com/ModifCompte.php",
+		"/D/wamp64/bin/apache/apache2.4.41/conf/httpd.conf",
+		"/D/wamp64/bin/apache/apache2.4.41/conf/extra/httpd-vhosts.conf",
+		"/D/wamp64/alias/adminer.conf",
+		"/D/wamp64/logs/access.log",
+		"/D/wamp64/www/High-media-serveur/Com/Conexion.php",
+		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Backup/20200101175136/LocalizedMenu/readme/README.fr_FR.md",
+		"/D/wamp64/www/High-media-serveur/Res/styleBox.css",
+		"/D/wamp64/www/High-media-serveur/Res/style.css",
+		"/D/wamp64/www/High-media-serveur/Res/styleVideo.css",
+		"/D/wamp64/www/High-media-serveur/Res/scriptModal.php",
+		"/D/wamp64/www/High-media-serveur/upload/Upload.php",
+		"/D/wamp64/www/High-media-serveur/upload/appVideo.php",
+		"/D/wamp64/www/High-media-serveur/user.php",
+		"/D/wamp64/www/High-media-serveur/upload/gestionVideo.php",
+		"/D/wamp64/www/High-media-serveur/global.php",
+		"/D/wamp64/www/High-media-serveur/video.php",
 		"/D/Wamp/www/HighMediaServeur/Res/popUpload.php",
 		"/D/Wamp/www/HighMediaServeur/VLecteur.php",
 		"/D/Wamp/www/HighMediaServeur/Com/TestNewPassWord.php",
@@ -726,7 +740,6 @@
 		"/D/Wamp/www/HighMediaServeur/Res/styleVideo.css",
 		"/D/Wamp/www/HighMediaServeur/user.php",
 		"/D/Wamp/www/HighMediaServeur/Res/style.css",
-		"/D/Project/High-media-serveur/README.md",
 		"/D/Wamp/www/HighMediaServeur/index.php",
 		"/D/Wamp/www/HighMediaServeur/Com/addFavor.php",
 		"/D/Wamp/www/HighMediaServeur/upload/Upload.php",
@@ -760,100 +773,19 @@
 		"/D/Wamp/www/HighMediaServeur/Com/verifiLoad.php",
 		"/D/Wamp/www/HighMediaServeur/Com/Conexion.php",
 		"/D/Wamp/www/HighMediaServeur/perso/changeImage.php",
-		"/D/Wamp/www/HighMediaServeur/upload/verifDonner.php",
-		"/D/Wamp/www/HighMediaServeur/info.php",
-		"/D/Wamp/www/TEST/index.html",
-		"/D/Wamp/www/TEST/Javascript/UploadAjaxABCI_DEV.js",
-		"/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload.php",
-		"/D/Wamp/www/TEST/UploadAjaxABCI.php",
-		"/D/Wamp/www/TEST/catch-file.php",
-		"/D/Wamp/www/TEST/file-upload-progress-bar.js",
-		"/D/Wamp/www/TEST/styles.css",
-		"/D/Wamp/www/TEST/Javascript/UploadAjaxABCI.js",
-		"/D/Wamp/www/TEST/index.php",
-		"/D/Wamp/www/TEST/upload.php",
-		"/C/Users/Matheo/Downloads/TFRICHET.FR-upload-multiple-apc-05.2013/index.php",
-		"/C/Users/Matheo/Downloads/Upload-Ajax-ABCI-v7.4/Upload-Ajax-ABCI/UploadAjaxABCI_Crop_multiple_multiple.php",
-		"/D/Wamp/www/TEST/Php_Upload/UploadAjaxABCI_Upload_Crop_multiple.php",
-		"/D/Wamp/www/HighMediaServeur/Res/Framework/jquery",
-		"/D/Wamp/www/HighMediaServeur/HighMediaProject.sublime-project",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModalB.js",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModal.js",
-		"/D/Wamp/www/HighMediaServeur/popup.php",
-		"/D/Wamp/www/HighMediaServeur/test.html",
-		"/D/Wamp/www/HighMediaServeur/Res/scriptModal2.js",
-		"/D/Wamp/www/TEST/style-test.css",
-		"/D/Wamp/www/TEST/script.js",
-		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/D/Wamp/www/TEST/script",
-		"/D/Wamp/www/TEST/style-test",
-		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/ConvertToUTF8/ConvertToUTF8.sublime-settings",
-		"/C/Users/Matheo/AppData/Roaming/Sublime Text 3/Packages/User/ConvertToUTF8.sublime-settings",
-		"/D/Wamp/www/HighMediaServeur/scriptModal.js",
-		"/C/Users/Matheo/Desktop/Visual Studio 2019.lnk",
-		"/D/Wamp/www/HighMediaServeur/Upload.php",
-		"/C/Users/Matheo/Desktop/test.php",
-		"/C/Users/Matheo/Desktop/test.html",
-		"/D/Wamp/www/HighMediaServeur/jeux_video.php",
-		"/C/Users/Matheo/Downloads/lecteur-video/index.html",
-		"/D/Project/HighMediaServeur/Html/HGMMain.html",
-		"/D/Project/HighMediaServeur/Html/Res/style.css",
-		"/D/Project/HighMediaServeur/Html/Res/javascript.js",
-		"/C/Users/Matheo/Downloads/lecteur-video/style.css",
-		"/C/Users/Matheo/Downloads/osmplayer-2.x/index.html",
-		"/C/Users/Matheo/Downloads/osmplayer-2.x/tools/README.md",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXSexlabSciptGenerique.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXQuestThiefChest.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXGeneriqueScene.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXDialogueInter.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXEventChestAliasPlayer.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXChangeContainerLetter.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXContainerThiefAlias.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXChestNoPLayerScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXExitBasseSalleScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXactorGeneratorAlias.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXEventChestScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/GuideToChestScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXPRostGeneScriptActor.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXClientAnaliseScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0300460A.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXSceneEventGeneriqueScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXRandomProstitution.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXGeneralScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSX.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/DialogueFollowerScript.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXEntreToSalleSrcipt.psc",
-		"/D/Project/Mod/PCSX/Data/scripts/source/PCSXRandomProstitution.psc",
-		"/D/Project/Mod/PCSX/03 Optional - Sources/GuideToChestScript.psc",
-		"/D/Project/Mod/PCSX/02 Core - Script/scripts/TIF_PCSX_0300460A.pex",
-		"/D/Project/Mod/PCSX/Data/scripts/source/TIF_PCSX_0300460A.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/PCSXTrigLanceEvent.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF__0304D24A.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF__0304D25E.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF__000B0EE9.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D24E.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D1F2.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D246.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D24A.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D242.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D23E.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D23A.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D252.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D257.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF_PCSX_0304D25B.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/Source/TIF__0304D246.psc",
-		"/X/SteamLibrary/steamapps/common/Skyrim/Data/scripts/PCSXChestNoPLayerScript.pex"
+		"/D/Wamp/www/HighMediaServeur/upload/verifDonner.php"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 98.0,
 		"where_history":
 		[
+			"<open folders>",
+			"/"
 		]
 	},
 	"find_state":
@@ -861,134 +793,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"vef.",
-			"cat",
-			"appVideo",
-			"SearchRV",
-			"SearchVideo",
-			"tdTexte",
-			"choi",
-			"Vaffiche",
-			"link",
-			"order",
-			"bacgroundUser",
-			"caseImg",
-			"zoneListe",
-			"back",
-			"/table",
-			"/td",
-			"/tr",
-			"td/",
-			"tr",
-			"td",
-			"zoneListe",
-			"entreVideo",
-			"table",
-			"/table",
-			"/td",
-			"/tr",
-			"/td",
-			"startPage",
-			"user",
-			"INSERT",
-			"min",
-			"m",
-			"mi",
-			"min",
-			"mini",
-			"reqCine",
-			"nameSerr",
-			"EpVideo",
-			"$_POST",
-			"$_post",
-			".htacc",
-			"alert",
-			"Tr",
-			"upload",
-			"#uploa",
-			"display",
-			"appMyVideo",
-			"favori",
-			"favoris",
-			"EpisodeSize",
-			"buttonNew",
-			"className",
-			"alert",
-			"modifMod",
-			"visual",
-			">\n",
+			"global",
+			"moveUrl",
+			"Chambre",
+			"prenom nom",
+			"zoneVideo",
+			"CDU",
+			"NewPass",
+			"$reponse",
+			"reponseA",
+			"start",
+			"main",
+			"start()",
+			"genreNumber",
+			"subGen",
+			"[]",
+			"genreNumber",
+			"RestoreModiSu",
+			"Format",
+			"VerifMusic",
+			"\"\n",
+			"$S",
+			"$Q",
+			"Q",
+			"GernreAnme",
+			"Genres",
+			"new",
+			"securiter",
+			"#Secu",
+			"#Securiter",
+			")\n",
+			"onclick",
+			"gen",
+			"genr",
+			"genre",
+			"bottomConnect",
+			"name",
+			"co",
+			"res/popup.php",
+			"Conex",
+			"#Conex",
+			"Res/popup.php#Conex",
 			"NonDisponible",
-			"zoneListe",
-			"\t\n",
-			"blockListeVideo",
-			".back",
-			"back",
-			"div",
-			".menu",
-			"menu",
-			"bottomMenu",
-			"separationB",
-			"%;\n",
-			"reqsearchA",
-			"appTitleM",
-			"imageUpl",
-			"form",
-			"wra",
-			"?>\n",
-			"cadreBaseT",
+			"borderS",
+			"VLecteur.php",
+			"VLecteur.phpz",
+			"VLecteur.php",
+			"Vlecteur",
+			".php",
+			"$moveUrl",
+			".php",
+			"moveUrl",
+			"upload/gestionVideo.php",
+			"search",
+			"CreateRepertoire",
+			"background-color: green",
+			"0",
+			"verif(",
+			"verif",
+			"errorTitle",
+			"ErreurVerif",
+			"addtotalAudio",
+			"addUploadAudio",
+			"addUpload",
+			"newBonus(",
+			"subTitle",
+			"formAddUploadA",
+			"addUpload",
+			"suploadA",
+			"supload",
+			"addUpload",
+			"newBonus(",
+			"totalVideo",
+			"addTotalAudio",
+			"addTotalVideo",
+			"addTotalAudio",
+			"totalAudio",
+			"addUpload(",
+			"formUploadA",
+			"isMus",
+			"formAddUpload",
+			"\t\t$AddVideo = $bda->prepare(\"INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)\");\n\t\t$AddVideo = $bda->prepare(\"INSERT INTO video(titre, SousTitre, Saison, Episode, Repertoire, Proprietaire) VALUES  (:titre, :SousTitre, :Saison, :Episode, :Repertoire, :Proprietaire)\");\nformAddUpload",
+			"Progress",
+			"Progress4",
+			"addUpload",
+			"formUpl",
+			"addformUpl",
+			"moveUrl",
+			"Audio",
+			"NameAudio",
+			"NameVideo",
+			"Mus",
+			"Music",
+			"eHist",
+			"$His",
+			"$Histo",
+			"$Episo",
+			"newApelleVideo",
+			"$aVideo",
+			"From",
+			"$video",
+			"from",
+			"$newEp",
+			"$Episo",
+			"$video",
 			"video",
+			"Rimage",
+			"From",
+			"Video",
 			"blockListeVideo",
+			"zoneListe",
+			"text-align",
+			"EpVideo",
+			"SearchV",
+			"SearchVideo",
+			"entreViewVideo",
 			"entreVideo",
-			"ZoneM",
-			"box",
-			"back",
-			"Box",
-			"imageUser",
-			"viewList",
-			"imageUser",
-			"_FILES",
-			"entreVideo",
-			">\n",
-			"body",
-			"viewList",
-			"body",
-			"viewList",
-			"display:",
-			"user",
-			"Proprietaire",
-			"user",
-			"boutonUpload",
-			"position",
-			"bottomMenu",
-			"caseBottom",
-			"menu",
-			"select",
-			"cadre",
-			"center",
-			"user",
-			"del",
-			"Pseudo",
-			"serr",
-			"vefHist",
-			"bottom",
-			"EpisodeSize",
-			"$_GET['Name']",
-			"img",
-			"object-fit: cover;",
-			"all",
-			"buttonS",
-			"image",
-			"boutonUpload",
-			"boutonUpload ",
-			"nameVideo",
-			"minia",
-			"GetMin",
-			"miniature",
-			"ReperV",
-			"tmpRepertori",
-			"Error",
-			"ErrorTitle",
-			"readData"
+			"style",
+			"Wrop",
+			"verif",
+			"type",
+			"script",
+			"GernreAnme",
+			"numEp",
+			"numEpC",
+			"=\"\"",
+			"RestoreModiEp",
+			"ern",
+			"aplError"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1007,165 +939,37 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Project/High-media-serveur/README.md",
+					"file": "README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5913,
+						"buffer_size": 3174,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								35,
-								35
+								36,
+								36
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": true,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "video.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12754,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5085,
-								5085
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
 							"spell_check": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 307.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "global.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11476,
-								11476
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1030.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "upload/gestionVideo.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4186,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								595
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "user.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								825,
-								797
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1175,219 +979,32 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
-					"file": "upload/appVideo.php",
+					"buffer": 1,
+					"file": "install.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1835,
+						"buffer_size": 2307,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								398,
-								398
+								1334,
+								1334
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 208.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "index.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2056,
-								2056
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 73.0,
-						"translation.y": 110.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "upload/Upload.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6002,
-								6004
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1729.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Res/scriptModal.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18456,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								15720,
-								15703
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 8306.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "Res/styleVideo.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "Res/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14132,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3811,
-								3811
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3058.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "Res/styleBox.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1329,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								420,
-								420
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1395,11 +1012,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 39.0
+		"height": 41.0
 	},
 	"layout":
 	{
@@ -1421,7 +1038,7 @@
 		"cols":
 		[
 			0.0,
-			0.0690607734807,
+			0.38214424546,
 			1.0
 		],
 		"rows":
@@ -1447,7 +1064,7 @@
 	"project": "HighMediaProject.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1456,6 +1073,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"Res/scriptModal.php"
+			]
 		],
 		"width": 0.0
 	},
@@ -1489,7 +1110,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 234.0,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

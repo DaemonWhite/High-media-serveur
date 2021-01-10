@@ -1,12 +1,13 @@
 <?php 
 	
-	$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'root','',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-	$appVideo = "SELECT * FROM titre ";
+	$appVideo = "SELECT * FROM titre WHERE";
+	$ifLang = 0;
 
-	$_POST['Search'];
+	//$_POST['Search'];
 
-	if ($_POST['Search'] != "")
+	if ($_POST['Search'] != "" && $_POST['Search'] != " ") // search Barr info
 	{
 		$Q = $_POST['Search'];
 		$S = explode(" ", $Q);
@@ -15,11 +16,7 @@
 
 		foreach ($S as $mot) {
 
-			if ($i == 0) {
-				
-				$appVideo.= " WHERE ";
-
-			} else {
+			if ($i != 0) {
 
 				$appVideo.= " AND ";
 
@@ -31,52 +28,42 @@
 
 		}
 
+		$appVideo.= " AND ";
 
+	} 
+
+	if ( "no" !=$_POST['Genre']) {
+		
+		$appVideo.= " Genre= '" . $_POST['Genre'] . "'";
+		$appVideo.= " AND ";
+
+	}
+
+	if ( "no" !=$_POST['subGen']) {
+		
+		$appVideo.= " subGenre= '" . $_POST['subGen'] . "'";
+		$appVideo.= " AND ";
+
+	}
+
+	if (!empty($_POST['Lang'])) {
+
+		$lan = "SELECT * FROM video WHERE Lang = '" . $_POST['Lang'] . "'" ;
+		
+		$req = $bdd->query($lan);
+
+		while ($donnes = $req->fetch()) {
+			
+			$ifLang++;
+
+		}
 
 	} else {
-
-		if ($_POST['Search'] != "" || $_POST['Genre']) {
-			
-			$appVideo.= " WHERE ";
-
-		}
-
+		$ifLang++;
 	}
 
-	if (!empty($_POST['Genre'] && $_POST['Search'] != "")) {
-				
-				if (!$_POST['Genre'] == "") {
-					
-					$appVideo.= " AND ";
 
-				}
-
-			}
-
-	if (!empty($_POST['Genre'])) {
-		
-
-		if ($_POST['Genre'] == "Anime") {
-			
-			$appVideo.= "Genre = 'Anime' ";
-
-		} elseif ($_POST['Genre'] == "Docu") {
-			
-			$appVideo.= "Genre = 'Docu' ";
-
-		} elseif ($_POST['Genre'] == "Movie") {
-			
-			$appVideo.= "Genre = 'Movie' ";
-
-		} elseif ($_POST['Genre'] == "TV") {
-
-			$appVideo.= "Genre = 'TV' ";
-
-		}
-
-
-
-	}
+	$appVideo.= " Type= '" . $_POST['Type'] . "'";
 
 	//echo $appVideo;
 
@@ -86,25 +73,29 @@
 
 	$Vef = 0 ;
 
-	while ($donnes = $req->fetch() ) {
+	if ($ifLang > 0) {
+		
+		while ($donnes = $req->fetch() ) {
 
-		$Vef++;
-
-		echo '<div class="caseBottom" onclick="newZone('; echo "'"; echo $donnes['nom']; echo "'"; echo ')">
-                          <table align="center">
-                                    <tr><img class="caseImg" src="' . $donnes['Affiche'] .'"></tr>
-                                    
-                                      <tr align="center" class="whiteCase"><td><span style=" font-size: 150%;">'. $donnes['nom'] . '</span></td></tr>  
-                                    </tr>
-                          </table>
-        
-                      </div>'; 
+			$Vef++;
+	
+			echo '<div class="caseBottom" onclick="newZone('; echo "'"; echo $donnes['nom']; echo "'"; echo ')">
+    	                      <table align="center">
+    	                                <tr><img class="caseImg" src="' . $donnes['Affiche'] .'"></tr>
+    	                                
+    	                                  <tr align="center" class="whiteCase"><td><span style=" font-size: 150%;">'. $donnes['nom'] . '</span></td></tr>  
+    	                                </tr>
+    	                      </table>
+    	    
+    	                  </div>'; 
+	
+		}
 
 	}
 
 	if ($Vef == 0) {
 
-		echo "Aucune vidéo trouvèe";
+		//echo "Aucune vidéo trouvèe";
 	
 	}
 	
