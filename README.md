@@ -14,8 +14,8 @@
 
 # Changelog
 
-V - 0.0.20A - 10 Janv 16h31
 
+V - 0.0.20A - 10 Janv 19h10
 - Ajout nouvelle information pour l'installation 
 - Ajout d'un paramêtres pour vérifier le compte
 - Ajour les utilisateur pourrons créer leur compte
@@ -38,6 +38,7 @@ V - 0.0.20A - 10 Janv 16h31
 - Modification du repertoire d'image pour s'adapter au sytéme de protection linux
 - Modification PDO est un user ---> User "HMS" Password ---> "Secure45RootHGMProject"
 - Amélioration du systéme de protection d'erreur pour l'upload
+- Amélioration Les video uploader ne porte plus leurs nom d'origine mais un nom dédier
 - Optimisation du sytéme de recherche
 - Optimisation de l'affichage boite à l'accueille
 - Optimisation du syteme de recherche
@@ -47,6 +48,7 @@ V - 0.0.20A - 10 Janv 16h31
 - Optimisation du système de connexion
 - Nettoyage des utilisateur SQL
 - Nettoyage de la base SQL
+- Correction Les caractère spéciaux son supporter correctement
 - Correction search barre Tag
 - Correction de la position Menu
 - Correction de bug liée a php 7.4
