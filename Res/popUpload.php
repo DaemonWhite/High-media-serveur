@@ -504,7 +504,7 @@ while ( $i <= 1) { ?>
 
           <div class="modal-bloc js-stope-modale">
               
-              <?php if (!empty($_GET['name']) AND empty($_GET['Ep'])) {  
+              <?php if (!empty($_GET['Name']) AND empty($_GET['Ep'])) {  
 
                 $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep="0" AND S="0" AND Favori=\'' . $_GET['name'] . '\' AND type=\'' . $GetV . '\' AND Genre="0" ');
                 $exiFavir = $vefFavor->fetch();
@@ -523,6 +523,7 @@ while ( $i <= 1) { ?>
 
                   $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep=\'' . $_GET['Ep'] . '\' AND S=\'' . $_GET['S'] . '\' AND Favori=\'' . $_GET['Name'] . '\' AND type=\'' . $GetV . '\' AND Genre="1" ');
                   $exiFavir = $vefFavor->fetch();
+
   
                   if ($exiFavir['Favori'] == "") { ?>
     

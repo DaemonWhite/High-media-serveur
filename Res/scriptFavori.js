@@ -1,14 +1,37 @@
-function appFav(type, nom, s, ep, Supr){
+function appFav(type, nom, s, ep, Supr, lec){
+
+	console.log(type, nom, s, ep, Supr, lec)
+
+	if (lec === "1") {
+
+		rat1 = document.getElementById("rating");
+		rat2 = document.getElementById("rating2");
+
+		if (Supr === 0) 
+		{
+
+			rat1.style.display = "none"
+			rat2.style.display = ""
+
+		}
+
+		 else if (Supr === 1) 
+		{
+			rat1.style.display = ""
+			rat2.style.display = "none"			
+		}
+
+
+
+	}
 
 	console.log(type);
 
-	if (type === "0") { 
+	if (type === 0) { 
 
 		v = 0;
 
 		genre = 0;
-		s = 0;
-		ep = 0;
 
 		var text = document.getElementById("Shell")
 	
@@ -17,8 +40,8 @@ function appFav(type, nom, s, ep, Supr){
 		oData.append("Name", nom);
 		oData.append("type", v);
 		oData.append("genre", genre);
-		oData.append("Epi", s);
-		oData.append("Sai", ep);
+		oData.append("Epi", ep);
+		oData.append("Sai", s);
 		oData.append("Suprimer", Supr);
 
 
@@ -28,7 +51,7 @@ function appFav(type, nom, s, ep, Supr){
 		vef.open("POST", "Com/addFavor.php", true);
 		 vef.onload = function(oEvent) {
 		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
-		      window.location = "?name=" + nom;
+		      
 		    } else {
 		      text.innerHTML = "Error --> Impossible de recupérer les donner";
 		    }
@@ -39,11 +62,11 @@ function appFav(type, nom, s, ep, Supr){
 	
 	}
 
-	 if (type === "1") {
+	 if (type === 2) {
 
 	 	v = 0;
 
-		genre = 1;
+		genre = 2;
 
 		var text = document.getElementById("Shell")
 	
@@ -52,8 +75,8 @@ function appFav(type, nom, s, ep, Supr){
 		oData.append("Name", nom);
 		oData.append("type", v);
 		oData.append("genre", genre);
-		oData.append("Epi", s);
-		oData.append("Sai", ep);
+		oData.append("Epi", ep);
+		oData.append("Sai", s);
 		oData.append("Suprimer", Supr);	
 
 

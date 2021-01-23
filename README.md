@@ -7,13 +7,23 @@
 - 2 - installer PHP MariaDB et Apache
 - 3 - Lancer l'installateur en admin ./install.sh sur le serveur
 - 4 - Créer l'utilisateur MariaDB HMS
-		- - User : HMS
-		- - Pass : Secure45RootHGMProject
+		-- User : HMS
+		-- Pass : Secure45RootHGMProject
 - 5 - Installer la base de donner highmediadata.sql
+- 6 - Configurer php
+	--
 - 6 - Testez et ce sera fini
 
 # Changelog
 
+V - 0.0.21A - 23 Janv
+
+- Modification du systeme de favory
+- Ameliraation anti Fraude pour les favory
+- Optimisation du système de box 
+- Correction de l'apparition des épisodes dans vlecteur
+- Correction de l'affichage de Vlecteur
+- Correction De historique Box qui n'étais pas gérer par lang
 
 V - 0.0.20A - 10 Janv 19h10
 - Ajout nouvelle information pour l'installation 
