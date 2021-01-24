@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : sam. 23 jan. 2021 à 18:12
+-- Généré le : Dim 24 jan. 2021 à 18:50
 -- Version du serveur :  10.3.25-MariaDB-0ubuntu1
 -- Version de PHP : 7.4.9
 
@@ -160,7 +160,7 @@ CREATE TABLE `video` (
   `Repertoire` text NOT NULL,
   `Proprietaire` int(11) NOT NULL,
   `Lang` varchar(255) DEFAULT NULL,
-  `Verif` int(11) NOT NULL DEFAULT 4 COMMENT 'verfier = 0 Conf = 1 pas tout les navigateur = 2 Urgent = 3'
+  `Verif` int(11) NOT NULL DEFAULT 3 COMMENT 'verfier = 0 Conf = 1 pas tout les navigateur = 2 Urgent = 3'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -223,7 +223,7 @@ ALTER TABLE `audio`
 -- AUTO_INCREMENT pour la table `favori`
 --
 ALTER TABLE `favori`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `historique`

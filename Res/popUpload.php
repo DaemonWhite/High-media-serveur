@@ -235,8 +235,8 @@ while ( $i <= 1) { ?>
                                 <td><input id="bouton<?php echo $butID; ?>" type="button" onclick="newBonus(<?php echo $butID; ?>, 1, 0)" class="buttonNew" value="+" style="display: ;" ></td>
 
                               <?php } else {echo "<td></td>";} ?>
-                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'numero','<?php echo $butID; ?>')" value="<?php echo $realValue; ?>"></td>
-                                <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" value="1"></td>
+                                <td><input id="Ep<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Ep<?php echo $butID; ?>" min="1" max="1000" onblur="verif(this,'1','<?php echo $butID; ?>', 2)" value="<?php echo $realValue; ?>"></td>
+                                <td><input id="S<?php echo $butID; ?>" class="EpisodeSize" type="number" name="Saison<?php echo $butID; ?>" min="1" max="50" value="1" onblur="verif(this,'1','<?php echo $butID; ?>', 2)"></td>
                                 <td><input class="texteBase" id="subTitle<?php echo $butID; ?>" type="text" name="subTitle<?php echo $butID; ?>" placeholder="Titre Secondaire"></td>
                                 <td><input class="buttonBase" type="file" name="Video[]" id="fileUpload<?php echo $butID; ?>" onchange="noVideo()" onchange="noVideo()" accept="video/*" ></td>
                                 <td><input type='hidden' id="fileUpload1" name='MAX_FILE_SIZE' value='7516192768'></td>
@@ -491,69 +491,7 @@ while ( $i <= 1) { ?>
 
 </section>
 
-
-
-
-
-<?php if ($typeFavor != 1) {  
-
-  $verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-  ?>
- <section id="Favor" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
-
-          <div class="modal-bloc js-stope-modale">
-              
-              <?php if (!empty($_GET['Name']) AND empty($_GET['Ep'])) {  
-
-                $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep="0" AND S="0" AND Favori=\'' . $_GET['name'] . '\' AND type=\'' . $GetV . '\' AND Genre="0" ');
-                $exiFavir = $vefFavor->fetch();
-
-                if ($exiFavir['Favori'] == "") { ?>
-
-                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'0')">Ajouter au favoris</button>
-
-                <?php } else { ?>
-
-                    <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['name'] . "'"; ?>, '0', '0' ,'1')">Supprimer des favoris</button>
-
-                <?php } ?>
-
-                <?php } else {
-
-                  $vefFavor = $verif->query('SELECT User, Ep, s, Favori, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Ep=\'' . $_GET['Ep'] . '\' AND S=\'' . $_GET['S'] . '\' AND Favori=\'' . $_GET['Name'] . '\' AND type=\'' . $GetV . '\' AND Genre="1" ');
-                  $exiFavir = $vefFavor->fetch();
-
-  
-                  if ($exiFavir['Favori'] == "") { ?>
-    
-                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "', '" . $_GET['Ep'] . "'"; ?>,'0')">Ajouter au favoris</button>
-    
-                    <?php } else { ?>
-    
-                        <button id="" class="boutonUpload" onclick="appFav(<?php echo "'" . $GetV . "','" . $_GET['Name'] . "', '" . $_GET['S'] . "','" . $_GET['Ep'] . "'"; ?>,'1')">Supprimer des favoris</button>
-    
-                    <?php }
-                  } ?>
-
-              <button id="#viewFavor" class="boutonUpload">Voire les favoris</button>
-
-              <button class="boutonUpload js-close-modale"> </button>
-          
-      
-          </div>
-      
-  </section>
-
-<?php } ?>
-
-  <section id="<?php if ($typeFavor == 1) { echo "Favor"; } else {echo "viewFavor";} ?>" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
-    <div class="modal-bloc js-stope-modale">
-
-      <button id="#SUpload" class="boutonUpload">Ajouter au favoris</button>
-
-    </div>
-  </section>
+</section>
 
   <section id="Gestion" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
     
@@ -566,4 +504,37 @@ while ( $i <= 1) { ?>
           </div>
 
   </section>
+
+<section id="Favor" class="modal-back" aria-hidden="true" role='dialog' aria="" style="display: none;">
+  
+  <div class="modal-bloc js-stope-modale">
+
+    <button id="#viewFavor" class="boutonUpload" onclick="appMyFavor('0')">Favori Video</button>
+
+    <button class="boutonUpload js-close-modale" style="margin-bottom: 7%;">Fermer</button>
+    
+  </div>
+
+</section>
+
+<section id="viewFavor" class="modal-back" aria-hidden="true" role='dialog' aria="" style="display: none;">
+  
+  <div class="modal-bloc js-stope-modale">
+
+      <div align="center" style="padding: 2%;">
+        <div class="cadreBaseT">
+        
+          <span class="colorTitle" style="font-size: 4.6vh;">Gérer mes fichier</span>
+
+        </div>
+        <div id="favorDiv">
+          
+        </div>
+      </div>    
+
+    <button class="boutonUpload js-close-modale" style="margin-bottom: 7%;">Fermer</button>
+    
+  </div>
+
+
 

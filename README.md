@@ -16,11 +16,16 @@
 
 # Changelog
 
-V - 0.0.21A - 23 Janv
+V - 0.0.21A - 24 Janv 18h47
 
-- Modification du systeme de favory
-- Ameliraation anti Fraude pour les favory
+- Modification du systeme de favori select vidéo
+- Modification du systeme de favori vidéo
+- Amélioration anti Fraude pour les favori
 - Optimisation du système de box 
+- Correction du gestionaire de favori et refonte compléte
+- Correction addUpload mauvais charactere non supporter
+- Correction verification addUpload
+- Correction retour au menu peut êtres fait depuis vlecteur
 - Correction de l'apparition des épisodes dans vlecteur
 - Correction de l'affichage de Vlecteur
 - Correction De historique Box qui n'étais pas gérer par lang

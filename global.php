@@ -22,7 +22,7 @@ $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY 
 $NameAudio = $bdd->query("SELECT ID, album, Titre, Piste, Disk FROM audio ORDER BY ID DESC LIMIT 0, 10");
 
 $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
-$Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
+$Fav = $bdd->query('SELECT User, Favori, Ep, S, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
 <!DOCTYPE html>
@@ -123,25 +123,31 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
                     <div class="boxSize">
                         <div class="contentBox">
                             <?php while ($Favo = $Fav->fetch()) { 
+                                if ($Favo['Genre'] == 0) 
+                                {
+                                    $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Favo['Favori'] . '\' AND Episode=\'' . $Favo['Ep'] . '\' AND Saison=\'' . $Favo['S'] . '\' ');
+                                    $Nvideo = $FavoVideo->fetch();
+                                }
 
-                                $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Favo['Favori'] . '\' AND Episode=\'' . $Favo['Ep'] . '\' AND Saison=\'' . $Favo['S'] . '\' ');
-                                $Nvideo = $FavoVideo->fetch();
-
-                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Favo['Favori'] . '\'');
                                 $Aff = $Affiche->fetch() ?>
 
-                                <?php if ($Favo['type'] == 1) { ?>
-
-                                    <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-                                        <div style="background-image: url('<?php echo "http://hmsteste.com/" . $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                <?php if ($Favo['Genre'] == 0) { ?>
+                                    <div class="selectBox" >
+                                        <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
                                         <div> <span> <?php echo $Ntitre; ?> </span> </div>
                                         <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
                                             S: <?php echo $Nvideo['Saison']; ?> </span></div>
                                     </div>
-
-                                <?php } else { ?>
+                                <?php } elseif ($Favo['Genre'] == 2) { ?>
+                                    <div class="selectBox" style="grid-template-columns: 106px 2fr " >
+                                        <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                        <div> <span> <?php echo $Ntitre; ?> </span> </div>
+                                    </div>
 
                                 <?php } ?>
+
+                                
 
                             <?php } ?>
                         </div>
@@ -182,7 +188,10 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
 
                     <div class="boxSize">
                         <div class="contentBox">
-                            <?php while ($Nvideo = $NameVideo->fetch()) { 
+                            <?php while ($Histo = $His->fetch()) { 
+
+                                $HistVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Histo['Name'] . '\' AND Episode=\'' . $Histo['Episode'] . '\' AND Saison=\'' . $Histo['Saison'] . '\' ');
+                                $Nvideo = $HistVideo->fetch();
 
                                 $Ntitre = $Nvideo['titre']; 
 

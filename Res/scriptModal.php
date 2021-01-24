@@ -357,23 +357,27 @@ function ErreurVerif(TypeEr, champ , erro){
 
 function anaEp(Ep, total, isMus , ErrorArea ,champ=false, ignore=0) { // vérifie si les episode son complétement rensegner
 
-	console.log(total)
+	console.log(ErrorArea)
 
 	var numEp = 1
 	var numEpC = numEp
 
-	if (isMus != 0) 
+	if (isMus == 1) 
 	{
 	 	numEpC = 25;
+	} else if (isMus == 2) 
+	{
+		numEp = 13;
+		numEpC = 13;
 	}
 
 	  var ErrorTitleTT // Diférence music et video
-	  if (isMus == 0) {
+	  if (isMus == 0 || isMus == 2) {
 	  	
 	  		ErrorTitleTT = "Vous ne pouver avoir qu'un épisode a la même valeur"
 	  		ErrorTitleTN = "L'episode doit étre remplie par une valleur numerique ou ne doit êtres NULL ainsi que la saison" 
 
-	  	} else { 
+	  	} else if (isMus == 1) { 
 	  	
 	  		ErrorTitleTT =  "Vous ne pouver avoir qu'une piste a la même valeur sur le même disque"
 	  		ErrorTitleTN =  "La piste doit étre remplie par une valleur numerique ou ne doit êtres NULL de meme que le disque"
@@ -381,7 +385,8 @@ function anaEp(Ep, total, isMus , ErrorArea ,champ=false, ignore=0) { // vérifi
 	  	}
 
 	while (total >= numEp) {
-			
+				
+				console.log(Ep)
 
 				VerifEp = document.getElementById("Ep" + numEpC)
 				VerSaison = document.getElementById("S" + numEpC).value
@@ -429,25 +434,29 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 	var Title0
 	var TotalCons
 	var retError = []
-	
+	console.log(champ, Objet, ZoneEp, mus)
 	if (mus == 0){ 
 		Title0 = document.getElementById("title");
 		var errorTitle0 = document.getElementById("ErrorTitle0")
 		var errorTitle1 = document.getElementById("ErrorTitle1")
 		TotalCons = totalVideo
+		num = 1
 	} else if (mus == 1) { 
 		Title0 = document.getElementById("titleA");
 		var errorTitle0 = document.getElementById("ErrorTitle2")
 		var errorTitle1 = document.getElementById("ErrorTitle3")
 		TotalCons = totalAudio
 		console.log(mus)
+		num = 25
 	} else if (mus == 2) {
-		
-		totalCons = addTotalVideo
+		var errorTitle0 = document.getElementById("ErrorTitle8")
+		var errorTitle1 = document.getElementById("ErrorTitle9")
+		TotalCons = 13 +addTotalVideo
+		num = 13
 
 	} else if (mus == 3) {
 		
-		totalCons = addTotalAudio
+		TotalCons = addTotalAudio
 
 	}
 
@@ -477,13 +486,13 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		verifiMyChest(Objet, mus, champ, champ)
 
 	} else if (Objet == 1) { // verification des episeode ou des piste
-		num = 1;
+
 		var ern = 0;
 		var i = 0;
 
 		while (TotalCons >= num) {
-
-				anErro = anaEp(num, TotalCons, mus, ErrorTitle1)
+				//console.log(TotalCons, num)
+				anErro = anaEp(num, TotalCons, mus, errorTitle1)
 
 				if (anErro != 0) {
 
@@ -497,7 +506,7 @@ function verif(champ, Objet, ZoneEp, mus=0) {
 		while (ern > i) {
 			Ep = document.getElementById("Ep"+retError[i])
 			Sa = document.getElementById("S"+retError[i])
-			//console.log(Ep, retError[i], i)
+			console.log(Ep, retError[i], i)
 			surligne(Ep, true)
 			surligne(Sa, true)
 			i++;
@@ -1028,6 +1037,30 @@ function appMyVideo(type) // Ramener les vidéo pour la gestion
 
 
 
+}
+
+function appMyFavor(type)
+{
+
+	var text = document.getElementById("favorDiv")
+	
+		var oData = new FormData();
+	
+		oData.append("Type", type);
+		oData.append("Gere", "0");
+
+	
+		vef = new XMLHttpRequest();
+		vef.open("POST", "Com/gestionFavor.php", true);
+		 vef.onload = function(oEvent) {
+		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+		      text.innerHTML = vef.responseText;
+		    } else {
+		      text.innerHTML = "Error --> Impossible de recupérer les donner";
+		    }
+		  };
+
+		  vef.send(oData);
 }
 
 function verifiMyChest(type, gere, titre, champ, value = null, value2 = null) // Verfi si le contenu n'esxiste pas

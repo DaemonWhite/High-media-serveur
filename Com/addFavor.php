@@ -23,6 +23,9 @@ $bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 if ($Genre == 0) {
 	$verifA = $bdd->query('SELECT * FROM video WHERE  titre=\'' . $nom . '\' AND Saison=\'' . $Saison . '\' AND Episode=\'' . $Episode . '\' ' );
 	$verif = $verifA->fetch();
+} elseif ($Genre == 2) {
+	$verifA = $bdd->query('SELECT * FROM titre WHERE nom=\'' . $nom . '\' AND Format=0 ');
+	$verif = $verifA->fetch();
 }
 
 if (!empty($verif)) {
@@ -46,6 +49,8 @@ if ($accept === 1) {
 
 
 		$addF = $bdd->query('DELETE FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Favori=\'' . $nom . '\' AND type=\'' . $type . '\' AND Ep=\'' . $Episode . '\' AND S=\'' . $Saison . '\' ');
+
+		echo "delete";
 
 	}
 }

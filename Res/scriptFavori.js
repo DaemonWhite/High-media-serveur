@@ -86,7 +86,7 @@ function appFav(type, nom, s, ep, Supr, lec){
 		vef.open("POST", "Com/addFavor.php", true);
 		 vef.onload = function(oEvent) {
 		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
-		      window.location = "?Name=" + nom + "&Ep=" + ep + "&S=" + s ;
+		      
 		    } else {
 		      text.innerHTML = "Error --> Impossible de recupérer les donner";
 		    }
