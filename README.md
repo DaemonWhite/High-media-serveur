@@ -16,8 +16,10 @@
 
 # Changelog
 
-V - 0.0.21A - 24 Janv 18h47
+V - 0.0.21A - 26 Janv 8h59
 
+- Ajout d'un message si une personne tente de télècharger alors qu'il n'y a rien
+- Ajout du systèmes de téléchargement
 - Modification du systeme de favori select vidéo
 - Modification du systeme de favori vidéo
 - Amélioration anti Fraude pour les favori

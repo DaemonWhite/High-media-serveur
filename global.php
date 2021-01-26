@@ -23,6 +23,7 @@ $NameAudio = $bdd->query("SELECT ID, album, Titre, Piste, Disk FROM audio ORDER 
 
 $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
 $Fav = $bdd->query('SELECT User, Favori, Ep, S, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
+$info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
 <!DOCTYPE html>
@@ -162,18 +163,10 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type, Genre FROM favori WHERE Us
 
                     <div class="boxSize">
                         <div class="contentBox">
-                            <?php while ($Nvideo = $NameVideo->fetch()) { 
+                            <?php while ($Ninfo = $info->fetch()) { ?>
 
-                                $Ntitre = $Nvideo['titre']; 
-
-                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
-                                $Aff = $Affiche->fetch() ?>
-
-                                <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-                                    <div style="background-image: url('<?php echo "http://hmsteste.com/" . $Aff['Affiche']; ?>'); background-size: cover;"></div>
-                                    <div> <span> <?php echo $Ntitre; ?> </span> </div>
-                                    <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
-                                         S: <?php echo $Nvideo['Saison']; ?> </span></div>
+                                <div class="selectBox" style="grid-template-columns: 1fr">
+                                    <div style="height: 5vh; "> <span> <?php echo $Ninfo['Titre']; ?> </span> </div>
                                 </div>
                             <?php } ?>
                         </div>

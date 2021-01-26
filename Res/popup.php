@@ -93,6 +93,19 @@
 
   	</section>
 
+  	<section id="noDown" class="modal-back" aria-hidden="true" role="dialog" aria-modal="" style="display: none;">
+    
+ 	     <div class="CupeInfo js-stope-modale">
+
+             
+             <p style="text-align: center; margin-top: 5%; font-size: 3vh; color: white;"> hmmm, j'ai un doute sur votre Inteligence mais il y'a rien à télècharger ici! </p>
+
+              <button class="boutonUpload js-close-modale" style="margin-top: 5%; margin-bottom: 3%; margin-left: 20%">Fermer</button>
+          
+          </div>
+
+  	</section>
+
 
 	<!-- <div>			Exemple popup
             

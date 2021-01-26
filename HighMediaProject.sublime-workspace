@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"ti",
+				"titre"
+			],
+			[
+				"vi",
+				"videal"
+			],
+			[
+				"vide",
+				"video"
+			],
+			[
+				"e",
+				"echo\techo \"…\""
+			],
+			[
+				"repon",
+				"responseText"
+			],
+			[
+				"tota",
+				"totalCons"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"js-",
+				"js-stope-modale"
+			],
+			[
+				"modal",
+				"modal-bloc"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"fav",
+				"Favo"
+			],
+			[
+				"fa",
+				"Favo"
+			],
+			[
 				"col",
 				"color\tproperty"
 			],
@@ -62,10 +114,6 @@
 			[
 				"base",
 				"basehms"
-			],
-			[
-				"e",
-				"echo"
 			],
 			[
 				"insta",
@@ -324,10 +372,6 @@
 				"option\tTag"
 			],
 			[
-				"se",
-				"select\tTag"
-			],
-			[
 				"mra",
 				"margin\tproperty"
 			],
@@ -408,10 +452,6 @@
 				"titre"
 			],
 			[
-				"ti",
-				"title"
-			],
-			[
 				"sess",
 				"session_start"
 			],
@@ -474,46 +514,6 @@
 			[
 				"tex",
 				"texteBase"
-			],
-			[
-				"sele",
-				"selectBase"
-			],
-			[
-				"ca",
-				"cadreBaseZ"
-			],
-			[
-				"colo",
-				"colorTitle"
-			],
-			[
-				"whi",
-				"width\tproperty"
-			],
-			[
-				"sc",
-				"scriptZone"
-			],
-			[
-				"S",
-				"Saison"
-			],
-			[
-				"su",
-				"Supr"
-			],
-			[
-				"int",
-				"intval"
-			],
-			[
-				"ty",
-				"typeFavor"
-			],
-			[
-				"Us",
-				"User_ID"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3661,
+				"buffer_size": 3932,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -538,10 +538,13 @@
 			}
 		},
 		{
+			"contents": "<?php\n\n$moveUrl = \"/home\";\n\ninclude(\"Com/Conexion.php\"); // Programe de connexion\n\ninclude(\"Com/verifiLoad.php\"); // Verification de la conexion rapide\n\ninclude(\"Com/userSetings.php\"); //Parametre utilisateur\n\ninclude(\"lang/FR.php\");  //Fichier de lang\n\n\n\n$typeFavor = 1; // 1 = acueille;\n\n$ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\\'' . $_SESSION['ID'] . '\\''); //Charge les image utilisateur\n$Rimage = $ImageUs->fetch();\n\n\n$NameVideo = $bdd->query(\"SELECT ID, titre, Episode, Saison FROM video ORDER BY ID DESC LIMIT 0, 10\");\n$NameAudio = $bdd->query(\"SELECT ID, album, Titre, Piste, Disk FROM audio ORDER BY ID DESC LIMIT 0, 10\");\n\n$His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\\'' . $_SESSION['ID'] . '\\' AND type=\"0\" ORDER BY ID DESC LIMIT 0, 10');\n$Fav = $bdd->query('SELECT User, Favori, Ep, S, type, Genre FROM favori WHERE User=\\'' . $_SESSION['ID'] . '\\' ORDER BY ID DESC LIMIT 0, 10');\n$info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');\n\n?>\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>HighMediaServeur</title>\n        <meta charset=\"utf-8\" />\n        <link rel=\"stylesheet\" href=\"Res/style.css\" />\n        <link rel=\"stylesheet\" href=\"Res/styleBox.css\" />\n\n    </head>\n\n    <header>\n       \n    </header>\n\n<script type=\"text/javascript\" src=\"Res/scriptZone.js\">\n</script>\n    \n    \n\n<body class=\"BackgroundA\">\n\n    <?php echo $Dmode; ?> \n            \n    <?php include('Com/mainMenu.php') ?>\n\n    <div class=\"content\">\n\n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" > <?php echo $_Lang_ACC_Nmus;?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <?php while ($Naudio = $NameAudio->fetch()) { \n\n                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\\'' . $Nvideo['titre'] . '\\'');\n                                $Aff = $Affiche->fetch() ?>\n\n                                <div class=\"selectBox\" onclick='appVideo(<?php echo '\"'.$Naudio['Titre'].'\", \"'. $Naudio['Piste'] .'\", \"'. $Naudio['Disk'] .'\"'; ?> )'>\n                                    <div style=\"background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;\"></div>\n                                    <div> <span> <?php echo $Naudio['Titre']; ?> </span> </div>\n                                    <div><span>Ep: <?php echo $Naudio['Disk']; ?><br>\n                                         S: <?php echo $Naudio['Piste']; ?> </span></div>\n                                </div>\n                            <?php } ?>\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n        \n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" > <?php echo $_Lang_Acc_Serv; ?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <!--serv -->\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n        \n\n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" > <?php echo $_Lang_Acc_Nvid; ?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <?php while ($Nvideo = $NameVideo->fetch()) { \n\n                                $Ntitre = $Nvideo['titre']; \n\n                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\\'' . $Nvideo['titre'] . '\\'');\n                                $Aff = $Affiche->fetch() ?>\n\n                                <div class=\"selectBox\" onclick='appVideo(<?php echo '\"'.$Nvideo['titre'].'\", \"'. $Nvideo['Episode'] .'\", \"'. $Nvideo['Saison'] .'\"'; ?> )'>\n                                    <div style=\"background-image: url('<?php echo \"http://hmsteste.com/\" . $Aff['Affiche']; ?>'); background-size: cover;\"></div>\n                                    <div> <span> <?php echo $Ntitre; ?> </span> </div>\n                                    <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>\n                                         S: <?php echo $Nvideo['Saison']; ?> </span></div>\n                                </div>\n                            <?php } ?>\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n\n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" > <?php echo $_Lang_Gen_Favoris; ?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <?php while ($Favo = $Fav->fetch()) { \n                                if ($Favo['Genre'] == 0) \n                                {\n                                    $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\\'' . $Favo['Favori'] . '\\' AND Episode=\\'' . $Favo['Ep'] . '\\' AND Saison=\\'' . $Favo['S'] . '\\' ');\n                                    $Nvideo = $FavoVideo->fetch();\n                                }\n\n                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\\'' . $Favo['Favori'] . '\\'');\n                                $Aff = $Affiche->fetch() ?>\n\n                                <?php if ($Favo['Genre'] == 0) { ?>\n                                    <div class=\"selectBox\" >\n                                        <div style=\"background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;\"></div>\n                                        <div> <span> <?php echo $Ntitre; ?> </span> </div>\n                                        <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>\n                                            S: <?php echo $Nvideo['Saison']; ?> </span></div>\n                                    </div>\n                                <?php } elseif ($Favo['Genre'] == 2) { ?>\n                                    <div class=\"selectBox\" style=\"grid-template-columns: 106px 2fr \" >\n                                        <div style=\"background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;\"></div>\n                                        <div> <span> <?php echo $Ntitre; ?> </span> </div>\n                                    </div>\n\n                                <?php } ?>\n\n                                \n\n                            <?php } ?>\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n\n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" ><?php echo $_Lang_Acc_Info; ?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <?php while ($Ninfo = $info->fetch()) { ?>\n\n                                <div class=\"selectBox\" style=\"grid-template-columns: 1fr\">\n                                    <div style=\"height: 5vh; \" onclick=\"\" > <span> <?php echo $Ninfo['Titre']; ?> </span> </div>\n                                </div>\n                            <?php } ?>\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n\n        <div class=\"spaceBox\">\n            <div class=\"box\">\n                <div class=\"titleBox\" ><?php echo $_Lang_Acc_Hist; ?></div>\n\n                    <div class=\"boxSize\">\n                        <div class=\"contentBox\">\n                            <?php while ($Histo = $His->fetch()) { \n\n                                $HistVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\\'' . $Histo['Name'] . '\\' AND Episode=\\'' . $Histo['Episode'] . '\\' AND Saison=\\'' . $Histo['Saison'] . '\\' ');\n                                $Nvideo = $HistVideo->fetch();\n\n                                $Ntitre = $Nvideo['titre']; \n\n                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\\'' . $Nvideo['titre'] . '\\'');\n                                $Aff = $Affiche->fetch() ?>\n\n                                <div class=\"selectBox\" onclick='appVideo(<?php echo '\"'.$Nvideo['titre'].'\", \"'. $Nvideo['Episode'] .'\", \"'. $Nvideo['Saison'] .'\"'; ?> )'>\n                                    <div style=\"background-image: url('<?php echo \"http://hmsteste.com/\" . $Aff['Affiche']; ?>'); background-size: cover;\"></div>\n                                    <div> <span> <?php echo $Ntitre; ?> </span> </div>\n                                    <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>\n                                         S: <?php echo $Nvideo['Saison']; ?> </span></div>\n                                </div>\n                            <?php } ?>\n                        </div>\n                    </div>\n                    \n            </div>\n        </div>\n        \n    </div>\n\n\n\n        <?php if ($_SESSION['Securiter'] >= 1 ) { include(\"Res/popUpload.php\"); } ?>\n\n        <script type=\"text/javascript\">\n            <?php include(\"Res/scriptModal.php\"); ?>\n        </script>\n        <script src=\"Res/scriptFavori.js\">\n        </script>\n\n   <!-- ?php include(\"Com/main.php\"); ?> -->\n    \n    <!-- Le pied de page -->\n        \n    </body>\n</html>",
 			"file": "global.php",
+			"file_size": 9660,
+			"file_write_time": 132559955224447108,
 			"settings":
 			{
-				"buffer_size": 9298,
+				"buffer_size": 9449,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -556,6 +559,24 @@
 			}
 		},
 		{
+			"file": "upload/verifUpload.php",
+			"settings":
+			{
+				"buffer_size": 727,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "upload/gestionVideo.php",
+			"settings":
+			{
+				"buffer_size": 4207,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "untitled.php",
 			"settings":
 			{
@@ -565,28 +586,46 @@
 			}
 		},
 		{
-			"file": "Res/popUpload.php",
+			"file": "Com/gestionFavor.php",
 			"settings":
 			{
-				"buffer_size": 26813,
+				"buffer_size": 1420,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Res/scriptFavori.js",
-			"settings":
-			{
-				"buffer_size": 1774,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "Com/addFavor.php",
 			"settings":
 			{
-				"buffer_size": 1343,
+				"buffer_size": 1502,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/popUpload.php",
+			"settings":
+			{
+				"buffer_size": 25067,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/styleVideo.css",
+			"settings":
+			{
+				"buffer_size": 2404,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Res/scriptModal.php",
+			"settings":
+			{
+				"buffer_size": 27506,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -601,10 +640,10 @@
 			}
 		},
 		{
-			"file": "Res/scriptZone.js",
+			"file": "Res/scriptFavori.js",
 			"settings":
 			{
-				"buffer_size": 908,
+				"buffer_size": 1714,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -711,13 +750,19 @@
 		"/mnt/Data Linux/var/www/HMS/Com",
 		"/mnt/Data Linux/var/www/HMS/lang",
 		"/mnt/Data Linux/var/www/HMS/Res",
+		"/mnt/Data Linux/var/www/HMS/upload",
 		"/mnt/Data Linux/var/www/HMS/upload"
 	],
 	"file_history":
 	[
+		"/mnt/Data Linux/var/www/HMS/video.php",
+		"/mnt/Data Linux/var/www/HMS/upload/addUpload.php",
+		"/mnt/Data Linux/var/www/HMS/Com/addFavor.php",
+		"/mnt/Data Linux/var/www/HMS/Res/scriptZone.js",
+		"/mnt/Data Linux/var/www/HMS/Res/styleBox.css",
+		"/mnt/Data Linux/var/www/HMS/Res/style.css",
 		"/mnt/Data Linux/var/www/HMS/upload/Upload.php",
 		"/mnt/Data Linux/var/www/HMS/install.sh",
-		"/mnt/Data Linux/var/www/HMS/Res/styleBox.css",
 		"/mnt/Data Linux/var/www/HMS/upload/appVideo.php",
 		"/mnt/DataLinux/var/www/HMS/changelog.log",
 		"/mnt/DataLinux/var/www/HMS/Com/verifiLoad.php",
@@ -837,16 +882,11 @@
 		"/D/Wamp/www/HighMediaServeur/Res/scriptZone.js",
 		"/D/Wamp/www/HighMediaServeur/audio.php",
 		"/D/Wamp/www/HighMediaServeur/Res/popup.php",
-		"/D/Wamp/bin/apache/apache2.4.39/conf/extra/httpd-vhosts.conf",
-		"/D/Wamp/alias/phpmyadmin.conf",
-		"/D/Wamp/www/HighMediaServeur/admin.php",
-		"/D/Wamp/www/test2/index.php",
-		"/D/Wamp/www/HighMediaServeur/php.ini",
-		"/D/Wamp/www/HighMediaServeur/Com/ModifCompte.php"
+		"/D/Wamp/bin/apache/apache2.4.39/conf/extra/httpd-vhosts.conf"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -862,6 +902,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"select",
+			"modal",
+			"favorDiv",
+			"vef.responseText",
+			"appVid",
+			"no",
+			"$get",
+			"errorTitle1",
+			"ErrorTitleTT",
+			"addTotalVideo",
+			"anaEp(",
+			"Tout vas",
+			"verif(",
+			"GetTyp",
+			"upload",
+			"gestUpload",
+			"viewFavor",
+			"ViewFavor",
+			"id=\"Favor\"",
+			"if=\"",
+			"Favor",
+			"#Favor",
+			"GetGenre",
+			"GetType",
+			"typeFavor",
 			"GetGenre",
 			"GetType",
 			"typeFavor",
@@ -964,32 +1029,7 @@
 			"addUpload",
 			"formUpl",
 			"addformUpl",
-			"moveUrl",
-			"Audio",
-			"NameAudio",
-			"NameVideo",
-			"Mus",
-			"Music",
-			"eHist",
-			"$His",
-			"$Histo",
-			"$Episo",
-			"newApelleVideo",
-			"$aVideo",
-			"From",
-			"$video",
-			"from",
-			"$newEp",
-			"$Episo",
-			"$video",
-			"video",
-			"Rimage",
-			"From",
-			"Video",
-			"blockListeVideo",
-			"zoneListe",
-			"text-align",
-			"EpVideo"
+			"moveUrl"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1008,7 +1048,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1017,15 +1057,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3661,
+						"buffer_size": 3932,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								490,
-								490
+								416,
+								416
 							]
 						],
 						"settings":
@@ -1038,7 +1078,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1066,7 +1106,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1075,15 +1115,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9298,
+						"buffer_size": 9449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								442,
-								442
+								7180,
+								7180
 							]
 						],
 						"settings":
@@ -1093,11 +1133,11 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.x": 45.0,
+						"translation.y": 2286.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1113,8 +1153,8 @@
 						"selection":
 						[
 							[
-								583,
-								583
+								5060,
+								5060
 							]
 						],
 						"settings":
@@ -1124,21 +1164,81 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 117.0,
-						"translation.y": 1.0,
+						"translation.x": 0.0,
+						"translation.y": 315.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "upload/verifUpload.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"word_wrap": false
+						},
+						"translation.x": 538.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "upload/gestionVideo.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 660.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "untitled.php",
 					"semi_transient": false,
 					"settings":
@@ -1150,8 +1250,12 @@
 						"selection":
 						[
 							[
-								2560,
-								2560
+								6320,
+								6320
+							],
+							[
+								6327,
+								6327
 							]
 						],
 						"settings":
@@ -1161,88 +1265,63 @@
 							"translate_tabs_to_spaces": true,
 							"word_wrap": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 518.0,
+						"translation.x": 64.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Res/popUpload.php",
+					"buffer": 7,
+					"file": "Com/gestionFavor.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 26813,
+						"buffer_size": 1420,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25380,
-								25380
+								779,
+								779
+							],
+							[
+								1386,
+								1386
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
+							"translate_tabs_to_spaces": false,
 							"word_wrap": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 7424.0,
+						"translation.x": 384.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Res/scriptFavori.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								454,
-								454
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "Com/addFavor.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1343,
+						"buffer_size": 1502,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								623,
-								623
+								424,
+								424
 							]
 						],
 						"settings":
@@ -1258,9 +1337,99 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "Res/style.css",
+					"buffer": 9,
+					"file": "Res/popUpload.php",
 					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23964,
+								23964
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7055.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Res/styleVideo.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1990,
+								1990
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Res/scriptModal.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27285,
+								27285
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 17800.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Res/style.css",
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 14719,
@@ -1270,8 +1439,8 @@
 						"selection":
 						[
 							[
-								14644,
-								14644
+								12259,
+								12259
 							]
 						],
 						"settings":
@@ -1281,40 +1450,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13630.0,
+						"translation.y": 11352.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "Res/scriptZone.js",
+					"buffer": 13,
+					"file": "Res/scriptFavori.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 908,
+						"buffer_size": 1714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								869,
-								869
+								1710,
+								1710
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1348,7 +1516,7 @@
 		"cols":
 		[
 			0.0,
-			0.545045705244,
+			0.649401824536,
 			1.0
 		],
 		"rows":

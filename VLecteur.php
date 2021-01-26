@@ -1,6 +1,6 @@
 <?php
 
-$moveUrl = "video.php";
+$moveUrl = "/Vlecteur";
 
 include("Com/Conexion.php");
 
@@ -100,13 +100,13 @@ if ($video['titre'] != "") {
           <div>
             
             <div class="titleVideo">
-              <?php echo $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?>
+              <?php echo $titleVideo = $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?>
             </div>
 
           	<div >
 
           	 <video class="video" controls>
-		  			    <source src="<?php echo $video['Repertoire']; ?>">
+		  			    <source src="<?php echo $rept = $video['Repertoire']; ?>">
 				      </video>
               <div style="text-align: left;">
                 <?php if (empty($nFavor)) {?>
@@ -160,6 +160,20 @@ if ($video['titre'] != "") {
 
  			window.location = "?Name=" + nom + "&Ep=" + nZone + "&S=" + sa ;
  		}
+
+
+  function downloadURI() 
+  {
+    <?php 
+    $path_parts = pathinfo($rept, PATHINFO_EXTENSION);
+    ?>
+      var name = "<?php echo $titleVideo . "." . $path_parts; ?>";
+      var uri = "<?php echo $rept;?>";
+      var link = document.createElement("a");
+      link.download = name;
+      link.href = uri;
+      link.click();
+  }
 
  	</script>
     <script type="text/javascript">

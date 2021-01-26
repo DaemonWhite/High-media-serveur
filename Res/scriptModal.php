@@ -1210,6 +1210,37 @@ function test2(value){
 
 }
 
+function viewInfo(Title, Date)
+{
+	var oData = new FormData();
+		var text = document.getElementById("idModmod" + numMode)
+		
+		oData.append("NameTi", Title);
+		oData.append("Episode", Ep);
+		oData.append("Saison", S);
+		oData.append("Sub", Sub);
+		oData.append("Type", type);
+		oData.append("Gere", "1");
+
+
+
+	
+		vef = new XMLHttpRequest();
+		vef.open("POST", "upload/gestionVideo.php", true);
+		 vef.onload = function(oEvent) {
+		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+		      
+		    	text.innerHTML = "<p align='center' style='color: red;'>La video a étais suprimer</p>";
+
+		    } else {
+
+		    }
+		  };
+	
+		vef.send(oData);
+}
+
+
 /*function test(){
 
 	var vala = []
