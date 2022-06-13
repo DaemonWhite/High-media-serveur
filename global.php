@@ -213,6 +213,7 @@ $info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
         </script>
+        <script type="text/javascript" src="Res/scriptModal.js"></script>
         <script src="Res/scriptFavori.js">
         </script>
 

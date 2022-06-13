@@ -1,6 +1,8 @@
 <?php
 
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+include("config.php");
+
+$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=' . $bdd_user . , 'HMS', $bdd_pass ,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
 if (!empty($_POST['Pseudo']) AND !empty($_POST['Pass']) AND !empty($_POST['Name']) AND !empty($_POST['Chambr']))
