@@ -1,3 +1,9 @@
+let modal = null
+let modalB = null
+const FocusSelect = "button, a, input,textarea"
+let focusValide = []
+
+
 const openModalUp = async function (e) {
 	e.preventDefault()
 	const target = e.target.getAttribute('id')

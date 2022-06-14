@@ -1,5 +1,7 @@
 <?php
-	$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	include("../config.php");
+
+	$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user ,  $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 	$Type = $_POST['Type']; //Type 0 = Titre; 1 = Ep;  ST = 2
 	$Gere  = $_POST['Gere']; //Gere 0 = Video; 1 = Music

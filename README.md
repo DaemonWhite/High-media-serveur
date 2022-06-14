@@ -16,6 +16,15 @@
 
 # Changelog
 
+V - 0.0.21A - 13 juin 21h47
+
+- Add config (non utilisé)
+- Optimisation scriptModal vrais script non php attention juste global
+- Correction session TesNewPsword Php
+- Correction sleep Upload
+- Correction Liens symbolique global.php au lieux d'absolue
+
+
 V - 0.0.21A - 26 Janv 8h59
 
 - Ajout d'un message si une personne tente de télècharger alors qu'il n'y a rien
@@ -33,6 +42,7 @@ V - 0.0.21A - 26 Janv 8h59
 - Correction De historique Box qui n'étais pas gérer par lang
 
 V - 0.0.20A - 10 Janv 19h10
+
 - Ajout nouvelle information pour l'installation 
 - Ajout d'un paramêtres pour vérifier le compte
 - Ajour les utilisateur pourrons créer leur compte

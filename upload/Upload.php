@@ -2,6 +2,8 @@
 
 session_start();
 
+include("../config.php");
+
 $UserName = $_SESSION['ID'];
 $VerifMusic = $_POST['IsMusic'];
 $repGen = -1; // Valeur d'inisiolisation d'ep
@@ -66,7 +68,7 @@ if (!empty($_POST['Synopsis'])) {$Remue = $_POST['Synopsis'];} else {$Remue = nu
 
 
 
-$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdb = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //(file_exists($dossier)
 
 	if (!empty($_POST['nameSerie'])) {
@@ -143,7 +145,7 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 						echo $ExisteVideo++;
 						# code...
-						sleep(0.1);
+						sleep(100);
 					}
 					
 				//} else {$Uerreur = "seule les video au extention suivante son autorisés";}
@@ -155,8 +157,6 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 
 	function CreateRepertoire($Season, $name, $Ep, $Saison, $sTitle, $nameVideo, $tmpRepertori, $Synopsis, $miniature, $bda, $user) {
-
-		$bda = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 		$VerifMusic = $_POST['IsMusic'];
 

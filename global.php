@@ -105,7 +105,7 @@ $info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
                                 $Aff = $Affiche->fetch() ?>
 
                                 <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-                                    <div style="background-image: url('<?php echo "http://hmsteste.com/" . $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                    <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
                                     <div> <span> <?php echo $Ntitre; ?> </span> </div>
                                     <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
                                          S: <?php echo $Nvideo['Saison']; ?> </span></div>
@@ -192,7 +192,7 @@ $info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
                                 $Aff = $Affiche->fetch() ?>
 
                                 <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-                                    <div style="background-image: url('<?php echo "http://hmsteste.com/" . $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                    <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
                                     <div> <span> <?php echo $Ntitre; ?> </span> </div>
                                     <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
                                          S: <?php echo $Nvideo['Saison']; ?> </span></div>
@@ -214,8 +214,8 @@ $info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
             <?php include("Res/scriptModal.php"); ?>
         </script>
         <script type="text/javascript" src="Res/scriptModal.js"></script>
-        <script src="Res/scriptFavori.js">
-        </script>
+        <script type="text/javascript" src="script/upload.js"></script>
+        <script src="Res/scriptFavori.js"></script>
 
    <!-- ?php include("Com/main.php"); ?> -->
     
