@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7deb1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le : Dim 10 jan. 2021 à 16:24
--- Version du serveur :  10.3.25-MariaDB-0ubuntu1
--- Version de PHP : 7.4.9
+-- Hôte : hms-servdb-1
+-- Généré le : mar. 14 juin 2022 à 17:36
+-- Version du serveur : 10.8.3-MariaDB-1:10.8.3+maria~jammy
+-- Version de PHP : 8.0.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -72,6 +71,17 @@ CREATE TABLE `historique` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `Info`
+--
+
+CREATE TABLE `Info` (
+  `id` int(11) NOT NULL,
+  `Titre` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `membre`
 --
 
@@ -93,8 +103,8 @@ CREATE TABLE `membre` (
 --
 
 INSERT INTO `membre` (`ID_user`, `UserName`, `Name_Surname`, `Password`, `Securiter`, `Chambre`, `IP1`, `IP2`, `Modif_IP`, `conf`) VALUES
-(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$12$HmZxsGBxubTtWX5kDb2.fej9khmVEjhobuRV7yiLXrVA8KWfmA5hy', 3, 418, '127.0.0.1', '::1', 0, 1),
-(2, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1, 0);
+(2, 'JordanRoy', 'HOULBERT Jordan', '$2y$10$mcxX2wMWrNdq1GiQpQwobO5kZKs6GpN2nekLfVvnqV.43iWgvloty', 3, 414, '192.168.43.40', NULL, 1, 0),
+(1, 'DaemonWhite', 'TRAVERS matheo', '$2y$10$yDpAaK/urhgEgotYu4m/1uTHXzPhfhZ5j6vRqUWOZkXHsm96GOZv2', 3, 418, '172.18.0.1', NULL, 1, 0);
 
 --
 -- Déclencheurs `membre`
@@ -142,8 +152,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `theme`, `image`, `historique`, `debugMode`) VALUES
-(1, 'Default', 'user/user/1/LogoBack.png', 0, 0),
-(2, 'Default', 'user/Default/User.png', 0, 0);
+(2, 'default', 'user/user/1/LogoBack.png', 0, 0),
+(1, 'deafault', 'user/user/1/LogoBack.png', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -159,7 +169,8 @@ CREATE TABLE `video` (
   `Episode` int(11) NOT NULL DEFAULT 1,
   `Repertoire` text NOT NULL,
   `Proprietaire` int(11) NOT NULL,
-  `Lang` varchar(255) DEFAULT NULL
+  `Lang` varchar(255) DEFAULT NULL,
+  `Verif` int(11) NOT NULL DEFAULT 3 COMMENT 'verfier = 0 Conf = 1 pas tout les navigateur = 2 Urgent = 3'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -183,6 +194,12 @@ ALTER TABLE `favori`
 --
 ALTER TABLE `historique`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- Index pour la table `Info`
+--
+ALTER TABLE `Info`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `membre`
@@ -222,13 +239,19 @@ ALTER TABLE `audio`
 -- AUTO_INCREMENT pour la table `favori`
 --
 ALTER TABLE `favori`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `historique`
 --
 ALTER TABLE `historique`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `Info`
+--
+ALTER TABLE `Info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `membre`

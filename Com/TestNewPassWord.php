@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,8 +11,6 @@
 </head>
 
 <?php
-
-session_start();
 
 $SecuG = htmlspecialchars($_SESSION['Securiter']);
 
@@ -44,7 +46,7 @@ if (empty($_GET['T3'])) {
 $idAplique = 0;
 
 
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new pdo('mysql:host=172.18.0.3;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $reqsearchA = $bdd->prepare("SELECT UserName, Name_Surname, Chambre, Securiter FROM membre WHERE Name_Surname = ?");
 $reqsearchA->execute(array($IDChoix1));

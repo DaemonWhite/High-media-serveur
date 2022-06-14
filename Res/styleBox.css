@@ -1,120 +1,77 @@
-.back
+.content
 {
-	display: flex;
-	padding: 4%;
-	padding-bottom: 0%;
-	overflow: auto;
-	font-size: 2vh;
-	font-family: "Arial black";
-	color: black;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
-.Box
-{
-	overflow: hidden;
-	border: 5px solid #000001 ;
-	border-radius: 4vh;
-	background-color: #898989;
-	height: 40vh;
-	width: 44vh;
-	margin-bottom: 5vh;
-}
-.BoxTitle
-{
-	height: 10%;
-	width: 100%;
-	border-bottom: 4px solid #000001;
+  display: flex;
+  flex: auto;
+  flex-direction: center;
+  flex-wrap: wrap;
+  margin: 5vh;
+  overflow: auto;
+  max-width: 80vw;
+  max-height: 96vh;
 }
 
-.overFlaw{
-	height: 90%;
-	overflow: auto;
+.spaceBox
+{
+  flex: auto;
+  text-align: center;
+  color: black;
+}
+.box
+{
+  margin: auto;
+  overflow: hidden;
+  border: 5px solid #000001 ;
+  border-radius: 4vh;
+  background-color: #898989;
+  height: 40vh;
+  width: 44vh;
+}
+.titleBox
+{
+  order: 2;
+  font-weight:bold;
+  width: 100%;
+  border-bottom: 0.7vh solid black;
+  font-size: 2.5vh;
+}
+
+.boxSize
+{
+  display: flex;
+  height: 37vh;
+  overflow-y: scroll;
+}
+
+.contentBox
+{
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.selectBox
+{
+  display: grid;
+  grid-template-columns: 106px 2fr 1fr;
+}
+
+.selectBox:hover > div
+{
+  background-color: #1b1a1a69;
 
 }
 
-.listenBoxM
+.selectBox > div
 {
-	color: white;
-	border-collapse: collapse;
-	border-bottom: 4px black solid;
-	background-color: #3D3D3D; 
-	height: 10%;
-	width: 100%;
+  background-color: #3D3D3D; 
+  display: flex;
+  color: white;
+  height: 144px;
+  border: solid black 0.3vh;
+  cursor: pointer;
 }
+.selectBox > div > span
+{
+  margin: auto;
 
-/* Video */
-
-.listenBoxV
-{
-	overflow: hidden;
-	padding: 0px;
-	color: white;	
-	border-collapse: collapse;
-	border: 4px black solid;
-	background-color: #3D3D3D; 
-	width: 100%;
-	text-align: left;
-	
-}
-.ChoiceV
-{
-	padding: 0vh;
-	border: 4px black solid;
-}
-.ChoiceV:hover
-{
-	cursor: pointer;
-	background-color: #1b1a1a69;
-	padding: 0vh;
-	border: 4px black solid;
-}
-
-.Vaffiche
-{
-	object-fit: cover;
-	width: 106px;
-	height: 144px;
-}
-.tdTexte
-{
-	text-align: center;
-}
-.borderS
-{
-	overflow: hidden;
-	text-align: center;															
-	padding: 0vh;	
-	width: 108px;
-	height: 146px;
-	border: 0px black solid;
-}
-.borderTi
-{	overflow: hidden;
-	text-align: center;
-	height: 144px;
-	padding: 0vh;
-	border: 4px black solid;
-}
-
-/* Audio */
-
-.listenBoxA
-{
-	overflow: hidden;
-	padding: 0px;
-	color: white;	
-	border-collapse: collapse;
-	border: 4px black solid;
-	background-color: #3D3D3D; 
-	width: 100%;
-	text-align: left;
-	
-}
-
-.Aaffiche
-{
-	object-fit: cover;
-	width: 106px;
-	height: 106px;
 }

@@ -7,15 +7,42 @@
 - 2 - installer PHP MariaDB et Apache
 - 3 - Lancer l'installateur en admin ./install.sh sur le serveur
 - 4 - Créer l'utilisateur MariaDB HMS
-		- - User : HMS
-		- - Pass : Secure45RootHGMProject
+		-- User : HMS
+		-- Pass : Secure45RootHGMProject
 - 5 - Installer la base de donner highmediadata.sql
+- 6 - Configurer php
+	--
 - 6 - Testez et ce sera fini
 
 # Changelog
 
+V - 0.0.21A - 13 juin 21h47
+
+- Add config (non utilisé)
+- Optimisation scriptModal vrais script non php attention juste global
+- Correction session TesNewPsword Php
+- Correction sleep Upload
+- Correction Liens symbolique global.php au lieux d'absolue
+
+
+V - 0.0.21A - 26 Janv 8h59
+
+- Ajout d'un message si une personne tente de télècharger alors qu'il n'y a rien
+- Ajout du systèmes de téléchargement
+- Modification du systeme de favori select vidéo
+- Modification du systeme de favori vidéo
+- Amélioration anti Fraude pour les favori
+- Optimisation du système de box 
+- Correction du gestionaire de favori et refonte compléte
+- Correction addUpload mauvais charactere non supporter
+- Correction verification addUpload
+- Correction retour au menu peut êtres fait depuis vlecteur
+- Correction de l'apparition des épisodes dans vlecteur
+- Correction de l'affichage de Vlecteur
+- Correction De historique Box qui n'étais pas gérer par lang
 
 V - 0.0.20A - 10 Janv 19h10
+
 - Ajout nouvelle information pour l'installation 
 - Ajout d'un paramêtres pour vérifier le compte
 - Ajour les utilisateur pourrons créer leur compte

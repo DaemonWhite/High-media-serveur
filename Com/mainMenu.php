@@ -7,6 +7,7 @@ $serPage03 = 'name="linkCenter" id="Res/popup.php#NDispo"';
 $serPage04 = 'name="linkCenter" id="Res/popup.php#NDispo"';
 $serPage05 = 'name="linkCenter" id="Res/popup.php#NDispo""';
 $serPage06 = 'name="LinkDown" onclick="ChangePAGE(\'user\')"';
+$down = "id='Res/popup.php#noDown'";
 
 if ($moveUrl == "/home") {
 
@@ -36,7 +37,9 @@ if ($moveUrl == "/home") {
 
     $serPage06 = "name='LinkDebutPassif' style='margin-bottom: 5%;'";
 
-} 
+} elseif ($moveUrl == "/Vlecteur") {
+    $down = "id='down' onclick='downloadURI()'";
+}
 
 ?>
 
@@ -94,13 +97,13 @@ if ($moveUrl == "/home") {
                               <button class="bottomMenu" id="Res/popup.php#NDispo"><?php echo $_Lang_Gen_Doss; ?>    </button>
                               <button class="bottomMenu" id="#Favor"><?php echo $_Lang_Gen_Favoris; ?> </button>
                               <button class="bottomMenu" id="#Gestion"><?php echo $_Lang_Gen_Fichi; ?></button>
-                              <button class="bottomMenu" id="Res/popup.php#NDispo"><?php echo $_Lang_Gen_Down; ?> </button>
+                              <button class="bottomMenu" <?php echo $down; ?>><?php echo $_Lang_Gen_Down; ?> </button>
                               <button class="bottomMenu" id="#Upload"><?php echo $_Lang_Gen_Upload; ?></button>
                             <?php } else { ?>
                               <button class="bottomMenu" id="Res/popup.php#NDispo"> <?php echo $_Lang_Gen_Doss; ?> </button>
                               <button class="bottomMenu" id="Res/popup.php#YNConnecte"> <?php echo $_Lang_Gen_Favoris; ?> </button>
                               <button class="bottomMenu" id="Res/popup.php#YNConnecte"> <?php echo $_Lang_Gen_Fichi; ?> </button>
-                              <button class="bottomMenu" id="Res/popup.php#NDispo"> <?php echo $_Lang_Gen_Down; ?> </button>
+                              <button class="bottomMenu" <?php echo $down; ?>> <?php echo $_Lang_Gen_Down; ?> </button>
                               <button class="bottomMenu" id="Res/popup.php#YNConnecte"> <?php echo $_Lang_Gen_Upload; ?> </button>
                             <?php } ?>
     

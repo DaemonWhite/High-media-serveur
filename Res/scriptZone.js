@@ -47,3 +47,8 @@
      {
         window.location = "Video?name=" + name;
      }
+
+     function favor()
+     {
+        
+     }

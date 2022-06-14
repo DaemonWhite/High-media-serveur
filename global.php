@@ -22,7 +22,8 @@ $NameVideo = $bdd->query("SELECT ID, titre, Episode, Saison FROM video ORDER BY 
 $NameAudio = $bdd->query("SELECT ID, album, Titre, Piste, Disk FROM audio ORDER BY ID DESC LIMIT 0, 10");
 
 $His = $bdd->query('SELECT User_ID, Name, type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND type="0" ORDER BY ID DESC LIMIT 0, 10');
-$Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
+$Fav = $bdd->query('SELECT User, Favori, Ep, S, type, Genre FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' ORDER BY ID DESC LIMIT 0, 10');
+$info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
 
 ?>
 <!DOCTYPE html>
@@ -44,146 +45,166 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
     
     
 
-    <body class="BackgroundA">
+<body class="BackgroundA">
 
-        <?php echo $Dmode; ?> 
+    <?php echo $Dmode; ?> 
             
-            <?php include('Com/mainMenu.php') ?>
+    <?php include('Com/mainMenu.php') ?>
 
-            <section class="" style="width: 200vh; height: 100vh; overflow: auto;" >
-                <div class="back" align="center" style="overflow: hidden;">
-                    
-                    <section class="Box">
-                        <div class="BoxTitle"><span> <?php echo $_Lang_ACC_Nmus;?> </span></div>
-                        
-                        <div align="left" class="overFlaw">
-                            <table class="listenBoxA">
-                                <?php while ($Naudio = $NameAudio->fetch()) {
+    <div class="content">
 
-                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Naudio['album'] . '\'');
-                                $Aff = $Affiche->fetch() ?>
-                                    <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Naudio['Titre'].'", "'. $Naudio['Piste'] .'", "'. $Naudio['Disk'] .'"'; ?> )'>
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" > <?php echo $_Lang_ACC_Nmus;?></div>
 
-                                        <td class="borderS"><img class="Aaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                        <td class="borderTi"><span><?php echo $Naudio['Titre'] . " - " . $Naudio['album']; ?></span></td>
-                                        <td class="borderS">
-                                            <span>Diske: <?php echo $Naudio['Disk']; ?></span><br>
-                                            <span>Piste: <?php echo $Naudio['Piste']; ?></span>
-                                            </td>
-
-                                    </tr>
-                                <?php } ?>
-                            </table>
-                        </div>
-
-                        
-                    </section>
-
-                    <section class="Box">
-                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Serv; ?></span></div>
-                        
-                    </section>
-
-                    <section class="Box">
-                        <div class="BoxTitle"><span> <?php echo $_Lang_Acc_Nvid; ?></span></div>
-
-                        <div align="left" class="overFlaw">
-                            <table class="listenBoxV">
-                                <?php while ($Nvideo = $NameVideo->fetch()) {
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <?php while ($Naudio = $NameAudio->fetch()) { 
 
                                 $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
                                 $Aff = $Affiche->fetch() ?>
-                                    <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
 
-                                        <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                        <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                        <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
-                                            <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
-
-                                    </tr>
-                                <?php } ?>
-                            </table>
+                                <div class="selectBox" onclick='appVideo(<?php echo '"'.$Naudio['Titre'].'", "'. $Naudio['Piste'] .'", "'. $Naudio['Disk'] .'"'; ?> )'>
+                                    <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                    <div> <span> <?php echo $Naudio['Titre']; ?> </span> </div>
+                                    <div><span>Ep: <?php echo $Naudio['Disk']; ?><br>
+                                         S: <?php echo $Naudio['Piste']; ?> </span></div>
+                                </div>
+                            <?php } ?>
                         </div>
-                        
-                    </section>
-
-
-                    <section class="Box">
-                        <div class="BoxTitle"><span><?php echo $_Lang_Gen_Favoris; ?></span></div>
-
-                        <div  align="left" class="overFlaw">
-                                <table class="listenBoxV">
-                                    <?php while ($Favo = $Fav->fetch()) {
-            
-                                        $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Favo['Favori'] . '\' AND Episode=\'' . $Favo['Ep'] . '\' AND Saison=\'' . $Favo['S'] . '\' ');
-                                        $Nvideo = $FavoVideo->fetch();
-        
-                                        $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Favo['Favori'] . '\'');
-                                        $Aff = $Affiche->fetch(); ?>
-
-                                            <?php if ($Favo['type'] == 1) { ?>
-                                                <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-            
-                                                    <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                                    <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                                    <td><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
-                                                        <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
-            
-                                                </tr>
-                                            <?php } else { ?>
-
-                                                <tr class="ChoiceV" onclick='appListVideo(<?php echo '"'.$Aff['nom'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
-            
-                                                    <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                                    <td class="tdTexte"><span><?php echo $Aff['nom'] ; ?></span></td>
-                                                    <td></td>
-            
-                                                </tr>
-
-                                            <?php } ?>
-                                    <?php } ?>
-                                </table>
-                            </div>
-                        
-                    </section>
-
-                    <section class="Box">
-                        <div class="BoxTitle"><span><?php echo $_Lang_Acc_Info; ?></span></div>
-
-                        
-                    </section>
+                    </div>
                     
+            </div>
+        </div>
+        
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" > <?php echo $_Lang_Acc_Serv; ?></div>
+
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <!--serv -->
+                        </div>
+                    </div>
                     
-                    <section class="Box">
-                        <div class="BoxTitle"><span>Historique</span></div>
-                            <div  align="left" class="overFlaw">
-                                <table class="listenBoxV">
-                                    <?php while ($Histo = $His->fetch()) {
-            
-                                        $HistVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Histo['Name'] . '\' AND Episode=\'' . $Histo['Episode'] . '\' AND Saison=\'' . $Histo['Saison'] . '\' ');
-                                        $Nvideo = $HistVideo->fetch();
+            </div>
+        </div>
         
-                                        $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
-                                        $Aff = $Affiche->fetch() ?>
-                                        
-                                            <tr class="ChoiceV" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" > <?php echo $_Lang_Acc_Nvid; ?></div>
+
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <?php while ($Nvideo = $NameVideo->fetch()) { 
+
+                                $Ntitre = $Nvideo['titre']; 
+
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+
+                                <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+                                    <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                    <div> <span> <?php echo $Ntitre; ?> </span> </div>
+                                    <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
+                                         S: <?php echo $Nvideo['Saison']; ?> </span></div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" > <?php echo $_Lang_Gen_Favoris; ?></div>
+
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <?php while ($Favo = $Fav->fetch()) { 
+                                if ($Favo['Genre'] == 0) 
+                                {
+                                    $FavoVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Favo['Favori'] . '\' AND Episode=\'' . $Favo['Ep'] . '\' AND Saison=\'' . $Favo['S'] . '\' ');
+                                    $Nvideo = $FavoVideo->fetch();
+                                }
+
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Favo['Favori'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+
+                                <?php if ($Favo['Genre'] == 0) { ?>
+                                    <div class="selectBox" >
+                                        <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                        <div> <span> <?php echo $Ntitre; ?> </span> </div>
+                                        <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
+                                            S: <?php echo $Nvideo['Saison']; ?> </span></div>
+                                    </div>
+                                <?php } elseif ($Favo['Genre'] == 2) { ?>
+                                    <div class="selectBox" style="grid-template-columns: 106px 2fr " >
+                                        <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                        <div> <span> <?php echo $Ntitre; ?> </span> </div>
+                                    </div>
+
+                                <?php } ?>
+
+                                
+
+                            <?php } ?>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" ><?php echo $_Lang_Acc_Info; ?></div>
+
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <?php while ($Ninfo = $info->fetch()) { ?>
+
+                                <div class="selectBox" style="grid-template-columns: 1fr">
+                                    <div style="height: 5vh; "> <span> <?php echo $Ninfo['Titre']; ?> </span> </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <div class="spaceBox">
+            <div class="box">
+                <div class="titleBox" ><?php echo $_Lang_Acc_Hist; ?></div>
+
+                    <div class="boxSize">
+                        <div class="contentBox">
+                            <?php while ($Histo = $His->fetch()) { 
+
+                                $HistVideo = $bdd->query('SELECT titre, Episode, Saison FROM video WHERE  titre=\'' . $Histo['Name'] . '\' AND Episode=\'' . $Histo['Episode'] . '\' AND Saison=\'' . $Histo['Saison'] . '\' ');
+                                $Nvideo = $HistVideo->fetch();
+
+                                $Ntitre = $Nvideo['titre']; 
+
+                                $Affiche = $bdd->query('SELECT nom, Affiche FROM titre WHERE nom=\'' . $Nvideo['titre'] . '\'');
+                                $Aff = $Affiche->fetch() ?>
+
+                                <div class="selectBox" onclick='appVideo(<?php echo '"'.$Nvideo['titre'].'", "'. $Nvideo['Episode'] .'", "'. $Nvideo['Saison'] .'"'; ?> )'>
+                                    <div style="background-image: url('<?php echo $Aff['Affiche']; ?>'); background-size: cover;"></div>
+                                    <div> <span> <?php echo $Ntitre; ?> </span> </div>
+                                    <div><span>Ep: <?php echo $Nvideo['Episode']; ?><br>
+                                         S: <?php echo $Nvideo['Saison']; ?> </span></div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
         
-                                                <td class="borderS"><img class="Vaffiche" src="<?php echo $Aff['Affiche']; ?>"></td>
-                                                <td class="borderTi"><span><?php echo $Nvideo['titre'] ; ?></span></td>
-                                                <td class="borderS"><span>Ep: <?php echo $Nvideo['Episode']; ?></span><br>
-                                                    <span>S: <?php echo $Nvideo['Saison']; ?></span></td>
-        
-                                            </tr>
-                                    <?php } ?>
-                                </table>
-                            </div>
-
-                        
-                    </section>  
-
-
-                </div>
-            </section>
+    </div>
 
 
 
@@ -192,8 +213,9 @@ $Fav = $bdd->query('SELECT User, Favori, Ep, S, type FROM favori WHERE User=\'' 
         <script type="text/javascript">
             <?php include("Res/scriptModal.php"); ?>
         </script>
-        <script src="Res/scriptFavori.js">
-        </script>
+        <script type="text/javascript" src="Res/scriptModal.js"></script>
+        <script type="text/javascript" src="script/upload.js"></script>
+        <script src="Res/scriptFavori.js"></script>
 
    <!-- ?php include("Com/main.php"); ?> -->
     

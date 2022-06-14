@@ -1,5 +1,6 @@
 <?php 
 
+include("config.php");
 include("lang/FR.php");
 
 
@@ -18,7 +19,7 @@ if (!empty($_GET['invite'])) {
 $ip_Visiteur = $_SERVER['REMOTE_ADDR'];
 $vertion = "0.0.20";
 
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 if (isset($_POST['DemandeConexion'])) {
 
@@ -32,7 +33,7 @@ if (isset($_POST['DemandeConexion'])) {
             $requser->execute(array($PseudConnect));
             $UserInfo = $requser->fetch();
 
-            $UserInfo['ID_user'];
+            //$UserInfo['ID_user'];
 
             
 

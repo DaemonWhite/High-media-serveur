@@ -138,16 +138,19 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
 <!DOCTYPE html>
   <html lang="fr-FR">
   <?php $typeFavor = 2; 
-        $GetV = 0;  ?>
+        $GetV = 0; 
+        $GetType = 0;
+        $GetGenre = 2;
+
+        $veifFav = $bdd->query('SELECT * FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Favori=\'' . $_GET['name'] . '\' AND type=\'' . $GetType . '\' AND Genre=\'' . $GetGenre . '\' ' );
+        $nFavor = $veifFav->fetch(); 
+  ?>
   <head>
       <title>High media serveur - Video</title>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="Res/style.css" />
       <link rel="stylesheet" href="Res/styleVideo.css" />
   </head>
-
-  <script type="text/javascript" src="Res/scriptZone.js">
-  </script>
 
 
   <body class="BackgroundA">
@@ -161,8 +164,20 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
             <?php
             $view = 0;
             
-            echo '<div class="titleVideo">' . $_GET['name'] . '</div>';
-        
+            echo '<div class="titleVideo" style="display: grid; grid-template-columns: 4fr 1fr;"> <div>' . $_GET['name'] . '</div>';?>
+
+            <div style="text-align: center;">
+                <?php if (empty($nFavor)) {?>
+                  <span id="rating" class="rating" style="display: ; font-size: 7vh;" onclick="appFav(2,'<?php echo $_GET['name'];?>',0,0, 0, '1')"> &#9734 </span>
+                  <span id="rating2" class="rating2" style="display: none; font-size: 7vh;" onclick="appFav(2,'<?php echo $_GET['name'];?>',0,0, 1, '1')"> &#9734 </span>
+                <?php } else { ?>
+                  <span id="rating" class="rating" style="display: none; font-size: 7vh;" onclick="appFav(2,'<?php echo $_GET['name'];?>',0,0, 0, '1')"> &#9734 </span>
+                  <span id="rating2" class="rating2" style="display: ; font-size: 7vh;" onclick="appFav(2,'<?php echo $_GET['name'];?>',0, 1, '1')"> &#9734 </span>
+               <?php } ?>
+              </div>
+
+          <?php 
+          echo "</div>";
             while ($donnes = $EpVideo->fetch()) {
 
               if ($view < $donnes['Saison']) {
@@ -194,6 +209,7 @@ $epSynops = $bdd->query('SELECT  nom, Synopsis FROM titre WHERE nom=\'' . $_GET[
             <?php include("Res/scriptModal.php"); ?>
       </script>
       <script type="text/javascript" src="Res/scriptFavori.js"></script>
+      <script type="text/javascript" src="Res/scriptZone.js"></script>
 
   </body>
   </html>

@@ -1,6 +1,6 @@
 <?php
 
-$moveUrl = "video.php";
+$moveUrl = "/Vlecteur";
 
 include("Com/Conexion.php");
 
@@ -14,14 +14,17 @@ $typeFavor = 2;
 $ImageUs = $bdd->query('SELECT ID, image FROM user WHERE ID=\'' . $_SESSION['ID'] . '\'');
 $Rimage = $ImageUs->fetch();
 
+$GetType = 0;
+$GetGenre = 0;
 
-
+$veifFav = $bdd->query('SELECT * FROM favori WHERE User=\'' . $_SESSION['ID'] . '\' AND Favori=\'' . $_GET['Name'] . '\' AND S=\'' . $_GET['S'] . '\' AND Ep=\'' . $_GET['Ep'] . '\' AND type=\'' . $GetType . '\' AND Genre=\'' . $GetGenre . '\' ' );
+$nFavor = $veifFav->fetch();
 
 $EpVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
 $video = $EpVideo->fetch();
 
 
-$Episo= $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
+$Episo= $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Saison=\'' . $_GET['S'] . '\' ORDER BY Episode');
 
 $anaHist = $bdd->query('SELECT User_ID, Name, Type, Episode, Saison FROM historique WHERE User_ID=\'' . $_SESSION['ID'] . '\' AND Name=\'' . $_GET['Name'] . '\' AND Type="0" AND Episode=\'' . $_GET['Ep'] . '\' AND Saison=\'' . $_GET['S'] . '\' ');
 $eHist = $anaHist->fetch();
@@ -34,8 +37,6 @@ $numEpHigh = $numEp + 1;
 if ($video['titre'] != "") {
 
   if ($_SESSION['ID'] >= 1) {
-
-    $GetType = 0;
 
     if ($eHist != "") {
 
@@ -90,67 +91,7 @@ if ($video['titre'] != "") {
 
   <?php echo $Dmode;?> 
 
-	 <nav id="menu">
-          
-              
-              <div>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Acueil')">Acueil</button>
-                  <button class="linkSelect" id="LinkDebutActif" onclick="ChangePAGE('Video')">Video</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Audio')">Audio</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Perso')">Espace personnelle</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Serv')">Serveur</button>
-                  <button class="linkSelect" id="linkCenter" onclick="ChangePAGE('Propo')">Proposition</button>
-                  <button class="linkSelect" id="LinkDown" onclick="ChangePAGE('user')">Paramètre</button>
-                  
-              </div>
-  
-              <div class="separationA">
-  
-                  <span class="infoUser"><?php echo $typeUser; ?></span>
-  
-                  <div class="imageUser">
-                      <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                        <img src="<?php echo $Rimage['image'];?>" class="image" onclick="ChangePAGE('user')" >
-                      <?php } else { ?>
-                        <img src="User/Default/User.png" class="image">
-                      <?php } ?>
-                   </div>
-  
-                  <span class="UserName"><?php echo $Pseudo ?></span>
-                  <?php if ($_SESSION['Securiter'] != "-1") {
-                      # code...
-                  ?>
-                  <form action="?Deco=1" method="post">
-                      <input name="Deco" id="Deco" type="submit" value="Deconecter" class="bottomDisconect" />
-                  </form>
-                   <?php } else { ?>
-                  <div>
-                      <button name="Co" id="Res/popup.php#Conex" class="bottomConnect">Conexion</button>
-                  </div>
-  
-                  <?php } ?>
-  
-              </div>
-  
-              <div class="separationB">
-  
-                  <?php if ($_SESSION['Securiter'] >= 1) { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="#Favor">Favoris</button>
-                    <button class="bottomMenu" id="#Gestion">Gestionaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="#Upload">Uploade</button>
-                  <?php } else { ?>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Dossier</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Favoris</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Gestionaire</button>
-                    <button class="bottomMenu" id="" onclick="NonDisponible()">Télécharger</button>
-                    <button class="bottomMenu" id="" onclick="Reserver()">Uploade</button>
-                  <?php } ?>
-  
-              </div>  
-      
-  </nav>
+	 <?php include('Com/mainMenu.php') ?>
 
   
     
@@ -158,19 +99,31 @@ if ($video['titre'] != "") {
       <div class="blockListeVideo" align="center">
           <div>
             
-            <div class="titleVideo"><?php echo $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?></div>
+            <div class="titleVideo">
+              <?php echo $titleVideo = $_GET['Name'] . ' - Episode: '. $_GET['Ep'] .' - S.'. $_GET['S']; ?>
+            </div>
 
           	<div >
-          	<video class="video" controls>
-		  			   <source src="<?php echo $video['Repertoire']; ?>">
-				    </video>
+
+          	 <video class="video" controls>
+		  			    <source src="<?php echo $rept = $video['Repertoire']; ?>">
+				      </video>
+              <div style="text-align: left;">
+                <?php if (empty($nFavor)) {?>
+                  <span id="rating" class="rating" style="display: ;" onclick="appFav(0,<?php echo "'" . $_GET['Name'] . "','". $_GET['S'] . "','" . $_GET['Ep'] . "',"; ?> 0, '1')"> &#9734 </span>
+                  <span id="rating2" class="rating2" style="display: none;" onclick="appFav(0,<?php echo "'" . $_GET['Name'] . "','". $_GET['S'] . "','" . $_GET['Ep'] . "',"; ?> 1, '1')"> &#9734 </span>
+              <?php } else { ?>
+                  <span id="rating" class="rating" style="display: none;" onclick="appFav(0,<?php echo "'" . $_GET['Name'] . "','". $_GET['S'] . "','" . $_GET['Ep'] . "',"; ?> 0, '1')"> &#9734 </span>
+                  <span id="rating2" class="rating2" style="display: ;" onclick="appFav(0,<?php echo "'" . $_GET['Name'] . "','". $_GET['S'] . "','" . $_GET['Ep'] . "',"; ?> 1, '1')"> &#9734 </span>
+               <?php } ?>
+              </div>
           	</div>
 
           	<div align="center" style="margin-top: 2%;">
 
           		<?php
           		$anaVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $numEpDown . '\' AND Saison=\'' . $_GET['S'] . '\' ');
-				$aVideo = $anaVideo->fetch();
+				      $aVideo = $anaVideo->fetch();
 
           		if (!empty($aVideo['Episode'])) { ?>
           			<button class="buttonNew" onclick="newApelleVideo('<?php echo $aVideo['Episode']; ?>')"><</button>
@@ -184,7 +137,7 @@ if ($video['titre'] != "") {
 
           		<?php
           		$anaVideo = $bdd->query('SELECT titre, Episode, Saison, Repertoire FROM video WHERE titre=\'' . $_GET['Name'] . '\' AND Episode=\'' . $numEpHigh . '\' AND Saison=\'' . $_GET['S'] . '\' ');
-				$aVideo = $anaVideo->fetch();
+				      $aVideo = $anaVideo->fetch();
 
           		if (!empty($aVideo['Episode'])) { ?>
           			<button class="buttonNew" onclick="newApelleVideo('<?php echo $aVideo['Episode']; ?>')">></button>
@@ -207,6 +160,20 @@ if ($video['titre'] != "") {
 
  			window.location = "?Name=" + nom + "&Ep=" + nZone + "&S=" + sa ;
  		}
+
+
+  function downloadURI() 
+  {
+    <?php 
+    $path_parts = pathinfo($rept, PATHINFO_EXTENSION);
+    ?>
+      var name = "<?php echo $titleVideo . "." . $path_parts; ?>";
+      var uri = "<?php echo $rept;?>";
+      var link = document.createElement("a");
+      link.download = name;
+      link.href = uri;
+      link.click();
+  }
 
  	</script>
     <script type="text/javascript">

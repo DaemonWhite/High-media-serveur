@@ -917,3 +917,37 @@ footer
 {
   text-decoration: underline;
 }
+
+.rating {
+
+  cursor: pointer;
+  font-size: 3vh;
+  color: #54C472;
+  
+}
+
+.rating:hover:before
+{
+  content: '\2605';
+  position: absolute;
+}
+
+.rating2 {
+
+  cursor: pointer;
+  font-size: 3vh;
+  color: #54C472;
+  
+}
+
+.rating2:before
+{
+  content: '\2605';
+  position: absolute;
+}
+
+.rating2:hover:before
+{
+    content: '\2606';
+    position: absolute;
+}

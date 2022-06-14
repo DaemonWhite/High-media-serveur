@@ -102,7 +102,10 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 							$Vdoss1 = $defChe . $TitrePrincip . "/";
 							$Vdoss2 = $Vdoss1 . "S" . $Saison[$ExisteVideo] . "/";
 
-							$nameV = $_FILES['Video']['name'][$ExisteVideo];
+							$preNameV = $_FILES['Video']['name'][$ExisteVideo];
+							$path_parts = pathinfo($preNameV, PATHINFO_EXTENSION);
+
+							$nameV = $_POST['GenreName'] . " S" . $Saison[$ExisteVideo] . " EP" . $Episode[$ExisteVideo] . "." . $path_parts;
 							$ReperV = $_FILES['Video']['tmp_name'][$ExisteVideo];
 	
 							if (!file_exists($Vdoss2 . $_FILES['Video']['name'][$ExisteVideo])) {
@@ -147,8 +150,8 @@ $bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootH
 
 		if ($VerifMusic == 0) {
 		
-			$GetTyp = $_POST['type']; //$_POST['typ']
-			$GetLang = $_POST['Lang'];
+			//$GetTyp = $_POST['type']; //$_POST['typ']
+			//$GetLang = $_POST['Lang'];
 			$DefChem = "Video/";
 			$Artiste = "NoValide";
 
