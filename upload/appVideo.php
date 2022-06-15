@@ -1,6 +1,8 @@
 <?php 
 	
-	$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+	include("../config.php");
+
+	$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 	$appVideo = "SELECT * FROM titre WHERE";
 	$ifLang = 0;

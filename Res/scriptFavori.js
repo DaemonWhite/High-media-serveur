@@ -1,3 +1,27 @@
+function appMyFavor(type)
+{
+
+	var text = document.getElementById("favorDiv")
+	
+		var oData = new FormData();
+	
+		oData.append("Type", type);
+		oData.append("Gere", "0");
+
+	
+		vef = new XMLHttpRequest();
+		vef.open("POST", "Com/gestionFavor.php", true);
+		 vef.onload = function(oEvent) {
+		    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+		      text.innerHTML = vef.responseText;
+		    } else {
+		      text.innerHTML = "Error --> Impossible de recupérer les donner";
+		    }
+		  };
+
+		  vef.send(oData);
+}
+
 function appFav(type, nom, s, ep, Supr, lec){
 
 	console.log(type, nom, s, ep, Supr, lec)

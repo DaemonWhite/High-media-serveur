@@ -1,5 +1,8 @@
 <?php
-$verif = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+include("../config.php");
+
+$verif = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $type = $_POST['Type'];// 0 Video ee  1 Audio
 $search;

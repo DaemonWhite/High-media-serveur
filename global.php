@@ -3,11 +3,8 @@
 $moveUrl = "/home";
 
 include("Com/Conexion.php"); // Programe de connexion
-
 include("Com/verifiLoad.php"); // Verification de la conexion rapide
-
 include("Com/userSetings.php"); //Parametre utilisateur
-
 include("lang/FR.php");  //Fichier de lang
 
 
@@ -216,6 +213,7 @@ $info = $bdd->query('SELECT * FROM Info ORDER BY ID DESC LIMIT 0, 10');
         <script type="text/javascript" src="Res/scriptModal.js"></script>
         <script type="text/javascript" src="script/upload.js"></script>
         <script src="Res/scriptFavori.js"></script>
+        <script type="text/javascript" src="script/gestionVideo.js"></script>
 
    <!-- ?php include("Com/main.php"); ?> -->
     

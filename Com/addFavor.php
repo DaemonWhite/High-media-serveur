@@ -2,6 +2,8 @@
 
 session_start();
 
+include("../config.php");
+
 $User = intval($_SESSION['ID']);
 
 $nom = $_POST['Name'];
@@ -18,7 +20,7 @@ echo $Saison . $Episode;
 
 
 
-$bdd = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 if ($Genre == 0) {
 	$verifA = $bdd->query('SELECT * FROM video WHERE  titre=\'' . $nom . '\' AND Saison=\'' . $Saison . '\' AND Episode=\'' . $Episode . '\' ' );

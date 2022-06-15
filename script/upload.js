@@ -1,3 +1,15 @@
+var totalVideo = 1
+var totalAudio = 1
+var addTotalVideo = 1
+var addTotalAudio = 1 // Pour plus tart
+
+var displayNum1 = []
+
+let form, progressBare;
+
+
+var II = 1 //Generateur de variable
+
 function verifiMyChest(type, gere, titre, champ, value = null, value2 = null) // Verfi si le contenu n'esxiste pas
 {//Type 0 = Titre; 1 = Ep; ST = 2
  //Gere 0 = Video; 1 = Music
@@ -327,6 +339,43 @@ function anaEp(Ep, total, isMus , ErrorArea ,champ=false, ignore=0) { // vérifi
 	return ignore;
 }
 
+function verifEpisode(isMus) {
+	var serr
+	var text
+
+	if (isMus === '0') {
+		serr = document.getElementById('nameSerr').value
+		text = document.getElementById("Shell")
+		isMus = "0";
+	} else {
+		serr = document.getElementById('nameSerrA').value
+		text = document.getElementById("ShellA")
+		isMus = "1";
+	}
+
+	console.log(serr, text, isMus)
+
+	var oData = new FormData();
+
+	oData.append("Name", serr);
+	oData.append("Type", isMus);
+
+	vef = new XMLHttpRequest();
+	vef.open("POST", "upload/verifDonner.php", true);
+	 vef.onload = function(oEvent) {
+	    if (vef.readyState == 4 && (vef.status == 200 || vef.status == 0)) {
+	      text.innerHTML = vef.responseText;
+	    } else {
+	      text.innerHTML = "Error --> Impossible de recupérer les donner";
+	    }
+	  };
+
+	vef.send(oData);
+
+	console.log(serr)
+
+}
+
 function readData(sData) {
 	document.getElementById("ErrorTitle" ).innerHTML = sData;
 	verifEpisode()
@@ -406,6 +455,12 @@ function uploadFile(formulaire){
 	
 	  oReq.send(oData);
 }
+
+while ( II < 65) {
+	displayNum1["bonus"+II] = 0;
+	II++;
+}
+
 
 
 function newUpload(is) {
@@ -515,4 +570,211 @@ function newUpload(is) {
 		ErrorMessage()
 
 	}
+}
+
+function addUpload(is) {
+	numVideo = 0;
+	vide = 13;
+	ErrVideo = 37;
+	var numMessage = 0;
+	var is2 = is + 1; // Normalise is
+		
+	if (is == 0) {
+		aTitle = document.getElementById("title")
+		vide = 13;
+		totalIs = addTotalVideo 
+	} else {
+		aTitle = document.getElementById("titleA")
+		aRtiste = document.getElementById("Artiste")
+		vide = 45;
+		totalIs = addTotalAudio
+
+	}
+
+		
+		while (totalIs > numVideo) {
+
+			var verifVideo = document.getElementById("fileUpload" + vide)
+			var verifTitre = document.getElementById("subTitle" + vide)
+	
+			if (verifVideo.value == "") {// verifi si les fichier ne son vide
+				
+				ErreurVerif("1", verifVideo , is2)
+				numMessage++;
+				
+
+			} else {
+
+				ErreurVerif("-1", verifVideo , is2)
+
+			}
+
+			erreur = verif(null, 1, vide, is2); // verifi tout les episode
+
+			if (erreur == true) {
+				numMessage++;
+			}
+
+			if (is != 0) {
+
+				if (verifTitre.value == "") { // Verifi l'existance des Titre des piste
+
+					ErreurVerif("2", verifTitre, is)
+					console.log(verifTitre)
+					numMessage++;
+	
+				} else {
+					ErreurVerif("-1", verifTitre, is)
+				}
+			}
+	
+	
+		vide++
+		numVideo++;
+		ErrVideo++;
+
+		console.log(vide,numVideo,ErrVideo)
+
+		}
+	
+	console.log(numMessage);
+
+	if (numMessage == 0) 
+	{
+
+		if (is == 0) {
+
+			uploadFile("formAddUpload")
+
+		} else if(is == 1) {
+
+			uploadFile("formAddUploadA")
+
+		}
+
+	} else { ErrorMessage() }
+}
+
+function newBonus(num, type, is) {
+
+	var num2 = num
+	var num3 = num
+	var addTotal = 0
+    num2 - 1;
+    num3 + 1;
+	if (num < 100) 
+	{
+		var did = document.getElementById("bonus" + num)
+		var visual = document.getElementById("bouton" + num)
+
+		var Ep = document.getElementById("Ep" + num).value
+		
+
+		var visual2 = document.getElementById("bouton" + (num2 - 1))
+
+		console.log(visual2)
+
+		var Eisode = Ep
+		Eisode++ 
+
+		
+
+		if (displayNum1["bonus" + num] == 0) 
+		{
+
+			visual.setAttribute('value', '-')
+			
+ 
+			if (num > 1 && num != 13 && num != 25 && num != 45) {
+				visual2.style.display = "none"
+			}
+
+
+			did.style.display = null
+			var EpV = document.getElementById("Ep" + (num3 + 1))
+			console.log(EpV, num3, "test")
+
+			displayNum1["bonus" + num] = 1
+			EpV.setAttribute('value', Eisode)
+			
+			addTotal++;
+
+		} else {
+
+			if (num > 1 && num != 13 && num != 25 && num != 45) {
+				visual.setAttribute('value', '+')
+				visual2.style.display = null;
+			} else {
+				visual.setAttribute('value', '+')
+			}
+				
+			did.style.display = "none"
+			displayNum1["bonus" + num] = 0
+			
+
+			addTotal--;
+
+		}
+	}
+
+	if (type == 0) {
+
+		if (is == 0 ) {
+
+			totalVideo = totalVideo + addTotal;
+
+		} else {
+
+			totalAudio = totalAudio + addTotal;
+
+		}
+
+	} else {
+
+		if (is == 0) {
+
+			addTotalVideo = addTotalVideo + addTotal;
+
+		} else {
+
+			addTotalAudio = addTotalAudio + addTotal;
+
+		}
+
+	}
+	console.log(totalAudio, totalVideo, addTotalAudio, addTotalVideo)
+}
+
+
+
+
+function ErrorMessage() {
+
+	alert("coriger les erreur")
+
+}
+
+function noVideo() {
+	vide = 1
+	numVideo = 13
+
+	while (totalVideo > numVideo) {
+
+		var verifVideo = document.getElementById("fileUpload" + vide)
+
+		console.log(verifVideo.value)
+
+		if (verifVideo.value == "") {
+
+			surligne(verifVideo, true);
+			document.getElementById("ErrorTitle" ).innerHTML = "Veulier choisire une video";
+			return false;
+		}
+
+
+		vide++
+		numVideo++;
+
+	}
+
 }
