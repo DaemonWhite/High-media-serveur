@@ -2,6 +2,8 @@
 
 session_start();
 
+include("../config.php");
+
 $UserName = $_SESSION['ID'];
 
 var_dump($_FILES);
@@ -61,7 +63,7 @@ while ($numGen <= $maxGen) {
 
 
 
-$bdb = new pdo('mysql:host=localhost;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdb = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 //(file_exists($dossier)
 
 	if (!empty($_POST['GenreName'])) {

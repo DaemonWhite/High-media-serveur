@@ -179,7 +179,12 @@ if ($video['titre'] != "") {
     <script type="text/javascript">
           <?php include("Res/scriptModal.php"); ?>
     </script>
-    <script type="text/javascript" src="Res/scriptFavori.js"></script>
+    <script type="text/javascript" src="Res/scriptZone.js" ></script>
+  <script type="text/javascript" src="Res/scriptModal.js"></script>
+  <script type="text/javascript" src="script/upload.js"></script>
+  <script src="Res/scriptFavori.js"></script>
+  <script type="text/javascript" src="script/gestionVideo.js"></script>
+    
 </body>
 </html>
 <?php } else {  header('Location: Error/404.php?Error=video'); }?>

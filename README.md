@@ -6,9 +6,11 @@
 - 1 - Telecharger la dernière vertions
 - 2 - installer PHP MariaDB et Apache
 - 3 - Lancer l'installateur en admin ./install.sh sur le serveur
-- 4 - Créer l'utilisateur MariaDB HMS
-		-- User : HMS
-		-- Pass : Secure45RootHGMProject
+- 4 - Configuré le fichier de configuration dans /config.php
+	-   -- host
+	-	-- User 
+    - 	-- Pass
+
 - 5 - Installer la base de donner highmediadata.sql
 - 6 - Configurer php
 	--
@@ -18,11 +20,16 @@
 
 V - 0.0.21A - 13 juin 21h47
 
-- Add config (non utilisé)
+- Add config (normalement utilisé par tous)
 - Optimisation scriptModal vrais script non php attention juste global
+	- creation gestionVideo.js
+	- creation de scriptModal.js
+	- création de user.js
+	- upload.js
 - Correction session TesNewPsword Php
 - Correction sleep Upload
 - Correction Liens symbolique global.php au lieux d'absolue
+- Supression de info.php
 
 
 V - 0.0.21A - 26 Janv 8h59

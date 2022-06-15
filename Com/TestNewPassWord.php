@@ -1,5 +1,8 @@
 <?php
     session_start();
+
+    include("../config.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +49,7 @@ if (empty($_GET['T3'])) {
 $idAplique = 0;
 
 
-$bdd = new pdo('mysql:host=172.18.0.3;dbname=highmediadata', 'HMS','Secure45RootHGMProject',   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+$bdd = new pdo('mysql:host=' . $bdd_host . ';dbname=highmediadata', $bdd_user, $bdd_pass,   array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 $reqsearchA = $bdd->prepare("SELECT UserName, Name_Surname, Chambre, Securiter FROM membre WHERE Name_Surname = ?");
 $reqsearchA->execute(array($IDChoix1));
